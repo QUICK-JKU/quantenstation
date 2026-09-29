@@ -278,10 +278,16 @@
       return el;
     }
 
-    el.innerHTML = svg +
-      '<div class="card-title">' + page[1] + '</div>' +
-      '<div class="card-sub">' + page[2] + note + '</div>' +
-      '<div class="card-url">' + url.replace(/^https?:\/\//, '') + '</div>';
+    // Das SVG kommt vom Encoder; alles andere nur als Text einsetzen —
+    // die Adresse stammt aus dem Eingabefeld bzw. aus localStorage.
+    el.innerHTML = svg;
+    [['card-title', page[1]], ['card-sub', page[2] + note],
+     ['card-url', url.replace(/^https?:\/\//, '')]].forEach(function (d) {
+      var div = document.createElement('div');
+      div.className = d[0];
+      div.textContent = d[1];
+      el.appendChild(div);
+    });
     return el;
   }
 

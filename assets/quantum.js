@@ -71,7 +71,13 @@
       var sub = $('.q-tile-sub', tile);
       var code = solvedCode(tile.getAttribute('data-q-id'));
       if (sub && code) {
-        sub.innerHTML = t('Gelöst', 'Solved') + ' · Code <strong class="q-mono">' + code + '</strong>';
+        // Nur als Text einsetzen: localStorage teilen sich alle Seiten unter
+        // quick-jku.github.io, der Wert ist also nicht vertrauenswürdig.
+        sub.textContent = t('Gelöst', 'Solved') + ' · Code ';
+        var strong = document.createElement('strong');
+        strong.className = 'q-mono';
+        strong.textContent = String(code).replace(/\D/g, '').slice(0, 4);
+        sub.appendChild(strong);
       } else if (sub) {
         sub.textContent = t('Gelöst ✓', 'Solved ✓');
       }

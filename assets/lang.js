@@ -22,7 +22,9 @@
   var here = /^en/i.test(document.documentElement.lang || '') ? 'en' : 'de';
 
   function wanted() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    var v = null;
+    try { v = localStorage.getItem(KEY); } catch (e) { /* egal */ }
+    return v === 'de' || v === 'en' ? v : null;   // nur bekannte Werte
   }
 
   function remember(lang) {
@@ -54,6 +56,7 @@
     var a = ev.target && ev.target.closest && ev.target.closest('[data-q-lang]');
     if (!a) return;
     var lang = a.getAttribute('data-q-lang');
+    if (lang !== 'de' && lang !== 'en') return;
     remember(lang);
     if (location.search || location.hash) {
       ev.preventDefault();

@@ -749,8 +749,11 @@ select.q-select {
 
 /* ---------- 12b. Wenig Bildhöhe (Zoom, Querformat) ----------
    Klebende Kopfleiste und fixe Fußleiste würden sonst den Großteil
-   des Bildschirms belegen. Sie scrollen dann einfach mit. */
-@media (max-height: 520px) {
+   des Bildschirms belegen. Sie scrollen dann einfach mit.
+   Nur im Querformat: Im Hochformat schwankt die Bildhöhe beim Scrollen,
+   weil die Browserleiste ein- und ausfährt — die Leisten würden sonst
+   mitten im Scrollen zwischen fest und mitlaufend hin- und herspringen. */
+@media (orientation: landscape) and (max-height: 480px) {
   .q-topbar { position: relative; }
   .q-bottombar { position: static; }
   body { padding-bottom: 0; }
