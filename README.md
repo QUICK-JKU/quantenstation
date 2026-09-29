@@ -371,8 +371,11 @@ Server, ohne Tracking. Auf der Startseite lässt er sich zurücksetzen.
 | 3 · Drehungen & Paare | `9316` |
 | 4 · Verschränkung im Alltag | `6482` |
 
-**Schriften** kommen von Google Fonts. Ohne Internet greift der Browser auf
-Systemschriften zurück — das Layout bleibt intakt.
+**Schriften** liegen selbst gehostet in `assets/fonts/` (Bricolage Grotesque,
+IBM Plex Sans, IBM Plex Mono — SIL Open Font License, siehe `OFL.txt`).
+Die Website lädt nichts von fremden Servern, es gehen also keine
+IP-Adressen an Google oder andere Dritte. Bitte keine Google-Fonts-Links
+mehr einbauen.
 
 **Browser:** getestet auf aktuellem Chromium. Verwendet werden nur breit
 unterstützte Techniken (Flexbox, Grid, `aspect-ratio`, `<details>`,
