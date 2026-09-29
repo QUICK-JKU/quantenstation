@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Teste selbst · Bloch-Kugel</title>
+<meta name="description" content="20 Vor-Ort-Challenges für die Bloch-Kugel-Station, in vier Stufen — dreh am Modell, dann prüf dein Ergebnis hier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="stylesheet" href="../../assets/quiz.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AE%3C/text%3E%3C/svg%3E">
+<style>
+  .level-pills {
+    display: flex; gap: 8px; overflow-x: auto;
+    padding-bottom: 2px; -webkit-overflow-scrolling: touch;
+  }
+  .level-pill {
+    flex: none;
+    padding: 11px 18px;
+    border-radius: 999px;
+    border: 2px solid var(--line);
+    background: #fff;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .level-pill.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .challenge-card + .challenge-card { margin-top: 14px; }
+
+  .gate-seq { display: inline-flex; flex-wrap: wrap; gap: 5px; vertical-align: middle; }
+  .gate-chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .gate-chip.gate-gap { background: var(--amber); }
+
+  .state-picker { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .state-btn {
+    min-height: 46px;
+    border-radius: 11px;
+    border: 2px solid var(--line);
+    background: #fff;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .state-btn.is-right { border-color: var(--green); background: rgba(31,138,91,.10); }
+  .state-btn.is-wrong { border-color: rgba(192,57,43,.5); background: rgba(192,57,43,.07); color: var(--muted); text-decoration: line-through; }
+  .state-btn:disabled { cursor: default; }
+  .state-btn:disabled:not(.is-right):not(.is-wrong) { opacity: .45; }
+
+  .angle-row { display: flex; gap: 10px; }
+  .angle-field { flex: 1; min-width: 0; }
+  .angle-field label { display: block; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-bottom: 5px; }
+  .angle-field input { width: 100%; min-width: 0; box-sizing: border-box; }
+
+  .seq-builder { display: flex; flex-wrap: wrap; gap: 8px; }
+  .seq-current {
+    min-height: 42px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1.5px dashed var(--line);
+  }
+
+  .trace-note { font-family: var(--font-mono); font-size: 12.5px; }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="teste-selbst.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/2-bloch-sphere/teste-selbst.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück">←</a>
+    <div class="q-topbar-title">Station 2 · Teste selbst</div>
+    <div class="q-topbar-badge">✓ Prüfen</div>
+    <a class="q-lang" href="../../en/stations/2-bloch-sphere/teste-selbst.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Vor-Ort-Challenges</div>
+    <h1 class="q-h1">Teste selbst</h1>
+    <p class="q-lead" style="max-width:440px;margin-left:auto;margin-right:auto;font-size:15.5px;">
+      An jeder Kugel liegt eine Aufgabe. Führ die Drehung mit dem
+      <strong>Magneten am Modell</strong> aus, lies das Ergebnis ab — und
+      prüf es gleich hier.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-note-blue">
+      <div class="q-note-title">Bevor du startest</div>
+      <div class="q-body">
+        Jede Aufgabe beginnt bei einem klaren Zustand — dreh den Magneten
+        zuerst zurück auf den <strong>Startpunkt</strong> und schau genau auf die Achsenbeschriftung.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="level-pills" data-level-pills></div>
+  </div>
+
+  <div class="q-wrap q-mt-sm" data-challenges></div>
+
+  <noscript>
+    <div class="q-wrap q-mt">
+      <div class="q-note">
+        <div class="q-note-title">JavaScript ist aus</div>
+        <div class="q-body">
+          Ohne JavaScript lassen sich die Antworten hier nicht prüfen. Die
+          Erklärseiten der Station funktionieren aber weiterhin.
+        </div>
+      </div>
+    </div>
+  </noscript>
+
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+<script src="../../assets/bloch-gates.js"></script>
+<script src="challenges-data.js"></script>
+<script src="teste-selbst.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editoren
+.vscode/
+.idea/
+*.swp
+
+# OneDrive-Konfliktdateien
+*-Konflikt-*
+*(1).html
+
+# Werkzeuge
+.claude/
+__pycache__/
+
+# Interne Arbeitsdaten (Redaktionsnotizen, nicht freigegebene Einträge) —
+# bleiben lokal; die Personenseiten daraus sind veröffentlicht.
+stations/4-meettheteam/team-data.json

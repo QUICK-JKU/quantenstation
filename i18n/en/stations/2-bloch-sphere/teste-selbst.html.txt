@@ -1,0 +1,29 @@
+# Englische Texte für stations/2-bloch-sphere/teste-selbst.html — siehe tools/build-en.py
+
+de: Teste selbst · Bloch-Kugel
+en: Test yourself · Bloch Sphere
+
+de: 20 Vor-Ort-Challenges für die Bloch-Kugel-Station, in vier Stufen — dreh am Modell, dann prüf dein Ergebnis hier.
+en: 20 on-site challenges for the Bloch sphere station, in four levels — turn the model, then check your result here.
+
+de: Station 2 · Teste selbst
+en: Station 2 · Test yourself
+
+de: ✓ Prüfen
+en: ✓ Check
+
+de: Vor-Ort-Challenges
+en: On-site challenges
+
+de: An jeder Kugel liegt eine Aufgabe. Führ die Drehung mit dem <strong>Magneten am Modell</strong> aus, lies das Ergebnis ab — und prüf es gleich hier.
+en: There is a task at every sphere. Carry out the rotation with the <strong>magnet on the model</strong>, read off the result — and check it right here.
+
+de: Bevor du startest
+en: Before you start
+
+de: Jede Aufgabe beginnt bei einem klaren Zustand — dreh den Magneten zuerst zurück auf den <strong>Startpunkt</strong> und schau genau auf die Achsenbeschriftung.
+en: Every task starts from a clear state — first turn the magnet back to the <strong>starting point</strong> and look closely at the axis labels.
+
+de: Ohne JavaScript lassen sich die Antworten hier nicht prüfen. Die Erklärseiten der Station funktionieren aber weiterhin.
+en: Without JavaScript the answers can't be checked here. The station's explanation pages still work, though.
+

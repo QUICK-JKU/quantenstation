@@ -1,0 +1,56 @@
+# Englische Texte für stations/2-bloch-sphere/challenges-data.js — siehe tools/build-en.py
+
+de: |0⟩ = +Z (Nordpol), |1⟩ = -Z (Südpol)
+en: |0⟩ = +Z (north pole), |1⟩ = -Z (south pole)
+
+de: Polarwinkel ab +Z, in Grad
+en: polar angle from +Z, in degrees
+
+de: Azimut ab +X Richtung +Y, 0-360°, an den Polen bedeutungslos
+en: azimuth from +X towards +Y, 0-360°, meaningless at the poles
+
+de: rechtshändig; Rz(90°) dreht +X nach +Y
+en: right-handed; Rz(90°) turns +X into +Y
+
+de: X/Y/Z/H = 180°-Drehungen, S = Rz(90°), S† = Rz(-90°), T = Rz(45°), T† = Rz(-45°)
+en: X/Y/Z/H = 180° rotations, S = Rz(90°), S† = Rz(-90°), T = Rz(45°), T† = Rz(-45°)
+
+de: unsichtbar auf der Kugel — spielt nie eine Rolle
+en: invisible on the sphere — never matters
+
+de: Leicht
+en: Easy
+
+de: Mittel
+en: Medium
+
+de: Schwer
+en: Hard
+
+de: Experte
+en: Expert
+
+de: Sdg
+en: =
+
+de: Verwandle |0⟩ in |1⟩ — nur mit H und S. Geht es mit möglichst wenigen Gattern?
+en: Turn |0⟩ into |1⟩ — using only H and S. Can you do it with as few gates as possible?
+
+de: Füll die Lücke, sodass |0⟩ am Ende bei |1⟩ landet.
+en: Fill the gap so that |0⟩ ends up at |1⟩.
+
+de: Tdg
+en: =
+
+de: Mysteriöses Gatter: |0⟩ bleibt |0⟩, aber |+⟩ wird zu |−i⟩. Wie heißt es?
+en: Mystery gate: |0⟩ stays |0⟩, but |+⟩ becomes |−i⟩. What is it called?
+
+de: S† = Rz(−90°): lässt die z-Achse fest, dreht +X nach −Y.
+en: S† = Rz(−90°): keeps the z-axis fixed, turns +X into −Y.
+
+de: Start bei |+⟩, wende nur T an. Wie oft, bis du wieder bei |+⟩ bist? Wie oft, bis du bei |−⟩ bist?
+en: Start at |+⟩ and apply only T. How many times until you are back at |+⟩? How many until you reach |−⟩?
+
+de: Reihenfolge zählt: von |0⟩ aus einmal A, dann getrennt B. Wo landest du jeweils?
+en: Order matters: starting from |0⟩, do A once, then separately B. Where do you end up in each case?
+

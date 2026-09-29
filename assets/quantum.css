@@ -1,0 +1,815 @@
+/* ============================================================
+   Quantenstation · 60 Jahre JKU
+   Gemeinsames Design-System für alle Stationen.
+   Mobile first — alles ist für das Handy gebaut. Auf Tablet und
+   Laptop bleibt es eine einzelne, nur etwas breitere Spalte
+   (siehe Abschnitt 12a). Beim Zoomen und bei wenig Bildhöhe
+   geben Kopf- und Fußleiste Platz frei (Abschnitt 12b).
+   ============================================================ */
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  /* Flächen */
+  --bg:        #f3efe6;
+  --surface:   #fbf9f3;
+  --card:      #ffffff;
+
+  /* Schrift */
+  --ink:       #14161c;
+  --muted:     #6a655c;
+  --faint:     #8a847a;
+
+  /* Quantenfarben (aus den Rätseln) */
+  --blue:      #1f5bff;
+  --red:       #ff352b;
+  --purple:    #8b3dff;
+  --coral:     #ff5d4a;
+  --green:     #1f8a5b;
+  --green-dk:  #14603f;
+  --amber:     #c98a1a;
+  --danger:    #c0392b;
+
+  /* Linien & Schatten */
+  --line:      rgba(20, 22, 28, .12);
+  --line-soft: rgba(20, 22, 28, .08);
+  --shadow-sm: 0 6px 16px rgba(20, 22, 28, .07);
+  --shadow-md: 0 8px 22px rgba(20, 22, 28, .10);
+  --shadow-lg: 0 14px 34px rgba(20, 22, 28, .13);
+
+  /* Radien */
+  --r-sm: 11px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+
+  /* Typo */
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --wrap: 460px;
+  --pad:  18px;
+
+  /* Safe areas (iPhone Notch / Home-Indicator) */
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+
+/* ---------- 2. Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* Lange deutsche Wörter dürfen notfalls umbrechen, statt aus
+     ihrem Kasten zu ragen und Nachbarn zu überdecken. */
+  overflow-wrap: break-word;
+  /* Platz für die fixe Fußleiste */
+  padding-bottom: calc(72px + var(--safe-b));
+}
+
+body.q-no-bottombar { padding-bottom: var(--safe-b); }
+
+img, svg { max-width: 100%; }
+h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+ul, ol { padding-left: 1.25em; }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--purple); }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+/* Kein blaues Tap-Highlight auf iOS */
+a, button, [role="button"], .q-tap {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---------- 3. Layout ---------- */
+.q-wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.q-main {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* Der weiche Farbschimmer am Seitenkopf */
+.q-glow {
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  transform: translateX(-50%);
+  /* nie breiter als der Viewport, sonst entsteht seitliches Scrollen */
+  width: min(460px, 100%);
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(31, 91, 255, .14),
+    rgba(255, 53, 43, .09),
+    transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.q-main > :not(.q-glow) { position: relative; z-index: 1; }
+
+.q-stack  { display: flex; flex-direction: column; gap: 14px; }
+.q-center { text-align: center; }
+.q-mt     { margin-top: 22px; }
+.q-mt-sm  { margin-top: 12px; }
+
+/* ---------- 4. Kopfleiste ---------- */
+.q-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-top: var(--safe-t);
+  background: rgba(243, 239, 230, .88);
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.q-topbar-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  min-height: 52px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.q-back {
+  flex: none;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  font-size: 19px; line-height: 1;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+.q-back:active { transform: scale(.93); }
+
+.q-topbar-title {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: clamp(13px, 3.6vw, 16px);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.q-topbar-badge {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(139, 61, 255, .10);
+  border: 1px solid rgba(139, 61, 255, .28);
+  color: var(--purple);
+}
+
+/* Sprachumschalter DE / EN (Kopfleiste; auf der Startseite in .q-langrow) */
+.q-lang {
+  flex: none;
+  min-width: 44px;
+  height: 40px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--ink);
+}
+.q-lang:hover { color: var(--purple); border-color: rgba(139, 61, 255, .45); }
+.q-lang:active { transform: scale(.94); }
+.q-langrow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+  padding-top: var(--safe-t);
+}
+
+/* ---------- 5. Fußleiste ---------- */
+.q-bottombar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 60;
+  padding-bottom: var(--safe-b);
+  background: rgba(243, 239, 230, .94);
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  border-top: 1px solid var(--line-soft);
+}
+
+.q-bottombar-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.q-navitem {
+  flex: 1 1 0;
+  /* min-width:0 ist nötig, damit sechs Punkte auch auf 320px-Displays
+     schrumpfen dürfen — sonst erzwingen sie horizontales Scrollen. */
+  min-width: 0;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--faint);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-align: center;
+  padding: 6px 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.q-navitem .ico { font-size: 20px; line-height: 1; }
+.q-navitem[aria-current="page"] { color: var(--blue); }
+.q-navitem:active { background: rgba(20, 22, 28, .05); }
+
+/* ---------- 6. Typografie ---------- */
+.q-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+/* Überschriften und schmale Beschriftungen: sehr lange Wörter
+   (ab 12 Zeichen) werden mit Trennstrich getrennt, kurze nie. */
+.q-h1, .q-h2, .q-h3, .q-tile-title, .q-tile-sub, .q-note-title,
+.q-kv-key, .q-acc > summary, .q-eyebrow, .q-topbar-title {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 12 5 5;
+}
+
+.q-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 10vw, 48px);
+  line-height: .96;
+  letter-spacing: -.02em;
+  margin-top: 8px;
+}
+
+.q-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(22px, 6.5vw, 27px);
+  line-height: 1.08;
+  letter-spacing: -.015em;
+}
+
+.q-h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.q-lead {
+  margin-top: 12px;
+  font-size: 16.5px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.q-body { font-size: 15.5px; line-height: 1.55; }
+.q-small { font-size: 15px; line-height: 1.5; color: var(--muted); }
+.q-fine  { font-size: 13.5px; line-height: 1.5; color: var(--faint); }
+
+.q-mono { font-family: var(--font-mono); }
+.t-blue { color: var(--blue); }
+.t-red { color: var(--red); }
+.t-purple { color: var(--purple); }
+.t-green { color: var(--green); }
+.t-muted { color: var(--muted); }
+
+/* ---------- 7. Karten ---------- */
+.q-card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  padding: 16px;
+}
+
+.q-card-soft {
+  background: var(--surface);
+  border: none;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 16px;
+}
+
+.q-note {
+  border-radius: var(--r-md);
+  background: rgba(139, 61, 255, .09);
+  border: 1.5px solid rgba(139, 61, 255, .28);
+  padding: 13px 16px;
+}
+.q-note-title {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.q-note-blue  { background: rgba(31, 91, 255, .08); border-color: rgba(31, 91, 255, .28); }
+.q-note-blue .q-note-title { color: var(--blue); }
+.q-note-green { background: rgba(31, 138, 91, .09); border-color: rgba(31, 138, 91, .30); }
+.q-note-green .q-note-title { color: var(--green); }
+
+/* ---------- 8. Listen-Links (Navigation) ---------- */
+.q-list { display: flex; flex-direction: column; gap: 11px; }
+
+.q-tile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 16px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  transition: transform .12s, box-shadow .12s;
+}
+.q-tile:hover { color: var(--ink); box-shadow: var(--shadow-md); }
+.q-tile:active { transform: scale(.985); }
+
+.q-tile-num {
+  flex: none;
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  background: var(--blue);
+}
+.q-tile-num.c-red    { background: var(--red); }
+.q-tile-num.c-purple { background: var(--purple); }
+.q-tile-num.c-green  { background: var(--green); }
+.q-tile-num.c-coral  { background: var(--coral); }
+.q-tile-num.c-ink    { background: var(--ink); }
+
+.q-tile-txt { flex: 1; min-width: 0; }
+.q-tile-title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.15;
+}
+.q-tile-sub {
+  display: block;
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+.q-tile-arrow { flex: none; color: var(--faint); font-size: 20px; }
+
+.q-tile.is-done { border-color: rgba(31, 138, 91, .45); }
+.q-tile.is-done .q-tile-num { background: var(--green); }
+
+/* ---------- 9. Buttons ---------- */
+.q-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: var(--r-sm);
+  background: var(--card);
+  border: 1.5px solid rgba(20, 22, 28, .16);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+.q-btn:active { transform: scale(.97); }
+.q-btn:hover { color: var(--ink); }
+
+.q-btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.q-btn-primary:hover { color: #fff; }
+
+.q-btn-green {
+  background: var(--green);
+  border-color: var(--green-dk);
+  color: #fff;
+}
+.q-btn-green:hover { color: #fff; }
+
+.q-btn-block { display: flex; width: 100%; }
+
+/* ---------- 10. Rätsel-Bausteine ---------- */
+
+/* Code-Ziffern (Erfolgsanzeige) */
+.q-code { display: flex; gap: 8px; justify-content: center; }
+.q-code-digit {
+  width: 52px; height: 64px;
+  border-radius: 12px;
+  background: var(--green);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 38px;
+  box-shadow: 0 8px 20px rgba(31, 138, 91, .35);
+}
+
+.q-success {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.q-success-label {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: .07em;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+}
+[hidden] { display: none !important; }
+
+/* Schieberegler */
+input[type=range].q-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  border-radius: 12px;
+  outline: none;
+  background: linear-gradient(90deg, var(--blue), var(--purple) 50%, var(--red));
+  margin: 0;
+}
+input[type=range].q-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 4px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35);
+  cursor: pointer;
+}
+input[type=range].q-slider::-moz-range-thumb {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 4px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35);
+  cursor: pointer;
+}
+
+/* Auswahlfelder */
+select.q-select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%236a655c' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  background-size: 10px;
+  padding-right: 26px;
+}
+
+/* Fortschrittsbalken */
+.q-meter {
+  height: 8px;
+  border-radius: 6px;
+  background: var(--line-soft);
+  overflow: hidden;
+}
+.q-meter-fill {
+  height: 100%;
+  width: 0;
+  background: var(--green);
+  transition: width .12s, background .12s;
+}
+
+/* Statuszeile */
+.q-status {
+  min-height: 24px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--faint);
+}
+.q-status.is-bad  { color: var(--danger); }
+.q-status.is-good { color: var(--green); }
+
+/* Rüttel-Animation bei Fehlern */
+@keyframes q-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(3px); }
+}
+.q-shake { animation: q-shake .4s ease; }
+
+@keyframes q-pulse {
+  0%, 100% { transform: scale(1); opacity: .55; }
+  50% { transform: scale(1.06); opacity: .9; }
+}
+
+/* ---------- 11. Hilfsklassen ---------- */
+.q-divider {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  margin: 24px 0;
+}
+
+.q-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: var(--muted);
+}
+
+/* Schlüssel-Wert-Liste. Die Schlüsselspalte ist so breit wie der
+   längste Schlüssel (mindestens 86px, höchstens 40 %), damit sich
+   Schlüssel und Text nie überlappen. Die Zeilen selbst sind nur
+   Hüllen (display: contents) — das Raster liegt auf .q-kv. */
+.q-kv {
+  display: grid;
+  grid-template-columns: minmax(86px, max-content) minmax(0, 1fr);
+  column-gap: 12px;
+  row-gap: 10px;
+  align-items: baseline;
+}
+.q-kv-row { display: contents; }
+.q-kv-key {
+  max-width: 40vw;
+  font-family: var(--font-mono);
+  font-size: 14.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.q-kv-val {
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 500;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 12 5 5;
+}
+
+/* Sehr schmal (kleine Handys, starker Zoom): Schlüssel über den Text. */
+@media (max-width: 340px) {
+  .q-kv { grid-template-columns: minmax(0, 1fr); row-gap: 2px; }
+  .q-kv-val + .q-kv-key, .q-kv-row + .q-kv-row > .q-kv-key { margin-top: 10px; }
+}
+
+/* Aufklappbare Abschnitte (Info / FAQ) */
+.q-acc {
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.q-acc + .q-acc { margin-top: 10px; }
+.q-acc > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 15px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.q-acc > summary::-webkit-details-marker { display: none; }
+.q-acc > summary::after {
+  content: '+';
+  margin-left: auto;
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--faint);
+  transition: transform .18s;
+}
+.q-acc[open] > summary::after { transform: rotate(45deg); }
+.q-acc-body {
+  padding: 0 16px 16px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.q-acc-body strong { color: var(--ink); }
+
+/* Bildschirmleser-only */
+.q-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- 12. Sehr kleine Geräte und starker Zoom ----------
+   Bei 200–400 % Browser-Zoom wird der Viewport rechnerisch sehr
+   schmal (z. B. 1280px / 400 % = 320px). Dann wird verdichtet. */
+@media (max-width: 360px) {
+  :root { --pad: 14px; }
+  .q-code-digit { width: 46px; height: 58px; font-size: 33px; }
+  .q-navitem { font-size: 9.5px; letter-spacing: 0; }
+  .q-navitem .ico { font-size: 18px; }
+  .q-tile { gap: 11px; padding: 13px 13px; }
+  .q-tile-num { width: 38px; height: 38px; font-size: 18px; border-radius: 11px; }
+  .q-tile-arrow { font-size: 17px; }
+  .q-note-title { letter-spacing: .1em; }
+  /* Platz für den Sprachumschalter: das Abzeichen tritt zurück. */
+  .q-topbar-badge { display: none; }
+}
+
+@media (max-width: 300px) {
+  :root { --pad: 10px; }
+  .q-code { gap: 5px; }
+  .q-code-digit { width: 40px; height: 50px; font-size: 28px; border-radius: 10px; }
+  .q-tile-arrow { display: none; }
+  /* Fußleiste: nur noch Symbole; der Text bleibt für Screenreader. */
+  .q-navitem { font-size: 0; gap: 0; min-height: 50px; }
+  .q-navitem .ico { font-size: 20px; }
+  .q-btn { padding-left: 14px; padding-right: 14px; }
+}
+
+/* ---------- 12a. Tablet und Laptop ----------
+   Die Seite bleibt eine einzelne, hochformatige Spalte — sie wird
+   nur etwas breiter und luftiger, statt am Rand zu kleben. */
+@media (min-width: 600px) {
+  :root { --wrap: 560px; --pad: 22px; }
+  .q-main { padding-top: 32px; padding-bottom: 56px; }
+  .q-mt { margin-top: 28px; }
+  .q-glow { width: min(620px, 100%); height: 560px; top: -200px; }
+  .q-lead { font-size: 17.5px; }
+  .q-body { font-size: 16px; }
+  .q-card, .q-card-soft { padding: 18px 20px; }
+  .q-tile { padding: 17px 18px; }
+}
+
+@media (min-width: 1000px) {
+  :root { --wrap: 640px; }
+  .q-main { padding-top: 40px; }
+  .q-lead { font-size: 18px; }
+  .q-body { font-size: 16.5px; }
+}
+
+/* ---------- 12b. Wenig Bildhöhe (Zoom, Querformat) ----------
+   Klebende Kopfleiste und fixe Fußleiste würden sonst den Großteil
+   des Bildschirms belegen. Sie scrollen dann einfach mit. */
+@media (max-height: 520px) {
+  .q-topbar { position: relative; }
+  .q-bottombar { position: static; }
+  body { padding-bottom: 0; }
+}
+
+/* ---------- 13. Reduzierte Bewegung ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- 13b. Die zwei Kisten (Gravur mit Kopfleiste) ----------
+   Gleicher Aufbau wie auf dem Druckplakat unter
+   stations/1-schroedinger/plakat/: dunkle Kopfleiste, hellere Flaeche,
+   darin die Gravur. Verwendet auf der Stationsseite und auf den beiden
+   Raetselseiten. Die Farbe kommt ueber .k-1 (gruen) oder .k-2 (rot). */
+
+.q-kisten { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+.q-kiste {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.q-kiste-kopf {
+  color: #fff;
+  padding: 9px 15px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.q-kiste-kopf em { font-style: normal; font-weight: 600; opacity: .85; font-size: 12px; }
+.q-kiste-flaeche { padding: 13px; }
+.q-kiste-flaeche img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  display: block;
+  /* Die Gravur wird ganz gezeigt, nicht beschnitten. */
+  object-fit: contain;
+  background: #fff;
+}
+
+.q-kiste.k-1 .q-kiste-kopf { background: linear-gradient(135deg, var(--green) 0%, var(--green-dk) 100%); }
+.q-kiste.k-1 .q-kiste-flaeche { background: rgba(31, 138, 91, .10); }
+.q-kiste.k-2 .q-kiste-kopf { background: linear-gradient(135deg, var(--red) 0%, #a3221b 100%); }
+.q-kiste.k-2 .q-kiste-flaeche { background: rgba(255, 53, 43, .09); }
+
+/* ---------- 14. Druck ---------- */
+@media print {
+  .q-topbar, .q-bottombar, .q-glow { display: none !important; }
+  body { padding-bottom: 0; background: #fff; }
+}

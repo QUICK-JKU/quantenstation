@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Schaltkreise lesen · QuantumTable</title>
+<meta name="description" content="Drähte, Gatter, Messung: die Notation von Quantenschaltkreisen in wenigen Minuten.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  .diagram {
+    width: 100%;
+    margin: 12px 0 0;
+    padding: 10px;
+    border-radius: var(--r-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    overflow-x: auto;
+  }
+  .diagram svg { display: block; height: auto; min-width: 280px; }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="info.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/3-quantumtable/info.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück">←</a>
+    <div class="q-topbar-title">Station 3 · Notation</div>
+    <div class="q-topbar-badge">? Info</div>
+    <a class="q-lang" href="../../en/stations/3-quantumtable/info.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap">
+    <div class="q-eyebrow">Notation</div>
+    <h1 class="q-h1">Schaltkreise<br>lesen</h1>
+    <p class="q-lead">
+      Ein Quantenschaltkreis liest sich wie Noten: <strong>von links nach
+      rechts</strong>, eine Zeile pro Qubit.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">1. Die „Drähte“</h2>
+    <p class="q-body q-mt-sm">
+      Jede waagrechte Linie ist ein Qubit. Sie ist <em>kein</em> Kabel — sie
+      ist eine <strong>Zeitachse</strong>. Links steht der Anfangszustand,
+      meistens <span class="q-mono">|0⟩</span>, rechts das Ende.
+    </p>
+    <div class="diagram">
+      <svg viewBox="0 0 300 90" role="img" aria-label="Zwei Qubit-Drähte">
+        <text x="4" y="31" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="700" fill="#1f5bff">|0⟩</text>
+        <text x="4" y="71" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="700" fill="#1f5bff">|0⟩</text>
+        <line x1="34" y1="26" x2="284" y2="26" stroke="rgba(20,22,28,.32)" stroke-width="2"/>
+        <line x1="34" y1="66" x2="284" y2="66" stroke="rgba(20,22,28,.32)" stroke-width="2"/>
+        <text x="160" y="16" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2" fill="#8a847a">ZEIT →</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">2. Die Gatter</h2>
+    <p class="q-body q-mt-sm">
+      Ein Kästchen auf einer Linie ist ein <strong>Gatter</strong> — eine
+      Drehung des Zustands. Auf der Bloch-Kugel vor Ort kannst du dir das ansehen:
+      <a href="../2-bloch-sphere/simulation.html">Gatter sind Drehungen</a>.
+    </p>
+    <div class="diagram">
+      <svg viewBox="0 0 300 90" role="img" aria-label="Ein H-Gatter auf dem oberen Draht">
+        <text x="4" y="31" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="700" fill="#1f5bff">|0⟩</text>
+        <text x="4" y="71" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="700" fill="#1f5bff">|0⟩</text>
+        <line x1="34" y1="26" x2="284" y2="26" stroke="rgba(20,22,28,.32)" stroke-width="2"/>
+        <line x1="34" y1="66" x2="284" y2="66" stroke="rgba(20,22,28,.32)" stroke-width="2"/>
+        <rect x="98" y="9" width="34" height="34" rx="9" fill="#8b3dff"/>
+        <text x="115" y="33" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="18" font-weight="800" fill="#fff">H</text>
+        <text x="115" y="60" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#6a655c">erzeugt Superposition</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">3. Der Punkt und das Kreuz</h2>
+    <p class="q-body q-mt-sm">
+      Ein <strong>ausgefüllter Punkt</strong> markiert das Kontroll-Qubit, das
+      <strong>⊕-Kreuz</strong> das Ziel. Zusammen ergeben sie ein
+      <strong>CNOT</strong>-Gatter: „Kippe das Ziel, aber nur wenn die Kontrolle 1
+      ist.“
+    </p>
+    <div class="diagram">
+      <svg viewBox="0 0 300 90" role="img" aria-label="Ein CNOT-Gatter">
+        <text x="4" y="31" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="700" fill="#1f5bff">|0⟩</text>
+        <text x="4" y="71" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="700" fill="#1f5bff">|0⟩</text>
+        <line x1="34" y1="26" x2="284" y2="26" stroke="rgba(20,22,28,.32)" stroke-width="2"/>
+        <line x1="34" y1="66" x2="284" y2="66" stroke="rgba(20,22,28,.32)" stroke-width="2"/>
+        <line x1="150" y1="26" x2="150" y2="66" stroke="#14161c" stroke-width="2.5"/>
+        <circle cx="150" cy="26" r="6" fill="#14161c"/>
+        <circle cx="150" cy="66" r="12" fill="none" stroke="#14161c" stroke-width="2.5"/>
+        <line x1="138" y1="66" x2="162" y2="66" stroke="#14161c" stroke-width="2.5"/>
+        <line x1="150" y1="54" x2="150" y2="78" stroke="#14161c" stroke-width="2.5"/>
+        <text x="196" y="22" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#6a655c">Kontrolle</text>
+        <text x="196" y="70" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#6a655c">Ziel</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">4. Die Messung</h2>
+    <p class="q-body q-mt-sm">
+      Das Symbol mit dem Zeiger steht ganz rechts: die <strong>Messung</strong>.
+      Sie beendet die Superposition, und heraus kommen ganz normale Bits.
+    </p>
+    <p class="q-body q-mt-sm">
+      Und weil das Ergebnis zufällig ist, führt man denselben Schaltkreis
+      <strong>viele tausend Mal</strong> aus. Was zählt, ist die
+      <em>Verteilung</em>, nicht ein einzelnes Ergebnis.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-list">
+      <a class="q-tile" href="schaltkreis.html">
+        <span class="q-tile-num c-red">▶</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Selbst ausprobieren</span>
+          <span class="q-tile-sub">Bau den Bell-Zustand in zwei Tipps</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+</body>
+</html>

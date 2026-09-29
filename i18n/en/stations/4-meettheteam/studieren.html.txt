@@ -1,0 +1,104 @@
+# Englische Texte für stations/4-meettheteam/studieren.html — siehe tools/build-en.py
+
+de: Wege in die Quantenphysik · Meet the Team
+en: Paths into quantum physics · Meet the Team
+
+de: Was man studiert, wenn man mit Quantenphysik arbeiten will — und was man dafür nicht braucht.
+en: What to study if you want to work with quantum physics — and what you don't need for it.
+
+de: 🎓 Wege
+en: 🎓 Paths
+
+de: Für alle, die weitermachen wollen
+en: For everyone who wants to keep going
+
+de: Wege in die<br>Quantenphysik
+en: Paths into<br>quantum physics
+
+de: Es gibt <strong>nicht den einen</strong> Weg. Es gibt drei Türen, die alle in denselben Raum führen.
+en: There is <strong>no single</strong> path. There are three doors that all lead into the same room.
+
+de: Physik
+en: Physics
+
+de: Die Frage: <em>Was passiert da eigentlich?</em> Du beschäftigst dich mit realen Systemen — Atomen, Photonen, Festkörpern — und damit, wie man sie im Labor kontrolliert. Viel Theorie, viel Experiment.
+en: The question: <em>What is actually going on?</em> You work with real systems — atoms, photons, solids — and with how to control them in the lab. Lots of theory, lots of experiment.
+
+de: Informatik
+en: Computer science
+
+de: Die Frage: <em>Was kann man damit ausrechnen?</em> Du entwirfst Algorithmen, Software und Fehlerkorrektur. Für diesen Weg musst du nicht wissen, wie ein Qubit gebaut ist — sondern was es kann.
+en: The question: <em>What can you compute with it?</em> You design algorithms, software and error correction. For this path you don't need to know how a qubit is built — but what it can do.
+
+de: Mathematik
+en: Mathematics
+
+de: Die Frage: <em>Warum funktioniert das?</em> Die Struktur hinter der Quantenmechanik ist lineare Algebra. Wer sie wirklich versteht, sieht Zusammenhänge, die anderen verborgen bleiben.
+en: The question: <em>Why does it work?</em> The structure behind quantum mechanics is linear algebra. Those who really understand it see connections that stay hidden to others.
+
+de: An der JKU lassen sich diese Richtungen gut kombinieren — etwa über Technische Physik, Informatik oder Mathematik-Studien mit passenden Schwerpunkten. Die aktuellen Studienpläne findest du auf <a href="https://www.jku.at" rel="noopener">jku.at</a>.
+en: At JKU these directions combine well — for example through Technical Physics, Computer Science or Mathematics degrees with suitable specialisations. You'll find the current curricula at <a href="https://www.jku.at/en" rel="noopener">jku.at</a>.
+
+de: Was du wirklich brauchst
+en: What you really need
+
+de: Wichtig
+en: Important
+
+de: Du musst es aushalten können, etwas <strong>drei Wochen lang nicht</strong> zu verstehen — und trotzdem weitermachen.
+en: You have to be able to cope with <strong>not understanding</strong> something <strong>for three weeks</strong> — and keep going anyway.
+
+de: Hilfreich
+en: Helpful
+
+de: Freude am Rechnen und Programmieren. Beides lernst du aber auch noch im Studium.
+en: Enjoying maths and programming. But you'll learn both during your studies too.
+
+de: Nicht nötig
+en: Not necessary
+
+de: Du brauchst keine Eins in Mathe. Du musst kein „Naturtalent“ sein. Du musst nicht mit 17 schon wissen, was du willst.
+en: You don't need top marks in maths. You don't have to be a “natural talent”. You don't have to know at 17 what you want.
+
+de: Das erste Studienjahr ist in allen drei Richtungen ziemlich zäh: Analysis, lineare Algebra, Mechanik, Programmieren. Quantenkurse kommen erst viel später vor.
+en: The first year of study is pretty tough in all three directions: analysis, linear algebra, mechanics, programming. Quantum courses only come much later.
+
+de: Was du schon jetzt tun kannst
+en: What you can do right now
+
+de: Rechnen mit komplexen Zahlen
+en: Calculating with complex numbers
+
+de: Komplexe Zahlen sind die Sprache der Quantenmechanik und meistens lernt man nur wenig darüber in der Schule.
+en: Complex numbers are the language of quantum mechanics, and school usually teaches you only a little about them.
+
+de: Etwas programmieren
+en: Do some programming
+
+de: Python reicht völlig. Es gibt frei verfügbare Bibliotheken, mit denen du Quantenschaltkreise auf deinem eigenen Rechner simulieren kannst.
+en: Python is perfectly enough. There are freely available libraries you can use to simulate quantum circuits on your own computer.
+
+de: Fragen stellen
+en: Ask questions
+
+de: Heute zum Beispiel. Unis wirken von außen oft verschlossen, sind es aber gar nicht: Es gibt Schnuppertage, offene Vorlesungen und Leute, die gerne erklären. Frag uns einfach nach dem, was dich interessiert.
+en: Today, for example. From the outside, universities often seem closed, but they really aren't: there are taster days, open lectures and people who love to explain. Just ask us about whatever interests you.
+
+de: Gibt es überhaupt Jobs in dem Bereich?
+en: Are there actually jobs in this field?
+
+de: Ja — und zwar deutlich mehr, als die reine Quantenforschung hergibt. Wer Physik, Informatik oder Mathematik studiert, landet häufig in Datenanalyse, Softwareentwicklung, Simulation oder Messtechnik. Die Denkweise ist gefragter als das konkrete Fachwissen.
+en: Yes — and considerably more than pure quantum research alone offers. People who study physics, computer science or mathematics often end up in data analysis, software development, simulation or measurement technology. The way of thinking is in greater demand than the specific expertise.
+
+de: Muss ich ins Ausland?
+en: Do I have to go abroad?
+
+de: Du musst nicht. Aber Physik ist ein internationales Fach, und ein Semester oder eine Doktorarbeit im Ausland ist üblich. Österreich hat in der Quantenforschung übrigens einen sehr guten Ruf.
+en: You don't have to. But physics is an international field, and a semester or a PhD abroad is common. By the way, Austria has a very good reputation in quantum research.
+
+de: Ist das nicht alles nur Hype?
+en: Isn't it all just hype?
+
+de: Teilweise, ja. Manche Versprechen sind deutlich überzogen, und niemand weiß heute sicher, welche Anwendungen sich durchsetzen. Aber die Physik dahinter ist seit hundert Jahren bestens bestätigt — und die Fähigkeit, einzelne Quantensysteme gezielt zu steuern, ist neu und real.
+en: Partly, yes. Some promises are clearly exaggerated, and nobody knows for sure today which applications will catch on. But the physics behind it has been thoroughly confirmed for a hundred years — and the ability to control individual quantum systems precisely is new and real.
+

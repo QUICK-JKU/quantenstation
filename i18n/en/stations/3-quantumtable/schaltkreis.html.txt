@@ -1,0 +1,122 @@
+# Englische Texte für stations/3-quantumtable/schaltkreis.html — siehe tools/build-en.py
+
+de: Schaltkreis am Handy · QuantumTable
+en: Circuits on your phone · QuantumTable
+
+de: Drei Qubits, echte Simulation: bau einen Schaltkreis und sieh sofort das Ergebnis.
+en: Three qubits, a real simulation: build a circuit and see the result instantly.
+
+de: ▶ 3 Qubits
+en: =
+
+de: Echte Simulation
+en: Real simulation
+
+de: Drei Qubits, alle starten bei <span class="q-mono">|0⟩</span>. Tippe Gatter an — die Rechnung läuft <strong>exakt</strong>, nicht nachgestellt.
+en: Three qubits, all starting at <span class="q-mono">|0⟩</span>. Tap gates — the calculation runs <strong>exactly</strong>, not faked.
+
+de: Aktueller Schaltkreis
+en: Current circuit
+
+de: QUBIT 1<br>oben
+en: QUBIT 1<br>top
+
+de: QUBIT 2<br>mitte
+en: QUBIT 2<br>middle
+
+de: QUBIT 3<br>unten
+en: QUBIT 3<br>bottom
+
+de: CNOT 1→2
+en: =
+
+de: CNOT 1→3
+en: =
+
+de: CNOT 2→1
+en: =
+
+de: CNOT 2→3
+en: =
+
+de: CNOT 3→1
+en: =
+
+de: CNOT 3→2
+en: =
+
+de: ↶ Zurück
+en: ↶ Undo
+
+de: ↺ Leeren
+en: ↺ Clear
+
+de: 📏 100 × messen
+en: 📏 Measure 100 ×
+
+de: ↺ Zähler zurücksetzen
+en: ↺ Reset counter
+
+de: Probier diese aus
+en: Try these
+
+de: H auf Qubit 1 — aus einem sicheren Ergebnis wird ein Münzwurf
+en: H on qubit 1 — a certain result turns into a coin toss
+
+de: H auf Qubit 1, dann CNOT 1→2 — die berühmteste Verschränkung (Qubit 3 bleibt außen vor)
+en: H on qubit 1, then CNOT 1→2 — the most famous entanglement (qubit 3 stays out of it)
+
+de: GHZ-Zustand
+en: GHZ state
+
+de: H auf Qubit 1, dann CNOT 1→2 und 1→3 — drei Qubits, eine Entscheidung
+en: H on qubit 1, then CNOT 1→2 and 1→3 — three qubits, one decision
+
+de: Alles gleich wahrscheinlich
+en: Everything equally likely
+
+de: H auf alle drei Qubits — acht Ergebnisse zu je 12,5 %
+en: H on all three qubits — eight results at 12.5 % each
+
+de: Der Aha-Moment
+en: The aha moment
+
+de: Bau den <strong>Bell-Zustand</strong> und miss 100-mal. Du bekommst nur <span class="q-mono">000</span> und <span class="q-mono">110</span> — Qubit 1 und 2 sind <em>nie</em> uneins. Einzeln ist jedes völlig zufällig, aber die beiden sind immer <strong>einig</strong>. Das ist Verschränkung. Mit dem <strong>GHZ-Zustand</strong> geht es zu dritt: nur <span class="q-mono">000</span> und <span class="q-mono">111</span>.
+en: Build the <strong>Bell state</strong> and measure 100 times. You only get <span class="q-mono">000</span> and <span class="q-mono">110</span> — qubits 1 and 2 <em>never</em> disagree. Each one on its own is completely random, but the two always <strong>agree</strong>. That is entanglement. With the <strong>GHZ state</strong> it works with three: only <span class="q-mono">000</span> and <span class="q-mono">111</span>.
+
+de: Warum kann man damit nicht schneller als Licht funken?
+en: Why can't you use this to signal faster than light?
+
+de: Weil das Ergebnis auf <em>deiner</em> Seite reiner Zufall bleibt — du kannst nicht bestimmen, ob 0 oder 1 herauskommt. Die Übereinstimmung fällt erst auf, wenn beide Seiten ihre Listen vergleichen, und <strong>dafür braucht es einen normalen Kanal</strong>.
+en: Because the result on <em>your</em> side remains pure chance — you can't decide whether 0 or 1 comes out. The agreement only shows up when both sides compare their lists, and <strong>that requires an ordinary channel</strong>.
+
+de: Was macht CNOT genau?
+en: What exactly does CNOT do?
+
+de: „Kippe das Ziel-Qubit, <strong>aber nur wenn</strong> das Kontroll-Qubit 1 ist.“ Steht das Kontroll-Qubit in Superposition, passiert beides gleichzeitig — und damit sind die Qubits verbunden.
+en: “Flip the target qubit, <strong>but only if</strong> the control qubit is 1.” If the control qubit is in superposition, both happen at the same time — and that links the qubits.
+
+de: Warum genau drei Qubits?
+en: Why exactly three qubits?
+
+de: Weil schon zwei <strong>alles Wesentliche</strong> zeigen — und drei zeigen, was danach kommt: acht Ergebnisse statt vier, und Verschränkung, die sich über mehr als ein Paar erstreckt. Jedes weitere Qubit verdoppelt die Zahl der Möglichkeiten. Am QuantumTable vor Ort kannst du mit mehr arbeiten.
+en: Because two already show <strong>everything essential</strong> — and three show what comes next: eight results instead of four, and entanglement that extends over more than one pair. Every additional qubit doubles the number of possibilities. At the QuantumTable on site you can work with more.
+
+de: ? Wie liest man einen Schaltkreis?
+en: ? How do you read a circuit?
+
+de: viewBox
+en: =
+
+de: IBM Plex Mono, monospace
+en: =
+
+de: Bricolage Grotesque, sans-serif
+en: =
+
+de: 🔗 Verschränkt: Qubit
+en: 🔗 Entangled: qubits
+
+de: und
+en: and
+

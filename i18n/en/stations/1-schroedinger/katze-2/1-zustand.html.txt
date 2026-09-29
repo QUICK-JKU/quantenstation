@@ -1,0 +1,20 @@
+# Englische Texte für stations/1-schroedinger/katze-2/1-zustand.html — siehe tools/build-en.py
+
+de: Rätsel 1 · Die zweite Katze
+en: Puzzle 1 · The second cat
+
+de: Schloss 1 der zweiten Schrödinger-Katze: vier Fragen, ein vierstelliger Code.
+en: Lock 1 of the second Schrödinger cat: four questions, one four-digit code.
+
+de: Box 2 · Rätsel 1 von 4
+en: Box 2 · Puzzle 1 of 4
+
+de: Rätsel 1
+en: Puzzle 1
+
+de: Warum 2ⁿ alles verändert
+en: Why 2ⁿ changes everything
+
+de: Was Quantentechnik kann
+en: What quantum technology can do
+

@@ -1,0 +1,65 @@
+# Englische Texte für stations/1-schroedinger/raetsel/3-wellen.html — siehe tools/build-en.py
+
+de: Rätsel 3 · Wellen in Phase
+en: Puzzle 3 · Waves in phase
+
+de: Rätsel 3: Verschiebe drei Wellen, bis ihre Summe die Zielkurve trifft.
+en: Puzzle 3: Shift three waves until their sum matches the target curve.
+
+de: Box 1 · Rätsel 3 von 4
+en: Box 1 · Puzzle 3 of 4
+
+de: Drei Wellen überlagern sich. Verschiebe jede mit ihrem Slider, bis die <strong class="t-green">Summe</strong> genau die <strong>gestrichelte Zielkurve</strong> trifft. Perfekte Interferenz verrät den Code.
+en: Three waves overlap. Shift each one with its slider until the <strong class="t-green">sum</strong> exactly matches the <strong>dashed target curve</strong>. Perfect interference reveals the code.
+
+de: Summe der drei Wellen im Vergleich zur Zielkurve
+en: Sum of the three waves compared with the target curve
+
+de: — — Ziel
+en: — — target
+
+de: Übereinstimmung 0&nbsp;%
+en: Match 0&nbsp;%
+
+de: KONSTRUKTIVE INTERFERENZ ✓
+en: CONSTRUCTIVE INTERFERENCE ✓
+
+de: Weiter zu Rätsel 4 →
+en: On to puzzle 4 →
+
+de: Jeder Slider verschiebt die Phase einer Welle. Nur wenn alle drei genau sitzen, deckt sich die Summe mit der Zielkurve.
+en: Each slider shifts the phase of one wave. Only when all three are exactly right does the sum line up with the target curve.
+
+de: Nimm dir <strong>eine Welle nach der anderen</strong> vor. Schieb Welle 1, bis der Prozentwert nicht mehr steigt, dann Welle 2, dann Welle 3 — und danach noch einmal von vorn zum Feinjustieren. Die Anzeige reagiert empfindlich: Die letzten Prozent brauchen kleine Schritte.
+en: Take <strong>one wave after the other</strong>. Move wave 1 until the percentage stops rising, then wave 2, then wave 3 — and then once more from the start to fine-tune. The display is sensitive: the last few percent need small steps.
+
+de: Wellen addieren sich nicht wie Zahlen, sondern <strong>mit ihrer Phase</strong>. Treffen Berg auf Berg, wird es lauter oder heller — <em>konstruktive</em> Interferenz. Trifft Berg auf Tal, bleibt nichts übrig — <em>destruktive</em> Interferenz. Ein Quantencomputer rechnet genau so: Er richtet die Phasen so aus, dass die falschen Antworten sich auslöschen und die richtige übrig bleibt.
+en: Waves don't add up like numbers, but <strong>with their phase</strong>. When crest meets crest, it gets louder or brighter — <em>constructive</em> interference. When crest meets trough, nothing is left — <em>destructive</em> interference. A quantum computer computes in exactly this way: it aligns the phases so that the wrong answers cancel out and the right one remains.
+
+de: <span class="wave-name"><span class="dot" style="background:
+en: =
+
+de: "></span>Welle
+en: "></span>Wave
+
+de: <path fill="none" stroke="
+en: =
+
+de: " stroke-width="2.5"></path>
+en: =
+
+de: <input type="range" min="0" max="359" value="0"
+en: =
+
+de: aria-label="Phase von Welle
+en: aria-label="Phase of wave
+
+de: ,rgba(20,22,28,.12));">
+en: =
+
+de: svg path
+en: =
+
+de: Übereinstimmung
+en: Match
+

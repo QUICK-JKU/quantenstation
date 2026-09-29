@@ -1,0 +1,89 @@
+# Englische Texte für stations/5-ama/mythen.html — siehe tools/build-en.py
+
+de: Sechs Quanten-Mythen · FAQ
+en: Six quantum myths · FAQ
+
+de: Was über Quantenphysik ständig behauptet wird — und was davon stimmt.
+en: What people keep claiming about quantum physics — and what's actually true.
+
+de: ✗ Check
+en: =
+
+de: Faktencheck
+en: Fact check
+
+de: Sechs<br>Quanten-Mythen
+en: Six<br>quantum myths
+
+de: Kaum ein Gebiet der Physik wird so oft falsch zitiert. Sechs Klassiker — und was tatsächlich dahintersteckt.
+en: Hardly any field of physics is misquoted as often. Six classics — and what's really behind them.
+
+de: Mythos 1
+en: Myth 1
+
+de: „Ein Quantencomputer probiert alle Lösungen gleichzeitig aus.“
+en: “A quantum computer tries all solutions at the same time.”
+
+de: Tatsächlich
+en: Actually
+
+de: Alle Möglichkeiten sind zwar gleichzeitig im Spiel, aber du darfst <strong>nur einmal messen</strong> — und bekommst eine zufällige Antwort. Nützlich wird es erst, wenn man die falschen Möglichkeiten vorher durch <strong>Interferenz auslöscht</strong>. Genau daran scheitern die meisten Ideen für Quantenalgorithmen.
+en: All possibilities are in play at the same time, but you may <strong>only measure once</strong> — and you get a random answer. It only becomes useful if you first <strong>cancel out</strong> the wrong possibilities <strong>through interference</strong>. That's exactly where most ideas for quantum algorithms fail.
+
+de: Mythos 2
+en: Myth 2
+
+de: „Bewusstsein lässt die Wellenfunktion kollabieren.“
+en: “Consciousness makes the wave function collapse.”
+
+de: Es braucht keinen Beobachter mit Bewusstsein — ein Detektor, eine Fotoplatte oder ein einzelnes Luftmolekül genügt. Entscheidend ist die <strong>Wechselwirkung mit der Umgebung</strong>. Die Idee war eine Spekulation einzelner Physiker und wurde durch populäre Bücher berühmt. Belegt ist sie nicht, und heute spielt sie in der Physik keine Rolle.
+en: No conscious observer is needed — a detector, a photographic plate or a single molecule of air is enough. What matters is the <strong>interaction with the surroundings</strong>. The idea was speculation by individual physicists and became famous through popular books. It is not supported by evidence, and today it plays no role in physics.
+
+de: Mythos 3
+en: Myth 3
+
+de: „Verschränkung erlaubt Kommunikation schneller als Licht.“
+en: “Entanglement allows communication faster than light.”
+
+de: Beweisbar nicht. Was du auf deiner Seite siehst, ist reiner Zufall — du kannst das Ergebnis nicht wählen und damit keine Nachricht hineinlegen. Die Übereinstimmung wird erst sichtbar, wenn beide Seiten ihre Ergebnisse vergleichen, und das geht nur über einen <strong>gewöhnlichen Kanal</strong>.
+en: Provably not. What you see on your side is pure chance — you can't choose the result, so you can't put a message into it. The agreement only becomes visible when both sides compare their results, and that only works over an <strong>ordinary channel</strong>.
+
+de: Mythos 4
+en: Myth 4
+
+de: „Die Unschärferelation liegt an unseren ungenauen Messgeräten.“
+en: “The uncertainty principle is down to our imprecise measuring devices.”
+
+de: Nein — sie gilt auch für <strong>perfekte</strong> Geräte. Ort und Impuls sind nicht bloß schwer gleichzeitig messbar, sie <em>existieren</em> nicht gleichzeitig als scharfe Werte. Das ist eine Aussage über die Natur, nicht über unsere Technik.
+en: No — it also holds for <strong>perfect</strong> devices. Position and momentum aren't just hard to measure at the same time, they don't <em>exist</em> as sharp values at the same time. That's a statement about nature, not about our technology.
+
+de: Mythos 5
+en: Myth 5
+
+de: „Quantenphysik zeigt, dass alles möglich ist.“
+en: “Quantum physics shows that anything is possible.”
+
+de: Das Gegenteil. Die Quantenmechanik ist eine der <strong>präzisesten</strong> Theorien überhaupt — manche Vorhersagen stimmen auf zwölf Nachkommastellen. Sie erlaubt nicht alles, sie schreibt sehr genau vor, was passieren darf und mit welcher Wahrscheinlichkeit.
+en: The opposite. Quantum mechanics is one of the <strong>most precise</strong> theories there is — some predictions agree to twelve decimal places. It doesn't allow everything; it prescribes very precisely what may happen and with what probability.
+
+de: Mythos 6
+en: Myth 6
+
+de: „Quantenphysik ist zu schwer, um sie zu verstehen.“
+en: “Quantum physics is too hard to understand.”
+
+de: Die <em>Mathematik</em> ist anspruchsvoll, aber die zentralen Ideen sind zugänglich: Möglichkeiten überlagern sich, sie können sich auslöschen, und Messen verändert das System. Du hast heute drei davon selbst ausprobiert — <strong>das war der schwierige Teil</strong>.
+en: The <em>mathematics</em> is demanding, but the central ideas are accessible: possibilities overlap, they can cancel each other out, and measuring changes the system. You've tried three of them yourself today — <strong>that was the hard part</strong>.
+
+de: Der beste Prüfstein
+en: The best test
+
+de: Echte Physik macht <strong>Vorhersagen mit Zahlen</strong>, die schiefgehen könnten. Wo „Quanten“ nur als Stimmungswort auftaucht — bei Heilung, Energiefeldern, Bewusstsein — ist es fast immer Marketing.
+en: Real physics makes <strong>predictions with numbers</strong> that could turn out wrong. Where “quantum” only appears as a mood word — in healing, energy fields, consciousness — it's almost always marketing.
+
+de: 21 Antworten zum Durchsuchen
+en: 21 answers to search through
+
+de: Alle Stationen auf einen Blick
+en: All stations at a glance
+

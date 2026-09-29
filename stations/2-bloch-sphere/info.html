@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Was ist ein Qubit? · Bloch-Kugel</title>
+<meta name="description" content="Vom Bit zum Qubit — und warum daraus eine Kugel wird.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AE%3C/text%3E%3C/svg%3E">
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="info.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/2-bloch-sphere/info.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück">←</a>
+    <div class="q-topbar-title">Station 2 · Hintergrund</div>
+    <div class="q-topbar-badge">? Info</div>
+    <a class="q-lang" href="../../en/stations/2-bloch-sphere/info.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap">
+    <div class="q-eyebrow">Hintergrund</div>
+    <h1 class="q-h1">Was ist<br>ein Qubit?</h1>
+    <p class="q-lead">
+      Die kürzeste Antwort: das kleinstmögliche Quantensystem — eines mit genau
+      <strong class="t-purple">zwei</strong> möglichen Messergebnissen.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Schritt 1: das Bit</h2>
+    <p class="q-body q-mt-sm">
+      Ein klassisches Bit ist ein Lichtschalter. Aus oder an. 0 oder 1. Dazwischen
+      gibt es nichts. Dein ganzes Handy besteht aus Milliarden solcher Schalter.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Schritt 2: der Dimmer</h2>
+    <p class="q-body q-mt-sm">
+      Ein Qubit wirkt zunächst wie ein <em>Dimmer</em>: Es kann irgendwo
+      zwischen 0 und 1 stehen. Aber Vorsicht — das Bild führt in die Irre.
+    </p>
+    <p class="q-body q-mt-sm">
+      Wenn du ein Qubit misst, bekommst du <strong>nie</strong> „ein bisschen
+      0“. Du bekommst 0 oder 1, ganz klar, wie beim Schalter. Was der Dimmer
+      einstellt, sind nur die <strong>Wahrscheinlichkeiten</strong>.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note">
+      <div class="q-note-title">Der Knackpunkt</div>
+      <div class="q-body">
+        Ein Qubit speichert nicht „0,7“. Es speichert eine Tendenz, bei der
+        Messung 0 oder 1 zu liefern — und diese Tendenz kann sich mit anderen
+        Tendenzen <strong>überlagern und auslöschen</strong>. Das kann kein
+        Dimmer.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Schritt 3: die zweite Zahl</h2>
+    <p class="q-body q-mt-sm">
+      Hier wird es interessant. Zur Beschreibung eines Qubits reicht eine Zahl
+      <em>nicht</em>. Es braucht zwei:
+    </p>
+    <div class="q-card q-mt-sm">
+      <div class="q-kv">
+        <div class="q-kv-row">
+          <span class="q-kv-key">θ Theta</span>
+          <span class="q-kv-val">Wie stark tendiert es zu 0 oder 1? → der <strong>Breitengrad</strong></span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">φ Phi</span>
+          <span class="q-kv-val">Welche Phase hat es? → der <strong>Längengrad</strong></span>
+        </div>
+      </div>
+    </div>
+    <p class="q-body q-mt-sm">
+      Zwei Winkel, die eine Richtung festlegen — das ist exakt die Beschreibung
+      eines Punktes auf einer <strong>Kugeloberfläche</strong>. Und damit hast
+      du die Bloch-Kugel. Sie ist keine Metapher, sondern die exakte Landkarte
+      aller Zustände, die ein Qubit haben kann.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Was ist die Phase?</h2>
+    <p class="q-body q-mt-sm">
+      Denk an eine Welle. Zwei Wellen können gleich hoch sein und trotzdem
+      verschoben — der eine Berg kommt früher als der andere. Diese Verschiebung
+      ist die Phase.
+    </p>
+    <p class="q-body q-mt-sm">
+      Bei <em>einer</em> Messung siehst du davon nichts. Sobald aber zwei Wege
+      wieder zusammenlaufen, entscheidet die Phase alles: Berg auf Berg
+      verstärkt, Berg auf Tal löscht aus. Ein Quantencomputer arbeitet genau
+      damit — er stellt die Phasen so ein, dass die falschen Antworten sich
+      gegenseitig vernichten.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Und was ist daran nützlich?</h2>
+    <p class="q-body q-mt-sm">
+      Ein Qubit allein ist noch nicht beeindruckend. Der Sprung kommt beim
+      Zusammenschalten: Bei <strong>n</strong> Qubits braucht die Beschreibung
+      2<sup>n</sup> Zahlen. Bei 300 Qubits sind das mehr Zahlen, als es Atome im
+      sichtbaren Universum gibt.
+    </p>
+    <p class="q-body q-mt-sm">
+      Der Haken bleibt: Am Ende darfst du nur <strong>einmal messen</strong> und
+      bekommst n Bits heraus. Die Kunst besteht darin, vorher so geschickt zu
+      überlagern, dass ausgerechnet die gesuchte Antwort übrig bleibt. Deshalb
+      sind Quantencomputer keine „schnelleren Computer“, sondern Spezialisten
+      für ganz bestimmte Aufgaben.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-note-blue">
+      <div class="q-note-title">Ehrlich gesagt</div>
+      <div class="q-body">
+        Die Bloch-Kugel funktioniert nur für <strong>ein einziges</strong>
+        Qubit. Für zwei gibt es kein Bild mehr, das man zeichnen könnte — und
+        genau dort wohnt die <strong>Verschränkung</strong>. Schöne Bilder haben
+        in der Physik oft ein Ablaufdatum.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-list">
+      <a class="q-tile" href="simulation.html">
+        <span class="q-tile-num c-purple">▶</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Simulation ausprobieren</span>
+          <span class="q-tile-sub">Zustand drehen, Gatter anwenden, messen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="q-tile" href="teste-selbst.html">
+        <span class="q-tile-num c-red">✓</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Teste selbst</span>
+          <span class="q-tile-sub">Die Vor-Ort-Challenges in vier Stufen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+</body>
+</html>

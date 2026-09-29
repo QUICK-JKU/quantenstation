@@ -1,0 +1,92 @@
+# Englische Texte für stations/1-schroedinger/raetsel/4-labore.html — siehe tools/build-en.py
+
+de: Rätsel 4 · Wer findet den Ort?
+en: Puzzle 4 · Who finds the position?
+
+de: Rätsel 4: Vier Labore, vier Forschende, vier Superpositionen — ein Logikrätsel.
+en: Puzzle 4: Four labs, four researchers, four superpositions — a logic puzzle.
+
+de: Box 1 · Rätsel 4 von 4
+en: Box 1 · Puzzle 4 of 4
+
+de: Vier Quantenlabore stehen nebeneinander (links → rechts: 1 → 4). In jedem arbeitet ein anderer <strong>Forscher</strong> und erforscht eine andere <strong>Superposition</strong>. Ordne sie mit den Hinweisen zu.
+en: Four quantum labs stand side by side (left → right: 1 → 4). In each one a different <strong>researcher</strong> works on a different <strong>superposition</strong>. Match them up using the clues.
+
+de: Hinweise
+en: Clues
+
+de: Jeder Forscher und jede Superposition kommt genau einmal vor. Die Häkchen zeigen, welche Hinweise schon erfüllt sind.
+en: Each researcher and each superposition appears exactly once. The ticks show which clues are already satisfied.
+
+de: Fang mit den Hinweisen an, die <strong>keine Wahl lassen</strong>: Hinweis 3 legt Bob fest, Hinweis 2 legt Labor 4 fest. Danach bleiben für Diana nur noch wenige Plätze — und Hinweis 1 erledigt den Rest.
+en: Start with the clues that <strong>leave no choice</strong>: clue 3 fixes Bob, clue 2 fixes lab 4. After that only a few places are left for Diana — and clue 1 does the rest.
+
+de: Ehrlich gesagt: Dieses Rätsel ist <strong>kein Quanteneffekt</strong>, sondern reine Logik — ausschließen, bis nur eine Möglichkeit übrig bleibt. Genau diese Denkarbeit steckt vor jedem Algorithmus. In der Quantenwelt ist es sogar noch strenger: Manche Größenpaare, etwa <strong>Ort und Impuls</strong>, lassen sich gar nicht gleichzeitig scharf festlegen. Das ist die <strong>Unschärferelation</strong>.
+en: To be honest: this puzzle is <strong>not a quantum effect</strong>, but pure logic — ruling things out until only one possibility is left. That is exactly the thinking that comes before every algorithm. The quantum world is even stricter: some pairs of quantities, such as <strong>position and momentum</strong>, cannot be pinned down sharply at the same time at all. That is the <strong>uncertainty principle</strong>.
+
+de: Alice
+en: =
+
+de: Bob
+en: =
+
+de: Charlie
+en: =
+
+de: Diana
+en: =
+
+de: Ort
+en: Position
+
+de: Spin
+en: =
+
+de: Alice arbeitet im Labor direkt links von dem Forscher, der den Spin untersucht.
+en: Alice works in the lab directly to the left of the researcher who studies spin.
+
+de: Im Labor ganz rechts wird die Energie gemessen.
+en: Energy is measured in the lab on the far right.
+
+de: Bob arbeitet in Labor 2.
+en: Bob works in lab 2.
+
+de: Diana erforscht den Zustand und arbeitet nicht in Labor 1.
+en: Diana studies the state and does not work in lab 1.
+
+de: <option value="
+en: =
+
+de: <div class="lab-n">LABOR
+en: <div class="lab-n">LAB
+
+de: <select class="q-select" aria-label="Forscher in Labor
+en: <select class="q-select" aria-label="Researcher in lab
+
+de: Forscher…
+en: Researcher…
+
+de: <select class="q-select" aria-label="Superposition in Labor
+en: <select class="q-select" aria-label="Superposition in lab
+
+de: Superposition…
+en: =
+
+de: Alle acht Felder ausfüllen…
+en: Fill in all eight fields…
+
+de: ✗ Jeder Name / jede Art nur einmal
+en: ✗ Each name / each kind only once
+
+de: ✗ Noch nicht alle Hinweise erfüllt
+en: ✗ Not all clues satisfied yet
+
+de: ✓ Alle Hinweise erfüllt
+en: ✓ All clues satisfied
+
+de: GELÖST ✓ —
+en: SOLVED ✓ —
+
+de: findet den Ort
+en: finds the position
+

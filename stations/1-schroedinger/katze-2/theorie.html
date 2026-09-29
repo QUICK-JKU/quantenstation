@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Die Rechenregeln · Die zweite Katze</title>
+<meta name="description" content="Alles, was die vier Rätsel der zweiten Katze verlangen: Amplituden, Betragsquadrat, Gatter als Drehungen, Photonenenergie und Bell-Zustände.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="stylesheet" href="../../../assets/quiz.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%90%3C/text%3E%3C/svg%3E">
+<style>
+  /* Sprungmarken nicht unter die klebende Kopfzeile schieben */
+  .th-sec { scroll-margin-top: 64px; }
+  .th-for {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: rgba(20, 22, 28, .06);
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    color: var(--muted);
+  }
+  .th-jump { display: flex; flex-wrap: wrap; gap: 7px; }
+  .th-jump a {
+    padding: 8px 13px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .th-jump a:hover { border-color: var(--blue); color: var(--ink); }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="theorie.html">
+<link rel="alternate" hreflang="en" href="../../../en/stations/1-schroedinger/katze-2/theorie.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zur zweiten Katze">←</a>
+    <div class="q-topbar-title">Theorie</div>
+    <div class="q-topbar-badge">📐 Regeln</div>
+    <a class="q-lang" href="../../../en/stations/1-schroedinger/katze-2/theorie.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Alles zum Nachschlagen</div>
+    <h1 class="q-h1">Die Rechenregeln</h1>
+    <p class="q-lead" style="max-width:440px;margin-left:auto;margin-right:auto;">
+      Hier steht <strong>alles</strong>, was die vier Schlösser von Box 2
+      verlangen — keine Frage braucht Wissen von außerhalb dieser Seite.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="th-jump">
+      <a href="#amplituden">Amplituden</a>
+      <a href="#zweihochn">2ⁿ</a>
+      <a href="#messung">Messung</a>
+      <a href="#gatter">Gatter</a>
+      <a href="#photonen">Photonen</a>
+      <a href="#bell">Bell-Zustand</a>
+      <a href="#grenzen">Grenzen</a>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="amplituden">
+    <h2 class="q-h2">1 · Amplituden und ihr Quadrat</h2>
+    <p class="q-body q-mt-sm">
+      Ein Qubit schreibt man als <span class="q-mono">|ψ⟩ = α·|0⟩ + β·|1⟩</span>.
+      Die beiden Zahlen α und β heißen <strong>Amplituden</strong>. Sie sind
+      <em>keine</em> Wahrscheinlichkeiten — die bekommt man erst durch Quadrieren.
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">P(0) = |α|²</span>&nbsp;&nbsp;·&nbsp;&nbsp;<span class="nb">P(1) = |β|²</span></div>
+      <div class="quiz-formel-note">Born’sche Regel — die Brücke von der Rechnung zur Messung</div>
+    </div>
+
+    <p class="q-body q-mt">
+      Weil bei jeder Messung genau ein Ergebnis herauskommt, müssen sich die
+      beiden Wahrscheinlichkeiten zu 1 addieren. Das ist die
+      <strong>Normierung</strong>:
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">|α|² + |β|² = 1</span></div>
+      <div class="quiz-formel-note">Jeder erlaubte Qubit-Zustand erfüllt sie</div>
+    </div>
+
+    <h3 class="q-h3 q-mt">Vorwärts gerechnet</h3>
+    <p class="q-body">Gegeben <span class="q-mono">|ψ⟩ = 0,6·|0⟩ + 0,8·|1⟩</span>:</p>
+    <ol class="quiz-steps">
+      <li>P(0) = 0,6² = <strong>0,36</strong> — also 36 %</li>
+      <li>P(1) = 0,8² = <strong>0,64</strong> — also 64 %</li>
+      <li>Probe: 0,36 + 0,64 = 1 ✓</li>
+    </ol>
+    <p class="q-fine q-mt-sm">
+      Die häufigste Falle: 0,8 als „80 %“ zu lesen. Erst das Quadrat ist die
+      Wahrscheinlichkeit.
+    </p>
+
+    <h3 class="q-h3 q-mt">Rückwärts gerechnet</h3>
+    <p class="q-body">
+      Gegeben <span class="q-mono">|ψ⟩ = 0,6·|0⟩ + b·|1⟩</span> mit reellem b &gt; 0.
+      Gesucht ist b:
+    </p>
+    <ol class="quiz-steps">
+      <li>Normierung ansetzen: 0,6² + b² = 1</li>
+      <li>Umstellen: b² = 1 − 0,36 = 0,64</li>
+      <li>Wurzel ziehen: b = <strong>0,8</strong></li>
+    </ol>
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="zweihochn">
+    <h2 class="q-h2">2 · Warum 2<sup>n</sup> alles verändert</h2>
+    <p class="q-body q-mt-sm">
+      Ein einzelnes Qubit braucht zwei Amplituden: eine für |0⟩, eine für |1⟩.
+      Zwei Qubits haben vier mögliche Ergebnisse — |00⟩, |01⟩, |10⟩, |11⟩ —
+      und brauchen daher vier Amplituden. Mit jedem weiteren Qubit
+      <strong>verdoppelt</strong> sich die Zahl.
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">n Qubits → 2<sup>n</sup> Amplituden</span></div>
+      <div class="quiz-formel-note">Alle zusammen beschreiben den Zustand vollständig</div>
+    </div>
+
+    <table class="quiz-tab">
+      <thead>
+        <tr><th>Qubits</th><th>Amplituden</th><th>Größenordnung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2</td><td>trivial</td></tr>
+        <tr><td>10</td><td>1 024</td><td>2¹⁰ — passt in jeden Taschenrechner</td></tr>
+        <tr><td>20</td><td>1 048 576</td><td>schon über eine Million</td></tr>
+        <tr><td>300</td><td>2³⁰⁰</td><td>mehr als Atome im sichtbaren Universum</td></tr>
+      </tbody>
+    </table>
+
+    <p class="q-body q-mt">
+      Genau deshalb lässt sich ein größerer Quantencomputer auf klassischen
+      Rechnern nicht mehr simulieren — nicht weil er „schneller“ wäre, sondern
+      weil die Buchhaltung explodiert.
+    </p>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="messung">
+    <h2 class="q-h2">3 · Was eine Messung tut</h2>
+    <p class="q-body q-mt-sm">
+      Vor der Messung ist ein Qubit in Superposition. Die Messung liefert
+      <strong>genau ein</strong> Ergebnis, und danach ist der Zustand
+      tatsächlich dieses Ergebnis — die Superposition ist weg. Man nennt das
+      <strong>Kollaps</strong>.
+    </p>
+
+    <div class="q-note q-note-blue q-mt-sm">
+      <div class="q-note-title">Die Folge daraus</div>
+      <div class="q-body">
+        Misst du <span class="q-mono">(|0⟩ + |1⟩)/√2</span> und bekommst 1, dann
+        ist das Qubit jetzt in |1⟩. Eine sofortige zweite Messung liefert
+        <strong>wieder 1</strong> — mit Sicherheit, nicht mehr zufällig.
+        Der Zufall steckt im ersten Blick, nicht im zweiten.
+      </div>
+    </div>
+
+    <h3 class="q-h3 q-mt">Superposition ist kein Unwissen</h3>
+    <p class="q-body">
+      Bei einer verdeckten Münze steht das Ergebnis längst fest, wir kennen es
+      nur nicht. Bei einem Qubit steht es <em>nicht</em> fest. Der Unterschied
+      ist messbar: Nur echte Superpositionen können sich überlagern und
+      gegenseitig <strong>auslöschen</strong>. Bloßes Unwissen kann das nie —
+      wo nichts schwingt, löscht sich auch nichts aus.
+    </p>
+    <p class="q-body q-mt-sm">
+      Genau darauf beruht der Test mit dem Hadamard-Gatter: Zweimal H
+      hintereinander bringt |0⟩ exakt zu |0⟩ zurück. Wäre der Zwischenzustand
+      nur ein unbekannter Münzwurf gewesen, käme in der Hälfte der Fälle 1
+      heraus.
+    </p>
+
+    <h3 class="q-h3 q-mt">Kein Bewusstsein nötig</h3>
+    <p class="q-body">
+      „Messen“ heißt Wechselwirkung, die Information nach außen trägt — ein
+      Detektor, eine Fotoplatte, ein Luftmolekül. Es braucht keine Person, die
+      hinsieht. Ein Detektor misst auch nachts, wenn niemand im Labor ist.
+      Dass große Objekte nie in Superposition erscheinen, liegt an derselben
+      Ursache: Sie wechselwirken unablässig mit ihrer Umgebung —
+      <strong>Dekohärenz</strong>.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="gatter">
+    <h2 class="q-h2">4 · Gatter sind Drehungen</h2>
+    <p class="q-body q-mt-sm">
+      Jeder Qubit-Zustand ist ein Punkt auf der Bloch-Kugel. Der Winkel
+      <strong>θ</strong> misst, wie weit der Zustand vom Nordpol |0⟩ weg ist.
+      Ein Gatter dreht diesen Punkt — mehr nicht.
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">P(1) = sin²(θ/2)</span></div>
+      <div class="quiz-formel-note">Achtung auf das halbe θ — daher sind Nord- und Südpol 180° auseinander</div>
+    </div>
+
+    <table class="quiz-tab">
+      <thead>
+        <tr><th>θ</th><th>P(1)</th><th>Zustand</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0°</td><td>0</td><td>|0⟩ — Nordpol</td></tr>
+        <tr><td>60°</td><td>0,25</td><td>sin²(30°) = 0,25</td></tr>
+        <tr><td>90°</td><td>0,5</td><td>Äquator, z. B. |+⟩</td></tr>
+        <tr><td>120°</td><td>0,75</td><td>sin²(60°) = 0,75</td></tr>
+        <tr><td>180°</td><td>1</td><td>|1⟩ — Südpol</td></tr>
+      </tbody>
+    </table>
+
+    <p class="q-body q-mt">
+      Eine Drehung <span class="q-mono">R<sub>y</sub>(φ)</span> um die y-Achse
+      erhöht θ direkt um φ. Startet man also bei |0⟩ (θ = 0°) und wendet
+      <span class="q-mono">R<sub>y</sub>(120°)</span> an, steht man bei
+      θ = 120° — und damit bei P(1) = 0,75.
+    </p>
+
+    <h3 class="q-h3 q-mt">Die vier, die du brauchst</h3>
+    <div class="q-kv q-mt-sm">
+      <div class="q-kv-row">
+        <span class="q-kv-key">H</span>
+        <span class="q-kv-val">Hadamard. Holt |0⟩ auf den Äquator und erzeugt die
+          Gleichverteilung <span class="q-mono">(|0⟩ + |1⟩)/√2</span> — also
+          P(0) = P(1) = 0,5. Das Standardwerkzeug für Superposition.</span>
+      </div>
+      <div class="q-kv-row">
+        <span class="q-kv-key">H·H</span>
+        <span class="q-kv-val">Zweimal H hebt sich auf: zurück zu exakt |0⟩.</span>
+      </div>
+      <div class="q-kv-row">
+        <span class="q-kv-key">X</span>
+        <span class="q-kv-val">Halbe Drehung um x. Macht aus |0⟩ ein |1⟩ — das
+          NICHT-Gatter der Quantenwelt.</span>
+      </div>
+      <div class="q-kv-row">
+        <span class="q-kv-key">Z</span>
+        <span class="q-kv-val">Halbe Drehung um z. Die Pole |0⟩ und |1⟩ bleiben
+          liegen, aber am Äquator dreht sich alles auf die Gegenseite:
+          <span class="q-mono">|+⟩ → |−⟩</span>.</span>
+      </div>
+    </div>
+
+    <div class="q-note q-mt-sm">
+      <div class="q-note-title">Warum Z ausgerechnet |+⟩ umdreht</div>
+      <div class="q-body">
+        <span class="q-mono">|+⟩ = (|0⟩ + |1⟩)/√2</span> liegt auf dem Äquator.
+        Z kippt das Vorzeichen vor |1⟩ und macht daraus
+        <span class="q-mono">|−⟩ = (|0⟩ − |1⟩)/√2</span> — den gegenüberliegenden
+        Punkt. Gemessen in der 0/1-Basis ändert sich dabei nichts (beide geben
+        50 : 50). Sichtbar wird der Unterschied erst, wenn man danach wieder H
+        anwendet: aus |+⟩ wird |0⟩, aus |−⟩ wird |1⟩.
+      </div>
+    </div>
+
+    <div class="q-list q-mt-sm">
+      <a class="q-tile" href="../../2-bloch-sphere/simulation.html">
+        <span class="q-tile-num c-purple">⟳</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Zum Ausprobieren</span>
+          <span class="q-tile-sub">X, Y, Z, H, S und mehr auf der drehbaren Kugel — mit Winkel- und Prozentanzeige</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="photonen">
+    <h2 class="q-h2">5 · Wie viel Energie steckt in Licht?</h2>
+    <p class="q-body q-mt-sm">
+      Licht kommt in Portionen — <strong>Photonen</strong>. Die Energie einer
+      Portion hängt allein von der Frequenz ab, nicht von der Helligkeit.
+      Helleres Licht heißt: mehr Photonen, nicht kräftigere.
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">E = h·f = h·c / λ</span></div>
+      <div class="quiz-formel-note">h = 6,626·10⁻³⁴ J·s — das Plancksche Wirkungsquantum</div>
+    </div>
+
+    <p class="q-body q-mt">
+      In der Praxis rechnet niemand mit diesen Zehnerpotenzen. Man misst Energie
+      in <strong>Elektronenvolt</strong> und Wellenlänge in
+      <strong>Nanometern</strong>, dann schrumpft die Formel zu einer Zahl, die
+      man sich merken kann:
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">E [eV] = 1240 / λ [nm]</span></div>
+      <div class="quiz-formel-note">h·c ≈ 1240 eV·nm — die nützlichste Faustformel der Optik</div>
+    </div>
+
+    <h3 class="q-h3 q-mt">Beispiel</h3>
+    <p class="q-body">Welche Energie hat ein Photon mit λ = 620 nm?</p>
+    <ol class="quiz-steps">
+      <li>Formel ansetzen: E = 1240 / 620</li>
+      <li>Ausrechnen: E = <strong>2,0 eV</strong></li>
+      <li>Plausibilität: 620 nm ist orange-rot — das energiearme Ende des sichtbaren Lichts</li>
+    </ol>
+
+    <table class="quiz-tab">
+      <thead>
+        <tr><th>Wellenlänge</th><th>Energie</th><th>Farbe</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>700 nm</td><td>1,8 eV</td><td>tiefrot</td></tr>
+        <tr><td>620 nm</td><td>2,0 eV</td><td>orange-rot</td></tr>
+        <tr><td>500 nm</td><td>2,5 eV</td><td>grün</td></tr>
+        <tr><td>400 nm</td><td>3,1 eV</td><td>violett</td></tr>
+      </tbody>
+    </table>
+
+    <p class="q-fine q-mt-sm">
+      Merkhilfe: Kurze Wellenlänge, hohe Energie. Deshalb macht UV-Licht
+      Sonnenbrand und rotes Licht nicht.
+    </p>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="bell">
+    <h2 class="q-h2">6 · Der Bell-Zustand</h2>
+    <p class="q-body q-mt-sm">
+      Zwei Qubits lassen sich so verbinden, dass keines für sich einen eigenen
+      Zustand hat — nur das Paar gemeinsam. Der bekannteste solche Zustand:
+    </p>
+
+    <div class="quiz-formel">
+      <div class="quiz-formel-eq"><span class="nb">|Φ⁺⟩ = (|00⟩ + |11⟩) / √2</span></div>
+      <div class="quiz-formel-note">Gebaut aus H auf dem ersten Qubit, dann CNOT</div>
+    </div>
+
+    <p class="q-body q-mt">
+      In der Klammer stehen nur <span class="q-mono">|00⟩</span> und
+      <span class="q-mono">|11⟩</span>. Was nicht dasteht, hat Amplitude 0 —
+      und nach der Born’schen Regel damit Wahrscheinlichkeit 0:
+    </p>
+
+    <table class="quiz-tab">
+      <thead>
+        <tr><th>Ergebnis</th><th>Amplitude</th><th>Wahrscheinlichkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>00</td><td>1/√2</td><td>50 %</td></tr>
+        <tr class="is-off"><td>01</td><td>0</td><td>0 % — kommt nie vor</td></tr>
+        <tr class="is-off"><td>10</td><td>0</td><td>0 % — kommt nie vor</td></tr>
+        <tr><td>11</td><td>1/√2</td><td>50 %</td></tr>
+      </tbody>
+    </table>
+
+    <p class="q-body q-mt">
+      Misst du also das erste Qubit und bekommst 0, dann liefert das zweite
+      <strong>mit Sicherheit ebenfalls 0</strong> — egal wie weit die beiden
+      voneinander entfernt sind. Für sich allein betrachtet ist jedes der beiden
+      Qubits trotzdem völlig zufällig: 50 zu 50.
+    </p>
+
+    <div class="q-note q-mt-sm">
+      <div class="q-note-title">Und warum man damit nicht schneller als Licht funkt</div>
+      <div class="q-body">
+        Du kannst dein Ergebnis nicht <em>wählen</em> — es fällt zufällig aus.
+        Damit lässt sich keine Nachricht hineinlegen. Wer nur seine eigene Seite
+        ansieht, sieht reines Rauschen. Die Übereinstimmung wird erst sichtbar,
+        wenn beide Seiten ihre Listen vergleichen — und dieser Vergleich läuft
+        über einen ganz gewöhnlichen Kanal, also höchstens mit Lichtgeschwindigkeit.
+      </div>
+    </div>
+
+    <h3 class="q-h3 q-mt">Wozu es heute schon dient</h3>
+    <p class="q-body">
+      Der handfeste Nutzen ist der <strong>abhörsichere Schlüsselaustausch</strong>,
+      die Quantenkryptografie. Zwei Seiten teilen sich verschränkte Paare und
+      gewinnen daraus eine gemeinsame Zufallsfolge als geheimen Schlüssel.
+      Ein Lauscher müsste messen — und jede Messung zerstört den Zustand
+      nachweisbar. Der Angriff verrät sich also selbst, statt unbemerkt zu
+      bleiben. Solche Strecken laufen bereits zwischen Städten und über Satellit.
+    </p>
+
+    <div class="q-list q-mt-sm">
+      <a class="q-tile" href="../../3-quantumtable/schaltkreis.html">
+        <span class="q-tile-num c-red">▶</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Bell-Zustand selbst bauen</span>
+          <span class="q-tile-sub">H, dann CNOT — und die Verteilung sofort sehen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt th-sec" id="grenzen">
+    <h2 class="q-h2">7 · Was Quantentechnik kann — und was nicht</h2>
+
+    <h3 class="q-h3 q-mt-sm">Quantenphysik ist nicht exotisch</h3>
+    <p class="q-body">
+      Sie gilt nicht nur für das Allerkleinste im Labor. <strong>Laser, LEDs,
+      Solarzellen, Transistoren</strong> in jedem Handy-Chip, <strong>MRT</strong>
+      im Krankenhaus und die Atomuhren im GPS beruhen sämtlich auf ihr. Sie ist
+      die bestbestätigte Theorie der Physik — und steckt in deiner Hosentasche.
+    </p>
+
+    <h3 class="q-h3 q-mt">Ein Quantencomputer probiert nicht alles durch</h3>
+    <p class="q-body">
+      Die verbreitetste Fehlvorstellung. Zwar sind alle Möglichkeiten gleichzeitig
+      im Spiel — aber gemessen werden darf nur <strong>einmal</strong>, und
+      heraus käme eine zufällige Antwort. Nützlich wird es erst, wenn man die
+      falschen Möglichkeiten vorher durch <strong>Interferenz auslöscht</strong>
+      und die richtige verstärkt. Genau daran scheitern die meisten Ideen für
+      Quantenalgorithmen.
+    </p>
+
+    <h3 class="q-h3 q-mt">Und dein Handy ersetzt er auch nicht</h3>
+    <p class="q-body">
+      Ein Quantencomputer ist ein <strong>Spezialwerkzeug</strong>, kein besserer
+      Alleskönner: bei bestimmten Aufgaben überlegen, bei den meisten anderen
+      langsamer als dein Laptop. Für Videos, Chats und Spiele bleibt der normale
+      Rechner klar vorn. Dazu kommt der Aufwand — Kühlung fast auf den absoluten
+      Nullpunkt und massive Abschirmung, weil jede Störung die Superposition
+      zerstört. Am aussichtsreichsten sind Moleküle und Materialien zu
+      simulieren: Die sind selbst Quantensysteme.
+    </p>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Noch tiefer graben</h2>
+    <div class="q-list q-mt-sm">
+      <a class="q-tile" href="../info.html">
+        <span class="q-tile-num c-purple">?</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Was ist Superposition?</span>
+          <span class="q-tile-sub">Die Münze, die Katze und die Dirac-Schreibweise</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="q-tile" href="../../2-bloch-sphere/info.html">
+        <span class="q-tile-num c-purple">2</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Was ist ein Qubit?</span>
+          <span class="q-tile-sub">θ, φ und warum daraus eine Kugel wird</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="q-tile" href="../../5-ama/mythen.html">
+        <span class="q-tile-num c-red">✗</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Sechs Quanten-Mythen</span>
+          <span class="q-tile-sub">Der Faktencheck zu Bewusstsein, Überlichtgeschwindigkeit und Co.</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="q-tile" href="index.html">
+        <span class="q-tile-num c-green">🔒</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Zurück zu den vier Schlössern</span>
+          <span class="q-tile-sub">Jetzt hast du alles beisammen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+</body>
+</html>

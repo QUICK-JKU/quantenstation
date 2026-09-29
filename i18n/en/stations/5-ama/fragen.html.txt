@@ -1,0 +1,173 @@
+# Englische Texte für stations/5-ama/fragen.html — siehe tools/build-en.py
+
+de: Häufige Fragen · Quantenstation JKU
+en: Frequently asked questions · Quantum Station JKU
+
+de: Die häufigsten Fragen zur Quantenphysik — durchsuchbar beantwortet.
+en: The most common questions about quantum physics — answered and searchable.
+
+de: 🔍 Suche
+en: 🔍 Search
+
+de: Nachschlagen
+en: Look it up
+
+de: Suchen … z. B. Katze, Qubit, Zufall
+en: Search … e.g. cat, qubit, chance
+
+de: Fragen durchsuchen
+en: Search the questions
+
+de: alle
+en: all
+
+de: Grundlagen
+en: Basics
+
+de: Quantencomputer
+en: Quantum computers
+
+de: Große Fragen
+en: Big questions
+
+de: Alltag
+en: Everyday life
+
+de: Was ist Superposition in einem Satz?
+en: What is superposition, in one sentence?
+
+de: Ein Quantensystem muss sich vor der Messung nicht für ein einziges Ergebnis entscheiden, sondern kann mehrere Möglichkeiten gleichzeitig in sich tragen. Das heißt <strong>nicht</strong>, dass wir die Antwort bloß nicht kennen. Sie steht tatsächlich noch nicht fest und wird erst durch die Messung festgelegt.
+en: Before a measurement, a quantum system doesn't have to decide on a single result, but can carry several possibilities within it at the same time. This does <strong>not</strong> mean that we simply don't know the answer. It really isn't fixed yet and is only determined by the measurement.
+
+de: Ist Schrödingers Katze wirklich tot und lebendig?
+en: Is Schrödinger's cat really dead and alive?
+
+de: Nein. Schrödinger hat sich das Beispiel 1935 als <strong>Kritik</strong> ausgedacht. Er wollte zeigen, wie absurd es wird, wenn man die Regeln der winzigen Teilchen auf große Dinge überträgt. Bei einzelnen Atomen lässt sich die Superposition genau nachmessen. Bei einer Katze gibt es sie nicht, denn sie besteht aus unvorstellbar vielen Teilchen und ist immer eindeutig lebendig oder eindeutig tot.
+en: No. Schrödinger came up with the example in 1935 as a <strong>criticism</strong>. He wanted to show how absurd it gets if you apply the rules of tiny particles to big things. For single atoms, superposition can be measured precisely. A cat doesn't have it, because it consists of unimaginably many particles and is always clearly alive or clearly dead.
+
+de: Ein Qubit ist das kleinste Quantensystem mit genau zwei möglichen Messergebnissen, meist 0 und 1. Anders als ein gewöhnliches Bit kann es vor der Messung in einer Superposition aus beiden Werten stehen. Um seinen Zustand vollständig zu beschreiben, braucht man zwei Winkel. Deshalb lässt er sich als Punkt auf einer Kugel darstellen, der <a href="../2-bloch-sphere/">Bloch-Kugel</a>.
+en: A qubit is the smallest quantum system with exactly two possible measurement results, usually 0 and 1. Unlike an ordinary bit, it can be in a superposition of both values before the measurement. To describe its state completely, you need two angles. That's why it can be shown as a point on a sphere, the <a href="../2-bloch-sphere/">Bloch sphere</a>.
+
+de: Was ist Interferenz?
+en: What is interference?
+
+de: Wellen überlagern sich und addieren dabei ihre Ausschläge. Wo Berg auf Berg trifft, wird die Welle stärker. Wo Berg auf Tal trifft, löschen sie sich aus. In der Quantenmechanik überlagern sich die <strong>Möglichkeiten</strong> selbst. Deshalb kann ein Ergebnis verschwinden, obwohl beide Wege dorthin offen sind, und ein anderes wird dafür umso wahrscheinlicher.
+en: Waves overlap and add up their amplitudes. Where crest meets crest, the wave gets stronger. Where crest meets trough, they cancel out. In quantum mechanics, the <strong>possibilities</strong> themselves overlap. That's why a result can vanish even though both paths to it are open, while another becomes all the more likely.
+
+de: Was bedeutet „Messung zerstört den Zustand“?
+en: What does “measurement destroys the state” mean?
+
+de: Messen ist kein passives Hinschauen, sondern eine Wechselwirkung mit dem System. Danach befindet es sich in genau einem der möglichen Ergebnisse und die ursprüngliche Superposition ist unwiederbringlich verloren. Das kannst du an der <a href="../2-bloch-sphere/simulation.html">Bloch-Kugel</a> selbst ausprobieren. Nach jeder Messung springt der Pfeil auf einen der beiden Pole.
+en: Measuring is not passive looking, but an interaction with the system. Afterwards it is in exactly one of the possible results and the original superposition is irretrievably lost. You can try this yourself on the <a href="../2-bloch-sphere/simulation.html">Bloch sphere</a>. After every measurement the arrow jumps to one of the two poles.
+
+de: Was ist Verschränkung?
+en: What is entanglement?
+
+de: Zwei Teilchen können so eng verbunden sein, dass keines von beiden für sich einen eigenen Zustand hat. Beschrieben werden kann nur das Paar gemeinsam. Misst man beide, passen die Ergebnisse immer zusammen, obwohl jedes einzelne für sich rein zufällig ausfällt. Du kannst so ein Paar selbst herstellen, mit dem <a href="../3-quantumtable/schaltkreis.html">Bell-Zustand</a> am QuantumTable.
+en: Two particles can be so closely connected that neither of them has a state of its own. Only the pair can be described together. If you measure both, the results always match, even though each one on its own comes out completely at random. You can make such a pair yourself with the <a href="../3-quantumtable/schaltkreis.html">Bell state</a> at the QuantumTable.
+
+de: Was ist die Unschärferelation?
+en: What is the uncertainty principle?
+
+de: Bestimmte Größenpaare, etwa Ort und Impuls eines Teilchens, können nicht beide gleichzeitig beliebig genau festliegen. Je genauer der Ort bekannt ist, desto unbestimmter wird der Impuls, und umgekehrt. Das liegt <strong>nicht</strong> an ungenauen Messgeräten. Es ist eine Eigenschaft der Natur selbst und würde auch mit perfekter Technik bestehen bleiben.
+en: Certain pairs of quantities, such as the position and momentum of a particle, cannot both be fixed with arbitrary precision at the same time. The more precisely the position is known, the less determined the momentum becomes, and vice versa. This is <strong>not</strong> down to imprecise measuring devices. It is a property of nature itself and would remain even with perfect technology.
+
+de: Sind Quantencomputer einfach schnellere Computer?
+en: Are quantum computers simply faster computers?
+
+de: Nein. Bei bestimmten Aufgaben sind sie tatsächlich viel schneller, bei den meisten anderen aber <strong>langsamer</strong> als dein Laptop. Für Videos, Chats oder Textverarbeitung bringen sie nichts. Ein Quantencomputer ist ein Spezialwerkzeug für ausgewählte Probleme und kein besserer Alleskönner.
+en: No. For certain tasks they really are much faster, but for most others they are <strong>slower</strong> than your laptop. For videos, chats or word processing they are no use. A quantum computer is a specialist tool for selected problems, not a better all-rounder.
+
+de: Probiert ein Quantencomputer alle Möglichkeiten gleichzeitig aus?
+en: Does a quantum computer try all possibilities at once?
+
+de: Das ist die häufigste Fehlvorstellung. Zwar hat er während der Rechnung viele Möglichkeiten gleichzeitig im Spiel, am Ende darf er aber nur <strong>einmal messen</strong> und bekommt dabei ein einziges Ergebnis. Würde man einfach drauflos messen, käme nur Zufall heraus. Die eigentliche Kunst besteht darin, die Rechnung so zu gestalten, dass sich die falschen Möglichkeiten durch Interferenz auslöschen und die richtige übrig bleibt.
+en: That's the most common misconception. During the calculation it does have many possibilities in play at once, but in the end it may only <strong>measure once</strong> and gets a single result. If you just measured away, you'd only get chance. The real art is to design the calculation so that the wrong possibilities cancel out through interference and the right one remains.
+
+de: Wofür sind sie tatsächlich gut?
+en: What are they actually good for?
+
+de: Am aussichtsreichsten ist die Simulation von Molekülen und Materialien, etwa für neue Medikamente oder bessere Batterien. Dazu kommen bestimmte Optimierungsprobleme. Bekannt, aber noch weit entfernt, ist auch das Knacken heutiger Verschlüsselung. Vieles davon befindet sich noch in der Forschung und ist kein fertiges Produkt.
+en: The most promising use is simulating molecules and materials, for example for new medicines or better batteries. Then there are certain optimisation problems. Well known, but still far away, is breaking today's encryption. Much of this is still at the research stage and not a finished product.
+
+de: Wann kann ich einen kaufen?
+en: When can I buy one?
+
+de: Für zu Hause wahrscheinlich nie, denn die Geräte brauchen extreme Kälte und aufwändige Abschirmung. Realistischer ist der Zugriff über die <strong>Cloud</strong>. Den gibt es schon heute, teilweise sogar gratis für kleine Experimente. Dabei läuft dein Programm auf einem Gerät im Labor und du bekommst nur das Ergebnis zurück.
+en: For your home, probably never, because the devices need extreme cold and elaborate shielding. Access via the <strong>cloud</strong> is more realistic. It already exists today, partly even free of charge for small experiments. Your program runs on a device in a lab and you just get the result back.
+
+de: Ist meine Verschlüsselung bald unsicher?
+en: Is my encryption going to be unsafe soon?
+
+de: Heute noch nicht. Dafür bräuchte es viel größere und stabilere Quantencomputer, als es sie derzeit gibt. Ein Risiko besteht eher darin, dass jemand verschlüsselte Daten <em>jetzt speichert und später entschlüsselt</em>. Deshalb werden schon heute neue, quantensichere Verfahren entwickelt und eingeführt.
+en: Not yet today. That would require much larger and more stable quantum computers than exist at present. The risk is rather that someone <em>stores encrypted data now and decrypts it later</em>. That's why new, quantum-safe methods are already being developed and introduced today.
+
+de: Warum sind Quantencomputer so empfindlich?
+en: Why are quantum computers so sensitive?
+
+de: Jede Störung von außen zerstört die Superposition der Qubits. Fachleute nennen das <strong>Dekohärenz</strong>. Schon Wärme, Vibrationen oder Streulicht reichen dafür aus. Deshalb werden viele Quantencomputer fast bis zum absoluten Nullpunkt gekühlt und aufwändig abgeschirmt, und deshalb ist die Fehlerkorrektur ein so großes Forschungsthema.
+en: Every disturbance from outside destroys the superposition of the qubits. Experts call this <strong>decoherence</strong>. Heat, vibrations or stray light are already enough. That's why many quantum computers are cooled almost to absolute zero and elaborately shielded, and why error correction is such a big research topic.
+
+de: Ist der Zufall echt oder kennen wir nur die Details nicht?
+en: Is the randomness real, or do we just not know the details?
+
+de: Nach heutigem Wissensstand ist er <strong>echt</strong>. Experimente zu den Bell'schen Ungleichungen, die 2022 mit dem Nobelpreis für Physik ausgezeichnet wurden, schließen naheliegende Erklärungen mit „versteckten Variablen“ aus. Vollständig geklärt ist die Deutung der Quantenmechanik damit aber noch nicht, und darüber wird weiter geforscht.
+en: As far as we know today, it is <strong>real</strong>. Experiments on Bell's inequalities, which were awarded the Nobel Prize in Physics in 2022, rule out obvious explanations with “hidden variables”. That doesn't fully settle the interpretation of quantum mechanics, though, and research on it continues.
+
+de: Gibt es Paralleluniversen?
+en: Are there parallel universes?
+
+de: Das ist eine <em>Interpretation</em> der Quantenmechanik, die Viele-Welten-Deutung, und keine Messung. Sie macht dieselben Vorhersagen wie andere Deutungen. Die Physik entscheidet zwischen Theorien durch Experimente, und hier liefern bisher alle Deutungen dieselben Ergebnisse. Ob es Paralleluniversen gibt, kann deshalb derzeit niemand nachweisen.
+en: That is an <em>interpretation</em> of quantum mechanics, the many-worlds interpretation, not a measurement. It makes the same predictions as other interpretations. Physics decides between theories through experiments, and so far all interpretations give the same results here. So at present nobody can prove whether parallel universes exist.
+
+de: Hat Bewusstsein etwas mit der Messung zu tun?
+en: Does consciousness have anything to do with measurement?
+
+de: Nein. Eine Messung braucht kein Bewusstsein. Ein Detektor, eine Fotoplatte oder schon die Luft im Raum reichen völlig aus, weil sie mit dem System wechselwirken. Die Idee geht auf Spekulationen einzelner Physiker zurück, etwa Eugene Wigner in den 1960er-Jahren, und wurde vor allem durch populäre Bücher verbreitet. In der heutigen Physik spielt sie keine Rolle.
+en: No. A measurement doesn't need consciousness. A detector, a photographic plate or even the air in the room are completely enough, because they interact with the system. The idea goes back to speculation by individual physicists, such as Eugene Wigner in the 1960s, and was spread mainly by popular books. It plays no role in physics today.
+
+de: Kann man mit Verschränkung schneller als Licht kommunizieren?
+en: Can you communicate faster than light with entanglement?
+
+de: Nein, und das lässt sich sogar beweisen. Dein Messergebnis ist reiner Zufall, den du nicht steuern kannst. Dass beide Seiten zusammenpassen, fällt erst auf, wenn sie ihre Ergebnisse vergleichen. Dafür müssen sie sich über einen ganz normalen Kanal austauschen, der nie schneller als das Licht ist.
+en: No, and this can even be proven. Your measurement result is pure chance that you can't control. That both sides match only becomes apparent when they compare their results. For that they have to exchange information over a perfectly ordinary channel, which is never faster than light.
+
+de: Begegnet mir Quantenphysik im Alltag?
+en: Do I come across quantum physics in everyday life?
+
+de: Ständig. LEDs, Laser, Solarzellen, die Chips in deinem Handy, die MRT im Krankenhaus und die Atomuhren im GPS beruhen alle auf Quantenmechanik. Sie ist also nicht exotisch, sondern die am besten bestätigte Theorie der gesamten Physik.
+en: All the time. LEDs, lasers, solar cells, the chips in your phone, MRI in hospitals and the atomic clocks in GPS all rely on quantum mechanics. So it isn't exotic, but the best-confirmed theory in all of physics.
+
+de: Warum wirkt das im Alltag nie „quantenhaft“?
+en: Why does everyday life never seem “quantum”?
+
+de: Der Grund ist die <strong>Dekohärenz</strong>. Je mehr Teilchen ein Objekt hat, desto schneller zerstört die Umgebung seine Superposition. Bei Alltagsgegenständen passiert das so unvorstellbar schnell, dass wir davon nie etwas bemerken.
+en: The reason is <strong>decoherence</strong>. The more particles an object has, the faster its surroundings destroy its superposition. For everyday objects this happens so unimaginably fast that we never notice any of it.
+
+de: Was ist mit „Quantenheilung“ oder „Quantenenergie“?
+en: What about “quantum healing” or “quantum energy”?
+
+de: Damit hat die Physik nichts zu tun. Ein guter Prüfstein ist die Frage, ob genaue Zahlen vorhergesagt werden, die man widerlegen könnte. Echte Quantenphysik macht <strong>zahlenmäßige Vorhersagen</strong>. Wenn „Quanten“ nur als Stimmungswort auftaucht, handelt es sich um Marketing.
+en: That has nothing to do with physics. A good test is to ask whether precise numbers are predicted that could be proven wrong. Real quantum physics makes <strong>numerical predictions</strong>. When “quantum” only appears as a mood word, it's marketing.
+
+de: Ich verstehe es einfach nicht. Bin ich zu dumm?
+en: I just don't get it. Am I too stupid?
+
+de: Nein. Die Quantenmechanik widerspricht unserer Alltagserfahrung und dein Gehirn wurde nicht dafür gebaut. Selbst Richard Feynman, einer der bekanntesten Physiker des 20. Jahrhunderts, soll sinngemäß gesagt haben, dass sie niemand wirklich <em>versteht</em>. Rechnen und vorhersagen können wir sie trotzdem hervorragend, und das Verstehen wächst mit dem Ausprobieren.
+en: No. Quantum mechanics contradicts our everyday experience and your brain wasn't built for it. Even Richard Feynman, one of the best-known physicists of the 20th century, is said to have remarked that nobody really <em>understands</em> it. We can still calculate and predict with it extremely well, and understanding grows as you try things out.
+
+de: Dazu haben wir hier nichts.
+en: We have nothing on that here.
+
+de: Frag uns einfach direkt an der Station — genau dafür sind wir da.
+en: Just ask us directly at the station — that's exactly what we're here for.
+
+de: Deine Frage fehlt?
+en: Your question is missing?
+
+de: Umso besser. Komm vorbei und stell sie uns.
+en: All the better. Come by and ask us.
+
+de: ✗ Weiter zu den Quanten-Mythen
+en: ✗ On to the quantum myths
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Rätsel 2 · Interferenz</title>
+<meta name="description" content="Rätsel 2: Springe durchs Labyrinth — jede Kachel muss die andere Farbe haben.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
+<style>
+  .maze-card {
+    padding: 10px;
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    margin: 16px auto 0;
+    width: 100%;
+    max-width: 356px;
+  }
+  .maze {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .cell {
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    border: 2px solid rgba(255, 255, 255, .35);
+    cursor: pointer;
+    transition: background .12s, box-shadow .12s;
+    padding: 0;
+  }
+  .cell .marker {
+    position: absolute;
+    top: 2px; left: 4px;
+    font-size: 11px;
+    line-height: 1;
+  }
+  .cell .num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(15px, 4.6vw, 19px);
+    color: #fff;
+  }
+  .cell.c-blue { background: var(--blue); }
+  .cell.c-red  { background: var(--red); }
+  .cell.on-path {
+    background: var(--green);
+    border-color: var(--green-dk);
+  }
+  .cell.is-last { box-shadow: 0 0 0 3px var(--ink), 0 6px 14px rgba(31,138,91,.4); }
+  .cell.is-start:not(.on-path) { box-shadow: inset 0 0 0 3px var(--green); }
+  .cell.is-exit:not(.on-path)  { box-shadow: inset 0 0 0 3px var(--ink); }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="2-interferenz.html">
+<link rel="alternate" hreflang="en" href="../../../en/stations/1-schroedinger/raetsel/2-interferenz.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zur Rätselübersicht">←</a>
+    <div class="q-topbar-title">Box 1 · Rätsel 2 von 4</div>
+    <div class="q-topbar-badge">🔒 Schloss 2</div>
+    <a class="q-lang" href="../../../en/stations/1-schroedinger/raetsel/2-interferenz.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Rätsel 2 · Schloss 2</div>
+    <h1 class="q-h1">Schaffst du das Labyrinth?</h1>
+    <p class="q-lead" style="max-width:450px;margin-left:auto;margin-right:auto;font-size:15.5px;">
+      Springe von <strong class="t-green">⚑&nbsp;Start</strong> zum
+      <strong>🔒&nbsp;Ziel</strong> — jede Kachel muss die <em>andere</em> Farbe
+      haben als die vorige: <strong class="t-blue">blau</strong> →
+      <strong class="t-red">rot</strong> → <strong class="t-blue">blau</strong>.
+      Viele Wege enden in Sackgassen. Die Zahlen auf deinem Weg ergeben der
+      Reihe nach den Code.
+    </p>
+  </div>
+
+  <div class="q-wrap">
+    <div class="maze-card" id="maze-card">
+      <div class="maze" id="maze"></div>
+    </div>
+
+    <div class="q-status q-mt-sm" id="msg"></div>
+
+    <div class="q-center">
+      <button class="q-btn" type="button" id="reset">↺ Zurücksetzen</button>
+    </div>
+
+    <div class="q-success" id="success" hidden>
+      <div class="q-success-label">ZIEL ERREICHT ✓</div>
+      <div class="q-code" data-q-code></div>
+      <div class="q-body t-green" style="font-weight:600;">🔓 Das ist dein Code.</div>
+      <a class="q-btn q-btn-green" href="3-wellen.html">Weiter zu Rätsel 3 →</a>
+    </div>
+
+    <p class="q-fine q-center q-mt" style="max-width:340px;margin-left:auto;margin-right:auto;">
+      Zwei gleiche Farben nacheinander gehen nicht. Sackgassen führen nicht zum
+      Ziel. Tippe eine frühere Kachel, um zurückzugehen.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Tipp anzeigen</summary>
+      <div class="q-acc-body">
+        Beginne bei der Fahne <strong>⚑</strong> unten links und arbeite dich
+        zuerst nach <strong>oben</strong>, dann nach rechts. Wenn du feststeckst,
+        tippe eine frühere Kachel deines Weges an — der Rest wird abgeschnitten
+        und du kannst es anders probieren.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Was steckt dahinter?</summary>
+      <div class="q-acc-body">
+        Das Wechselspiel <strong>blau → rot → blau</strong> ist ein Bild für den
+        <strong>Phasenwechsel</strong>: In einem Interferometer bekommt ein
+        Lichtweg bei jeder Reflexion einen Phasensprung. Nur Wege, bei denen die
+        Phasen am Ende zusammenpassen, überleben — alle anderen löschen sich
+        gegenseitig aus. Genau das siehst du hier als Farbregel.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-block" href="index.html">← Alle Rätsel von Box 1</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var W = 8, H = 6, ENTRY = 40, EXIT = 7;
+
+  // 0 = blau, 1 = rot
+  var GRID = [
+    1,0,0,1,1,1,0,1,
+    0,1,1,1,1,1,1,1,
+    0,0,0,0,0,0,0,1,
+    1,0,1,0,1,1,1,1,
+    0,0,1,0,0,1,0,1,
+    1,0,0,1,0,0,0,0
+  ];
+
+  // Kachel-Index → Ziffer, die auf dem Weg eingesammelt wird
+  var GATES = {
+    2:1, 8:2, 9:9, 11:1, 13:3, 14:0, 15:4, 23:7,
+    24:6, 27:0, 29:8, 35:9, 38:6, 41:5, 43:4, 45:7, 47:3
+  };
+
+  var mazeEl = document.getElementById('maze');
+  var cardEl = document.getElementById('maze-card');
+  var msgEl  = document.getElementById('msg');
+  var okEl   = document.getElementById('success');
+
+  var path = [];
+  var cells = [];
+
+  function adjacent(a, b) {
+    var ra = Math.floor(a / W), ca = a % W;
+    var rb = Math.floor(b / W), cb = b % W;
+    return Math.abs(ra - rb) + Math.abs(ca - cb) === 1;
+  }
+
+  function flash(text) {
+    msgEl.textContent = text;
+    msgEl.className = 'q-status q-mt-sm is-bad';
+    cardEl.classList.remove('q-shake');
+    void cardEl.offsetWidth; // Reflow, damit die Animation neu startet
+    cardEl.classList.add('q-shake');
+  }
+
+  function tap(i) {
+    if (path.length === 0) {
+      // Der Weg darf nur an der Fahne beginnen.
+      if (i === ENTRY) { path = [i]; msgEl.textContent = ''; render(); }
+      return;
+    }
+    var last = path[path.length - 1];
+
+    if (i === last) { path.pop(); msgEl.textContent = ''; render(); return; }
+
+    var at = path.indexOf(i);
+    if (at >= 0) { path = path.slice(0, at + 1); msgEl.textContent = ''; render(); return; }
+
+    if (!adjacent(last, i)) return;
+
+    if (GRID[last] === GRID[i]) { flash('gleiche Farbe — geht nicht'); return; }
+
+    path.push(i);
+    if (i === EXIT) {
+      msgEl.textContent = '';
+    } else {
+      msgEl.textContent = '✓ weiter';
+      msgEl.className = 'q-status q-mt-sm is-good';
+    }
+    render();
+  }
+
+  function build() {
+    for (var i = 0; i < W * H; i++) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'cell';
+      btn.setAttribute('aria-label', 'Kachel ' + (i + 1));
+
+      var mark = document.createElement('span');
+      mark.className = 'marker';
+      btn.appendChild(mark);
+
+      var num = document.createElement('span');
+      num.className = 'num';
+      btn.appendChild(num);
+
+      (function (idx) {
+        btn.addEventListener('click', function () { tap(idx); });
+      })(i);
+
+      mazeEl.appendChild(btn);
+      cells.push({ el: btn, marker: mark, num: num });
+    }
+  }
+
+  function render() {
+    var last = path.length ? path[path.length - 1] : -1;
+    var solved = last === EXIT;
+
+    for (var i = 0; i < cells.length; i++) {
+      var c = cells[i];
+      var onPath = path.indexOf(i) >= 0;
+
+      c.el.className = 'cell ' + (GRID[i] === 0 ? 'c-blue' : 'c-red');
+      if (onPath)       c.el.classList.add('on-path');
+      if (i === last)   c.el.classList.add('is-last');
+      if (i === ENTRY)  c.el.classList.add('is-start');
+      if (i === EXIT)   c.el.classList.add('is-exit');
+
+      c.marker.textContent = i === ENTRY ? '⚑' : (i === EXIT ? '🔒' : '');
+      c.num.textContent = Object.prototype.hasOwnProperty.call(GATES, i)
+        ? String(GATES[i]) : '';
+    }
+
+    if (solved) {
+      var code = path
+        .filter(function (x) { return Object.prototype.hasOwnProperty.call(GATES, x); })
+        .map(function (x) { return String(GATES[x]); })
+        .join('');
+      Q.solve({ id: 'schroedinger-2', code: code, block: okEl });
+    }
+  }
+
+  document.getElementById('reset').addEventListener('click', function () {
+    path = [];
+    msgEl.textContent = '';
+    msgEl.className = 'q-status q-mt-sm';
+    render();
+  });
+
+  build();
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>QR codes · Quantum Station JKU</title>
+<meta name="description" content="Generate and print QR codes for all pages of the Quantum Station.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%B2%3C/text%3E%3C/svg%3E">
+<style>
+  body { padding-bottom: 40px; }
+
+  .setup { max-width: 620px; margin: 0 auto; }
+  .url-input {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 16px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    background: #fff;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .sheet { max-width: 900px; margin: 0 auto; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr));
+    gap: 16px;
+  }
+  .grid.big { grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+
+  .card {
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: var(--r-md);
+    padding: 16px 14px 14px;
+    text-align: center;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .card svg { width: 100%; height: auto; max-width: 230px; }
+  .card-title {
+    margin-top: 10px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.15;
+  }
+  .card-sub {
+    margin-top: 3px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+  .card-url {
+    margin-top: 7px;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    color: var(--faint);
+    word-break: break-all;
+    line-height: 1.3;
+  }
+  .card.poster { padding: 26px 20px 20px; }
+  .card.poster svg { max-width: 300px; }
+  .card.poster .card-title { font-size: 22px; margin-top: 14px; }
+  .card.poster .card-sub { font-size: 12px; }
+
+  .group-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    margin: 30px 0 4px;
+  }
+
+  .warn {
+    margin-top: 12px;
+    padding: 12px 15px;
+    border-radius: var(--r-md);
+    background: rgba(255,53,43,.08);
+    border: 1.5px solid rgba(255,53,43,.3);
+    color: var(--danger);
+    font-size: 14px;
+  }
+
+  @media print {
+    @page { margin: 12mm; }
+    body { background: #fff; padding: 0; }
+    .noprint { display: none !important; }
+    .q-glow { display: none; }
+    .card { border: 1px solid #bbb; box-shadow: none; }
+    .grid { gap: 10mm; }
+    .group-title { margin-top: 8mm; }
+  }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="../../qr/index.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body class="q-no-bottombar">
+
+<header class="q-topbar noprint">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="../index.html" aria-label="Back to the overview">←</a>
+    <div class="q-topbar-title">Tool · QR codes</div>
+    <div class="q-topbar-badge">🔲 Print</div>
+    <a class="q-lang" href="../../qr/index.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap setup noprint">
+    <div class="q-eyebrow">Tool</div>
+    <h1 class="q-h1">QR codes</h1>
+    <p class="q-lead">
+      Enter the address where the English pages live (it ends in <strong>/en/</strong>) — the codes are regenerated instantly. Then simply <strong>print</strong>.
+    </p>
+
+    <div class="q-mt">
+      <label class="q-small" for="base">Base address (with a slash at the end)</label>
+      <input class="url-input q-mt-sm" type="url" id="base" spellcheck="false"
+             placeholder="https://quick-jku.github.io/quantenstation/en/">
+      <div id="warn" class="warn" hidden></div>
+    </div>
+
+    <div class="q-mt-sm" style="display:flex;gap:9px;flex-wrap:wrap;">
+      <button class="q-btn" type="button" id="use-here">Use the address of this page</button>
+      <button class="q-btn q-btn-primary" type="button" id="print">🖨 Print</button>
+    </div>
+
+    <div class="q-note q-mt">
+      <div class="q-note-title">Printing tip</div>
+      <div class="q-body">
+        The large codes at the top are meant for the <strong>station signs</strong> — print them at least 4 cm wide, then scanning also works from half a metre away. The white margin around them is part of the code and must not be trimmed off.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap sheet">
+    <h2 class="group-title">Station signs</h2>
+    <p class="q-small noprint">These go on the stations as large signs.</p>
+    <div class="grid big q-mt-sm" id="posters"></div>
+
+    <h2 class="group-title">All individual pages</h2>
+    <p class="q-small noprint">As a reserve — for flyers or notices, for example.</p>
+    <div class="grid q-mt-sm" id="all"></div>
+  </div>
+
+</main>
+
+<script src="../../assets/site.js"></script>
+<script src="../../assets/qr.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var STORE = 'jku60-qr-basis';
+
+  // pfad · Titel · Untertitel · ist Stationsschild
+  var PAGES = [
+    ['index.html',                                        'Quantum Station',   'Home · Overview',      true],
+    ['stations/1-schroedinger/',                          'Schrödinger Box',  'Station 1',              true],
+    ['stations/2-bloch-sphere/',                          'Bloch Sphere',      'Station 2',              true],
+    ['stations/3-quantumtable/',                          'QuantumTable',     'Station 3',              true],
+    ['stations/4-meettheteam/',                           'Meet the Team',    'Station 4',              true],
+    ['stations/5-ama/',                                   'FAQ',              'Frequently asked questions',         true],
+
+    ['stations/1-schroedinger/info.html',                 'What is superposition?', 'Station 1 · Info',  false],
+    ['stations/1-schroedinger/box.html',                  'The boxes',              'Station 1 · The boxes',false],
+    ['stations/1-schroedinger/raetsel/',                  'The 4 puzzles',           'Box 1 · Puzzles',false],
+    ['stations/1-schroedinger/raetsel/1-superposition.html','Puzzle 1 · Superposition','Box 1 · Lock 1',      false],
+    ['stations/1-schroedinger/raetsel/2-interferenz.html', 'Puzzle 2 · Interference',  'Box 1 · Lock 2',       false],
+    ['stations/1-schroedinger/raetsel/3-wellen.html',      'Puzzle 3 · Waves',       'Box 1 · Lock 3',       false],
+    ['stations/1-schroedinger/raetsel/4-labore.html',      'Puzzle 4 · Labs',       'Box 1 · Lock 4',       false],
+
+    ['stations/1-schroedinger/katze-2/',                   'The second cat',                 'Box 2 · Overview',true],
+    ['stations/1-schroedinger/katze-2/theorie.html',       'The rules of calculation',                 'Box 2 · Theory',false],
+    ['stations/1-schroedinger/katze-2/1-zustand.html',     'Puzzle 1 · State',               'Box 2 · Lock 1',false],
+    ['stations/1-schroedinger/katze-2/2-messung.html',     'Puzzle 2 · Measurement',               'Box 2 · Lock 2',false],
+    ['stations/1-schroedinger/katze-2/3-drehungen.html',   'Puzzle 3 · Rotations',             'Box 2 · Lock 3',false],
+    ['stations/1-schroedinger/katze-2/4-verschraenkung.html','Puzzle 4 · Entanglement',         'Box 2 · Lock 4',false],
+
+    ['stations/2-bloch-sphere/info.html',                 'What is a qubit?','Station 2 · Info',       false],
+    ['stations/2-bloch-sphere/simulation.html',           'Simulating the Bloch sphere','Station 2 · Simulation', false],
+    ['stations/2-bloch-sphere/teste-selbst.html',         'Test yourself',      'Station 2 · Challenges', false],
+
+    ['stations/3-quantumtable/schaltkreis.html',          'Build a circuit', 'Station 3 · Simulator',  false],
+    ['stations/3-quantumtable/info.html',                 'Reading circuits','Station 3 · Notation',   false],
+    ['stations/3-quantumtable/scch.html',                 'Who is the SCCH?', 'Station 3 · Partner',    false],
+
+    ['stations/4-meettheteam/studieren.html',             'Paths into quantum physics','Station 4 · Studying', false],
+    ['stations/4-meettheteam/personen/alexander-mandl.html', 'Alexander Mandl',   'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/johannes-kofler.html', 'Johannes Kofler',   'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/jadwiga-wilkens.html', 'Jadwiga Wilkens',   'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/sebastian-egginger.html', 'Sebastian Egginger', 'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/richard-kueng.html',   'Richard Kueng',     'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/kristina-kirova.html', 'Kristina Kirova',   'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/patrick-fath.html',    'Patrick Fath',      'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/elena-giovannini.html', 'Elena Giovannini',  'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/filipa-peres.html',    'Filipa Peres',      'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/marwa-marso.html',     'Marwa Marso',       'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/mario-ullrich.html',   'Mario Ullrich',     'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/alexander-ploier.html', 'Alexander Ploier',  'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/luna-lima-keller.html', 'Luna Lima Keller',  'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/diego-garcia-martin.html', 'Diego García Martín', 'Station 4 · Person',     false],
+    ['stations/4-meettheteam/personen/nina-brandl.html',     'Nina Brandl',       'Station 4 · Person',     false],
+
+    ['stations/5-ama/fragen.html',                        'Frequently asked questions',    'FAQ · All questions',              false],
+    ['stations/5-ama/mythen.html',                        'Six quantum myths','FAQ · Myths',         false],
+
+    ['quiz/',                                              'Quiz pool',                        '18 quizzes · 3 levels',true],
+    ['quiz/quiz.html?id=kinder-1',                         'The cat in the box',              'Quiz · Children',    false],
+    ['quiz/quiz.html?id=kinder-2',                         'Light plays tricks',                'Quiz · Children',    false],
+    ['quiz/quiz.html?id=kinder-3',                         'Teeny-tiny',                      'Quiz · Children',    false],
+    ['quiz/quiz.html?id=kinder-4',                         'Chance and dice',                'Quiz · Children',    false],
+    ['quiz/quiz.html?id=kinder-5',                         'The quantum computer',              'Quiz · Children',    false],
+    ['quiz/quiz.html?id=kinder-6',                         'In the lab',                         'Quiz · Children',    false],
+
+    ['quiz/quiz.html?id=schule-1',                         'Superposition & measurement',          'Quiz · School',    false],
+    ['quiz/quiz.html?id=schule-2',                         'Double slit & interference',        'Quiz · School',    false],
+    ['quiz/quiz.html?id=schule-3',                         'Photons & the photoelectric effect',           'Quiz · School',    false],
+    ['quiz/quiz.html?id=schule-4',                         'Atoms & spectra',                 'Quiz · School',    false],
+    ['quiz/quiz.html?id=schule-5',                         'Qubits & gates',                  'Quiz · School',    false],
+    ['quiz/quiz.html?id=schule-6',                         'Entanglement & myths',           'Quiz · School',    false],
+
+    ['quiz/quiz.html?id=studium-1',                        'States & normalisation',            'Quiz · University',   false],
+    ['quiz/quiz.html?id=studium-2',                        'Born rule & expectation values',     'Quiz · University',   false],
+    ['quiz/quiz.html?id=studium-3',                        'Matter waves & uncertainty',        'Quiz · University',   false],
+    ['quiz/quiz.html?id=studium-4',                        'Atomic physics & spectra',            'Quiz · University',   false],
+    ['quiz/quiz.html?id=studium-5',                        'Bloch sphere & gates',             'Quiz · University',   false],
+    ['quiz/quiz.html?id=studium-6',                        'Entanglement, Bell & algorithms','Quiz · University',   false]
+  ];
+
+  var baseInput = document.getElementById('base');
+  var warnEl    = document.getElementById('warn');
+  var postersEl = document.getElementById('posters');
+  var allEl     = document.getElementById('all');
+
+  function currentBase() {
+    // .../qr/ → eine Ebene höher ist die Wurzel der Seiten
+    return location.href.replace(/qr\/(index\.html)?(\?.*)?(#.*)?$/, '');
+  }
+
+  function card(page, poster) {
+    var base = baseInput.value.trim();
+    if (base && base.slice(-1) !== '/') base += '/';
+    var url = base + page[0];
+
+    var el = document.createElement('div');
+    el.className = 'card' + (poster ? ' poster' : '');
+
+    var svg = '';
+    var note = '';
+    // Bei sehr langen Adressen automatisch auf ein niedrigeres
+    // Fehlerkorrektur-Level ausweichen, statt gar nichts zu zeigen.
+    var levels = poster ? ['Q', 'M', 'L'] : ['M', 'L'];
+    for (var i = 0; i < levels.length; i++) {
+      try {
+        svg = QR.svg(url, { ec: levels[i], quiet: 4 });
+        if (i > 0) note = ' (Level ' + levels[i] + ')';
+        break;
+      } catch (e) { /* nächstes Level probieren */ }
+    }
+    if (!svg) {
+      el.innerHTML = '<div class="warn">Address too long for a QR code of this size.</div>';
+      return el;
+    }
+
+    el.innerHTML = svg +
+      '<div class="card-title">' + page[1] + '</div>' +
+      '<div class="card-sub">' + page[2] + note + '</div>' +
+      '<div class="card-url">' + url.replace(/^https?:\/\//, '') + '</div>';
+    return el;
+  }
+
+  function render() {
+    var base = baseInput.value.trim();
+    warnEl.hidden = true;
+
+    if (!base) {
+      warnEl.hidden = false;
+      warnEl.textContent = 'Please enter a base address first.';
+      postersEl.innerHTML = '';
+      allEl.innerHTML = '';
+      return;
+    }
+    if (!/^https?:\/\//i.test(base)) {
+      warnEl.hidden = false;
+      warnEl.textContent = 'The address should start with http:// or https:// — otherwise the code won\'t work when scanned.';
+    }
+
+    try { localStorage.setItem(STORE, base); } catch (e) {}
+
+    postersEl.innerHTML = '';
+    allEl.innerHTML = '';
+    PAGES.forEach(function (p) {
+      if (p[3]) postersEl.appendChild(card(p, true));
+      allEl.appendChild(card(p, false));
+    });
+  }
+
+  baseInput.addEventListener('input', render);
+
+  document.getElementById('use-here').addEventListener('click', function () {
+    baseInput.value = currentBase();
+    render();
+  });
+  document.getElementById('print').addEventListener('click', function () {
+    window.print();
+  });
+
+  // Beim Start: die feste Adresse aus assets/site.js (für die englische
+  // Fassung mit en/ dahinter), sonst eine gespeicherte, sonst die aktuelle.
+  var official = window.QUANTENSTATION_URL || '';
+  if (official && /^en/i.test(document.documentElement.lang || '')) official += 'en/';
+  var saved = null;
+  try { saved = localStorage.getItem(STORE); } catch (e) {}
+  baseInput.value = official || saved || currentBase();
+  render();
+})();
+</script>
+</body>
+</html>

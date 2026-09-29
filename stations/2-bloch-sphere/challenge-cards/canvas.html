@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloch-Kugel-Herausforderungen — Referenzkarten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---------------------------------------------------------------------
+     PAGE SIZE — sized for a home/office printer, not a print shop.
+
+     An artboard here is the PRINTABLE area of A4, 194 x 281 mm
+     (733 x 1062 px @ 96dpi), not the full 210x297mm sheet — a normal
+     inkjet/laser cannot print to the edge. @page puts an 8mm margin back.
+     Print at 100% / "actual size", never "fit to page".
+  --------------------------------------------------------------------- */
+  :root {
+    --ink: #14161c; --muted: #6a655c; --faint: #8a847a;
+    --line: rgba(20,22,28,.14);
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+    --l1: #1f8a5b; --l1-dk: #14603f; --l1-tint: rgba(31,138,91,.10);
+    --l2: #1f5bff; --l2-dk: #123a9e; --l2-tint: rgba(31,91,255,.10);
+    --l3: #c98a1a; --l3-dk: #8a5c0f; --l3-tint: rgba(201,138,26,.13);
+    --l4: #ff352b; --l4-dk: #a3221b; --l4-tint: rgba(255,53,43,.10);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #dfe3ea; }
+  body { font-family: var(--font-body); color: var(--ink); }
+
+  .sheet-stack {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 40px; padding: 40px 20px;
+  }
+
+  article.page {
+    width: 733px; height: 1062px; flex: none;
+    background: #ffffff;
+    box-shadow: 0 14px 40px rgba(15,35,80,.22);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* ---------- header band ---------- */
+  .band {
+    position: relative; flex: none; color: #fff;
+    padding: 20px 34px 18px; overflow: hidden;
+  }
+  .band svg.atom { position: absolute; right: -40px; top: -46px; width: 190px; height: 190px; opacity: .22; }
+  .lvl-head-row { position: relative; display: flex; align-items: center; gap: 18px; }
+  /* Big, unmistakable difficulty badge — each sheet sits at its own sphere
+     and is read on its own, so the level must be obvious at a glance. */
+  .level-badge {
+    flex: none; width: 78px; height: 78px; border-radius: 50%;
+    background: #fff; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 800; font-size: 42px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  }
+  .pill {
+    font-family: var(--font-mono); font-weight: 600; font-size: 14px;
+    letter-spacing: .09em; padding: 5px 11px; border-radius: 999px;
+    background: rgba(255,255,255,.24); display: inline-block;
+  }
+  .band h1 {
+    margin: 7px 0 0; font-family: var(--font-display); font-weight: 800;
+    font-size: 34px; line-height: 1.06; letter-spacing: -.01em;
+  }
+
+  /* ---------- body ---------- */
+  .body { flex: 1; min-height: 0; padding: 18px 34px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .body p { margin: 0; font-size: 21px; line-height: 1.46; color: #232323; text-wrap: pretty; }
+
+  .subhead {
+    font-family: var(--font-mono); font-weight: 700; font-size: 13px;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 2px 0 0;
+  }
+  .ref-line { font-size: 14.5px; line-height: 1.32; color: #3a3a3a; margin: 0; }
+  .ref-line + .ref-line { margin-top: 2px; }
+
+  .intro-row { display: flex; align-items: center; gap: 18px; }
+  .intro-row .ref-line { flex: 1; font-size: 17.5px; line-height: 1.42; }
+  /* Placeholder until the station's site has a final URL — swap for a real
+     QR (see the TODO above INTRO_HTML) without touching the layout. */
+  .qr-box {
+    flex: none; width: 92px; height: 92px; border: 2px dashed var(--faint); border-radius: 11px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    font-family: var(--font-mono); font-weight: 700; font-size: 21px; color: var(--faint);
+  }
+  .qr-box span { font-size: 8.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+  .qr-box.is-filled { border: 0; }
+  .qr-box.is-filled svg { width: 100%; height: 100%; display: block; }
+
+  .gate-info { display: grid; grid-template-columns: 1fr; gap: 3px 18px; }
+  .gate-info .gi-item { display: flex; align-items: baseline; gap: 10px; font-size: 18px; line-height: 1.22; color: var(--ink); }
+  .gate-info .gi-item b { flex: none; font-family: var(--font-mono); font-weight: 700; font-size: 18px; color: var(--ink); min-width: 62px; }
+
+  /* ---------- gate chips ---------- */
+  .chip-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .chip {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 68px; height: 68px; padding: 0 14px; border-radius: 15px;
+    color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.18); flex: none;
+  }
+  .chip.ghost { background: #fff; border: 3px dashed var(--faint); color: var(--faint); box-shadow: none; }
+  /* the starting state — not a gate, so it gets its own outlined style */
+  .chip.start-chip { background: #fff; border: 2px solid var(--row-dark, var(--ink)); color: var(--row-dark, var(--ink)); box-shadow: none; font-weight: 700; }
+  .chip-arrow { font-size: 18px; color: var(--faint); font-weight: 700; }
+  /* Smaller than the full chip — the sequence is just one of several things
+     each row must show now, so it no longer gets to dominate the row. */
+  .chip.sm { min-width: 40px; height: 40px; font-size: 17px; border-radius: 10px; }
+
+  /* ---------- one page per sphere: compact challenge rows ---------- */
+  .body-level { gap: 4px; }
+  .level-row { border: 1.5px solid var(--line); border-radius: 13px; padding: 5px 18px 6px; }
+  .lr-head { display: flex; align-items: baseline; gap: 11px; margin-bottom: 5px; flex-wrap: wrap; }
+  .lr-id {
+    font-family: var(--font-mono); font-weight: 700; font-size: 14.5px; color: #fff;
+    padding: 3px 9px; border-radius: 6px; letter-spacing: .04em; flex: none;
+  }
+  .lr-title { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--ink); }
+  .lr-body { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .lr-line { font-size: 16px; line-height: 1.3; color: #232323; }
+  .lr-line b { color: var(--ink); }
+  .lr-target { font-family: var(--font-mono); font-weight: 700; font-size: 15.5px; color: var(--row-dark, var(--ink)); }
+
+  /* ---------- footer ---------- */
+  .foot {
+    flex: none; background: var(--ink); color: #cfd3dc;
+    padding: 10px 34px; display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: .06em;
+  }
+
+  /* ---------- print ---------- */
+  @page { size: A4; margin: 8mm; }
+  @media print {
+    html, body { background: #fff !important; }
+    .sheet-stack { gap: 0 !important; padding: 0 !important; background: #fff !important; }
+    article.page {
+      box-shadow: none !important; width: 194mm !important; height: 281mm !important;
+      break-after: page; page-break-after: always;
+    }
+    article.page:last-child { break-after: auto; page-break-after: auto; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet-stack" id="sheet-stack"></div>
+
+<script>
+    /* ===== BEGIN GENERATED — do not edit by hand. Edit data.json, then run:
+           python build.py
+       ===================================================================== */
+    const META = {
+  "conventions": {
+    "poles": "|0> = +Z (north), |1> = -Z (south)",
+    "axes": "|+> = +X, |-> = -X, |+i> = +Y, |-i> = -Y",
+    "theta": "polar angle from +Z, degrees",
+    "phi": "azimuth from +X toward +Y, degrees, 0-360; null at poles",
+    "rotations": "right-handed; Rz(90) maps +X to +Y",
+    "gates": "X/Y/Z = 180 deg turns, S = Rz(90), Sdg = Rz(-90), T = Rz(45), Tdg = Rz(-45), H = 180 deg about (X+Z)/sqrt2",
+    "global_phase": "ignored"
+  },
+  "levels": {
+    "1": "Easy",
+    "2": "Medium",
+    "3": "Hard",
+    "4": "Expert"
+  }
+};
+    const CHALLENGES = [
+  {
+    "id": "L1-1",
+    "level": 1,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "X",
+      "H"
+    ],
+    "expected": {
+      "state": "-",
+      "label": "|->",
+      "theta_deg": 90.0,
+      "phi_deg": 180.0,
+      "bloch": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L1-2",
+    "level": 1,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "Z",
+      "H"
+    ],
+    "expected": {
+      "state": "1",
+      "label": "|1>",
+      "theta_deg": 180.0,
+      "phi_deg": null,
+      "bloch": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L1-3",
+    "level": 1,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "X",
+      "H",
+      "Z"
+    ],
+    "expected": {
+      "state": "+",
+      "label": "|+>",
+      "theta_deg": 90.0,
+      "phi_deg": 0.0,
+      "bloch": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L1-4",
+    "level": 1,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "S"
+    ],
+    "expected": {
+      "state": "+i",
+      "label": "|+i>",
+      "theta_deg": 90.0,
+      "phi_deg": 90.0,
+      "bloch": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L1-5",
+    "level": 1,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "S",
+      "H"
+    ],
+    "expected": {
+      "state": "-i",
+      "label": "|-i>",
+      "theta_deg": 90.0,
+      "phi_deg": 270.0,
+      "bloch": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L2-1",
+    "level": 2,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "S",
+      "S",
+      "H"
+    ],
+    "expected": {
+      "state": "1",
+      "label": "|1>",
+      "theta_deg": 180.0,
+      "phi_deg": null,
+      "bloch": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L2-2",
+    "level": 2,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "S",
+      "Z",
+      "H"
+    ],
+    "expected": {
+      "state": "+i",
+      "label": "|+i>",
+      "theta_deg": 90.0,
+      "phi_deg": 90.0,
+      "bloch": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L2-3",
+    "level": 2,
+    "type": "sequence",
+    "start": "1",
+    "start_label": "|1>",
+    "sequence": [
+      "H",
+      "S",
+      "S",
+      "S",
+      "H"
+    ],
+    "expected": {
+      "state": "-i",
+      "label": "|-i>",
+      "theta_deg": 90.0,
+      "phi_deg": 270.0,
+      "bloch": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L2-4",
+    "level": 2,
+    "type": "sequence",
+    "start": "+i",
+    "start_label": "|+i>",
+    "sequence": [
+      "X",
+      "H",
+      "Sdg"
+    ],
+    "expected": {
+      "state": "+",
+      "label": "|+>",
+      "theta_deg": 90.0,
+      "phi_deg": 0.0,
+      "bloch": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L2-5",
+    "level": 2,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "S",
+      "S",
+      "S",
+      "S",
+      "H"
+    ],
+    "expected": {
+      "state": "0",
+      "label": "|0>",
+      "theta_deg": 0.0,
+      "phi_deg": null,
+      "bloch": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L3-1",
+    "level": 3,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "T"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 90.0,
+      "phi_deg": 45.0,
+      "bloch": [
+        0.707107,
+        0.707107,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.707107,
+        0.707107,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L3-2",
+    "level": 3,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "T",
+      "S"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 90.0,
+      "phi_deg": 135.0,
+      "bloch": [
+        -0.707107,
+        0.707107,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.707107,
+        0.707107,
+        0.0
+      ],
+      [
+        -0.707107,
+        0.707107,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L3-3",
+    "level": 3,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "Rx(90deg)",
+      "T"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 90.0,
+      "phi_deg": 315.0,
+      "bloch": [
+        0.707107,
+        -0.707107,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.707107,
+        -0.707107,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L3-4",
+    "level": 3,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "Ry(45deg)",
+      "Rz(90deg)"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 45.0,
+      "phi_deg": 90.0,
+      "bloch": [
+        0.0,
+        0.707107,
+        0.707107
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.707107,
+        0.0,
+        0.707107
+      ],
+      [
+        0.0,
+        0.707107,
+        0.707107
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L3-5",
+    "level": 3,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "Ry(135deg)",
+      "T",
+      "T"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 135.0,
+      "phi_deg": 90.0,
+      "bloch": [
+        0.0,
+        0.707107,
+        -0.707107
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.707107,
+        0.0,
+        -0.707107
+      ],
+      [
+        0.5,
+        0.5,
+        -0.707107
+      ],
+      [
+        0.0,
+        0.707107,
+        -0.707107
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L4-1",
+    "level": 4,
+    "type": "free_sequence",
+    "start": "0",
+    "prompt": "Turn |0> into |1> using only H and S. Fewest gates?",
+    "target": "1",
+    "allowed_gates": [
+      "H",
+      "S"
+    ],
+    "optimal_length": 4,
+    "optimal_solutions": [
+      [
+        "H",
+        "S",
+        "S",
+        "H"
+      ]
+    ]
+  },
+  {
+    "id": "L4-2",
+    "level": 4,
+    "type": "fill_gap",
+    "start": "0",
+    "prompt": "Fill the gap so |0> ends at |1>.",
+    "target": "1",
+    "template": [
+      "H",
+      "S",
+      "?",
+      "Sdg",
+      "H"
+    ],
+    "options": [
+      "X",
+      "Y",
+      "Z",
+      "H",
+      "S",
+      "Sdg",
+      "T",
+      "Tdg"
+    ],
+    "valid": [
+      "X",
+      "Z",
+      "H"
+    ]
+  },
+  {
+    "id": "L4-3",
+    "level": 4,
+    "type": "identify_gate",
+    "prompt": "Mystery gate: |0> stays |0>, but |+> goes to |-i>. Name it.",
+    "options": [
+      "X",
+      "Y",
+      "Z",
+      "H",
+      "S",
+      "Sdg",
+      "T",
+      "Tdg"
+    ],
+    "valid": [
+      "Sdg"
+    ],
+    "tests": [
+      {
+        "in": "0",
+        "out": "0"
+      },
+      {
+        "in": "+",
+        "out": "-i"
+      }
+    ],
+    "explanation": "S-dagger = Rz(-90 deg): fixes the Z axis, turns +X to -Y."
+  },
+  {
+    "id": "L4-4",
+    "level": 4,
+    "type": "count",
+    "start": "+",
+    "prompt": "Start at |+>, apply only T. How many T gates to return to |+>? How many to reach |->?",
+    "answers": {
+      "return_to_start": 8,
+      "reach_minus": 4
+    }
+  },
+  {
+    "id": "L4-5",
+    "level": 4,
+    "type": "compare_orders",
+    "start": "0",
+    "prompt": "Order matters: from |0> do A, then separately B. What are the end states?",
+    "A": {
+      "sequence": [
+        "Rx(90deg)",
+        "Rz(90deg)",
+        "Ry(90deg)"
+      ],
+      "expected": "1",
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ]
+    },
+    "B": {
+      "sequence": [
+        "Ry(90deg)",
+        "Rz(90deg)",
+        "Rx(90deg)"
+      ],
+      "expected": "0",
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  }
+];
+    /* ===== END GENERATED ===================================================== */
+</script>
+<script src="../../../assets/site.js"></script>
+<script src="../../../assets/qr.js"></script>
+
+<script>
+(function () {
+  'use strict';
+
+  var LEVELS = {
+    1: { name: 'Leicht',  color: 'var(--l1)', dark: 'var(--l1-dk)', tint: 'var(--l1-tint)' },
+    2: { name: 'Mittel',  color: 'var(--l2)', dark: 'var(--l2-dk)', tint: 'var(--l2-tint)' },
+    3: { name: 'Schwer',  color: 'var(--l3)', dark: 'var(--l3-dk)', tint: 'var(--l3-tint)' },
+    4: { name: 'Experte', color: 'var(--l4)', dark: 'var(--l4-dk)', tint: 'var(--l4-tint)' }
+  };
+
+  var KET = { '0': '|0⟩', '1': '|1⟩', '+': '|+⟩', '-': '|−⟩', '+i': '|+i⟩', '-i': '|−i⟩' };
+  function ket(code) { return code == null ? null : (KET[code] || ('|' + code + '⟩')); }
+
+  /* Each description names the rotation (angle + axis) and then gives two
+     concrete examples: what it does, and one state it leaves untouched —
+     both easy to check against the physical sphere. */
+  var GATE_INFO = {
+    X:   { label: 'X',  color: '#ff352b', desc: 'Dreht 180° um die x-Achse: |0⟩ auf |1⟩, lässt |+⟩ unverändert.' },
+    Y:   { label: 'Y',  color: '#ff5d4a', desc: 'Dreht 180° um die y-Achse: |0⟩ auf |1⟩, lässt |+i⟩ unverändert.' },
+    Z:   { label: 'Z',  color: '#1f5bff', desc: 'Dreht 180° um die z-Achse: |+⟩ auf |−⟩, lässt |0⟩ unverändert.' },
+    H:   { label: 'H',  color: '#8b3dff', desc: 'Dreht 180° um die Achse zwischen x und z: |0⟩ auf |+⟩, |1⟩ auf |−⟩.' },
+    S:   { label: 'S',  color: '#1f8a5b', desc: 'Dreht 90° um die z-Achse: |+⟩ auf |+i⟩, lässt |0⟩ unverändert.' },
+    Sdg: { label: 'S†', color: '#14603f', desc: 'Dreht −90° um die z-Achse: |+⟩ auf |−i⟩, lässt |0⟩ unverändert.' },
+    T:   { label: 'T',  color: '#c98a1a', desc: 'Dreht 45° um die z-Achse: |+⟩ ein Achtel Richtung |+i⟩ (2×T = S), lässt |0⟩ unverändert.' },
+    Tdg: { label: 'T†', color: '#8a5c0f', desc: 'Dreht −45° um die z-Achse: |+⟩ ein Achtel Richtung |−i⟩, lässt |0⟩ unverändert.' }
+  };
+  var AXIS_DESC = {
+    x: 'Dreht um θ um die x-Achse, lässt |+⟩/|−⟩ unverändert; z. B. bei 90°: dreht |0⟩ auf |−i⟩.',
+    y: 'Dreht um θ um die y-Achse, lässt |+i⟩/|−i⟩ unverändert; z. B. bei 90°: dreht |0⟩ auf |+⟩.',
+    z: 'Dreht um θ um die z-Achse, lässt |0⟩/|1⟩ unverändert; z. B. bei 90°: dreht |+⟩ auf |+i⟩ (= S).'
+  };
+
+  function parseGate(name) {
+    var m = /^R([xyz])\((-?\d+)deg\)$/.exec(name);
+    if (m) {
+      var axis = m[1], deg = m[2];
+      return { key: 'R' + axis, label: 'R' + axis + '(' + deg + '°)', glossaryLabel: 'R' + axis + '(θ)', color: '#14161c', desc: AXIS_DESC[axis] };
+    }
+    var info = GATE_INFO[name] || { label: name, color: '#14161c', desc: '' };
+    return { key: name, label: info.label, color: info.color, desc: info.desc };
+  }
+
+  function gateChip(name, opts) {
+    opts = opts || {};
+    if (name === '?') return '<span class="chip ghost' + (opts.sm ? ' sm' : '') + '">?</span>';
+    var g = parseGate(name);
+    var cls = 'chip' + (opts.sm ? ' sm' : '');
+    return '<span class="' + cls + '" style="background:' + g.color + '">' + g.label + '</span>';
+  }
+
+  function chipRow(names, opts) {
+    opts = opts || {};
+    return '<div class="chip-row">' + names.map(function (n, i) {
+      var out = gateChip(n, opts);
+      if (i < names.length - 1 && !opts.noArrow) out += '<span class="chip-arrow">→</span>';
+      return out;
+    }).join('') + '</div>';
+  }
+
+  function startChip(label, opts) {
+    opts = opts || {};
+    return '<span class="chip start-chip' + (opts.sm ? ' sm' : '') + '">' + label + '</span>';
+  }
+
+  /* A sequence row without its starting state is ambiguous — the same
+     gates land somewhere else depending on where you begin. */
+  function seqChipRow(startLabel, names, opts) {
+    opts = opts || {};
+    var items = [startChip(startLabel, opts)].concat(names.map(function (n) { return gateChip(n, opts); }));
+    return '<div class="chip-row">' + items.map(function (it, i) {
+      return it + (i < items.length - 1 ? '<span class="chip-arrow">→</span>' : '');
+    }).join('') + '</div>';
+  }
+
+  function fmtNum(n) {
+    var r = Math.round(n * 100) / 100;
+    if (Object.is(r, -0)) r = 0;
+    return r.toString();
+  }
+  function angleLine(theta, phi) {
+    return 'θ = ' + fmtNum(theta) + '°  ·  φ = ' + (phi == null ? '—' : fmtNum(phi) + '°');
+  }
+
+  /* data.json keeps the original English prompts from the simulator that
+     generated it; the printed cards are German, so the handful of level-4
+     titles get a hand-written translation here rather than in the data
+     file. These are print-ready cards with no solutions shown, so each
+     title/sub is phrased as the open question the visitor has to answer. */
+  /* Short titles keep the header band to one line; the original English
+     prompt from data.json still drives the actual checking logic in
+     bodyXxx() below — this is display text only. */
+  var DE_TITLE_SUB = {
+    'L4-1': { title: 'Starte in |0⟩ und gelange zu |1⟩ — nur mit H und S', sub: 'Geht es auch mit weniger als 4 Gattern?' },
+    'L4-2': { title: 'Fülle die Lücke', sub: 'Ziel: |0⟩ → |1⟩' },
+    'L4-3': { title: 'Mysteriöses Gatter', sub: '|0⟩ bleibt |0⟩, |+⟩ wird zu |−i⟩ — wie heißt es?' },
+    'L4-4': { title: 'Perioden zählen', sub: 'Start |+⟩, nur T: wie oft bis |+⟩? Wie oft bis |−⟩?' },
+    'L4-5': { title: 'Was sind die Ergebnisse?', sub: 'Von |0⟩: einmal Reihenfolge A, einmal B — wie enden sie?' }
+  };
+
+  function titleAndSub(c) {
+    if (DE_TITLE_SUB[c.id]) return DE_TITLE_SUB[c.id];
+    var title = 'Sequenz: ' + c.sequence.map(function (n) { return parseGate(n).label; }).join(' → ');
+    var sub = c.expected.state != null
+      ? ket(c.start) + ' → ' + ket(c.expected.state)
+      : 'Ziel: ' + angleLine(c.expected.theta_deg, c.expected.phi_deg);
+    return { title: title, sub: sub };
+  }
+
+  var ATOM_SVG = '<svg class="atom" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">' +
+    '<g fill="none" stroke="#ffffff" stroke-width="2">' +
+    '<ellipse cx="100" cy="100" rx="78" ry="30"></ellipse>' +
+    '<ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(60 100 100)"></ellipse>' +
+    '<ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(120 100 100)"></ellipse>' +
+    '</g><circle cx="100" cy="100" r="8" fill="#ffffff"></circle></svg>';
+
+  function header(lvl, level, tag) {
+    return '<header class="band" style="background:linear-gradient(135deg,' + lvl.color + ' 0%,' + lvl.dark + ' 100%);">' +
+      ATOM_SVG +
+      '<div class="lvl-head-row">' +
+        '<div class="level-badge" style="color:' + lvl.dark + '">' + level + '</div>' +
+        '<div><span class="pill">STATION 2 · BLOCH-KUGEL' + (tag ? ' · ' + tag : '') + '</span><h1>Level ' + level + ' · ' + lvl.name + '</h1></div>' +
+      '</div>' +
+      '</header>';
+  }
+
+  function footer(rightText) {
+    return '<footer class="foot"><span>60 JAHRE JKU · STATION 2 — BLOCH-KUGEL</span><span>' + rightText + '</span></footer>';
+  }
+
+  /* One page per Bloch sphere: each physical sphere is dedicated to one
+     difficulty, and challenges are not necessarily worked through in order
+     across spheres — so every sheet must stand entirely on its own, with
+     the conventions and every gate it uses spelled out, not just a pointer
+     to a "first page" that no longer exists.
+
+     Two variants of every level page are printed: one with the solutions
+     (for staff) and one without (to hand to visitors). */
+
+  /* QR code to "Teste selbst", where visitors check their answers.
+     The site address comes from assets/site.js; without it (or without
+     qr.js) the dashed placeholder box stays. */
+  function qrBoxHtml() {
+    var base = window.QUANTENSTATION_URL;
+    if (!base || !window.QR) return '<div class="qr-box">QR<span>URL folgt</span></div>';
+    return '<div class="qr-box is-filled">' +
+      QR.svg(base + 'stations/2-bloch-sphere/teste-selbst.html', { ec: 'M', quiet: 2 }) + '</div>';
+  }
+  var INTRO_HTML =
+    '<div class="intro-row">' +
+      '<p class="ref-line">Führe die folgenden Sequenzen auf der Kugel aus und merke dir den ' +
+      'Endzustand. Auf der Website findest du noch mehr Infos und kannst deine Lösungen überprüfen.</p>' +
+      qrBoxHtml() +
+    '</div>';
+
+  function levelGateNames(level) {
+    var names = [];
+    CHALLENGES.filter(function (c) { return c.level === level; }).forEach(function (c) {
+      if (c.sequence) names = names.concat(c.sequence);
+      if (c.allowed_gates) names = names.concat(c.allowed_gates);
+      if (c.options) names = names.concat(c.options);
+      if (c.type === 'count') names.push('T');
+      if (c.A) names = names.concat(c.A.sequence, c.B.sequence);
+    });
+    return names;
+  }
+
+  function gateInfoGrid(level) {
+    var seen = {}, rows = [];
+    levelGateNames(level).forEach(function (n) {
+      var g = parseGate(n);
+      if (seen[g.key] || !g.desc) return;
+      seen[g.key] = true;
+      rows.push('<div class="gi-item"><b>' + (g.glossaryLabel || g.label) + '</b><span>' + g.desc + '</span></div>');
+    });
+    return '<div class="gate-info">' + rows.join('') + '</div>';
+  }
+
+  function rowShell(c, lvl, bodyHtml) {
+    return '<div class="level-row" style="border-color:' + lvl.color + '55;--row-dark:' + lvl.dark + ';">' +
+      '<div class="lr-head"><span class="lr-id" style="background:' + lvl.color + '">' + c.id + '</span>' +
+      '<span class="lr-title">' + titleAndSub(c).title + '</span></div>' +
+      '<div class="lr-body">' + bodyHtml + '</div>' +
+      '</div>';
+  }
+
+  /* Task only, no solutions — the version to hand to visitors. Perform the
+     sequence on the sphere and check the result on the website instead. */
+  var TASK_ROW_BUILDERS = {
+    sequence: function (c, lvl) {
+      return rowShell(c, lvl, seqChipRow(ket(c.start), c.sequence, { sm: true }));
+    },
+    free_sequence: function (c, lvl) {
+      return rowShell(c, lvl, '');
+    },
+    fill_gap: function (c, lvl) {
+      return rowShell(c, lvl,
+        seqChipRow(ket(c.start), c.template, { sm: true }) +
+        '<span class="lr-target">→ Ziel: ' + ket(c.target) + '</span>');
+    },
+    identify_gate: function (c, lvl) {
+      var tests = 'The gate turns ' + c.tests.map(function (t) { return ket(t.in) + '→' + ket(t.out); }).join('  and  ');
+      return rowShell(c, lvl, '<span class="lr-line">' + tests + '</span>');
+    },
+    count: function (c, lvl) {
+      return rowShell(c, lvl,
+        '<span class="lr-line">Starte in ' + ket(c.start) + ' und wende nur T an. Wie oft bis man zurück in ' + ket(c.start) + ' ist? Wie oft bis |−⟩?</span>');
+    },
+    compare_orders: function (c, lvl) {
+      function line(label, run) {
+        return '<div>' + label + ': ' + ket(c.start) + ' → ' +
+          run.sequence.map(function (n) { return parseGate(n).label; }).join(' → ') + '</div>';
+      }
+      return rowShell(c, lvl, '<div class="lr-line" style="flex:0 0 100%;">' + line('A', c.A) + line('B', c.B) + '</div>');
+    }
+  };
+
+  /* data.json keeps the original English explanation from the simulator;
+     the printed cards are German, so this one hand-written field lives
+     here rather than in the data file. Only used on the solved variant. */
+  var DE_EXPLANATION = {
+    'L4-3': 'S† = Rz(−90°): lässt die z-Achse unverändert und dreht +X nach −Y.'
+  };
+
+  /* Same rows, with the answer included — the staff reference variant. */
+  var SOLUTION_ROW_BUILDERS = {
+    sequence: function (c, lvl) {
+      var target = c.expected.state != null
+        ? ket(c.expected.state) + ' (' + angleLine(c.expected.theta_deg, c.expected.phi_deg) + ')'
+        : angleLine(c.expected.theta_deg, c.expected.phi_deg);
+      return rowShell(c, lvl, seqChipRow(ket(c.start), c.sequence, { sm: true }) + '<span class="lr-target">→ ' + target + '</span>');
+    },
+    free_sequence: function (c, lvl) {
+      var sol = c.optimal_solutions[0];
+      return rowShell(c, lvl,
+        '<span class="lr-line">Erlaubt: <b>' + c.allowed_gates.map(function (g) { return parseGate(g).label; }).join(', ') + '</b></span>' +
+        seqChipRow(ket(c.start), sol, { sm: true }) +
+        '<span class="lr-target">→ ' + ket(c.target) + ' (' + c.optimal_length + ' Gatter)</span>');
+    },
+    fill_gap: function (c, lvl) {
+      return rowShell(c, lvl,
+        seqChipRow(ket(c.start), c.template, { sm: true }) +
+        '<span class="lr-line">Gültig: <b>' + c.valid.map(function (v) { return parseGate(v).label; }).join(', ') + '</b></span>' +
+        '<span class="lr-target">→ ' + ket(c.target) + '</span>');
+    },
+    identify_gate: function (c, lvl) {
+      var tests = c.tests.map(function (t) { return ket(t.in) + '→' + ket(t.out); }).join('  ·  ');
+      return rowShell(c, lvl,
+        '<span class="lr-line">' + tests + '</span>' +
+        '<span class="lr-target">Antwort: ' + c.valid.map(function (v) { return parseGate(v).label; }).join(', ') + '</span>' +
+        '<span class="lr-line" style="flex:0 0 100%;color:var(--muted);font-style:italic;">' + (DE_EXPLANATION[c.id] || c.explanation) + '</span>');
+    },
+    count: function (c, lvl) {
+      return rowShell(c, lvl,
+        '<span class="lr-line">Start ' + ket(c.start) + ', nur T: <b>' + c.answers.return_to_start + '</b> Gatter bis zurück zu ' + ket(c.start) + ' · <b>' + c.answers.reach_minus + '</b> bis |−⟩</span>');
+    },
+    compare_orders: function (c, lvl) {
+      function line(label, run) {
+        return '<div>' + label + ': ' + ket(c.start) + ' → ' +
+          run.sequence.map(function (n) { return parseGate(n).label; }).join(' → ') +
+          ' ⇒ <b>' + ket(run.expected) + '</b></div>';
+      }
+      return rowShell(c, lvl, '<div class="lr-line" style="flex:0 0 100%;">' + line('A', c.A) + line('B', c.B) + '</div>');
+    }
+  };
+
+  function levelPage(level, withSolutions) {
+    var lvl = LEVELS[level];
+    var builders = withSolutions ? SOLUTION_ROW_BUILDERS : TASK_ROW_BUILDERS;
+    var rows = CHALLENGES.filter(function (c) { return c.level === level; })
+      .map(function (c) { return builders[c.type](c, lvl); }).join('');
+    var tag = withSolutions ? 'MIT LÖSUNGEN' : null;
+    return '<article class="page" data-label="LEVEL-' + level + (withSolutions ? '-LOESUNG' : '') + '">' +
+      header(lvl, level, tag) +
+      '<div class="body body-level">' +
+        INTRO_HTML +
+        gateInfoGrid(level) +
+        rows +
+      '</div>' +
+      footer('LEVEL ' + level + ' · ' + lvl.name.toUpperCase() + (withSolutions ? ' · LÖSUNGEN' : '')) +
+      '</article>';
+  }
+
+  /* ---------------- render ---------------- */
+
+  function render() {
+    var html = [];
+    [1, 2, 3, 4].forEach(function (l) { html.push(levelPage(l, true)); });
+    [1, 2, 3, 4].forEach(function (l) { html.push(levelPage(l, false)); });
+    document.getElementById('sheet-stack').innerHTML = html.join('\n');
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

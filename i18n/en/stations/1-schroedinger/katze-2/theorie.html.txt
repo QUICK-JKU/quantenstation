@@ -1,0 +1,329 @@
+# Englische Texte für stations/1-schroedinger/katze-2/theorie.html — siehe tools/build-en.py
+
+de: Die Rechenregeln · Die zweite Katze
+en: The rules of calculation · The second cat
+
+de: Alles, was die vier Rätsel der zweiten Katze verlangen: Amplituden, Betragsquadrat, Gatter als Drehungen, Photonenenergie und Bell-Zustände.
+en: Everything the four puzzles of the second cat ask for: amplitudes, squared magnitudes, gates as rotations, photon energy and Bell states.
+
+de: Zurück zur zweiten Katze
+en: Back to the second cat
+
+de: Theorie
+en: Theory
+
+de: 📐 Regeln
+en: 📐 Rules
+
+de: Alles zum Nachschlagen
+en: Everything to look up
+
+de: Hier steht <strong>alles</strong>, was die vier Schlösser von Box 2 verlangen — keine Frage braucht Wissen von außerhalb dieser Seite.
+en: Here you'll find <strong>everything</strong> the four locks of Box 2 ask for — no question needs knowledge from outside this page.
+
+de: Amplituden
+en: Amplitudes
+
+de: Messung
+en: Measurement
+
+de: Gatter
+en: Gates
+
+de: Grenzen
+en: Limits
+
+de: 1 · Amplituden und ihr Quadrat
+en: 1 · Amplitudes and their square
+
+de: Ein Qubit schreibt man als <span class="q-mono">|ψ⟩ = α·|0⟩ + β·|1⟩</span>. Die beiden Zahlen α und β heißen <strong>Amplituden</strong>. Sie sind <em>keine</em> Wahrscheinlichkeiten — die bekommt man erst durch Quadrieren.
+en: A qubit is written as <span class="q-mono">|ψ⟩ = α·|0⟩ + β·|1⟩</span>. The two numbers α and β are called <strong>amplitudes</strong>. They are <em>not</em> probabilities — you only get those by squaring.
+
+de: Born’sche Regel — die Brücke von der Rechnung zur Messung
+en: Born rule — the bridge from calculation to measurement
+
+de: Weil bei jeder Messung genau ein Ergebnis herauskommt, müssen sich die beiden Wahrscheinlichkeiten zu 1 addieren. Das ist die <strong>Normierung</strong>:
+en: Since every measurement gives exactly one result, the two probabilities must add up to 1. This is the <strong>normalisation</strong>:
+
+de: Jeder erlaubte Qubit-Zustand erfüllt sie
+en: Every allowed qubit state satisfies it
+
+de: Vorwärts gerechnet
+en: Calculating forwards
+
+de: Gegeben <span class="q-mono">|ψ⟩ = 0,6·|0⟩ + 0,8·|1⟩</span>:
+en: Given <span class="q-mono">|ψ⟩ = 0.6·|0⟩ + 0.8·|1⟩</span>:
+
+de: P(0) = 0,6² = <strong>0,36</strong> — also 36 %
+en: P(0) = 0.6² = <strong>0.36</strong> — that is 36 %
+
+de: P(1) = 0,8² = <strong>0,64</strong> — also 64 %
+en: P(1) = 0.8² = <strong>0.64</strong> — that is 64 %
+
+de: Probe: 0,36 + 0,64 = 1 ✓
+en: Check: 0.36 + 0.64 = 1 ✓
+
+de: Die häufigste Falle: 0,8 als „80 %“ zu lesen. Erst das Quadrat ist die Wahrscheinlichkeit.
+en: The most common trap: reading 0.8 as “80 %”. Only the square is the probability.
+
+de: Rückwärts gerechnet
+en: Calculating backwards
+
+de: Gegeben <span class="q-mono">|ψ⟩ = 0,6·|0⟩ + b·|1⟩</span> mit reellem b &gt; 0. Gesucht ist b:
+en: Given <span class="q-mono">|ψ⟩ = 0.6·|0⟩ + b·|1⟩</span> with real b &gt; 0. Find b:
+
+de: Normierung ansetzen: 0,6² + b² = 1
+en: Set up the normalisation: 0.6² + b² = 1
+
+de: Umstellen: b² = 1 − 0,36 = 0,64
+en: Rearrange: b² = 1 − 0.36 = 0.64
+
+de: Wurzel ziehen: b = <strong>0,8</strong>
+en: Take the square root: b = <strong>0.8</strong>
+
+de: 2 · Warum 2<sup>n</sup> alles verändert
+en: 2 · Why 2<sup>n</sup> changes everything
+
+de: Ein einzelnes Qubit braucht zwei Amplituden: eine für |0⟩, eine für |1⟩. Zwei Qubits haben vier mögliche Ergebnisse — |00⟩, |01⟩, |10⟩, |11⟩ — und brauchen daher vier Amplituden. Mit jedem weiteren Qubit <strong>verdoppelt</strong> sich die Zahl.
+en: A single qubit needs two amplitudes: one for |0⟩, one for |1⟩. Two qubits have four possible results — |00⟩, |01⟩, |10⟩, |11⟩ — and therefore need four amplitudes. With every additional qubit the number <strong>doubles</strong>.
+
+de: n Qubits → 2<sup>n</sup> Amplituden
+en: n qubits → 2<sup>n</sup> amplitudes
+
+de: Alle zusammen beschreiben den Zustand vollständig
+en: Together they describe the state completely
+
+de: Qubits
+en: =
+
+de: Größenordnung
+en: Order of magnitude
+
+de: trivial
+en: =
+
+de: 2¹⁰ — passt in jeden Taschenrechner
+en: 2¹⁰ — fits into any pocket calculator
+
+de: schon über eine Million
+en: already over a million
+
+de: mehr als Atome im sichtbaren Universum
+en: more than there are atoms in the observable universe
+
+de: Genau deshalb lässt sich ein größerer Quantencomputer auf klassischen Rechnern nicht mehr simulieren — nicht weil er „schneller“ wäre, sondern weil die Buchhaltung explodiert.
+en: That is exactly why a larger quantum computer can no longer be simulated on classical computers — not because it would be “faster”, but because the bookkeeping explodes.
+
+de: 3 · Was eine Messung tut
+en: 3 · What a measurement does
+
+de: Vor der Messung ist ein Qubit in Superposition. Die Messung liefert <strong>genau ein</strong> Ergebnis, und danach ist der Zustand tatsächlich dieses Ergebnis — die Superposition ist weg. Man nennt das <strong>Kollaps</strong>.
+en: Before the measurement a qubit is in superposition. The measurement gives <strong>exactly one</strong> result, and afterwards the state really is that result — the superposition is gone. This is called <strong>collapse</strong>.
+
+de: Die Folge daraus
+en: What follows from this
+
+de: Misst du <span class="q-mono">(|0⟩ + |1⟩)/√2</span> und bekommst 1, dann ist das Qubit jetzt in |1⟩. Eine sofortige zweite Messung liefert <strong>wieder 1</strong> — mit Sicherheit, nicht mehr zufällig. Der Zufall steckt im ersten Blick, nicht im zweiten.
+en: If you measure <span class="q-mono">(|0⟩ + |1⟩)/√2</span> and get 1, the qubit is now in |1⟩. An immediate second measurement gives <strong>1 again</strong> — with certainty, no longer by chance. The randomness lies in the first look, not the second.
+
+de: Superposition ist kein Unwissen
+en: Superposition is not ignorance
+
+de: Bei einer verdeckten Münze steht das Ergebnis längst fest, wir kennen es nur nicht. Bei einem Qubit steht es <em>nicht</em> fest. Der Unterschied ist messbar: Nur echte Superpositionen können sich überlagern und gegenseitig <strong>auslöschen</strong>. Bloßes Unwissen kann das nie — wo nichts schwingt, löscht sich auch nichts aus.
+en: With a covered coin, the result has long been fixed; we just don't know it. With a qubit it is <em>not</em> fixed. The difference is measurable: only genuine superpositions can overlap and <strong>cancel each other out</strong>. Mere ignorance can never do that — where nothing oscillates, nothing cancels.
+
+de: Genau darauf beruht der Test mit dem Hadamard-Gatter: Zweimal H hintereinander bringt |0⟩ exakt zu |0⟩ zurück. Wäre der Zwischenzustand nur ein unbekannter Münzwurf gewesen, käme in der Hälfte der Fälle 1 heraus.
+en: The test with the Hadamard gate is based on exactly this: applying H twice in a row brings |0⟩ back to exactly |0⟩. If the intermediate state had only been an unknown coin toss, 1 would come out in half of the cases.
+
+de: Kein Bewusstsein nötig
+en: No consciousness required
+
+de: „Messen“ heißt Wechselwirkung, die Information nach außen trägt — ein Detektor, eine Fotoplatte, ein Luftmolekül. Es braucht keine Person, die hinsieht. Ein Detektor misst auch nachts, wenn niemand im Labor ist. Dass große Objekte nie in Superposition erscheinen, liegt an derselben Ursache: Sie wechselwirken unablässig mit ihrer Umgebung — <strong>Dekohärenz</strong>.
+en: “Measuring” means an interaction that carries information to the outside — a detector, a photographic plate, a molecule of air. No person needs to look. A detector measures at night too, when nobody is in the lab. That large objects never appear in superposition has the same cause: they constantly interact with their surroundings — <strong>decoherence</strong>.
+
+de: 4 · Gatter sind Drehungen
+en: 4 · Gates are rotations
+
+de: Jeder Qubit-Zustand ist ein Punkt auf der Bloch-Kugel. Der Winkel <strong>θ</strong> misst, wie weit der Zustand vom Nordpol |0⟩ weg ist. Ein Gatter dreht diesen Punkt — mehr nicht.
+en: Every qubit state is a point on the Bloch sphere. The angle <strong>θ</strong> measures how far the state is from the north pole |0⟩. A gate rotates this point — nothing more.
+
+de: P(1) = sin²(θ/2)
+en: =
+
+de: Achtung auf das halbe θ — daher sind Nord- und Südpol 180° auseinander
+en: Watch out for the half θ — that's why the north and south poles are 180° apart
+
+de: |0⟩ — Nordpol
+en: |0⟩ — north pole
+
+de: sin²(30°) = 0,25
+en: sin²(30°) = 0.25
+
+de: Äquator, z. B. |+⟩
+en: Equator, e.g. |+⟩
+
+de: sin²(60°) = 0,75
+en: sin²(60°) = 0.75
+
+de: |1⟩ — Südpol
+en: |1⟩ — south pole
+
+de: Eine Drehung <span class="q-mono">R<sub>y</sub>(φ)</span> um die y-Achse erhöht θ direkt um φ. Startet man also bei |0⟩ (θ = 0°) und wendet <span class="q-mono">R<sub>y</sub>(120°)</span> an, steht man bei θ = 120° — und damit bei P(1) = 0,75.
+en: A rotation <span class="q-mono">R<sub>y</sub>(φ)</span> about the y-axis increases θ directly by φ. So if you start at |0⟩ (θ = 0°) and apply <span class="q-mono">R<sub>y</sub>(120°)</span>, you end up at θ = 120° — and therefore at P(1) = 0.75.
+
+de: Die vier, die du brauchst
+en: The four you need
+
+de: Hadamard. Holt |0⟩ auf den Äquator und erzeugt die Gleichverteilung <span class="q-mono">(|0⟩ + |1⟩)/√2</span> — also P(0) = P(1) = 0,5. Das Standardwerkzeug für Superposition.
+en: Hadamard. Brings |0⟩ to the equator and creates the equal superposition <span class="q-mono">(|0⟩ + |1⟩)/√2</span> — so P(0) = P(1) = 0.5. The standard tool for superposition.
+
+de: Zweimal H hebt sich auf: zurück zu exakt |0⟩.
+en: Applying H twice cancels out: back to exactly |0⟩.
+
+de: Halbe Drehung um x. Macht aus |0⟩ ein |1⟩ — das NICHT-Gatter der Quantenwelt.
+en: Half a turn about x. Turns |0⟩ into |1⟩ — the NOT gate of the quantum world.
+
+de: Halbe Drehung um z. Die Pole |0⟩ und |1⟩ bleiben liegen, aber am Äquator dreht sich alles auf die Gegenseite: <span class="q-mono">|+⟩ → |−⟩</span>.
+en: Half a turn about z. The poles |0⟩ and |1⟩ stay put, but on the equator everything turns to the opposite side: <span class="q-mono">|+⟩ → |−⟩</span>.
+
+de: Warum Z ausgerechnet |+⟩ umdreht
+en: Why Z of all gates flips |+⟩
+
+de: <span class="q-mono">|+⟩ = (|0⟩ + |1⟩)/√2</span> liegt auf dem Äquator. Z kippt das Vorzeichen vor |1⟩ und macht daraus <span class="q-mono">|−⟩ = (|0⟩ − |1⟩)/√2</span> — den gegenüberliegenden Punkt. Gemessen in der 0/1-Basis ändert sich dabei nichts (beide geben 50 : 50). Sichtbar wird der Unterschied erst, wenn man danach wieder H anwendet: aus |+⟩ wird |0⟩, aus |−⟩ wird |1⟩.
+en: <span class="q-mono">|+⟩ = (|0⟩ + |1⟩)/√2</span> lies on the equator. Z flips the sign in front of |1⟩ and turns it into <span class="q-mono">|−⟩ = (|0⟩ − |1⟩)/√2</span> — the opposite point. Measured in the 0/1 basis nothing changes (both give 50 : 50). The difference only becomes visible when you apply H again afterwards: |+⟩ becomes |0⟩, |−⟩ becomes |1⟩.
+
+de: X, Y, Z, H, S und mehr auf der drehbaren Kugel — mit Winkel- und Prozentanzeige
+en: X, Y, Z, H, S and more on the rotatable sphere — with angle and percentage display
+
+de: 5 · Wie viel Energie steckt in Licht?
+en: 5 · How much energy is in light?
+
+de: Licht kommt in Portionen — <strong>Photonen</strong>. Die Energie einer Portion hängt allein von der Frequenz ab, nicht von der Helligkeit. Helleres Licht heißt: mehr Photonen, nicht kräftigere.
+en: Light comes in portions — <strong>photons</strong>. The energy of one portion depends only on the frequency, not on the brightness. Brighter light means more photons, not stronger ones.
+
+de: h = 6,626·10⁻³⁴ J·s — das Plancksche Wirkungsquantum
+en: h = 6.626·10⁻³⁴ J·s — Planck's constant
+
+de: In der Praxis rechnet niemand mit diesen Zehnerpotenzen. Man misst Energie in <strong>Elektronenvolt</strong> und Wellenlänge in <strong>Nanometern</strong>, dann schrumpft die Formel zu einer Zahl, die man sich merken kann:
+en: In practice nobody calculates with these powers of ten. Measure energy in <strong>electronvolts</strong> and wavelength in <strong>nanometres</strong>, and the formula shrinks to a number you can remember:
+
+de: h·c ≈ 1240 eV·nm — die nützlichste Faustformel der Optik
+en: h·c ≈ 1240 eV·nm — the most useful rule of thumb in optics
+
+de: Beispiel
+en: Example
+
+de: Formel ansetzen: E = 1240 / 620
+en: Set up the formula: E = 1240 / 620
+
+de: Ausrechnen: E = <strong>2,0 eV</strong>
+en: Calculate: E = <strong>2.0 eV</strong>
+
+de: Plausibilität: 620 nm ist orange-rot — das energiearme Ende des sichtbaren Lichts
+en: Sanity check: 620 nm is orange-red — the low-energy end of visible light
+
+de: Wellenlänge
+en: Wavelength
+
+de: Farbe
+en: Colour
+
+de: tiefrot
+en: deep red
+
+de: orange-rot
+en: orange-red
+
+de: grün
+en: green
+
+de: violett
+en: violet
+
+de: Merkhilfe: Kurze Wellenlänge, hohe Energie. Deshalb macht UV-Licht Sonnenbrand und rotes Licht nicht.
+en: Memory aid: short wavelength, high energy. That's why UV light gives you sunburn and red light doesn't.
+
+de: 6 · Der Bell-Zustand
+en: 6 · The Bell state
+
+de: Zwei Qubits lassen sich so verbinden, dass keines für sich einen eigenen Zustand hat — nur das Paar gemeinsam. Der bekannteste solche Zustand:
+en: Two qubits can be linked in such a way that neither has a state of its own — only the pair together. The best-known such state:
+
+de: Gebaut aus H auf dem ersten Qubit, dann CNOT
+en: Built from H on the first qubit, then CNOT
+
+de: In der Klammer stehen nur <span class="q-mono">|00⟩</span> und <span class="q-mono">|11⟩</span>. Was nicht dasteht, hat Amplitude 0 — und nach der Born’schen Regel damit Wahrscheinlichkeit 0:
+en: The bracket contains only <span class="q-mono">|00⟩</span> and <span class="q-mono">|11⟩</span>. Whatever isn't there has amplitude 0 — and by the Born rule therefore probability 0:
+
+de: Ergebnis
+en: Result
+
+de: Amplitude
+en: =
+
+de: Wahrscheinlichkeit
+en: Probability
+
+de: 0 % — kommt nie vor
+en: 0 % — never occurs
+
+de: Misst du also das erste Qubit und bekommst 0, dann liefert das zweite <strong>mit Sicherheit ebenfalls 0</strong> — egal wie weit die beiden voneinander entfernt sind. Für sich allein betrachtet ist jedes der beiden Qubits trotzdem völlig zufällig: 50 zu 50.
+en: So if you measure the first qubit and get 0, the second one gives <strong>0 as well, with certainty</strong> — no matter how far apart the two are. Seen on its own, each of the two qubits is still completely random: 50 to 50.
+
+de: Und warum man damit nicht schneller als Licht funkt
+en: And why you can't send signals faster than light with it
+
+de: Du kannst dein Ergebnis nicht <em>wählen</em> — es fällt zufällig aus. Damit lässt sich keine Nachricht hineinlegen. Wer nur seine eigene Seite ansieht, sieht reines Rauschen. Die Übereinstimmung wird erst sichtbar, wenn beide Seiten ihre Listen vergleichen — und dieser Vergleich läuft über einen ganz gewöhnlichen Kanal, also höchstens mit Lichtgeschwindigkeit.
+en: You can't <em>choose</em> your result — it comes out at random. So you can't put a message into it. Anyone looking only at their own side sees pure noise. The agreement only becomes visible when both sides compare their lists — and that comparison goes through an ordinary channel, so at most at the speed of light.
+
+de: Wozu es heute schon dient
+en: What it is already used for today
+
+de: Der handfeste Nutzen ist der <strong>abhörsichere Schlüsselaustausch</strong>, die Quantenkryptografie. Zwei Seiten teilen sich verschränkte Paare und gewinnen daraus eine gemeinsame Zufallsfolge als geheimen Schlüssel. Ein Lauscher müsste messen — und jede Messung zerstört den Zustand nachweisbar. Der Angriff verrät sich also selbst, statt unbemerkt zu bleiben. Solche Strecken laufen bereits zwischen Städten und über Satellit.
+en: The tangible use is <strong>eavesdropping-proof key exchange</strong>, quantum cryptography. Two parties share entangled pairs and obtain a common random sequence from them as a secret key. An eavesdropper would have to measure — and every measurement detectably destroys the state. So the attack gives itself away instead of going unnoticed. Such links are already running between cities and via satellite.
+
+de: Bell-Zustand selbst bauen
+en: Build a Bell state yourself
+
+de: H, dann CNOT — und die Verteilung sofort sehen
+en: H, then CNOT — and see the distribution right away
+
+de: 7 · Was Quantentechnik kann — und was nicht
+en: 7 · What quantum technology can do — and what it can't
+
+de: Quantenphysik ist nicht exotisch
+en: Quantum physics is not exotic
+
+de: Sie gilt nicht nur für das Allerkleinste im Labor. <strong>Laser, LEDs, Solarzellen, Transistoren</strong> in jedem Handy-Chip, <strong>MRT</strong> im Krankenhaus und die Atomuhren im GPS beruhen sämtlich auf ihr. Sie ist die bestbestätigte Theorie der Physik — und steckt in deiner Hosentasche.
+en: It doesn't only apply to the tiniest things in the lab. <strong>Lasers, LEDs, solar cells, the transistors</strong> in every phone chip, <strong>MRI</strong> in hospitals and the atomic clocks in GPS all rely on it. It is the best-confirmed theory in physics — and it's in your pocket.
+
+de: Ein Quantencomputer probiert nicht alles durch
+en: A quantum computer does not try everything
+
+de: Die verbreitetste Fehlvorstellung. Zwar sind alle Möglichkeiten gleichzeitig im Spiel — aber gemessen werden darf nur <strong>einmal</strong>, und heraus käme eine zufällige Antwort. Nützlich wird es erst, wenn man die falschen Möglichkeiten vorher durch <strong>Interferenz auslöscht</strong> und die richtige verstärkt. Genau daran scheitern die meisten Ideen für Quantenalgorithmen.
+en: The most widespread misconception. All possibilities are in play at the same time — but you may only measure <strong>once</strong>, and the answer would come out at random. It only becomes useful if you first <strong>cancel out</strong> the wrong possibilities <strong>through interference</strong> and reinforce the right one. That's exactly where most ideas for quantum algorithms fail.
+
+de: Und dein Handy ersetzt er auch nicht
+en: And it won't replace your phone either
+
+de: Ein Quantencomputer ist ein <strong>Spezialwerkzeug</strong>, kein besserer Alleskönner: bei bestimmten Aufgaben überlegen, bei den meisten anderen langsamer als dein Laptop. Für Videos, Chats und Spiele bleibt der normale Rechner klar vorn. Dazu kommt der Aufwand — Kühlung fast auf den absoluten Nullpunkt und massive Abschirmung, weil jede Störung die Superposition zerstört. Am aussichtsreichsten sind Moleküle und Materialien zu simulieren: Die sind selbst Quantensysteme.
+en: A quantum computer is a <strong>specialist tool</strong>, not a better all-rounder: superior at certain tasks, slower than your laptop at most others. For videos, chats and games, a normal computer stays clearly ahead. On top of that comes the effort — cooling almost to absolute zero and heavy shielding, because every disturbance destroys the superposition. The most promising use is simulating molecules and materials: they are quantum systems themselves.
+
+de: Noch tiefer graben
+en: Dig even deeper
+
+de: Die Münze, die Katze und die Dirac-Schreibweise
+en: The coin, the cat and Dirac notation
+
+de: θ, φ und warum daraus eine Kugel wird
+en: θ, φ and why that makes a sphere
+
+de: Der Faktencheck zu Bewusstsein, Überlichtgeschwindigkeit und Co.
+en: The fact check on consciousness, faster-than-light and co.
+
+de: Zurück zu den vier Schlössern
+en: Back to the four locks
+
+de: Jetzt hast du alles beisammen
+en: Now you have everything together
+

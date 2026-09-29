@@ -1,0 +1,26 @@
+# Englische Texte für quiz/quiz.html — siehe tools/build-en.py
+
+de: Quiz · Quantenstation JKU
+en: Quiz · Quantum Station JKU
+
+de: Ein Quiz aus dem Fragenpool der Quantenstation — sechs Fragen, ein vierstelliger Code.
+en: A quiz from the Quantum Station's question pool — six questions, one four-digit code.
+
+de: Zurück zum Quiz-Pool
+en: Back to the quiz pool
+
+de: Quiz
+en: =
+
+de: 🔒 Code
+en: =
+
+de: Weiteres Quiz wählen →
+en: Choose another quiz →
+
+de: Ohne JavaScript lässt sich das Quiz nicht spielen. Die Infoseiten der Stationen funktionieren aber weiterhin.
+en: Without JavaScript the quiz cannot be played. The stations' info pages still work, though.
+
+de: Die Antwortmöglichkeiten werden bei jedem Start neu gemischt. Fortschritt und Code bleiben auf diesem Gerät gespeichert.
+en: The answer options are shuffled at every start. Progress and code stay saved on this device.
+

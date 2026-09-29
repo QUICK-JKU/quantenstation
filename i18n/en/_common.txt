@@ -1,0 +1,365 @@
+# Englische Texte, die auf mehreren Seiten vorkommen — siehe tools/build-en.py
+
+de: <span class="ico" aria-hidden="true">💬</span>FAQ
+en: <span class="ico" aria-hidden="true">💬</span>FAQ
+
+de: Stationen
+en: Stations
+
+de: <span class="ico" aria-hidden="true">⚛️</span>Table
+en: <span class="ico" aria-hidden="true">⚛️</span>Table
+
+de: <span class="ico" aria-hidden="true">🏠</span>Start
+en: <span class="ico" aria-hidden="true">🏠</span>Home
+
+de: <span class="ico" aria-hidden="true">🐱</span>Katze
+en: <span class="ico" aria-hidden="true">🐱</span>Cat
+
+de: <span class="ico" aria-hidden="true">🔮</span>Kugel
+en: <span class="ico" aria-hidden="true">🔮</span>Sphere
+
+de: <span class="ico" aria-hidden="true">👥</span>Team
+en: <span class="ico" aria-hidden="true">👥</span>Team
+
+de: Station 4 · Team
+en: Station 4 · Team
+
+de: 👥 Person
+en: 👥 Person
+
+de: Zurück zum Team
+en: Back to the team
+
+de: Zurück
+en: Back
+
+de: Zurück zur Übersicht
+en: Back to the overview
+
+de: 🔓 Das ist dein Code.
+en: 🔓 This is your code.
+
+de: JavaScript ist aus
+en: JavaScript is off
+
+de: GELÖST ✓
+en: SOLVED ✓
+
+de: ↺ Noch einmal
+en: ↺ Once more
+
+de: Alle vier Schlösser →
+en: All four locks →
+
+de: Hängst du fest?
+en: Stuck?
+
+de: Was ist ein Qubit?
+en: What is a qubit?
+
+de: Teste selbst
+en: Test yourself
+
+de: Häufige Fragen
+en: Frequently asked questions
+
+de: Superposition
+en: Superposition
+
+de: Vor Ort
+en: On site
+
+de: Theorie nachlesen — alles, was hier verlangt wird
+en: Read up on the theory — everything asked here
+
+de: Hier gibt es bewusst keine Tipps — aber alles Benötigte steht nachlesbar bereit.
+en: There are deliberately no hints here — but everything you need is there to read up on.
+
+de: Ohne JavaScript lässt sich dieses Rätsel nicht spielen. Die <a href="theorie.html">Theorieseite</a> funktioniert aber weiterhin.
+en: Without JavaScript this puzzle cannot be played. The <a href="theorie.html">theory page</a> still works, though.
+
+de: Vier Fragen, ein Code. Die Antwortmöglichkeiten werden bei jedem Start neu gemischt. Dein Fortschritt bleibt auf diesem Gerät gespeichert.
+en: Four questions, one code. The answer options are shuffled at every start. Your progress stays saved on this device.
+
+de: Tipp anzeigen
+en: Show hint
+
+de: Was steckt dahinter?
+en: What's behind it?
+
+de: ← Alle Rätsel von Box 1
+en: ← All puzzles of Box 1
+
+de: Zurück zur Rätselübersicht
+en: Back to the puzzle overview
+
+de: FAQ
+en: =
+
+de: Meet the Team
+en: =
+
+de: QuantumTable
+en: =
+
+de: Schrödinger-Box
+en: Schrödinger Box
+
+de: Bloch-Kugel
+en: Bloch Sphere
+
+de: Rätsel 2 · Interferenz
+en: Puzzle 2 · Interference
+
+de: Die Rechenregeln
+en: The rules of calculation
+
+de: Rätsel 1 · Superposition
+en: Puzzle 1 · Superposition
+
+de: Was ist Superposition?
+en: What is superposition?
+
+de: Wege in die Quantenphysik
+en: Paths into quantum physics
+
+de: Sechs Quanten-Mythen
+en: Six quantum myths
+
+de: Box 2
+en: =
+
+de: ? Info
+en: ? Info
+
+de: Station 3 · Notation
+en: Station 3 · Notation
+
+de: Der Quantencomputer
+en: The quantum computer
+
+de: Wer ist das SCCH?
+en: Who is the SCCH?
+
+de: Quiz-Pool
+en: Quiz pool
+
+de: Schaltkreis bauen
+en: Build a circuit
+
+de: Atome & Spektren
+en: Atoms & spectra
+
+de: Rätsel 3 · Wellen
+en: Puzzle 3 · Waves
+
+de: Station 3 · Partner
+en: Station 3 · Partner
+
+de: Simulation der Bloch-Kugel
+en: Simulating the Bloch sphere
+
+de: Doppelspalt & Interferenz
+en: Double slit & interference
+
+de: FAQ · Alle Fragen
+en: FAQ · All questions
+
+de: Die Katze im Karton
+en: The cat in the box
+
+de: Superposition & Messung
+en: Superposition & measurement
+
+de: Die 4 Rätsel
+en: The 4 puzzles
+
+de: Qubits & Gatter
+en: Qubits & gates
+
+de: Verschränkung & Mythen
+en: Entanglement & myths
+
+de: Box 1 · Rätsel
+en: Box 1 · Puzzles
+
+de: Im Labor
+en: In the lab
+
+de: Station 4 · Studium
+en: Station 4 · Studying
+
+de: Station 2 · Simulation
+en: Station 2 · Simulation
+
+de: Klitzeklein
+en: Teeny-tiny
+
+de: Station 1 · Die Boxen
+en: Station 1 · The boxes
+
+de: Station 2
+en: =
+
+de: Verschränkung, Bell & Algorithmen
+en: Entanglement, Bell & algorithms
+
+de: Materiewellen & Unschärfe
+en: Matter waves & uncertainty
+
+de: Station 4
+en: =
+
+de: Licht macht Faxen
+en: Light plays tricks
+
+de: Station 1
+en: =
+
+de: Station 3 · Simulator
+en: Station 3 · Simulator
+
+de: Station 3
+en: =
+
+de: Zustände & Normierung
+en: States & normalisation
+
+de: FAQ · Mythen
+en: FAQ · Myths
+
+de: Bloch-Kugel & Gatter
+en: Bloch sphere & gates
+
+de: Born-Regel & Erwartungswerte
+en: Born rule & expectation values
+
+de: Atomphysik & Spektren
+en: Atomic physics & spectra
+
+de: Zufall und Würfel
+en: Chance and dice
+
+de: Photonen & Photoeffekt
+en: Photons & the photoelectric effect
+
+de: Photonen
+en: Photons
+
+de: Welche Energie hat ein Photon mit λ = 620 nm?
+en: What is the energy of a photon with λ = 620 nm?
+
+de: Box 1
+en: =
+
+de: einfach
+en: easy
+
+de: Box 1 · einfach
+en: Box 1 · easy
+
+de: Gravur auf Kiste 1: Katzen, ein Karton und der Schriftzug Schrödinger's cat is alive und dead
+en: Engraving on box 1: cats, a cardboard box and the words Schrödinger's cat is alive and dead
+
+de: Box 2 · schwer
+en: Box 2 · hard
+
+de: schwer
+en: hard
+
+de: Gravur auf Kiste 2: Quantum Enclosure System mit lebender und zerfallender Katze
+en: Engraving on box 2: Quantum Enclosure System with a living and a decaying cat
+
+de: Hintergrund
+en: Background
+
+de: Amplituden und ihr Quadrat
+en: Amplitudes and their square
+
+de: Gatter sind Drehungen
+en: Gates are rotations
+
+de: 🔒 Schloss 1
+en: 🔒 Lock 1
+
+de: Rätsel 1 · Schloss 1
+en: Puzzle 1 · Lock 1
+
+de: Rätsel 2 · Schloss 2
+en: Puzzle 2 · Lock 2
+
+de: 🔒 Schloss 2
+en: 🔒 Lock 2
+
+de: 🔒 Schloss 3
+en: 🔒 Lock 3
+
+de: Der Bell-Zustand
+en: The Bell state
+
+de: Rätsel 3 · Schloss 3
+en: Puzzle 3 · Lock 3
+
+de: Rätsel 4 · Schloss 4
+en: Puzzle 4 · Lock 4
+
+de: 🔒 Schloss 4
+en: 🔒 Lock 4
+
+de: Gut zu wissen
+en: Good to know
+
+de: Was daraus wirklich folgt — und was nicht
+en: What really follows from it — and what doesn't
+
+de: Warum Nachschauen die Sache verändert
+en: Why looking changes things
+
+de: Verschränkung im Alltag
+en: Entanglement in everyday life
+
+de: Was in einem Qubit steckt — und was daraus folgt
+en: What's inside a qubit — and what follows from it
+
+de: Box 2 · Die zweite Katze
+en: Box 2 · The second cat
+
+de: Zum Ausprobieren
+en: Try it out
+
+de: Energie
+en: Energy
+
+de: Zustand
+en: State
+
+de: Bell-Zustand
+en: Bell state
+
+de: ↺ Zurücksetzen
+en: ↺ Reset
+
+de: Wellen in Phase
+en: Waves in phase
+
+de: Wer findet den Ort?
+en: Who finds the position?
+
+de: Weiter geht's
+en: Where to next
+
+de: 🔮 Kugel
+en: 🔮 Sphere
+
+de: Ehrlich gesagt
+en: To be honest
+
+de: Wenn du jetzt misst
+en: If you measure now
+
+de: Frag uns etwas
+en: Ask us something
+
+de: Sieh dir häufige Fragen an oder stell uns deine eigene Frage
+en: Browse common questions or ask us your own
+

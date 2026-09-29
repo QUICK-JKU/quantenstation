@@ -1,0 +1,77 @@
+# Englische Texte für stations/1-schroedinger/index.html — siehe tools/build-en.py
+
+de: Schrödinger-Box · Quantenstation JKU
+en: Schrödinger Box · Quantum Station JKU
+
+de: Die Schrödinger-Box: Superposition zum Angreifen — und zwei Boxen, deren Schlösser du mit Online-Rätseln am Handy knackst.
+en: The Schrödinger box: superposition you can touch — and two boxes whose locks you crack with online puzzles on your phone.
+
+de: 🐱 Katze
+en: 🐱 Cat
+
+de: Lebendig <em>und</em> tot — solange niemand hinsieht. Hier steht die Box, die eine theoretische Katze sehr bekannt gemacht hat.
+en: Alive <em>and</em> dead — as long as nobody looks. Here stands the box that made a theoretical cat very famous.
+
+de: Stilisierte Katze, halb blau, halb rot
+en: Stylised cat, half blue, half red
+
+de: Knacke die Rätsel, die Schrödingers Katze gefangen halten, und öffne die Box!
+en: Crack the puzzles that keep Schrödinger's cat locked in, and open the box!
+
+de: Ein klassisches Bit ist 0 <em>oder</em> 1. Ein Quantenteilchen kann beides zugleich sein, bis jemand misst. Das ist kein Nichtwissen über einen längst feststehenden Wert, sondern ein eigener Zustand. Und genau der lässt sich zum <strong>Rechnen</strong> benutzen.
+en: A classical bit is 0 <em>or</em> 1. A quantum particle can be both at once until someone measures it. That is not a lack of knowledge about a value that was fixed long ago, but a state of its own. And that very state can be used for <strong>computing</strong>.
+
+de: Superposition genauer erklärt
+en: Superposition explained in more detail
+
+de: Die Münze, die Messung und die Ket-Schreibweise
+en: The coin, the measurement and the ket notation
+
+de: Kurz gefragt
+en: Quick questions
+
+de: Ist die Katze wirklich tot und lebendig?
+en: Is the cat really dead and alive?
+
+de: Nein — und genau das war Schrödingers Punkt. Er hat sich das Beispiel 1935 <strong>als Kritik</strong> ausgedacht: Wenn man die Quantenregeln naiv auf große Dinge überträgt, kommt Unsinn heraus. Für <strong>einzelne Teilchen</strong> stimmt die Superposition aber messbar genau.
+en: No — and that was exactly Schrödinger's point. He came up with the example in 1935 <strong>as a criticism</strong>: if you naively apply the quantum rules to big things, you get nonsense. For <strong>single particles</strong>, however, superposition is measurably, precisely true.
+
+de: Warum bricht die Superposition beim Hinsehen zusammen?
+en: Why does the superposition collapse when you look?
+
+de: Weil „Hinsehen“ nie passiv ist. Jede Messung koppelt das Teilchen an seine Umgebung — dieser Vorgang heißt <strong>Dekohärenz</strong>. Je größer ein Objekt, desto schneller passiert das: bei einer echten Katze in unvorstellbar kurzer Zeit.
+en: Because “looking” is never passive. Every measurement couples the particle to its surroundings — this process is called <strong>decoherence</strong>. The bigger an object, the faster it happens: for a real cat in an unimaginably short time.
+
+de: Wozu ist das gut?
+en: What is it good for?
+
+de: Superposition ist der Motor von <strong>Quantencomputern</strong>: Ein Qubit kann 0 und 1 zugleich sein, und zusammen mit Interferenz entsteht daraus die Rechenkraft. Wie ein Qubit aussieht, zeigt <a href="../2-bloch-sphere/">Station 2</a>.
+en: Superposition is the engine of <strong>quantum computers</strong>: a qubit can be 0 and 1 at the same time, and together with interference this is where the computing power comes from. What a qubit looks like is shown at <a href="../2-bloch-sphere/">Station 2</a>.
+
+de: Was steckt in den Kisten?
+en: What's in the boxes?
+
+de: Vor dir stehen zwei Holzkisten mit je vier Zahlenschlössern. Wer alle Rätsel einer Box löst und sie öffnen kann, darf sich über eine kleine Überraschung freuen.
+en: In front of you are two wooden boxes, each with four combination locks. Whoever solves all the puzzles of a box and manages to open it can look forward to a small surprise.
+
+de: Was hier wirklich steht
+en: What is really standing here
+
+de: Die Geschichte der Katze und was in den Kisten steckt
+en: The story of the cat and what's inside the boxes
+
+de: Und jetzt
+en: And now
+
+de: Die zwei Boxen
+en: The two boxes
+
+de: Zu jeder Box gehören vier Rätsel. Jedes gibt dir einen <strong>vierstelligen Code</strong>, und jeder Code öffnet eines der Schlösser. Die Reihenfolge ist egal und dein Fortschritt bleibt auf diesem Handy gespeichert.
+en: Each box comes with four puzzles. Each one gives you a <strong>four-digit code</strong>, and each code opens one of the locks. The order doesn't matter and your progress stays saved on this phone.
+
+de: Vier Schlösser · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span> gelöst
+en: Four locks · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span> solved
+
+de: Vier Schlösser · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> gelöst
+en: Four locks · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> solved
+

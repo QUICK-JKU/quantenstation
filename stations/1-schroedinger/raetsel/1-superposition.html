@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Rätsel 1 · Superposition</title>
+<meta name="description" content="Rätsel 1: Die Katze ist beides gleichzeitig. Miss jeden Pol einzeln.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
+<style>
+  .stage {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 300 / 325;
+    margin: 18px auto 4px;
+  }
+  .stage-glow {
+    /* nur vertikal überstehen — seitlich bündig, sonst scrollt die Seite */
+    position: absolute; top: -6%; bottom: -6%; left: 0; right: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,61,255,.28), transparent 65%);
+    transition: opacity .12s;
+    pointer-events: none;
+  }
+  .cat {
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    transition: opacity .1s;
+  }
+  .cat-blue { filter: grayscale(1) brightness(.55) sepia(1) hue-rotate(195deg) saturate(7); }
+  .cat-red  { filter: grayscale(1) brightness(.55) sepia(1) hue-rotate(335deg) saturate(7); }
+
+  .digits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 290px;
+    margin: 4px auto 0;
+  }
+  .digit {
+    aspect-ratio: 3 / 4;
+    border-radius: 14px;
+    background: #fff;
+    border: 2px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    box-shadow: 0 6px 16px rgba(20,22,28,.08);
+    overflow: hidden;
+  }
+  .digit span {
+    position: absolute;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(38px, 13vw, 52px);
+  }
+  .digit .d-blue { color: var(--blue); }
+  .digit .d-red  { color: var(--red); }
+
+  .poles {
+    display: flex; justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 15px; font-weight: 600;
+    margin-bottom: 12px;
+  }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="1-superposition.html">
+<link rel="alternate" hreflang="en" href="../../../en/stations/1-schroedinger/raetsel/1-superposition.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zur Rätselübersicht">←</a>
+    <div class="q-topbar-title">Box 1 · Rätsel 1 von 4</div>
+    <div class="q-topbar-badge">🔒 Schloss 1</div>
+    <a class="q-lang" href="../../../en/stations/1-schroedinger/raetsel/1-superposition.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Rätsel 1 · Schloss 1</div>
+    <h1 class="q-h1">Superposition</h1>
+    <p class="q-lead" style="max-width:440px;margin-left:auto;margin-right:auto;">
+      Die Katze ist <strong class="t-blue">beides gleichzeitig</strong> — in der
+      <em>Mitte</em> verschwimmt alles. <strong>Miss jeden Pol einzeln:</strong>
+      ganz links die blaue Zahl, ganz rechts die rote.
+    </p>
+  </div>
+
+  <div class="q-wrap">
+    <div class="stage">
+      <div class="stage-glow" id="glow"></div>
+      <img class="cat cat-blue" id="cat-blue" src="../../../assets/katze.gif" alt="blaue Katze">
+      <img class="cat cat-red"  id="cat-red"  src="../../../assets/katze.gif" alt="rote Katze">
+    </div>
+
+    <div class="digits" id="digits">
+      <div class="digit"><span class="d-blue"></span><span class="d-red"></span></div>
+      <div class="digit"><span class="d-blue"></span><span class="d-red"></span></div>
+      <div class="digit"><span class="d-blue"></span><span class="d-red"></span></div>
+      <div class="digit"><span class="d-blue"></span><span class="d-red"></span></div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm" style="max-width:380px;">
+    <div class="q-note q-center">
+      <div class="q-note-title">So kombinierst du</div>
+      <div class="q-body">
+        Beide Zahlen <strong>Stelle für Stelle addieren</strong>.<br>
+        Nur die <em>letzte Ziffer</em> zählt: <span class="q-mono">7+8 → 5</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt" style="max-width:380px;">
+    <div class="poles">
+      <span class="t-blue">|0⟩ blau</span>
+      <span class="t-purple">unlesbar</span>
+      <span class="t-red">|1⟩ rot</span>
+    </div>
+    <input type="range" class="q-slider" id="slider" min="0" max="1000" value="120"
+           aria-label="Messregler zwischen den beiden Polen">
+    <p class="q-small q-center q-mt-sm">
+      📏 In der Mitte herrscht reine Superposition — <strong>nichts</strong> ist
+      lesbar. Der Code lebt an den Polen.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <form class="q-card" data-q-lock="4540" data-q-id="schroedinger-1">
+      <div class="q-note-title" style="color:var(--muted);">Code prüfen</div>
+      <p class="q-small q-mt-sm">Hast du die vier Ziffern? Trag sie ein.</p>
+      <div style="display:flex;gap:9px;margin-top:11px;">
+        <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4"
+               placeholder="1234" aria-label="Vierstelliger Code"
+               style="flex:1;min-width:0;min-height:48px;padding:10px 14px;border-radius:11px;border:1.5px solid var(--line);background:var(--surface);font-family:var(--font-mono);font-size:22px;font-weight:700;letter-spacing:.3em;text-align:center;">
+        <button class="q-btn q-btn-primary" type="submit">Prüfen</button>
+      </div>
+      <div class="q-status q-mt-sm" data-q-lock-status></div>
+      <div class="q-note q-note-green q-center" data-q-lock-ok hidden>
+        <div class="q-body">
+          <strong>Schloss 1 geknackt.</strong><br>
+          Weiter geht's mit <a href="2-interferenz.html">Rätsel 2 →</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Tipp anzeigen</summary>
+      <div class="q-acc-body">
+        Ganz links ist nur die <strong class="t-blue">blaue</strong> Zahl scharf,
+        ganz rechts nur die <strong class="t-red">rote</strong>. Notiere beide,
+        dann addiere sie stellenweise — ohne Übertrag.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Was steckt dahinter?</summary>
+      <div class="q-acc-body">
+        Genau das ist der Kern einer Messung: Du kannst dir <strong>eine
+        Messrichtung aussuchen</strong>, aber nicht beide gleichzeitig scharf
+        sehen. Dazwischen liegt die Superposition — und die trägt selbst keine
+        ablesbare Antwort. Mehr dazu im
+        <a href="../info.html">Hintergrundtext</a>.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-block" href="index.html">← Alle Rätsel von Box 1</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // Die beiden Pol-Zahlen. Stellenweise addiert (ohne Übertrag) ergeben
+  // sie den Code: 2395 + 2255 → 4540
+  var BLUE = [2, 3, 9, 5];
+  var RED  = [2, 2, 5, 5];
+
+  var slider   = document.getElementById('slider');
+  var glow     = document.getElementById('glow');
+  var catBlue  = document.getElementById('cat-blue');
+  var catRed   = document.getElementById('cat-red');
+  var cells    = Array.prototype.slice.call(document.querySelectorAll('.digit'));
+
+  function clamp01(x) { return Math.max(0, Math.min(1, x)); }
+
+  function render() {
+    var raw = Number(slider.value);
+    var t = raw / 1000;                 // 0 … 1
+    var d = Math.abs(t - 0.5) * 2;      // 0 in der Mitte, 1 an den Rändern
+
+    // Jeder Pol ist nur nahe seinem eigenen Ende scharf.
+    var blueReveal = clamp01((0.42 - t) / 0.42);
+    var redReveal  = clamp01((t - 0.58) / 0.42);
+
+    var blueBlur = ((1 - blueReveal) * 9).toFixed(1) + 'px';
+    var redBlur  = ((1 - redReveal)  * 9).toFixed(1) + 'px';
+
+    catBlue.style.opacity = blueReveal;
+    catRed.style.opacity  = redReveal;
+    glow.style.opacity    = ((1 - d) * 0.85).toFixed(2);
+
+    cells.forEach(function (cell, i) {
+      var b = cell.querySelector('.d-blue');
+      var r = cell.querySelector('.d-red');
+      b.textContent = String(BLUE[i]);
+      r.textContent = String(RED[i]);
+      b.style.opacity = blueReveal;
+      r.style.opacity = redReveal;
+      b.style.filter = 'blur(' + blueBlur + ')';
+      r.style.filter = 'blur(' + redBlur + ')';
+    });
+  }
+
+  slider.addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>

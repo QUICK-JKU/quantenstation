@@ -1,0 +1,17 @@
+# Englische Texte für stations/1-schroedinger/katze-2/raetsel.js — siehe tools/build-en.py
+
+de: vier Schlösser, gemischtes Niveau
+en: four locks, mixed level
+
+de: Zustand & Rechenkraft
+en: State & computing power
+
+de: Messung & Kollaps
+en: Measurement & collapse
+
+de: Drehungen & Paare
+en: Rotations & pairs
+
+de: Rechnen mit Photonen, Winkeln und Bell-Zuständen
+en: Calculating with photons, angles and Bell states
+

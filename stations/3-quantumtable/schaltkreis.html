@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Schaltkreis am Handy · QuantumTable</title>
+<meta name="description" content="Drei Qubits, echte Simulation: bau einen Schaltkreis und sieh sofort das Ergebnis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  .circuit-card {
+    width: 100%;
+    margin: 14px auto 0;
+    padding: 12px 8px;
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    overflow-x: auto;          /* lange Schaltkreise scrollen im Kasten */
+    -webkit-overflow-scrolling: touch;
+  }
+  .circuit-card svg {
+    display: block;
+    height: 188px;
+    /* Der Schaltkreis behält seine echte Größe. Ohne max-width:none greift
+       die globale Regel img, svg { max-width: 100% }: Die Zeichnung würde
+       dann mit jedem weiteren Gatter kleiner gestaucht, statt dass der
+       Kasten seitlich scrollt. */
+    max-width: none;
+    /* Passt er in den Kasten, sitzt er mittig. */
+    margin: 0 auto;
+  }
+
+  .pad { display: flex; flex-direction: column; gap: 10px; }
+  .pad-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .pad-label {
+    flex: none; width: 62px;
+    font-family: var(--font-mono);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--faint);
+    line-height: 1.15;
+  }
+  .pad-btns { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+  .gbtn {
+    min-height: 46px;
+    border-radius: 11px;
+    border: none;
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .gbtn:active { transform: scale(.94); }
+  .g-h { background: var(--purple); }
+  .g-x { background: var(--red); }
+  .g-z { background: var(--blue); }
+  .g-s { background: var(--green); }
+  .g-c { background: var(--ink); font-size: 14px; }
+
+  .cnot-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+  @media (max-width: 330px) {
+    .cnot-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pad-label { width: 50px; }
+  }
+
+  .probs { display: flex; flex-direction: column; gap: 9px; }
+  .prow { display: flex; align-items: center; gap: 9px; }
+  .pname {
+    flex: none; width: 50px;
+    font-family: var(--font-mono);
+    font-size: 14px; font-weight: 700;
+  }
+  .ptrack { flex: 1; height: 15px; border-radius: 8px; background: var(--line-soft); overflow: hidden; }
+  .pfill { height: 100%; width: 0; background: var(--ink); transition: width .2s; }
+  .ppct {
+    flex: none; width: 56px; text-align: right;
+    font-family: var(--font-mono);
+    font-size: 13.5px; font-weight: 700;
+  }
+
+  .tally { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+  .tbox {
+    text-align: center;
+    padding: 9px 4px;
+    border-radius: 11px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+  }
+  .tn { font-family: var(--font-display); font-weight: 800; font-size: 21px; line-height: 1; }
+  .tl { margin-top: 3px; font-family: var(--font-mono); font-size: 10px; color: var(--faint); }
+
+  .flag {
+    margin-top: 12px;
+    padding: 11px 14px;
+    border-radius: var(--r-md);
+    text-align: center;
+    font-weight: 600;
+    font-size: 14.5px;
+    background: rgba(31,138,91,.10);
+    border: 1.5px solid rgba(31,138,91,.32);
+    color: var(--green);
+  }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="schaltkreis.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/3-quantumtable/schaltkreis.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück">←</a>
+    <div class="q-topbar-title">Station 3 · Simulator</div>
+    <div class="q-topbar-badge">▶ 3 Qubits</div>
+    <a class="q-lang" href="../../en/stations/3-quantumtable/schaltkreis.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Echte Simulation</div>
+    <h1 class="q-h1">Schaltkreis bauen</h1>
+    <p class="q-lead" style="max-width:430px;margin-left:auto;margin-right:auto;font-size:15.5px;">
+      Drei Qubits, alle starten bei <span class="q-mono">|0⟩</span>.
+      Tippe Gatter an — die Rechnung läuft <strong>exakt</strong>, nicht
+      nachgestellt.
+    </p>
+  </div>
+
+  <div class="q-wrap">
+    <div class="circuit-card">
+      <svg id="circuit" role="img" aria-label="Aktueller Schaltkreis"></svg>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm">
+    <div class="pad">
+      <div class="pad-row">
+        <span class="pad-label">QUBIT 1<br>oben</span>
+        <span class="pad-btns">
+          <button class="gbtn g-h" type="button" data-g="H" data-w="1">H</button>
+          <button class="gbtn g-x" type="button" data-g="X" data-w="1">X</button>
+          <button class="gbtn g-z" type="button" data-g="Z" data-w="1">Z</button>
+          <button class="gbtn g-s" type="button" data-g="S" data-w="1">S</button>
+        </span>
+      </div>
+      <div class="pad-row">
+        <span class="pad-label">QUBIT 2<br>mitte</span>
+        <span class="pad-btns">
+          <button class="gbtn g-h" type="button" data-g="H" data-w="2">H</button>
+          <button class="gbtn g-x" type="button" data-g="X" data-w="2">X</button>
+          <button class="gbtn g-z" type="button" data-g="Z" data-w="2">Z</button>
+          <button class="gbtn g-s" type="button" data-g="S" data-w="2">S</button>
+        </span>
+      </div>
+      <div class="pad-row">
+        <span class="pad-label">QUBIT 3<br>unten</span>
+        <span class="pad-btns">
+          <button class="gbtn g-h" type="button" data-g="H" data-w="3">H</button>
+          <button class="gbtn g-x" type="button" data-g="X" data-w="3">X</button>
+          <button class="gbtn g-z" type="button" data-g="Z" data-w="3">Z</button>
+          <button class="gbtn g-s" type="button" data-g="S" data-w="3">S</button>
+        </span>
+      </div>
+      <div class="cnot-row">
+        <button class="gbtn g-c" type="button" data-cnot="1" data-target="2">CNOT 1→2</button>
+        <button class="gbtn g-c" type="button" data-cnot="1" data-target="3">CNOT 1→3</button>
+        <button class="gbtn g-c" type="button" data-cnot="2" data-target="1">CNOT 2→1</button>
+        <button class="gbtn g-c" type="button" data-cnot="2" data-target="3">CNOT 2→3</button>
+        <button class="gbtn g-c" type="button" data-cnot="3" data-target="1">CNOT 3→1</button>
+        <button class="gbtn g-c" type="button" data-cnot="3" data-target="2">CNOT 3→2</button>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:11px;">
+      <button class="q-btn" type="button" id="undo" style="flex:1;">↶ Zurück</button>
+      <button class="q-btn" type="button" id="clear" style="flex:1;">↺ Leeren</button>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-card">
+      <div class="q-note-title" style="color:var(--muted);">Wenn du jetzt misst</div>
+      <div class="probs q-mt-sm" id="probs"></div>
+      <div class="flag" id="flag" hidden></div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm">
+    <button class="q-btn q-btn-primary q-btn-block" type="button" id="measure">📏 100 × messen</button>
+    <div class="tally q-mt-sm" id="tally"></div>
+    <div class="q-center q-mt-sm">
+      <button class="q-btn" type="button" id="reset-tally">↺ Zähler zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Probier diese aus</h2>
+    <div class="q-list q-mt-sm">
+      <button class="q-tile" type="button" data-recipe="H1" style="text-align:left;cursor:pointer;">
+        <span class="q-tile-num c-purple">H</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Superposition</span>
+          <span class="q-tile-sub">H auf Qubit 1 — aus einem sicheren Ergebnis wird ein Münzwurf</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="q-tile" type="button" data-recipe="BELL" style="text-align:left;cursor:pointer;">
+        <span class="q-tile-num c-green">★</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Bell-Zustand</span>
+          <span class="q-tile-sub">H auf Qubit 1, dann CNOT 1→2 — die berühmteste Verschränkung (Qubit 3 bleibt außen vor)</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="q-tile" type="button" data-recipe="GHZ" style="text-align:left;cursor:pointer;">
+        <span class="q-tile-num c-purple">3</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">GHZ-Zustand</span>
+          <span class="q-tile-sub">H auf Qubit 1, dann CNOT 1→2 und 1→3 — drei Qubits, eine Entscheidung</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="q-tile" type="button" data-recipe="ALL" style="text-align:left;cursor:pointer;">
+        <span class="q-tile-num c-red">⁝</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Alles gleich wahrscheinlich</span>
+          <span class="q-tile-sub">H auf alle drei Qubits — acht Ergebnisse zu je 12,5 %</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-note-blue">
+      <div class="q-note-title">Der Aha-Moment</div>
+      <div class="q-body">
+        Bau den <strong>Bell-Zustand</strong> und miss 100-mal. Du bekommst nur
+        <span class="q-mono">000</span> und <span class="q-mono">110</span> —
+        Qubit 1 und 2 sind <em>nie</em> uneins. Einzeln ist jedes völlig
+        zufällig, aber die beiden sind immer <strong>einig</strong>. Das ist
+        Verschränkung. Mit dem
+        <strong>GHZ-Zustand</strong> geht es zu dritt: nur <span class="q-mono">000</span>
+        und <span class="q-mono">111</span>.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Warum kann man damit nicht schneller als Licht funken?</summary>
+      <div class="q-acc-body">
+        Weil das Ergebnis auf <em>deiner</em> Seite reiner Zufall bleibt — du
+        kannst nicht bestimmen, ob 0 oder 1 herauskommt. Die Übereinstimmung
+        fällt erst auf, wenn beide Seiten ihre Listen vergleichen, und
+        <strong>dafür braucht es einen normalen Kanal</strong>.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Was macht CNOT genau?</summary>
+      <div class="q-acc-body">
+        „Kippe das Ziel-Qubit, <strong>aber nur wenn</strong> das Kontroll-Qubit
+        1 ist.“ Steht das Kontroll-Qubit in Superposition, passiert beides
+        gleichzeitig — und damit sind die Qubits verbunden.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Warum genau drei Qubits?</summary>
+      <div class="q-acc-body">
+        Weil schon zwei <strong>alles Wesentliche</strong> zeigen — und drei
+        zeigen, was danach kommt: acht Ergebnisse statt vier, und
+        Verschränkung, die sich über mehr als ein Paar erstreckt. Jedes
+        weitere Qubit verdoppelt die Zahl der Möglichkeiten. Am QuantumTable
+        vor Ort kannst du mit mehr arbeiten.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-block" href="info.html">? Wie liest man einen Schaltkreis?</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     Zustandsvektor für drei Qubits.
+     Index i steht für |q1 q2 q3⟩ mit q1 = oberes Bit (Wert 4),
+     q3 = unteres Bit (Wert 1).  Amplituden sind komplex: {re, im}.
+     ------------------------------------------------------------------ */
+  var N = 3, DIM = 8;
+  var LABELS = ['000', '001', '010', '011', '100', '101', '110', '111'];
+  var S2 = 1 / Math.SQRT2;
+
+  var ops = [];            // Liste der gesetzten Gatter
+  var tally = [0, 0, 0, 0, 0, 0, 0, 0];
+
+  function maskOf(wire) { return 1 << (N - wire); }
+
+  function freshState() {
+    var st = [];
+    for (var i = 0; i < DIM; i++) st.push({ re: i === 0 ? 1 : 0, im: 0 });
+    return st;
+  }
+
+  function applySingle(st, gate, wire) {
+    var m = maskOf(wire);
+    for (var i = 0; i < DIM; i++) {
+      if (i & m) continue;             // jedes Paar nur einmal anfassen
+      var j = i | m;
+      var a = st[i], b = st[j];
+      if (gate === 'H') {
+        st[i] = { re: (a.re + b.re) * S2, im: (a.im + b.im) * S2 };
+        st[j] = { re: (a.re - b.re) * S2, im: (a.im - b.im) * S2 };
+      } else if (gate === 'X') {
+        st[i] = b; st[j] = a;
+      } else if (gate === 'Z') {
+        st[j] = { re: -b.re, im: -b.im };
+      } else if (gate === 'S') {
+        // Multiplikation mit i
+        st[j] = { re: -b.im, im: b.re };
+      }
+    }
+  }
+
+  function applyCnot(st, control, target) {
+    var cm = maskOf(control), tm = maskOf(target);
+    for (var i = 0; i < DIM; i++) {
+      if ((i & cm) && !(i & tm)) {
+        var j = i | tm;
+        var t = st[i]; st[i] = st[j]; st[j] = t;
+      }
+    }
+  }
+
+  function compute() {
+    var st = freshState();
+    ops.forEach(function (op) {
+      if (op.type === 'cnot') applyCnot(st, op.control, op.target);
+      else applySingle(st, op.gate, op.wire);
+    });
+    return st;
+  }
+
+  function probs(st) {
+    return st.map(function (a) { return a.re * a.re + a.im * a.im; });
+  }
+
+  // Ein reiner Zustand ist genau dann ein Produkt einzelner Qubits, wenn
+  // jedes Qubit für sich rein ist. Ist ein Qubit gemischt (Reinheit < 1),
+  // hängt es mit den anderen zusammen. Reinheit = Sp(ρ²) des reduzierten
+  // Zustands ρ dieses Qubits.
+  function entangledQubits(st) {
+    var out = [];
+    for (var w = 1; w <= N; w++) {
+      var m = maskOf(w), r00 = 0, r11 = 0, r01re = 0, r01im = 0;
+      for (var i = 0; i < DIM; i++) {
+        if (i & m) continue;
+        var a = st[i], b = st[i | m];
+        r00 += a.re * a.re + a.im * a.im;
+        r11 += b.re * b.re + b.im * b.im;
+        // a · conj(b)
+        r01re += a.re * b.re + a.im * b.im;
+        r01im += a.im * b.re - a.re * b.im;
+      }
+      var purity = r00 * r00 + r11 * r11 + 2 * (r01re * r01re + r01im * r01im);
+      if (purity < 1 - 1e-6) out.push(w);
+    }
+    return out;
+  }
+
+  /* ---------- Schaltkreis zeichnen ---------- */
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('circuit');
+
+  function draw() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    var x0 = 46, step = 52, pad = 30;
+    var width = Math.max(300, x0 + ops.length * step + pad + 34);
+    var ys = [40, 96, 152];
+    svg.setAttribute('viewBox', '0 0 ' + width + ' 188');
+    svg.setAttribute('width', width);
+
+    function add(tag, attrs, text) {
+      var e = document.createElementNS(SVG_NS, tag);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      if (text != null) e.textContent = text;
+      svg.appendChild(e);
+      return e;
+    }
+
+    // Drähte
+    ys.forEach(function (y) {
+      add('line', { x1: x0 - 8, y1: y, x2: width - 30, y2: y,
+                    stroke: 'rgba(20,22,28,.32)', 'stroke-width': 2 });
+    });
+
+    // Startbeschriftung
+    ys.forEach(function (y) {
+      add('text', { x: 6, y: y + 6, 'font-family': 'IBM Plex Mono, monospace',
+                    'font-size': 15, 'font-weight': 700, fill: '#1f5bff' }, '|0⟩');
+    });
+
+    var COLOR = { H: '#8b3dff', X: '#ff352b', Z: '#1f5bff', S: '#1f8a5b' };
+
+    ops.forEach(function (op, k) {
+      var x = x0 + k * step + 14;
+      if (op.type === 'cnot') {
+        var cy = ys[op.control - 1];
+        var ty = ys[op.target - 1];
+        add('line', { x1: x, y1: cy, x2: x, y2: ty, stroke: '#14161c', 'stroke-width': 2.5 });
+        add('circle', { cx: x, cy: cy, r: 6, fill: '#14161c' });
+        add('circle', { cx: x, cy: ty, r: 12, fill: 'none', stroke: '#14161c', 'stroke-width': 2.5 });
+        add('line', { x1: x - 12, y1: ty, x2: x + 12, y2: ty, stroke: '#14161c', 'stroke-width': 2.5 });
+        add('line', { x1: x, y1: ty - 12, x2: x, y2: ty + 12, stroke: '#14161c', 'stroke-width': 2.5 });
+      } else {
+        var y = ys[op.wire - 1];
+        add('rect', { x: x - 17, y: y - 17, width: 34, height: 34, rx: 9,
+                      fill: COLOR[op.gate] });
+        add('text', { x: x, y: y + 7, 'text-anchor': 'middle',
+                      'font-family': 'Bricolage Grotesque, sans-serif',
+                      'font-size': 18, 'font-weight': 800, fill: '#fff' }, op.gate);
+      }
+    });
+
+    // Messsymbol am Ende
+    var mx = width - 30;
+    ys.forEach(function (y) {
+      add('rect', { x: mx - 15, y: y - 15, width: 30, height: 30, rx: 8,
+                    fill: '#fff', stroke: 'rgba(20,22,28,.28)', 'stroke-width': 2 });
+      add('path', { d: 'M' + (mx - 8) + ',' + (y + 6) + ' A 8 8 0 0 1 ' + (mx + 8) + ',' + (y + 6),
+                    fill: 'none', stroke: '#14161c', 'stroke-width': 2 });
+      add('line', { x1: mx, y1: y + 6, x2: mx + 6, y2: y - 6,
+                    stroke: '#14161c', 'stroke-width': 2 });
+    });
+
+    // lange Schaltkreise: ans rechte Ende scrollen
+    var card = svg.parentNode;
+    card.scrollLeft = card.scrollWidth;
+  }
+
+  /* ---------- Wahrscheinlichkeiten ---------- */
+  var probsEl = document.getElementById('probs');
+  var flagEl  = document.getElementById('flag');
+  var tallyEl = document.getElementById('tally');
+
+  LABELS.forEach(function (lab) {
+    var row = document.createElement('div');
+    row.className = 'prow';
+    row.innerHTML =
+      '<span class="pname q-mono">|' + lab + '⟩</span>' +
+      '<span class="ptrack"><span class="pfill"></span></span>' +
+      '<span class="ppct">0 %</span>';
+    probsEl.appendChild(row);
+
+    var box = document.createElement('div');
+    box.className = 'tbox';
+    box.innerHTML = '<div class="tn">0</div><div class="tl">' + lab + '</div>';
+    tallyEl.appendChild(box);
+  });
+
+  var fills = probsEl.querySelectorAll('.pfill');
+  var pcts  = probsEl.querySelectorAll('.ppct');
+  var tns   = tallyEl.querySelectorAll('.tn');
+
+  function render() {
+    draw();
+    var st = compute();
+    var p = probs(st);
+
+    p.forEach(function (v, i) {
+      fills[i].style.width = (v * 100) + '%';
+      fills[i].style.background = v > 0.001 ? '#14161c' : 'transparent';
+      pcts[i].textContent = String(v < 0.0005 ? 0 : Math.round(v * 1000) / 10).replace('.', ',') + ' %';
+      pcts[i].style.color = v > 0.001 ? 'var(--ink)' : 'var(--faint)';
+    });
+
+    var ent = entangledQubits(st);
+    if (ent.length) {
+      flagEl.hidden = false;
+      flagEl.textContent = '🔗 Verschränkt: Qubit ' +
+        (ent.length === 1 ? ent[0] : ent.slice(0, -1).join(', ') + ' und ' + ent[ent.length - 1]) + '.';
+    } else {
+      flagEl.hidden = true;
+    }
+
+    tally.forEach(function (n, i) { tns[i].textContent = n; });
+  }
+
+  /* ---------- Bedienung ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-g]'), function (b) {
+    b.addEventListener('click', function () {
+      ops.push({ type: 'single', gate: b.getAttribute('data-g'), wire: Number(b.getAttribute('data-w')) });
+      render();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-cnot]'), function (b) {
+    b.addEventListener('click', function () {
+      ops.push({ type: 'cnot', control: Number(b.getAttribute('data-cnot')), target: Number(b.getAttribute('data-target')) });
+      render();
+    });
+  });
+
+  document.getElementById('undo').addEventListener('click', function () {
+    ops.pop(); render();
+  });
+  document.getElementById('clear').addEventListener('click', function () {
+    ops = []; tally = [0, 0, 0, 0, 0, 0, 0, 0]; render();
+  });
+  document.getElementById('reset-tally').addEventListener('click', function () {
+    tally = [0, 0, 0, 0, 0, 0, 0, 0]; render();
+  });
+
+  document.getElementById('measure').addEventListener('click', function () {
+    var p = probs(compute());
+    for (var n = 0; n < 100; n++) {
+      var r = Math.random(), acc = 0;
+      for (var i = 0; i < DIM; i++) {
+        acc += p[i];
+        if (r < acc) { tally[i]++; break; }
+      }
+    }
+    render();
+  });
+
+  var RECIPES = {
+    H1:   [{ type: 'single', gate: 'H', wire: 1 }],
+    BELL: [{ type: 'single', gate: 'H', wire: 1 }, { type: 'cnot', control: 1, target: 2 }],
+    GHZ:  [{ type: 'single', gate: 'H', wire: 1 }, { type: 'cnot', control: 1, target: 2 }, { type: 'cnot', control: 1, target: 3 }],
+    ALL:  [{ type: 'single', gate: 'H', wire: 1 }, { type: 'single', gate: 'H', wire: 2 }, { type: 'single', gate: 'H', wire: 3 }]
+  };
+  Array.prototype.forEach.call(document.querySelectorAll('[data-recipe]'), function (b) {
+    b.addEventListener('click', function () {
+      ops = RECIPES[b.getAttribute('data-recipe')].map(function (o) {
+        return JSON.parse(JSON.stringify(o));
+      });
+      tally = [0, 0, 0, 0, 0, 0, 0, 0];
+      render();
+      document.querySelector('.circuit-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

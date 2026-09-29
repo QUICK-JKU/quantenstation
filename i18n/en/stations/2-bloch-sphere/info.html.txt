@@ -1,0 +1,89 @@
+# Englische Texte für stations/2-bloch-sphere/info.html — siehe tools/build-en.py
+
+de: Was ist ein Qubit? · Bloch-Kugel
+en: What is a qubit? · Bloch Sphere
+
+de: Vom Bit zum Qubit — und warum daraus eine Kugel wird.
+en: From bit to qubit — and why that makes a sphere.
+
+de: Station 2 · Hintergrund
+en: Station 2 · Background
+
+de: Was ist<br>ein Qubit?
+en: What is<br>a qubit?
+
+de: Die kürzeste Antwort: das kleinstmögliche Quantensystem — eines mit genau <strong class="t-purple">zwei</strong> möglichen Messergebnissen.
+en: The shortest answer: the smallest possible quantum system — one with exactly <strong class="t-purple">two</strong> possible measurement results.
+
+de: Schritt 1: das Bit
+en: Step 1: the bit
+
+de: Ein klassisches Bit ist ein Lichtschalter. Aus oder an. 0 oder 1. Dazwischen gibt es nichts. Dein ganzes Handy besteht aus Milliarden solcher Schalter.
+en: A classical bit is a light switch. Off or on. 0 or 1. There is nothing in between. Your whole phone is made of billions of such switches.
+
+de: Schritt 2: der Dimmer
+en: Step 2: the dimmer
+
+de: Ein Qubit wirkt zunächst wie ein <em>Dimmer</em>: Es kann irgendwo zwischen 0 und 1 stehen. Aber Vorsicht — das Bild führt in die Irre.
+en: At first a qubit looks like a <em>dimmer</em>: it can be set anywhere between 0 and 1. But careful — the picture is misleading.
+
+de: Wenn du ein Qubit misst, bekommst du <strong>nie</strong> „ein bisschen 0“. Du bekommst 0 oder 1, ganz klar, wie beim Schalter. Was der Dimmer einstellt, sind nur die <strong>Wahrscheinlichkeiten</strong>.
+en: When you measure a qubit, you <strong>never</strong> get “a little bit of 0”. You get 0 or 1, clearly, just like with the switch. What the dimmer sets are only the <strong>probabilities</strong>.
+
+de: Der Knackpunkt
+en: The crux
+
+de: Ein Qubit speichert nicht „0,7“. Es speichert eine Tendenz, bei der Messung 0 oder 1 zu liefern — und diese Tendenz kann sich mit anderen Tendenzen <strong>überlagern und auslöschen</strong>. Das kann kein Dimmer.
+en: A qubit doesn't store “0.7”. It stores a tendency to give 0 or 1 when measured — and this tendency can <strong>overlap with other tendencies and cancel out</strong>. No dimmer can do that.
+
+de: Schritt 3: die zweite Zahl
+en: Step 3: the second number
+
+de: Hier wird es interessant. Zur Beschreibung eines Qubits reicht eine Zahl <em>nicht</em>. Es braucht zwei:
+en: This is where it gets interesting. One number is <em>not</em> enough to describe a qubit. It takes two:
+
+de: θ Theta
+en: θ theta
+
+de: Wie stark tendiert es zu 0 oder 1? → der <strong>Breitengrad</strong>
+en: How strongly does it lean towards 0 or 1? → the <strong>latitude</strong>
+
+de: φ Phi
+en: φ phi
+
+de: Welche Phase hat es? → der <strong>Längengrad</strong>
+en: Which phase does it have? → the <strong>longitude</strong>
+
+de: Zwei Winkel, die eine Richtung festlegen — das ist exakt die Beschreibung eines Punktes auf einer <strong>Kugeloberfläche</strong>. Und damit hast du die Bloch-Kugel. Sie ist keine Metapher, sondern die exakte Landkarte aller Zustände, die ein Qubit haben kann.
+en: Two angles that fix a direction — that is exactly the description of a point on the <strong>surface of a sphere</strong>. And there you have the Bloch sphere. It is not a metaphor, but the exact map of all the states a qubit can have.
+
+de: Was ist die Phase?
+en: What is the phase?
+
+de: Denk an eine Welle. Zwei Wellen können gleich hoch sein und trotzdem verschoben — der eine Berg kommt früher als der andere. Diese Verschiebung ist die Phase.
+en: Think of a wave. Two waves can be equally high and still be shifted — one crest comes earlier than the other. This shift is the phase.
+
+de: Bei <em>einer</em> Messung siehst du davon nichts. Sobald aber zwei Wege wieder zusammenlaufen, entscheidet die Phase alles: Berg auf Berg verstärkt, Berg auf Tal löscht aus. Ein Quantencomputer arbeitet genau damit — er stellt die Phasen so ein, dass die falschen Antworten sich gegenseitig vernichten.
+en: In <em>a single</em> measurement you don't see any of it. But as soon as two paths come together again, the phase decides everything: crest on crest reinforces, crest on trough cancels. A quantum computer works with exactly this — it sets the phases so that the wrong answers wipe each other out.
+
+de: Und was ist daran nützlich?
+en: And what's useful about it?
+
+de: Ein Qubit allein ist noch nicht beeindruckend. Der Sprung kommt beim Zusammenschalten: Bei <strong>n</strong> Qubits braucht die Beschreibung 2<sup>n</sup> Zahlen. Bei 300 Qubits sind das mehr Zahlen, als es Atome im sichtbaren Universum gibt.
+en: A single qubit isn't impressive yet. The leap comes when you connect them: with <strong>n</strong> qubits the description needs 2<sup>n</sup> numbers. With 300 qubits that's more numbers than there are atoms in the observable universe.
+
+de: Der Haken bleibt: Am Ende darfst du nur <strong>einmal messen</strong> und bekommst n Bits heraus. Die Kunst besteht darin, vorher so geschickt zu überlagern, dass ausgerechnet die gesuchte Antwort übrig bleibt. Deshalb sind Quantencomputer keine „schnelleren Computer“, sondern Spezialisten für ganz bestimmte Aufgaben.
+en: The catch remains: in the end you may only <strong>measure once</strong> and you get n bits out. The art is to superpose so cleverly beforehand that precisely the answer you're looking for remains. That's why quantum computers are not “faster computers”, but specialists for very particular tasks.
+
+de: Die Bloch-Kugel funktioniert nur für <strong>ein einziges</strong> Qubit. Für zwei gibt es kein Bild mehr, das man zeichnen könnte — und genau dort wohnt die <strong>Verschränkung</strong>. Schöne Bilder haben in der Physik oft ein Ablaufdatum.
+en: The Bloch sphere only works for <strong>a single</strong> qubit. For two there is no longer a picture you could draw — and that is exactly where <strong>entanglement</strong> lives. In physics, nice pictures often have an expiry date.
+
+de: Simulation ausprobieren
+en: Try the simulation
+
+de: Zustand drehen, Gatter anwenden, messen
+en: Rotate the state, apply gates, measure
+
+de: Die Vor-Ort-Challenges in vier Stufen
+en: The on-site challenges in four levels
+

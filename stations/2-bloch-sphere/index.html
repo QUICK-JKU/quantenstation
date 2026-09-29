@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Bloch-Kugel · Quantenstation JKU</title>
+<meta name="description" content="Die Bloch-Kugel: die Landkarte aller Zustände, die ein einzelnes Qubit annehmen kann.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AE%3C/text%3E%3C/svg%3E">
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="index.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/2-bloch-sphere/index.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="../../index.html" data-q-back aria-label="Zurück zur Übersicht">←</a>
+    <div class="q-topbar-title">Station 2</div>
+    <div class="q-topbar-badge">🔮 Kugel</div>
+    <a class="q-lang" href="../../en/stations/2-bloch-sphere/index.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Station 2</div>
+    <h1 class="q-h1">Bloch-Kugel</h1>
+    <p class="q-lead" style="max-width:420px;margin-left:auto;margin-right:auto;">
+      Ein Bit kennt zwei Werte. Ein <strong class="t-purple">Qubit</strong> kennt
+      eine ganze Kugeloberfläche.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-center">
+      <div class="q-note-title">Vor Ort</div>
+      <div class="q-body">
+        Nimm das Modell in die Hand und dreh es. <strong>Oben</strong> ist |0⟩,
+        <strong>unten</strong> |1⟩ — und alles dazwischen ist ein echter,
+        erlaubter Zustand.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Weiter geht's</h2>
+    <div class="q-list q-mt-sm">
+
+      <a class="q-tile" href="info.html">
+        <span class="q-tile-num">1</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Was ist ein Qubit?</span>
+          <span class="q-tile-sub">Von der Glühbirne zur Kugel — Schritt für Schritt</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="q-tile" href="simulation.html">
+        <span class="q-tile-num c-purple">2</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Simulation der Bloch-Kugel</span>
+          <span class="q-tile-sub">Frei drehen, mit Gattern rechnen, direkt messen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="q-tile" href="teste-selbst.html">
+        <span class="q-tile-num c-red">3</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Teste selbst</span>
+          <span class="q-tile-sub">20 Vor-Ort-Challenges in vier Stufen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Die Kugel in 30 Sekunden</h2>
+    <div class="q-card q-mt-sm">
+      <div class="q-kv">
+        <div class="q-kv-row">
+          <span class="q-kv-key">Nordpol</span>
+          <span class="q-kv-val"><strong class="t-blue">|0⟩</strong> — die Messung liefert garantiert 0.</span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">Südpol</span>
+          <span class="q-kv-val"><strong class="t-red">|1⟩</strong> — die Messung liefert garantiert 1.</span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">Äquator</span>
+          <span class="q-kv-val">Perfekte Superposition: 50 % zu 50 %.</span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">Längengrad</span>
+          <span class="q-kv-val">Die <strong>Phase</strong> — unsichtbar bei einer einzelnen Messung, aber entscheidend für Interferenz.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Warum eine Kugel und keine Linie?</summary>
+      <div class="q-acc-body">
+        Weil zwei Zahlen nötig sind, um ein Qubit zu beschreiben: <strong>wie
+        stark</strong> es zu 0 oder 1 tendiert (der Breitengrad) und
+        <strong>welche Phase</strong> es hat (der Längengrad). Zwei Freiheiten →
+        eine Fläche → eine Kugel.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Und bei mehreren Qubits?</summary>
+      <div class="q-acc-body">
+        Da hört das schöne Bild leider auf. Zwei Qubits brauchen bereits einen
+        Raum, den man nicht mehr zeichnen kann — und genau dort steckt
+        <strong>Verschränkung</strong>, die eigentliche Superkraft. Die Kugel
+        gilt nur für <em>ein einzelnes</em> Qubit.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-primary q-btn-block" href="simulation.html">▶ Kugel ausprobieren</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+</body>
+</html>

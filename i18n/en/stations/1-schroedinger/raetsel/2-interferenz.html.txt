@@ -1,0 +1,41 @@
+# Englische Texte für stations/1-schroedinger/raetsel/2-interferenz.html — siehe tools/build-en.py
+
+de: Rätsel 2: Springe durchs Labyrinth — jede Kachel muss die andere Farbe haben.
+en: Puzzle 2: Jump through the maze — every tile must be the other colour.
+
+de: Box 1 · Rätsel 2 von 4
+en: Box 1 · Puzzle 2 of 4
+
+de: Schaffst du das Labyrinth?
+en: Can you beat the maze?
+
+de: Springe von <strong class="t-green">⚑&nbsp;Start</strong> zum <strong>🔒&nbsp;Ziel</strong> — jede Kachel muss die <em>andere</em> Farbe haben als die vorige: <strong class="t-blue">blau</strong> → <strong class="t-red">rot</strong> → <strong class="t-blue">blau</strong>. Viele Wege enden in Sackgassen. Die Zahlen auf deinem Weg ergeben der Reihe nach den Code.
+en: Jump from <strong class="t-green">⚑&nbsp;start</strong> to the <strong>🔒&nbsp;goal</strong> — every tile must have the <em>other</em> colour than the one before: <strong class="t-blue">blue</strong> → <strong class="t-red">red</strong> → <strong class="t-blue">blue</strong>. Many paths end in dead ends. The numbers along your path give you the code, in order.
+
+de: ZIEL ERREICHT ✓
+en: GOAL REACHED ✓
+
+de: Weiter zu Rätsel 3 →
+en: On to puzzle 3 →
+
+de: Zwei gleiche Farben nacheinander gehen nicht. Sackgassen führen nicht zum Ziel. Tippe eine frühere Kachel, um zurückzugehen.
+en: Two tiles of the same colour in a row are not allowed. Dead ends don't lead to the goal. Tap an earlier tile to go back.
+
+de: Beginne bei der Fahne <strong>⚑</strong> unten links und arbeite dich zuerst nach <strong>oben</strong>, dann nach rechts. Wenn du feststeckst, tippe eine frühere Kachel deines Weges an — der Rest wird abgeschnitten und du kannst es anders probieren.
+en: Start at the flag <strong>⚑</strong> at the bottom left and work your way <strong>up</strong> first, then to the right. If you get stuck, tap an earlier tile on your path — the rest is cut off and you can try another way.
+
+de: Das Wechselspiel <strong>blau → rot → blau</strong> ist ein Bild für den <strong>Phasenwechsel</strong>: In einem Interferometer bekommt ein Lichtweg bei jeder Reflexion einen Phasensprung. Nur Wege, bei denen die Phasen am Ende zusammenpassen, überleben — alle anderen löschen sich gegenseitig aus. Genau das siehst du hier als Farbregel.
+en: The alternation <strong>blue → red → blue</strong> stands for a <strong>phase change</strong>: in an interferometer a light path picks up a phase jump at every reflection. Only paths whose phases match at the end survive — all the others cancel each other out. That is exactly what you see here as a colour rule.
+
+de: gleiche Farbe — geht nicht
+en: same colour — not allowed
+
+de: ✓ weiter
+en: ✓ continue
+
+de: Kachel
+en: Tile
+
+de: cell
+en: =
+

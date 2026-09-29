@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>What is a qubit? · Bloch Sphere</title>
+<meta name="description" content="From bit to qubit — and why that makes a sphere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AE%3C/text%3E%3C/svg%3E">
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="../../../stations/2-bloch-sphere/info.html">
+<link rel="alternate" hreflang="en" href="info.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Back">←</a>
+    <div class="q-topbar-title">Station 2 · Background</div>
+    <div class="q-topbar-badge">? Info</div>
+    <a class="q-lang" href="../../../stations/2-bloch-sphere/info.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap">
+    <div class="q-eyebrow">Background</div>
+    <h1 class="q-h1">What is<br>a qubit?</h1>
+    <p class="q-lead">
+      The shortest answer: the smallest possible quantum system — one with exactly <strong class="t-purple">two</strong> possible measurement results.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Step 1: the bit</h2>
+    <p class="q-body q-mt-sm">
+      A classical bit is a light switch. Off or on. 0 or 1. There is nothing in between. Your whole phone is made of billions of such switches.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Step 2: the dimmer</h2>
+    <p class="q-body q-mt-sm">
+      At first a qubit looks like a <em>dimmer</em>: it can be set anywhere between 0 and 1. But careful — the picture is misleading.
+    </p>
+    <p class="q-body q-mt-sm">
+      When you measure a qubit, you <strong>never</strong> get “a little bit of 0”. You get 0 or 1, clearly, just like with the switch. What the dimmer sets are only the <strong>probabilities</strong>.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note">
+      <div class="q-note-title">The crux</div>
+      <div class="q-body">
+        A qubit doesn't store “0.7”. It stores a tendency to give 0 or 1 when measured — and this tendency can <strong>overlap with other tendencies and cancel out</strong>. No dimmer can do that.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Step 3: the second number</h2>
+    <p class="q-body q-mt-sm">
+      This is where it gets interesting. One number is <em>not</em> enough to describe a qubit. It takes two:
+    </p>
+    <div class="q-card q-mt-sm">
+      <div class="q-kv">
+        <div class="q-kv-row">
+          <span class="q-kv-key">θ theta</span>
+          <span class="q-kv-val">How strongly does it lean towards 0 or 1? → the <strong>latitude</strong></span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">φ phi</span>
+          <span class="q-kv-val">Which phase does it have? → the <strong>longitude</strong></span>
+        </div>
+      </div>
+    </div>
+    <p class="q-body q-mt-sm">
+      Two angles that fix a direction — that is exactly the description of a point on the <strong>surface of a sphere</strong>. And there you have the Bloch sphere. It is not a metaphor, but the exact map of all the states a qubit can have.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">What is the phase?</h2>
+    <p class="q-body q-mt-sm">
+      Think of a wave. Two waves can be equally high and still be shifted — one crest comes earlier than the other. This shift is the phase.
+    </p>
+    <p class="q-body q-mt-sm">
+      In <em>a single</em> measurement you don't see any of it. But as soon as two paths come together again, the phase decides everything: crest on crest reinforces, crest on trough cancels. A quantum computer works with exactly this — it sets the phases so that the wrong answers wipe each other out.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">And what's useful about it?</h2>
+    <p class="q-body q-mt-sm">
+      A single qubit isn't impressive yet. The leap comes when you connect them: with <strong>n</strong> qubits the description needs 2<sup>n</sup> numbers. With 300 qubits that's more numbers than there are atoms in the observable universe.
+    </p>
+    <p class="q-body q-mt-sm">
+      The catch remains: in the end you may only <strong>measure once</strong> and you get n bits out. The art is to superpose so cleverly beforehand that precisely the answer you're looking for remains. That's why quantum computers are not “faster computers”, but specialists for very particular tasks.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-note-blue">
+      <div class="q-note-title">To be honest</div>
+      <div class="q-body">
+        The Bloch sphere only works for <strong>a single</strong> qubit. For two there is no longer a picture you could draw — and that is exactly where <strong>entanglement</strong> lives. In physics, nice pictures often have an expiry date.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-list">
+      <a class="q-tile" href="simulation.html">
+        <span class="q-tile-num c-purple">▶</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Try the simulation</span>
+          <span class="q-tile-sub">Rotate the state, apply gates, measure</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="q-tile" href="teste-selbst.html">
+        <span class="q-tile-num c-red">✓</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Test yourself</span>
+          <span class="q-tile-sub">The on-site challenges in four levels</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stations">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Home</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Cat</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+</body>
+</html>

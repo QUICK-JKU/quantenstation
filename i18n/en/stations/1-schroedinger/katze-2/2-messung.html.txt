@@ -1,0 +1,17 @@
+# Englische Texte für stations/1-schroedinger/katze-2/2-messung.html — siehe tools/build-en.py
+
+de: Rätsel 2 · Die zweite Katze
+en: Puzzle 2 · The second cat
+
+de: Schloss 2 der zweiten Schrödinger-Katze: vier Fragen, ein vierstelliger Code.
+en: Lock 2 of the second Schrödinger cat: four questions, one four-digit code.
+
+de: Box 2 · Rätsel 2 von 4
+en: Box 2 · Puzzle 2 of 4
+
+de: Rätsel 2
+en: Puzzle 2
+
+de: Was eine Messung tut
+en: What a measurement does
+

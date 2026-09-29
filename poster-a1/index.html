@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eingangsplakat A1 — Quantenstation 60 Jahre JKU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Eingangsplakat A1 (594 × 841 mm) — gezeichnet in 2245 × 3179 px.
+   Am Bildschirm wird das Blatt per --zoom auf Fensterbreite skaliert,
+   beim Drucken läuft es in Originalgröße.
+   ========================================================================== */
+
+:root {
+  --ink:       #14161c;
+  --paper:     #fbf9f3;
+  --muted:     #5d584f;
+  --grey:      #8a847a;
+  --rule:      rgba(20, 22, 28, .14);
+  --blue:      #1f5bff;
+  --blue-link: #1f4fd8;
+  --purple:    #5c22b8;
+  --navy:      #0c1f66;
+  --yellow: #ffa33a;
+
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  --zoom: .34;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #dfe3ea; }
+
+/* ---------- Bühne & Blatt ---------- */
+
+#stage {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#sheet {
+  position: relative;
+  flex: none;
+  width: 2245px;
+  height: 3179px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  box-shadow: 0 14px 40px rgba(15, 35, 80, .25);
+  zoom: var(--zoom);
+}
+
+/* Gemeinsame Bausteine */
+.mono-label {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: .12em;
+  white-space: nowrap;
+}
+.pretty { text-wrap: pretty; }
+
+/* ==========================================================================
+   KOPFBEREICH
+   ========================================================================== */
+
+.hero {
+  flex: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 680px;
+  gap: 72px;
+  padding: 36px 90px 40px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.hero__badge {
+  align-self: flex-start;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .22);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 140px;
+  line-height: .95;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.hero__title em { font-style: normal; color: var(--yellow); }
+
+.hero__lead {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.32;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+
+/* QR-Karte + drei Schritte */
+.hero__howto {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.qr-card {
+  position: relative;
+  flex: none;
+  width: 370px;
+  padding: 24px 24px 22px;
+  border-radius: 30px;
+  background: #fff;
+  color: var(--ink);
+  text-align: center;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .3);
+}
+.qr-card__code {
+  width: 322px;
+  height: 322px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 5px dashed var(--grey);
+  border-radius: 20px;
+  color: var(--grey);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 64px;
+}
+.qr-card__code small { font-size: 26px; letter-spacing: .06em; }
+.qr-card__code.is-filled { border: 0; }
+.qr-card__code.is-filled svg { width: 100%; height: 100%; display: block; }
+.qr-card__title {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-size: 42px;
+  line-height: 1.1;
+}
+.qr-card__hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+.steps li {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.steps__num {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--blue-link);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steps h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1.1;
+}
+.steps p {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.34;
+  text-wrap: pretty;
+}
+
+/* Fotos rechts */
+.hero__photos {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+.hero__photos figure { margin: 0; display: flex; flex-direction: column; }
+.hero__photos img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background: var(--navy);
+}
+.hero__photos figcaption { font-weight: 500; }
+
+.photo-main {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  gap: 12px;
+}
+/* Hochformat-Foto im Querformat-Rahmen: Foto schmaler als der Rahmen
+   (--kryo-breite; kleiner = weiter herausgezoomt, ca. 54 % = ganzes Foto),
+   die Ränder füllt eine unscharfe, abgedunkelte Kopie desselben Fotos. */
+.photo-main__frame {
+  --kryo-breite: 62%;
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--navy);
+}
+.photo-main__frame::before {
+  content: '';
+  position: absolute;
+  inset: -60px;
+  background: url(img/kryostat.jpg) center 30% / cover;
+  filter: blur(28px) brightness(.35);
+}
+.photo-main__frame img {
+  position: relative;
+  width: var(--kryo-breite);
+  height: 100%;
+  object-position: 50% 30%;
+  background: none;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .5);
+}
+.photo-main figcaption { font-size: 28px; line-height: 1.3; }
+
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.photo-pair figure { gap: 10px; }
+.photo-pair img { height: 230px; border-radius: 22px; }
+.photo-pair img.atome { object-position: 55% 60%; }
+.photo-pair figcaption { font-size: 25px; line-height: 1.28; }
+
+/* ==========================================================================
+   HAUPTTEIL
+   ========================================================================== */
+
+.content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 90px 24px;
+}
+.content > section { position: relative; }
+
+.section-title {
+  margin: 0 0 20px;
+  padding-bottom: 18px;
+  border-bottom: 4px solid var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.section-title .mono-label { font-size: 28px; color: var(--grey); }
+.stations .section-title { margin-bottom: 28px; }
+
+/* ---------- Was ist ein Quantencomputer? ---------- */
+
+.explainer {
+  position: relative;
+  columns: 3;
+  column-gap: 70px;
+  column-rule: 2px solid var(--rule);
+  font-size: 27px;
+  line-height: 1.38;
+  color: #222;
+}
+.explainer h4 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 1.08;
+  color: var(--blue-link);
+  break-after: avoid;
+}
+.explainer p { margin: 0 0 16px; text-wrap: pretty; }
+.explainer p:last-child { margin-bottom: 0; }
+
+.bloch-figure {
+  float: right;
+  width: 170px;
+  margin: 4px 0 8px 22px;
+}
+.bloch-figure svg { display: block; width: 170px; height: auto; }
+.bloch-figure figcaption {
+  margin-top: 4px;
+  font-size: 23px;
+  line-height: 1.25;
+  color: var(--muted);
+}
+
+/* ---------- Die 4 Stationen ---------- */
+
+.station-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 36px;
+}
+
+/* Jede Karte setzt nur --c (Rahmen/Kopf) und --c-dark (Text/Zahl). */
+.station--1 { --c: #ff352b; --c-dark: #a3221b; }
+.station--2 { --c: #1f5bff; --c-dark: #123a9e; }
+.station--3 { --c: #1f8a5b; --c-dark: #14603f; }
+.station--4 { --c: #8b3dff; --c-dark: #5c22b8; }
+
+.station {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--c);
+  border-radius: 30px;
+  background: #fff;
+}
+.station__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 28px;
+  border-radius: 24px 24px 0 0;
+  background: var(--c);
+  color: #fff;
+}
+.station__num {
+  flex: none;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--c-dark);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.station__head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 1;
+  letter-spacing: -.015em;
+}
+.station__head small {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 24px;
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+.station__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 28px 18px;
+  font-size: 27px;
+  line-height: 1.34;
+  color: #262626;
+}
+.station__body p { margin: 0; text-wrap: pretty; }
+.station__body .tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 1.15;
+  color: var(--c-dark);
+}
+.station__body b {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  letter-spacing: .1em;
+  color: var(--c-dark);
+}
+
+/* ==========================================================================
+   FUSSZEILE
+   ========================================================================== */
+
+.site-footer {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 16px 90px 18px;
+  border-top: 4px solid var(--ink);
+  background: #fff;
+}
+.site-footer img { display: block; flex: none; height: 190px; width: auto; }
+.site-footer__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 56px;
+  border-left: 2px solid var(--rule);
+}
+.site-footer__institute {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1.1;
+}
+.site-footer__uni {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: .08em;
+}
+.site-footer__credits {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: .05em;
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   SIEBEN VERSTECKTE KATZEN
+   Alle ausblenden: class="no-cats" an #sheet setzen.
+   ========================================================================== */
+
+.cat { position: absolute; }
+.no-cats .cat { display: none; }
+
+.cat--qr        { right: 34px;  top: -44px;  width: 72px; height: 45px; color: #fff;            opacity: .55; }
+.cat--photo     { left: 22px;   top: -26px; width: 52px; height: 62px; color: var(--navy);     opacity: .55; }
+.cat--bloch     {                                                       color: var(--ink);      opacity: .7;  }
+.cat--explainer { left: calc(66.6% + 12px); bottom: -8px; width: 50px; height: 60px; color: var(--blue-link); opacity: .22; }
+.cat--station1  { right: 250px; top: -50px;  width: 82px; height: 51px; color: var(--c); }
+.cat--station3  { right: 40px;  top: -50px;  width: 82px; height: 51px; color: var(--c); }
+.cat--footer    { right: 110px; bottom: 242px; width: 44px; height: 53px; color: var(--ink);    opacity: .8;  }
+
+/* ==========================================================================
+   DRUCK
+   ========================================================================== */
+
+/* Warnung am Bildschirm, wenn Text über den Rand des Blatts hinausläuft
+   (wird vom Skript unten gesetzt; im Druck unsichtbar). */
+#sheet.is-overflowing { outline: 12px solid #ff352b; }
+#sheet.is-overflowing::after {
+  content: 'Inhalt passt nicht aufs Blatt – Text kürzen';
+  position: absolute; left: 0; right: 0; top: 0;
+  padding: 16px; background: #ff352b; color: #fff;
+  font: 700 40px var(--font-mono); text-align: center; z-index: 10;
+}
+
+@page { size: 594mm 841mm; margin: 0; }   /* A1 hoch, randlos */
+
+@media print {
+  html, body { background: #fff; }
+  #stage { display: block; padding: 0; }
+  #sheet { zoom: 1; box-shadow: none; outline: none; width: 594mm; height: 841mm; }
+  #sheet::after { display: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<!-- Katzen-Symbole, wiederverwendet über <use href="#cat"> / "#cathead" -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="cat" viewBox="0 0 100 120">
+      <g fill="currentColor">
+        <path d="M28 116 C16 84 26 56 50 54 C74 56 84 84 72 116 Z"/>
+        <circle cx="50" cy="34" r="19"/>
+        <path d="M33 22 L36 2 L49 15 Z"/>
+        <path d="M67 22 L64 2 L51 15 Z"/>
+      </g>
+      <path d="M72 108 C98 108 104 72 90 60" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="43" cy="33" r="3.6" fill="#ffd166"/>
+      <circle cx="57" cy="33" r="3.6" fill="#ffd166"/>
+    </symbol>
+    <symbol id="cathead" viewBox="0 0 100 62">
+      <g fill="currentColor">
+        <circle cx="50" cy="44" r="30"/>
+        <path d="M24 36 L26 4 L46 22 Z"/>
+        <path d="M76 36 L74 4 L54 22 Z"/>
+      </g>
+      <circle cx="40" cy="42" r="4.5" fill="#ffd166"/>
+      <circle cx="60" cy="42" r="4.5" fill="#ffd166"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="stage">
+<article id="sheet" aria-label="Plakat A1">
+
+  <!-- ===================== KOPFBEREICH ===================== -->
+  <header class="hero">
+
+    <div class="hero__intro">
+      <span class="hero__badge">60 JAHRE JKU · 06. OKTOBER 2026</span>
+
+      <h1 class="hero__title">Machen wir 60 Jahre JKU <em>messbar.</em></h1>
+
+      <p class="hero__lead">Bei uns schaust du nicht nur zu, sondern probierst selbst aus, wie ein Quantencomputer denkt – ganz ohne Vorwissen. Und halte die Augen offen: Auf diesem Plakat haben sich sieben Katzen versteckt.</p>
+
+      <div class="hero__howto">
+        <div class="qr-card">
+          <svg class="cat cat--qr" viewBox="0 0 100 62" aria-hidden="true"><use href="#cathead"/></svg>
+          <!-- QR-Code zur Startseite; die Adresse steht in assets/site.js -->
+          <div class="qr-card__code" data-qr="">QR<small>URL FOLGT</small></div>
+          <b class="qr-card__title">Zur Website</b>
+          <small class="qr-card__hint">Mit dem Handy scannen – ohne App und Login.</small>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="steps__num">1</span>
+            <div>
+              <h3>Scannen</h3>
+              <p>Scanne den QR-Code mit deinem Handy, und die Website öffnet sich direkt – eine App brauchst du nicht.</p>
+            </div>
+          </li>
+          <li>
+            <span class="steps__num">2</span>
+            <div>
+              <h3>Wählen</h3>
+              <p>Besuche die Stationen in beliebiger Reihenfolge. Ist gerade viel los, überbrückst du die Wartezeit mit einem Rätsel am Handy.</p>
+            </div>
+          </li>
+          <li>
+            <span class="steps__num">3</span>
+            <div>
+              <h3>Ausprobieren</h3>
+              <p>Drehe Modelle, stecke Schaltkreise und knacke Rätsel, von denen jedes mit einem vierstelligen Code endet.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="hero__photos">
+      <figure class="photo-main">
+        <div class="photo-main__frame">
+          <img src="img/kryostat.jpg" alt="Geöffneter Kryostat eines supraleitenden Quantencomputers">
+        </div>
+        <figcaption>Supraleitende Quantencomputer wie dieser sehen oft aus wie ein goldener Kronleuchter. Sie müssen fast bis zum absoluten Nullpunkt gekühlt werden.</figcaption>
+        <svg class="cat cat--photo" viewBox="0 0 100 120" aria-hidden="true"><use href="#cat"/></svg>
+      </figure>
+
+      <div class="photo-pair">
+        <figure>
+          <img class="atome" src="img/neutrale-atome.jpg" alt="Versuchsaufbau eines Quantencomputers mit neutralen Atomen">
+          <figcaption>Neutrale Atome werden z.B. mit Laserlicht festgehalten</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ionenfalle.jpg" alt="Ionenfalle für gefangene Atome">
+          <figcaption>Eine Falle für geladene Atome, die per Laser gesteuert werden</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ===================== HAUPTTEIL ===================== -->
+  <main class="content">
+
+    <!-- Was ist ein Quantencomputer? -->
+    <section class="basics">
+      <h2 class="section-title">Was ist ein Quantencomputer? <span class="mono-label">DAS WICHTIGSTE IN KÜRZE</span></h2>
+
+      <div class="explainer">
+        <h4>Rechnen mit Qubits</h4>
+        <figure class="bloch-figure">
+          <svg viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="110" cy="120" r="80" fill="rgba(31,91,255,.07)" stroke="#14161c" stroke-opacity=".55" stroke-width="3"/>
+            <ellipse cx="110" cy="120" rx="80" ry="26" fill="none" stroke="#14161c" stroke-opacity=".4" stroke-width="2.5" stroke-dasharray="7 6"/>
+            <ellipse cx="110" cy="120" rx="26" ry="80" fill="none" stroke="#14161c" stroke-opacity=".25" stroke-width="2"/>
+            <line x1="110" y1="32" x2="110" y2="208" stroke="#14161c" stroke-opacity=".55" stroke-width="2.5"/>
+            <line x1="110" y1="120" x2="160" y2="66" stroke="#ff352b" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="160" cy="66" r="9" fill="#ff352b" stroke="#fff" stroke-width="3"/>
+            <g font-family="IBM Plex Mono, monospace" font-weight="700" font-size="21" fill="#1f4fd8" text-anchor="middle">
+              <text x="110" y="24">|0⟩</text>
+              <text x="110" y="234">|1⟩</text>
+            </g>
+            <use class="cat cat--bloch" href="#cat" x="176" y="196" width="22" height="26"/>
+          </svg>
+          <figcaption>Ein Qubit auf der Bloch-Kugel</figcaption>
+        </figure>
+        <p>Ein Quantencomputer rechnet nicht mit gewöhnlichen Bits, sondern mit Qubits, und nutzt dafür die Gesetze der Quantenphysik – also jene Regeln, nach denen sich Atome und Licht verhalten. Während ein normales Bit entweder 0 oder 1 ist, kann ein Qubit beides zugleich sein. Man nennt das Superposition.</p>
+
+        <h4>Messen und Rechnen</h4>
+        <p>Misst man ein Qubit, erhält man trotzdem immer 0 oder 1. Wie wahrscheinlich welches Ergebnis ist, hängt vom Zustand ab, und nach der Messung kollabiert dieser. Gerechnet wird mit Gattern: Jedes Gatter dreht den Zustand auf der Kugel um einen vorgegebenen Winkel und damit kann man rechnen.</p>
+
+        <h4>Verschränkung und Interferenz</h4>
+        <p>Zwei Qubits können so eng zusammenhängen, dass man sie nur noch gemeinsam beschreiben kann. Das ist einer der Effekte, die wir klassisch nicht erreichen. Weil n Qubits 2<sup>n</sup> Zahlen brauchen – bei 50 Qubits schon rund eine Billiarde –, kommen normale Computer hier rasch an ihre Grenzen. Dabei probiert ein Quantencomputer nicht einfach alles gleichzeitig aus, sondern sorgt dafür, dass sich falsche Antworten gegenseitig auslöschen und richtige verstärken.</p>
+
+        <h4>Wie baut man Qubits – und wozu?</h4>
+        <p>Qubits lassen sich auf ganz unterschiedliche Arten bauen: Supraleitende Schaltkreise müssen fast bis zum absoluten Nullpunkt gekühlt werden, während Atome und Ionen mit Laserlicht festgehalten werden und manche Rechner mit einzelnen Lichtteilchen sogar bei Raumtemperatur arbeiten. Eines Tages sollen sie helfen, neue Materialien und Medikamente zu entwickeln oder schwierige Planungsaufgaben zu lösen, und auch für besonders genaue Messgeräte sind Quanten wichtig.</p>
+
+        <h4>Wie weit sind wir?</h4>
+        <p>Heutige Geräte sind noch klein und machen viele Fehler, weshalb die Fehlerkorrektur zu den großen Forschungsthemen zählt. Den PC wird ein Quantencomputer ohnehin nicht ersetzen, denn er ist nur bei bestimmten Aufgaben überlegen. Quantenphysik steckt aber längst in deinem Alltag: Laser, Computerchips und Magnetresonanz-Geräte im Krankenhaus beruhen alle darauf.</p>
+      </div>
+
+      <svg class="cat cat--explainer" viewBox="0 0 100 120" aria-hidden="true"><use href="#cat"/></svg>
+    </section>
+
+    <!-- Die 4 Stationen -->
+    <section class="stations">
+      <h2 class="section-title">Die 4 Stationen <span class="mono-label">DAS ERWARTET DICH</span></h2>
+
+      <div class="station-grid">
+
+        <div class="station station--1">
+          <svg class="cat cat--station1" viewBox="0 0 100 62" aria-hidden="true"><use href="#cathead"/></svg>
+          <div class="station__head">
+            <div class="station__num">1</div>
+            <div><h3>Schrödinger-Box</h3><small>SOWOHL ALS AUCH</small></div>
+          </div>
+          <div class="station__body">
+            <p class="tagline">Die Katze ist lebendig und tot zugleich – zumindest, solange niemand in die Kiste schaut.</p>
+            <p><b>VOR ORT </b>Vor Ort stehen zwei Holzkisten, die mit vier Zahlenschlössern gesichert sind. Löse die Rätsel der Katze und öffne die Boxen.</p>
+            <p><b>AM HANDY </b>Hier findest du die Online-Rätsel samt Erklärungen. Wenn du richtig liegst, erhältst du die Codes für die Zahlenschlösser.</p>
+          </div>
+        </div>
+
+        <div class="station station--2">
+          <div class="station__head">
+            <div class="station__num">2</div>
+            <div><h3>Bloch-Kugel</h3><small>DAS QUBIT</small></div>
+          </div>
+          <div class="station__body">
+            <p class="tagline">Ein Bit kennt nur zwei Werte, einem Qubit steht dagegen eine ganze Kugeloberfläche offen.</p>
+            <p><b>VOR ORT </b>Hier findest du Kugeln als Qubit Modelle gemeinsam mit 20 Challenges, mit denen du dich und dein Verständnis der Bloch Sphere selbst testen kannst.</p>
+            <p><b>AM HANDY </b>Hier erfährst du, was ein Qubit eigentlich ist, wie die Rotationen funktionieren und kannst deine Lösungen überprüfen.</p>
+          </div>
+        </div>
+
+        <div class="station station--3">
+          <svg class="cat cat--station3" viewBox="0 0 100 62" aria-hidden="true"><use href="#cathead"/></svg>
+          <div class="station__head">
+            <div class="station__num">3</div>
+            <div><h3>QuantumTable</h3><small>SCHALTKREISE VOM SCCH</small></div>
+          </div>
+          <div class="station__body">
+            <p class="tagline">Du baust einen Schaltkreis und siehst sofort, was dabei herauskommt.</p>
+            <p><b>VOR ORT </b>Lege die Bausteine auf den Tisch und verbinde sie miteinander – Alex hilft dir gern beim Einstieg.</p>
+            <p><b>AM HANDY </b>Online findest du Erklärungen zum Thema Quantenschaltkreise, wie man sie liest und wie sie funktionieren.</p>
+          </div>
+        </div>
+
+        <div class="station station--4">
+          <div class="station__head">
+            <div class="station__num">4</div>
+            <div><h3>Meet the Team</h3><small>MENSCHEN DER FORSCHUNG</small></div>
+          </div>
+          <div class="station__body">
+            <p class="tagline">Hier lernst du die Menschen kennen, die hinter der Forschung stehen.</p>
+            <p><b>VOR ORT </b>Unser Team stellt sich selbst in kurzen Steckbriefen vor und erklärt, woran wir gerade arbeiten</p>
+            <p><b>AM HANDY </b>Sind die Mappen vor Ort gerade besetzt, findest du alle Steckbriefe auch online.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <svg class="cat cat--footer" viewBox="0 0 100 120" aria-hidden="true"><use href="#cat"/></svg>
+
+  <!-- ===================== FUSSZEILE ===================== -->
+  <footer class="site-footer">
+    <img src="img/logo-sloths.svg" alt="The Sloths – Quantum Information &amp; Computation @ Kepler">
+    <div class="site-footer__text">
+      <span class="site-footer__institute">Institut für Integrierte Schaltungen und Quantencomputing</span>
+      <span class="site-footer__uni">JOHANNES KEPLER UNIVERSITÄT LINZ · 60 JAHRE JKU</span>
+    </div>
+  </footer>
+
+</article>
+</div>
+
+<script src="../assets/site.js"></script>
+<script src="../assets/qr.js"></script>
+<script>
+  // QR-Code zur Website (Adresse aus assets/site.js).
+  (function () {
+    var base = window.QUANTENSTATION_URL;
+    if (!base || !window.QR) return;
+    document.querySelectorAll('[data-qr]').forEach(function (el) {
+      el.innerHTML = QR.svg(base + el.getAttribute('data-qr'), { ec: 'M', quiet: 2 });
+      el.classList.add('is-filled');
+    });
+  })();
+
+  // Blatt am Bildschirm auf Fensterbreite skalieren (Druck: siehe @media print).
+  function fitSheet() {
+    var zoom = Math.min(1, Math.max(0.15, (window.innerWidth - 40) / 2245));
+    document.documentElement.style.setProperty('--zoom', zoom);
+  }
+  fitSheet();
+  window.addEventListener('resize', fitSheet);
+
+  // Prüfen, ob der Hauptteil in seinen Platz passt (sonst rot markieren).
+  function checkOverflow() {
+    var sheet = document.getElementById('sheet');
+    var content = document.querySelector('.content');
+    var zoom = parseFloat(getComputedStyle(sheet).zoom) || 1;
+    var limit = content.getBoundingClientRect().bottom
+              - parseFloat(getComputedStyle(content).paddingBottom) * zoom;
+    var over = Math.round((content.lastElementChild.getBoundingClientRect().bottom - limit) / zoom);
+    sheet.classList.toggle('is-overflowing', over > 1);
+    if (over > 1) console.warn('Plakat: Hauptteil ist ' + over + ' px zu hoch.');
+  }
+  document.fonts.ready.then(checkOverflow);
+  window.addEventListener('load', checkOverflow);
+</script>
+</body>
+</html>

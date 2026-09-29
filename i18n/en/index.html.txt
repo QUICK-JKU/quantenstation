@@ -1,0 +1,68 @@
+# Englische Texte für index.html — siehe tools/build-en.py
+
+de: Quantenstation · 60 Jahre JKU
+en: Quantum Station · 60 Years of JKU
+
+de: Nicht zuschauen — mitmessen. Vier Stationen rund um Quantenphysik zum Jubiläum 60 Jahre JKU.
+en: Don't just watch — measure along. Four stations on quantum physics for the 60th anniversary of JKU.
+
+de: 60 Jahre JKU · 06.10.
+en: 60 years of JKU · 6 Oct
+
+de: machen wir<br>60 Jahre JKU<br><span class="t-blue">messbar.</span>
+en: Let's make<br>60 years of JKU<br><span class="t-blue">measurable.</span>
+
+de: Nicht zuschauen — sondern <strong class="t-purple">mitmessen</strong>. Euch erwarten vier Stationen zum Mitmachen und Experimentieren — mit Rätseln direkt auf dem Handy.
+en: Don't just watch — <strong class="t-purple">measure along</strong>. Four stations are waiting for you to join in and experiment — with puzzles right on your phone.
+
+de: So funktioniert's
+en: How it works
+
+de: QR-Code scannen → Infos holen → <strong>Rätsel lösen</strong>.<br> Alles online, <strong>kein Login</strong>, kein Download.
+en: Scan the QR code → get the info → <strong>solve puzzles</strong>.<br> Everything online, <strong>no login</strong>, no download.
+
+de: Die 4 Stationen
+en: The 4 stations
+
+de: Tippe eine Station an — oder scanne den QR-Code direkt vor Ort.
+en: Tap a station — or scan the QR code right there on site.
+
+de: Löse die Rätsel und öffne die Box
+en: Solve the puzzles and open the box
+
+de: Wie sieht ein Quantenbit aus?
+en: What does a quantum bit look like?
+
+de: Schaltkreise bauen &amp; sofort sehen — vom SCCH
+en: Build circuits &amp; see the result instantly — by the SCCH
+
+de: Was forschen wir eigentlich an der Uni?
+en: What do we actually research at the university?
+
+de: Und außerdem
+en: And also
+
+de: Häufige Fragen, Quanten-Mythen — und deine eigenen
+en: Common questions, quantum myths — and your own
+
+de: Muss ich etwas installieren?
+en: Do I need to install anything?
+
+de: Nein. Alles läuft im Browser deines Handys — kein Login, keine App, keine Anmeldung. Wenn du magst, kannst du diese Seite als Lesezeichen speichern und die Rätsel später zu Hause fertig lösen.
+en: No. Everything runs in your phone's browser — no login, no app, no sign-up. If you like, you can bookmark this page and finish the puzzles at home later.
+
+de: Brauche ich Vorwissen?
+en: Do I need any prior knowledge?
+
+de: Nein. Die Rätsel sind für die <strong>Oberstufe</strong> gemacht, aber jedes erklärt sich selbst. Neugier reicht völlig — und wir stehen daneben und helfen gerne weiter.
+en: No. The puzzles are made for <strong>upper secondary school</strong>, but each one explains itself. Curiosity is all you need — and we are right there and happy to help.
+
+de: Wird mein Fortschritt gespeichert?
+en: Is my progress saved?
+
+de: Ja, aber nur <strong>lokal auf deinem Handy</strong>. Wir sammeln keine Daten, es gibt kein Tracking und nichts verlässt dein Gerät. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Fortschritt zurücksetzen</button> </div>
+en: Yes, but only <strong>locally on your phone</strong>. We collect no data, there is no tracking and nothing leaves your device. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Reset progress</button> </div>
+
+de: Johannes Kepler Universität Linz · Jubiläum 60 Jahre<br> Quantenstation — nicht zuschauen, mitmessen.
+en: Johannes Kepler University Linz · 60th anniversary<br> Quantum Station — don't just watch, measure along.
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Rätsel 3 · Wellen in Phase</title>
+<meta name="description" content="Rätsel 3: Verschiebe drei Wellen, bis ihre Summe die Zielkurve trifft.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
+<style>
+  .graph-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 16px auto 0;
+    padding: 12px;
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+  }
+  .graph-card svg { display: block; width: 100%; height: auto; }
+
+  .wave-list {
+    width: 100%;
+    max-width: 360px;
+    margin: 16px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .wave {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    box-shadow: var(--shadow-sm);
+  }
+  .wave-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 9px;
+  }
+  .wave-name {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 14px;
+  }
+  .dot { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+  .wave-deg {
+    font-family: var(--font-mono);
+    font-size: 13px; font-weight: 600;
+    color: var(--faint);
+  }
+  .wave svg { display: block; width: 100%; height: auto; margin-bottom: 8px; }
+  .wave input[type=range] {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 14px; border-radius: 10px; outline: none; margin: 0;
+  }
+  .wave input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer;
+  }
+  .wave input[type=range]::-moz-range-thumb {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer;
+  }
+  .legend {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: .06em;
+  }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="3-wellen.html">
+<link rel="alternate" hreflang="en" href="../../../en/stations/1-schroedinger/raetsel/3-wellen.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zur Rätselübersicht">←</a>
+    <div class="q-topbar-title">Box 1 · Rätsel 3 von 4</div>
+    <div class="q-topbar-badge">🔒 Schloss 3</div>
+    <a class="q-lang" href="../../../en/stations/1-schroedinger/raetsel/3-wellen.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Rätsel 3 · Schloss 3</div>
+    <h1 class="q-h1">Wellen in Phase</h1>
+    <p class="q-lead" style="max-width:450px;margin-left:auto;margin-right:auto;font-size:15.5px;">
+      Drei Wellen überlagern sich. Verschiebe jede mit ihrem Slider, bis die
+      <strong class="t-green">Summe</strong> genau die
+      <strong>gestrichelte Zielkurve</strong> trifft. Perfekte Interferenz
+      verrät den Code.
+    </p>
+  </div>
+
+  <div class="q-wrap">
+    <div class="graph-card">
+      <svg viewBox="0 0 336 150" aria-label="Summe der drei Wellen im Vergleich zur Zielkurve">
+        <line x1="0" y1="75" x2="336" y2="75" stroke="rgba(20,22,28,.12)" stroke-width="1"></line>
+        <path id="target-path" fill="none" stroke="#9a948a" stroke-width="2.5" stroke-dasharray="6 5"></path>
+        <path id="sum-path" fill="none" stroke="#14161c" stroke-width="3.5"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <div class="legend">
+        <span>— — Ziel</span>
+        <span id="match-label" style="font-size:13px;font-weight:700;">Übereinstimmung 0&nbsp;%</span>
+      </div>
+      <div class="q-meter q-mt-sm">
+        <div class="q-meter-fill" id="match-bar"></div>
+      </div>
+    </div>
+
+    <div class="wave-list" id="waves"></div>
+
+    <div class="q-success" id="success" hidden>
+      <div class="q-success-label">KONSTRUKTIVE INTERFERENZ ✓</div>
+      <div class="q-code" data-q-code></div>
+      <div class="q-body t-green" style="font-weight:600;">🔓 Das ist dein Code.</div>
+      <a class="q-btn q-btn-green" href="4-labore.html">Weiter zu Rätsel 4 →</a>
+    </div>
+
+    <p class="q-fine q-center q-mt" style="max-width:340px;margin-left:auto;margin-right:auto;">
+      Jeder Slider verschiebt die Phase einer Welle. Nur wenn alle drei genau
+      sitzen, deckt sich die Summe mit der Zielkurve.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Tipp anzeigen</summary>
+      <div class="q-acc-body">
+        Nimm dir <strong>eine Welle nach der anderen</strong> vor. Schieb Welle 1,
+        bis der Prozentwert nicht mehr steigt, dann Welle 2, dann Welle 3 — und
+        danach noch einmal von vorn zum Feinjustieren. Die Anzeige reagiert
+        empfindlich: Die letzten Prozent brauchen kleine Schritte.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Was steckt dahinter?</summary>
+      <div class="q-acc-body">
+        Wellen addieren sich nicht wie Zahlen, sondern <strong>mit ihrer
+        Phase</strong>. Treffen Berg auf Berg, wird es lauter oder heller —
+        <em>konstruktive</em> Interferenz. Trifft Berg auf Tal, bleibt nichts
+        übrig — <em>destruktive</em> Interferenz. Ein Quantencomputer rechnet
+        genau so: Er richtet die Phasen so aus, dass die falschen Antworten sich
+        auslöschen und die richtige übrig bleibt.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-block" href="index.html">← Alle Rätsel von Box 1</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var FREQ   = [1, 2, 3];
+  var AMP    = [1, 0.7, 0.5];
+  var TARGET = [45, 210, 300];   // die gesuchten Phasen in Grad
+  var CODE   = '3060';
+  var COLORS = ['#1f5bff', '#ff352b', '#8b3dff'];
+
+  var phases = [0, 0, 0];
+
+  var sumMax = AMP[0] + AMP[1] + AMP[2];
+
+  function wave(i, x, phaseDeg) {
+    var ph = phaseDeg * Math.PI / 180;
+    return AMP[i] * Math.sin(FREQ[i] * 2 * Math.PI * x + ph);
+  }
+
+  function sumAt(x, ph) {
+    var s = 0;
+    for (var i = 0; i < 3; i++) s += wave(i, x, ph[i]);
+    return s;
+  }
+
+  function buildPath(fn, width, mid, scale) {
+    var d = '', N = 90;
+    for (var k = 0; k <= N; k++) {
+      var x = k / N;
+      var y = mid - scale * fn(x);
+      d += (k === 0 ? 'M' : 'L') + (x * width).toFixed(1) + ',' + y.toFixed(1) + ' ';
+    }
+    return d.trim();
+  }
+
+  /* ---------- Slider-Karten aufbauen ---------- */
+  var listEl = document.getElementById('waves');
+  var rows = [];
+
+  for (var i = 0; i < 3; i++) {
+    var card = document.createElement('div');
+    card.className = 'wave';
+    card.innerHTML =
+      '<div class="wave-head">' +
+        '<span class="wave-name"><span class="dot" style="background:' + COLORS[i] + '"></span>Welle ' + (i + 1) + '</span>' +
+        '<span class="wave-deg">0°</span>' +
+      '</div>' +
+      '<svg viewBox="0 0 300 46" aria-hidden="true">' +
+        '<line x1="0" y1="23" x2="300" y2="23" stroke="rgba(20,22,28,.1)" stroke-width="1"></line>' +
+        '<path fill="none" stroke="' + COLORS[i] + '" stroke-width="2.5"></path>' +
+      '</svg>' +
+      '<input type="range" min="0" max="359" value="0" ' +
+        'aria-label="Phase von Welle ' + (i + 1) + '" ' +
+        'style="background:linear-gradient(90deg,' + COLORS[i] + ',rgba(20,22,28,.12));">';
+
+    listEl.appendChild(card);
+
+    var row = {
+      deg:   card.querySelector('.wave-deg'),
+      path:  card.querySelector('svg path'),
+      input: card.querySelector('input')
+    };
+    (function (idx, input) {
+      input.addEventListener('input', function () {
+        phases[idx] = Number(input.value);
+        render();
+      });
+    })(i, row.input);
+    rows.push(row);
+  }
+
+  /* ---------- Zeichnen ---------- */
+  var targetPathEl = document.getElementById('target-path');
+  var sumPathEl    = document.getElementById('sum-path');
+  var matchLabel   = document.getElementById('match-label');
+  var matchBar     = document.getElementById('match-bar');
+  var okEl         = document.getElementById('success');
+
+  targetPathEl.setAttribute('d', buildPath(function (x) { return sumAt(x, TARGET); }, 336, 75, 30));
+
+  function render() {
+    sumPathEl.setAttribute('d', buildPath(function (x) { return sumAt(x, phases); }, 336, 75, 30));
+
+    // Abweichung als quadratisches Mittel gegen die Zielkurve
+    var err = 0, N = 120;
+    for (var k = 0; k <= N; k++) {
+      var x = k / N;
+      var a = sumAt(x, phases), b = sumAt(x, TARGET);
+      err += (a - b) * (a - b);
+    }
+    var rms = Math.sqrt(err / (N + 1));
+    var match = Math.min(1, Math.max(0, 1 - rms / (2 * sumMax)));
+    var solved = match >= 0.991;
+
+    // Anzeige spreizen — die rohe Abweichung wirkt sonst zu gnädig
+    var disp = Math.max(0, (match - 0.6) / 0.4);
+    var pct = solved ? 100 : Math.min(99, Math.round(Math.pow(disp, 1.5) * 100));
+
+    var color = solved ? '#1f8a5b' : (pct > 85 ? '#c98a1a' : '#9a5b52');
+    matchLabel.textContent = 'Übereinstimmung ' + pct + ' %';
+    matchLabel.style.color = color;
+    matchBar.style.width = pct + '%';
+    matchBar.style.background = color;
+
+    sumPathEl.setAttribute('stroke', solved ? '#1f8a5b' : '#14161c');
+    sumPathEl.style.filter = solved ? 'drop-shadow(0 0 5px rgba(31,138,91,.55))' : 'none';
+
+    for (var i = 0; i < 3; i++) {
+      rows[i].deg.textContent = phases[i] + '°';
+      (function (idx) {
+        rows[idx].path.setAttribute('d',
+          buildPath(function (x) { return wave(idx, x, phases[idx]); }, 300, 23, 15));
+      })(i);
+    }
+
+    if (solved) Q.solve({ id: 'schroedinger-3', code: CODE, block: okEl });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

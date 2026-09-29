@@ -1,0 +1,17 @@
+# Englische Texte für stations/1-schroedinger/katze-2/4-verschraenkung.html — siehe tools/build-en.py
+
+de: Rätsel 4 · Die zweite Katze
+en: Puzzle 4 · The second cat
+
+de: Schloss 4 der zweiten Schrödinger-Katze: vier Fragen, ein vierstelliger Code.
+en: Lock 4 of the second Schrödinger cat: four questions, one four-digit code.
+
+de: Box 2 · Rätsel 4 von 4
+en: Box 2 · Puzzle 4 of 4
+
+de: Rätsel 4
+en: Puzzle 4
+
+de: Was Quantentechnik kann — und was nicht
+en: What quantum technology can do — and what it can't
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Quiz pool · Quantum Station JKU</title>
+<meta name="description" content="18 quantum quizzes in three levels of difficulty — for children, school students and university students. Each one gives a four-digit code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="stylesheet" href="../../assets/quiz.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%93%3C/text%3E%3C/svg%3E">
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="../../quiz/index.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="../index.html" data-q-back aria-label="Back">←</a>
+    <div class="q-topbar-title">Quiz pool</div>
+    <div class="q-topbar-badge">❓ 18 quizzes</div>
+    <a class="q-lang" href="../../quiz/index.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Three levels · 108 questions</div>
+    <h1 class="q-h1">The quiz pool</h1>
+    <p class="q-lead" style="max-width:430px;margin-left:auto;margin-right:auto;">
+      Just like the four puzzles of the Schrödinger box: every quiz ends with a <strong>four-digit code</strong>. Only here there is something for every age.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-note-blue q-center">
+      <div class="q-note-title">How a quiz works</div>
+      <div class="q-body">
+        Six questions, one after another. A wrong guess costs nothing — you see right away why, and you can try again. At the end you get your code.
+      </div>
+    </div>
+  </div>
+
+  <div data-quiz-index></div>
+
+  <noscript>
+    <div class="q-wrap q-mt">
+      <div class="q-note">
+        <div class="q-note-title">JavaScript is off</div>
+        <div class="q-body">
+          The quizzes need JavaScript. All the stations' info pages work without it, though.
+        </div>
+      </div>
+    </div>
+  </noscript>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Frequently asked questions</h2>
+    <details class="q-acc">
+      <summary>Do I have to get every question right?</summary>
+      <div class="q-acc-body">
+        No. If you pick a wrong answer, we briefly explain why, and you choose again. You only move on with the right answer — <strong>you get the code in any case</strong>. The stars at the end just show how much you got right first time.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Which level suits me?</summary>
+      <div class="q-acc-body">
+        <strong>Children</strong> needs no prior knowledge and no calculating. <strong>School students</strong> assumes school physics, but calculates in your head at most. <strong>University students</strong> requires real calculations with numerical values and units — bra-ket included. Just try it: the levels are independent of each other.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Is my progress saved?</summary>
+      <div class="q-acc-body">
+        Yes — locally on this device, without login and without a server. Solved quizzes get a tick and keep showing their code. Everything can be reset on the start page.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Can I repeat a quiz?</summary>
+      <div class="q-acc-body">
+        Any time. At the end of every quiz there is a <strong>Once more</strong> button. The answer options are shuffled again each time.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-list">
+      <a class="q-tile" href="../stations/1-schroedinger/raetsel/index.html">
+        <span class="q-tile-num c-ink">🔒</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Prefer the four puzzles?</span>
+          <span class="q-tile-sub">Interactive locks of the Schrödinger box · upper secondary level</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stations">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../index.html"><span class="ico" aria-hidden="true">🏠</span>Home</a>
+    <a class="q-navitem" href="../stations/1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Cat</a>
+    <a class="q-navitem" href="../stations/2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
+    <a class="q-navitem" href="../stations/3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../stations/4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../stations/5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+<script src="pool.js"></script>
+<script src="../../assets/quiz.js"></script>
+</body>
+</html>

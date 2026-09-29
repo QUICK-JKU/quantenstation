@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Häufige Fragen · Quantenstation JKU</title>
+<meta name="description" content="Die häufigsten Fragen zur Quantenphysik — durchsuchbar beantwortet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%AC%3C/text%3E%3C/svg%3E">
+<style>
+  .search-wrap { position: sticky; top: calc(52px + var(--safe-t)); z-index: 40; padding: 10px 0 12px;
+                 background: linear-gradient(var(--bg) 75%, transparent); }
+  .search {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border-radius: var(--r-md);
+    border: 1.5px solid var(--line);
+    background: #fff;
+    font-size: 16px;   /* 16px verhindert das Zoomen auf iOS */
+    box-shadow: var(--shadow-sm);
+  }
+  .cats { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
+  .cat {
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 12px; font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .cat[aria-pressed="true"] {
+    background: var(--ink); border-color: var(--ink); color: #fff;
+  }
+  .empty { text-align: center; padding: 30px 10px; color: var(--faint); }
+  /* Wenig Bildhöhe (Zoom, Querformat): Suche scrollt mit, wie die Kopfleiste. */
+  @media (max-height: 520px) { .search-wrap { position: static; } }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="fragen.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/5-ama/fragen.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück">←</a>
+    <div class="q-topbar-title">FAQ · Alle Fragen</div>
+    <div class="q-topbar-badge">🔍 Suche</div>
+    <a class="q-lang" href="../../en/stations/5-ama/fragen.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap">
+    <div class="q-eyebrow">Nachschlagen</div>
+    <h1 class="q-h1">Häufige Fragen</h1>
+  </div>
+
+  <div class="q-wrap">
+    <div class="search-wrap">
+      <input class="search" type="search" id="search" placeholder="Suchen … z. B. Katze, Qubit, Zufall"
+             aria-label="Fragen durchsuchen">
+      <div class="cats" id="cats">
+        <button class="cat" type="button" data-cat="alle" aria-pressed="true">alle</button>
+        <button class="cat" type="button" data-cat="grundlagen" aria-pressed="false">Grundlagen</button>
+        <button class="cat" type="button" data-cat="computer" aria-pressed="false">Quantencomputer</button>
+        <button class="cat" type="button" data-cat="philosophie" aria-pressed="false">Große Fragen</button>
+        <button class="cat" type="button" data-cat="alltag" aria-pressed="false">Alltag</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap" id="faq">
+
+    <!-- ---------- Grundlagen ---------- -->
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Was ist Superposition in einem Satz?</summary>
+      <div class="q-acc-body">
+        Ein Quantensystem muss sich vor der Messung nicht für ein einziges
+        Ergebnis entscheiden, sondern kann mehrere Möglichkeiten gleichzeitig in
+        sich tragen. Das heißt <strong>nicht</strong>, dass wir die Antwort bloß
+        nicht kennen. Sie steht tatsächlich noch nicht fest und wird erst
+        durch die Messung festgelegt.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Ist Schrödingers Katze wirklich tot und lebendig?</summary>
+      <div class="q-acc-body">
+        Nein. Schrödinger hat sich das Beispiel 1935 als <strong>Kritik</strong>
+        ausgedacht. Er wollte zeigen, wie absurd es wird, wenn man die Regeln der
+        winzigen Teilchen auf große Dinge überträgt. Bei einzelnen Atomen lässt
+        sich die Superposition genau nachmessen. Bei einer Katze gibt es sie
+        nicht, denn sie besteht aus unvorstellbar vielen Teilchen und ist
+        immer eindeutig lebendig oder eindeutig tot.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Was ist ein Qubit?</summary>
+      <div class="q-acc-body">
+        Ein Qubit ist das kleinste Quantensystem mit genau zwei möglichen
+        Messergebnissen, meist 0 und 1. Anders als ein gewöhnliches Bit kann es
+        vor der Messung in einer Superposition aus beiden Werten stehen. Um
+        seinen Zustand vollständig zu beschreiben, braucht man zwei Winkel.
+        Deshalb lässt er sich als Punkt auf einer Kugel darstellen, der
+        <a href="../2-bloch-sphere/">Bloch-Kugel</a>.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Was ist Interferenz?</summary>
+      <div class="q-acc-body">
+        Wellen überlagern sich und addieren dabei ihre Ausschläge. Wo Berg auf
+        Berg trifft, wird die Welle stärker. Wo Berg auf Tal trifft, löschen sie
+        sich aus. In der Quantenmechanik überlagern sich die
+        <strong>Möglichkeiten</strong> selbst. Deshalb kann ein Ergebnis
+        verschwinden, obwohl beide Wege dorthin offen sind, und ein anderes wird
+        dafür umso wahrscheinlicher.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Was bedeutet „Messung zerstört den Zustand“?</summary>
+      <div class="q-acc-body">
+        Messen ist kein passives Hinschauen, sondern eine Wechselwirkung mit dem
+        System. Danach befindet es sich in genau einem der möglichen Ergebnisse
+        und die ursprüngliche Superposition ist unwiederbringlich verloren.
+        Das kannst du an der <a href="../2-bloch-sphere/simulation.html">Bloch-Kugel</a>
+        selbst ausprobieren. Nach jeder Messung springt der Pfeil auf einen der
+        beiden Pole.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Was ist Verschränkung?</summary>
+      <div class="q-acc-body">
+        Zwei Teilchen können so eng verbunden sein, dass keines von beiden für
+        sich einen eigenen Zustand hat. Beschrieben werden kann nur das Paar
+        gemeinsam. Misst man beide, passen die Ergebnisse immer zusammen, obwohl
+        jedes einzelne für sich rein zufällig ausfällt. Du kannst so ein Paar
+        selbst herstellen, mit dem
+        <a href="../3-quantumtable/schaltkreis.html">Bell-Zustand</a>
+        am QuantumTable.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="grundlagen">
+      <summary>Was ist die Unschärferelation?</summary>
+      <div class="q-acc-body">
+        Bestimmte Größenpaare, etwa Ort und Impuls eines Teilchens, können nicht
+        beide gleichzeitig beliebig genau festliegen. Je genauer der Ort bekannt
+        ist, desto unbestimmter wird der Impuls, und umgekehrt. Das liegt
+        <strong>nicht</strong> an ungenauen Messgeräten. Es ist eine Eigenschaft
+        der Natur selbst und würde auch mit perfekter Technik bestehen bleiben.
+      </div>
+    </details>
+
+    <!-- ---------- Quantencomputer ---------- -->
+    <details class="q-acc" data-cat="computer">
+      <summary>Sind Quantencomputer einfach schnellere Computer?</summary>
+      <div class="q-acc-body">
+        Nein. Bei bestimmten Aufgaben sind sie tatsächlich viel schneller, bei
+        den meisten anderen aber <strong>langsamer</strong> als dein Laptop. Für
+        Videos, Chats oder Textverarbeitung bringen sie nichts. Ein
+        Quantencomputer ist ein Spezialwerkzeug für ausgewählte Probleme und
+        kein besserer Alleskönner.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="computer">
+      <summary>Probiert ein Quantencomputer alle Möglichkeiten gleichzeitig aus?</summary>
+      <div class="q-acc-body">
+        Das ist die häufigste Fehlvorstellung. Zwar hat er während der Rechnung
+        viele Möglichkeiten gleichzeitig im Spiel, am Ende darf er aber nur
+        <strong>einmal messen</strong> und bekommt dabei ein einziges Ergebnis.
+        Würde man einfach drauflos messen, käme nur Zufall heraus. Die
+        eigentliche Kunst besteht darin, die Rechnung so zu gestalten, dass sich
+        die falschen Möglichkeiten durch Interferenz auslöschen und die richtige
+        übrig bleibt.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="computer">
+      <summary>Wofür sind sie tatsächlich gut?</summary>
+      <div class="q-acc-body">
+        Am aussichtsreichsten ist die Simulation von Molekülen und Materialien,
+        etwa für neue Medikamente oder bessere Batterien. Dazu kommen bestimmte
+        Optimierungsprobleme. Bekannt, aber noch weit entfernt, ist auch das
+        Knacken heutiger Verschlüsselung. Vieles davon befindet sich noch in der
+        Forschung und ist kein fertiges Produkt.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="computer">
+      <summary>Wann kann ich einen kaufen?</summary>
+      <div class="q-acc-body">
+        Für zu Hause wahrscheinlich nie, denn die Geräte brauchen extreme Kälte
+        und aufwändige Abschirmung. Realistischer ist der Zugriff über die
+        <strong>Cloud</strong>. Den gibt es schon heute, teilweise sogar gratis
+        für kleine Experimente. Dabei läuft dein Programm auf einem Gerät im
+        Labor und du bekommst nur das Ergebnis zurück.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="computer">
+      <summary>Ist meine Verschlüsselung bald unsicher?</summary>
+      <div class="q-acc-body">
+        Heute noch nicht. Dafür bräuchte es viel größere und stabilere
+        Quantencomputer, als es sie derzeit gibt. Ein Risiko besteht eher darin,
+        dass jemand verschlüsselte Daten <em>jetzt speichert und später
+        entschlüsselt</em>. Deshalb werden schon heute neue, quantensichere
+        Verfahren entwickelt und eingeführt.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="computer">
+      <summary>Warum sind Quantencomputer so empfindlich?</summary>
+      <div class="q-acc-body">
+        Jede Störung von außen zerstört die Superposition der Qubits. Fachleute
+        nennen das <strong>Dekohärenz</strong>. Schon Wärme, Vibrationen oder
+        Streulicht reichen dafür aus. Deshalb werden viele Quantencomputer fast
+        bis zum absoluten Nullpunkt gekühlt und aufwändig abgeschirmt, und
+        deshalb ist die Fehlerkorrektur ein so großes Forschungsthema.
+      </div>
+    </details>
+
+    <!-- ---------- Große Fragen ---------- -->
+    <details class="q-acc" data-cat="philosophie">
+      <summary>Ist der Zufall echt oder kennen wir nur die Details nicht?</summary>
+      <div class="q-acc-body">
+        Nach heutigem Wissensstand ist er <strong>echt</strong>. Experimente zu
+        den Bell'schen Ungleichungen, die 2022 mit dem Nobelpreis für Physik
+        ausgezeichnet wurden, schließen naheliegende Erklärungen mit
+        „versteckten Variablen“ aus. Vollständig geklärt ist die Deutung der
+        Quantenmechanik damit aber noch nicht, und darüber wird weiter
+        geforscht.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="philosophie">
+      <summary>Gibt es Paralleluniversen?</summary>
+      <div class="q-acc-body">
+        Das ist eine <em>Interpretation</em> der Quantenmechanik, die
+        Viele-Welten-Deutung, und keine Messung. Sie macht dieselben
+        Vorhersagen wie andere Deutungen. Die Physik entscheidet zwischen
+        Theorien durch Experimente, und hier liefern bisher alle Deutungen
+        dieselben Ergebnisse. Ob es Paralleluniversen gibt, kann deshalb
+        derzeit niemand nachweisen.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="philosophie">
+      <summary>Hat Bewusstsein etwas mit der Messung zu tun?</summary>
+      <div class="q-acc-body">
+        Nein. Eine Messung braucht kein Bewusstsein. Ein Detektor, eine
+        Fotoplatte oder schon die Luft im Raum reichen völlig aus, weil sie mit
+        dem System wechselwirken. Die Idee geht auf Spekulationen einzelner
+        Physiker zurück, etwa Eugene Wigner in den 1960er-Jahren, und wurde vor
+        allem durch populäre Bücher verbreitet. In der heutigen Physik spielt
+        sie keine Rolle.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="philosophie">
+      <summary>Kann man mit Verschränkung schneller als Licht kommunizieren?</summary>
+      <div class="q-acc-body">
+        Nein, und das lässt sich sogar beweisen. Dein Messergebnis ist reiner
+        Zufall, den du nicht steuern kannst. Dass beide Seiten zusammenpassen,
+        fällt erst auf, wenn sie ihre Ergebnisse vergleichen. Dafür müssen sie
+        sich über einen ganz normalen Kanal austauschen, der nie schneller als
+        das Licht ist.
+      </div>
+    </details>
+
+    <!-- ---------- Alltag ---------- -->
+    <details class="q-acc" data-cat="alltag">
+      <summary>Begegnet mir Quantenphysik im Alltag?</summary>
+      <div class="q-acc-body">
+        Ständig. LEDs, Laser, Solarzellen, die Chips in deinem Handy, die MRT im
+        Krankenhaus und die Atomuhren im GPS beruhen alle auf Quantenmechanik.
+        Sie ist also nicht exotisch, sondern die am besten bestätigte Theorie der
+        gesamten Physik.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="alltag">
+      <summary>Warum wirkt das im Alltag nie „quantenhaft“?</summary>
+      <div class="q-acc-body">
+        Der Grund ist die <strong>Dekohärenz</strong>. Je mehr Teilchen ein
+        Objekt hat, desto schneller zerstört die Umgebung seine Superposition.
+        Bei Alltagsgegenständen passiert das so unvorstellbar schnell, dass wir
+        davon nie etwas bemerken.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="alltag">
+      <summary>Was ist mit „Quantenheilung“ oder „Quantenenergie“?</summary>
+      <div class="q-acc-body">
+        Damit hat die Physik nichts zu tun. Ein guter Prüfstein ist die Frage,
+        ob genaue Zahlen vorhergesagt werden, die man widerlegen könnte. Echte
+        Quantenphysik macht <strong>zahlenmäßige Vorhersagen</strong>. Wenn
+        „Quanten“ nur als Stimmungswort auftaucht, handelt es sich um Marketing.
+      </div>
+    </details>
+
+    <details class="q-acc" data-cat="alltag">
+      <summary>Ich verstehe es einfach nicht. Bin ich zu dumm?</summary>
+      <div class="q-acc-body">
+        Nein. Die Quantenmechanik widerspricht unserer Alltagserfahrung und
+        dein Gehirn wurde nicht dafür gebaut. Selbst Richard Feynman, einer der
+        bekanntesten Physiker des 20. Jahrhunderts, soll sinngemäß gesagt haben,
+        dass sie niemand wirklich <em>versteht</em>. Rechnen und vorhersagen
+        können wir sie trotzdem hervorragend, und das Verstehen wächst mit dem
+        Ausprobieren.
+      </div>
+    </details>
+
+  </div>
+
+  <div class="empty" id="empty" hidden>
+    <p class="q-body">Dazu haben wir hier nichts.</p>
+    <p class="q-small q-mt-sm">Frag uns einfach direkt an der Station — genau dafür sind wir da.</p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-center">
+      <div class="q-note-title">Deine Frage fehlt?</div>
+      <div class="q-body">Umso besser. Komm vorbei und stell sie uns.</div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-block" href="mythen.html">✗ Weiter zu den Quanten-Mythen</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var items  = Q.$$('#faq details');
+  var search = document.getElementById('search');
+  var empty  = document.getElementById('empty');
+  var cats   = Q.$$('#cats .cat');
+  var active = 'alle';
+
+  function normalise(s) {
+    return s.toLowerCase()
+      .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/ü/g, 'u').replace(/ß/g, 'ss');
+  }
+
+  function apply() {
+    var term = normalise(search.value.trim());
+    var shown = 0;
+
+    items.forEach(function (item) {
+      var matchesCat = active === 'alle' || item.getAttribute('data-cat') === active;
+      var matchesTerm = !term || normalise(item.textContent).indexOf(term) >= 0;
+      var show = matchesCat && matchesTerm;
+      item.hidden = !show;
+      if (show) shown++;
+      // Bei aktiver Suche die Treffer gleich aufklappen
+      if (show && term) item.open = true;
+      if (!term) item.open = false;
+    });
+
+    empty.hidden = shown > 0;
+  }
+
+  search.addEventListener('input', apply);
+
+  cats.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      active = btn.getAttribute('data-cat');
+      cats.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>

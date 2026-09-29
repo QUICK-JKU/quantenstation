@@ -1,0 +1,158 @@
+# Englische Texte für stations/2-bloch-sphere/simulation.html — siehe tools/build-en.py
+
+de: Simulation der Bloch-Kugel · Station 2
+en: Simulating the Bloch sphere · Station 2
+
+de: Dreh den Qubit-Zustand frei, mit Reglern oder mit Gattern — X, Y, Z, H, S, S†, T, T† und Rx/Ry/Rz — und miss ihn direkt.
+en: Rotate the qubit state freely, with sliders or with gates — X, Y, Z, H, S, S†, T, T† and Rx/Ry/Rz — and measure it directly.
+
+de: Simulation der<br>Bloch-Kugel
+en: Simulating the<br>Bloch sphere
+
+de: <strong>Zieh</strong> über die Kugel, nimm die Regler — oder wende ein <strong class="t-purple">Gatter</strong> an. Der rote Pfeil ist der Zustand deines Qubits.
+en: <strong>Drag</strong> across the sphere, use the sliders — or apply a <strong class="t-purple">gate</strong>. The red arrow is the state of your qubit.
+
+de: Bloch-Kugel mit dem aktuellen Qubit-Zustand
+en: Bloch sphere with the current qubit state
+
+de: θ — Breitengrad
+en: θ — latitude
+
+de: Polarwinkel Theta
+en: Polar angle theta
+
+de: φ — Längengrad (Phase)
+en: φ — longitude (phase)
+
+de: Azimutwinkel Phi
+en: Azimuthal angle phi
+
+de: Oder mit Gattern drehen
+en: Or rotate with gates
+
+de: Ein Gatter dreht den aktuellen Zustand — egal, wo er gerade steht.
+en: A gate rotates the current state — wherever it happens to be.
+
+de: Tippe ein Gatter an. Der gestrichelte Pfeil zeigt, wo der Zustand vorher war.
+en: Tap a gate. The dashed arrow shows where the state was before.
+
+de: Dein Schaltkreis
+en: Your circuit
+
+de: |0⟩ — noch nichts angewendet
+en: |0⟩ — nothing applied yet
+
+de: 📏 Messen
+en: 📏 Measure
+
+de: MAL |0⟩
+en: TIMES |0⟩
+
+de: MAL |1⟩
+en: TIMES |1⟩
+
+de: MESSUNGEN
+en: MEASUREMENTS
+
+de: ↺ Zurück auf |0⟩
+en: ↺ Back to |0⟩
+
+de: Zähler zurücksetzen
+en: Reset counter
+
+de: Alle acht Gatter im Überblick
+en: All eight gates at a glance
+
+de: Halbe Drehung um die x-Achse. Macht aus 0 eine 1 — das <strong>NICHT-Gatter</strong> der Quantenwelt.
+en: Half a turn about the x-axis. Turns 0 into 1 — the <strong>NOT gate</strong> of the quantum world.
+
+de: Halbe Drehung um y. Tauscht ebenfalls die Pole, aber mit anderer Phase.
+en: Half a turn about y. Also swaps the poles, but with a different phase.
+
+de: Halbe Drehung um z. Die Pole bleiben — <strong>nur die Phase kippt</strong>.
+en: Half a turn about z. The poles stay — <strong>only the phase flips</strong>.
+
+de: Hadamard. Holt |0⟩ auf den Äquator: <strong>erzeugt Superposition</strong>. Das wichtigste Gatter überhaupt.
+en: Hadamard. Brings |0⟩ to the equator: <strong>creates superposition</strong>. The most important gate of all.
+
+de: Viertel-Drehung um z (90°). Dreht |+⟩ auf den Y-Pol: <strong>|+i⟩</strong>.
+en: Quarter turn about z (90°). Turns |+⟩ to the y-pole: <strong>|+i⟩</strong>.
+
+de: S rückwärts (−90° um z). Die <strong>inverse</strong> Drehung zu S. Dreht |+⟩ zu <strong>|−i⟩</strong>.
+en: S backwards (−90° about z). The <strong>inverse</strong> rotation of S. Turns |+⟩ to <strong>|−i⟩</strong>.
+
+de: Achtel-Drehung um z (45°). Die feinste übliche Phasenschraube — zweimal T ist genau S.
+en: Eighth of a turn about z (45°). The finest common phase screw — applying T twice gives exactly S.
+
+de: T rückwärts (−45° um z). Inverse von T.
+en: T backwards (−45° about z). The inverse of T.
+
+de: Und ein beliebiger Winkel?
+en: And any angle at all?
+
+de: X, Y, Z, S, S†, T und T† sind alle nur <strong>Spezialfälle</strong> eines einzigen Werkzeugs: einer Drehung um eine Achse um einen frei wählbaren Winkel. Dafür gibt es eigene Namen:
+en: X, Y, Z, S, S†, T and T† are all just <strong>special cases</strong> of a single tool: a rotation about an axis by a freely chosen angle. These have their own names:
+
+de: Drehung um <strong>θ Grad</strong> um die x-Achse (durch |+⟩ und |−⟩).
+en: Rotation by <strong>θ degrees</strong> about the x-axis (through |+⟩ and |−⟩).
+
+de: Drehung um θ Grad um die y-Achse (durch |+i⟩ und |−i⟩).
+en: Rotation by θ degrees about the y-axis (through |+i⟩ and |−i⟩).
+
+de: Drehung um θ Grad um die z-Achse (durch |0⟩ und |1⟩).
+en: Rotation by θ degrees about the z-axis (through |0⟩ and |1⟩).
+
+de: Am Modell heißt das: Du drehst die Kugel einfach so, dass die genannte Achse fest bleibt, und schwenkst um den angegebenen Winkel. Die Drehrichtung folgt der <strong>Rechte-Hand-Regel</strong>: Der Daumen zeigt in die positive Achsenrichtung (für z also nach oben zu |0⟩, für x zu |+⟩, für y zu |+i⟩), die gekrümmten Finger geben die Drehrichtung für positive Winkel vor. So dreht S = R<sub>z</sub>(90°) den Zustand |+⟩ nach |+i⟩.
+en: On the model this means: you simply hold the sphere so that the named axis stays fixed, and swing it by the given angle. The direction of rotation follows the <strong>right-hand rule</strong>: the thumb points in the positive direction of the axis (for z upwards to |0⟩, for x to |+⟩, for y to |+i⟩), and the curled fingers give the direction of rotation for positive angles. So S = R<sub>z</sub>(90°) turns the state |+⟩ into |+i⟩.
+
+de: Damit sind X = R<sub>x</sub>(180°), Y = R<sub>y</sub>(180°), Z = R<sub>z</sub>(180°) — und S = R<sub>z</sub>(90°), S† = R<sub>z</sub>(−90°), T = R<sub>z</sub>(45°), T† = R<sub>z</sub>(−45°). Alles, was auf der Kugel passiert, ist irgendeine Kombination dieser drei Drehungen.
+en: This makes X = R<sub>x</sub>(180°), Y = R<sub>y</sub>(180°), Z = R<sub>z</sub>(180°) — and S = R<sub>z</sub>(90°), S† = R<sub>z</sub>(−90°), T = R<sub>z</sub>(45°), T† = R<sub>z</sub>(−45°). Everything that happens on the sphere is some combination of these three rotations.
+
+de: Achte darauf
+en: Watch out
+
+de: Nach dem Messen springt der Pfeil auf einen <strong>Pol</strong> — und bleibt dort. Die vorherige Position ist unwiederbringlich weg. Genau das meint „die Messung zerstört die Superposition“.
+en: After measuring, the arrow jumps to a <strong>pole</strong> — and stays there. The previous position is irretrievably gone. That is exactly what “the measurement destroys the superposition” means.
+
+de: Probier das aus
+en: Try this
+
+de: Tippe <strong>H</strong>, dann noch einmal <strong>H</strong>. Du landest wieder exakt bei |0⟩. Zweimal dieselbe halbe Drehung hebt sich auf — ein schönes Beispiel dafür, dass jedes Gatter <em>umkehrbar</em> ist.
+en: Tap <strong>H</strong>, then <strong>H</strong> once more. You end up exactly at |0⟩ again. The same half turn twice cancels itself out — a nice example of the fact that every gate is <em>reversible</em>.
+
+de: Warum ändert φ die Wahrscheinlichkeiten nicht?
+en: Why doesn't φ change the probabilities?
+
+de: Weil φ die <strong>Phase</strong> ist. Sie ist bei einer einzelnen Messung in der 0/1-Richtung völlig unsichtbar. Wichtig wird sie erst, wenn zwei Wege wieder zusammentreffen — dann entscheidet sie, ob sich etwas verstärkt oder auslöscht. Genau das ist <a href="../1-schroedinger/raetsel/3-wellen.html">Rätsel 3</a>.
+en: Because φ is the <strong>phase</strong>. In a single measurement in the 0/1 direction it is completely invisible. It only matters when two paths meet again — then it decides whether something is reinforced or cancelled. That is exactly <a href="../1-schroedinger/raetsel/3-wellen.html">puzzle 3</a>.
+
+de: Warum muss jedes Gatter umkehrbar sein?
+en: Why does every gate have to be reversible?
+
+de: Weil eine Drehung nie Information vernichtet — man kann sie zurückdrehen. Ein klassisches UND-Gatter kann das nicht: Aus einer 0 am Ausgang lässt sich nicht rekonstruieren, was vorne anlag. Quantengatter sind <strong>immer</strong> umkehrbar. Nur die Messung ist es nicht, und deshalb steht sie ganz am Schluss.
+en: Because a rotation never destroys information — you can turn it back. A classical AND gate can't do that: from a 0 at the output you can't reconstruct what went in. Quantum gates are <strong>always</strong> reversible. Only the measurement isn't, and that's why it comes at the very end.
+
+de: Und wo bleibt die Verschränkung?
+en: And where is entanglement?
+
+de: Dafür braucht es Gatter, die <strong>zwei</strong> Qubits gleichzeitig betreffen — etwa CNOT. Auf einer einzelnen Kugel lässt sich das nicht darstellen. Beim <a href="../3-quantumtable/">QuantumTable</a> kannst du genau solche Schaltkreise selbst zusammenstecken.
+en: For that you need gates that act on <strong>two</strong> qubits at once — such as CNOT. That can't be shown on a single sphere. At the <a href="../3-quantumtable/">QuantumTable</a> you can plug together exactly such circuits yourself.
+
+de: Ist der Zufall bei der Messung echt?
+en: Is the randomness of the measurement real?
+
+de: Hier auf der Seite nicht — dein Browser würfelt mit einem Pseudozufallsgenerator. In der Natur schon: Nach allem, was wir wissen, ist der Ausgang einer Quantenmessung <strong>grundsätzlich</strong> nicht vorhersagbar, nicht bloß praktisch.
+en: Not here on the page — your browser rolls the dice with a pseudo-random number generator. In nature, yes: as far as we know, the outcome of a quantum measurement is <strong>fundamentally</strong> unpredictable, not just in practice.
+
+de: ✓ Weiter: Teste selbst
+en: ✓ Next: Test yourself
+
+de: <span class="q-small">|0⟩ — noch nichts angewendet</span>
+en: <span class="q-small">|0⟩ — nothing applied yet</span>
+
+de: → gemessen: 0
+en: → measured: 0
+
+de: → gemessen: 1
+en: → measured: 1
+

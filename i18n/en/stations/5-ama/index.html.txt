@@ -1,0 +1,74 @@
+# Englische Texte für stations/5-ama/index.html — siehe tools/build-en.py
+
+de: FAQ · Quantenstation JKU
+en: FAQ · Quantum Station JKU
+
+de: Deine Frage zur Quantenphysik — egal wie klein, egal wie schräg.
+en: Your question about quantum physics — no matter how small, no matter how odd.
+
+de: 💬 Fragen
+en: 💬 Questions
+
+de: Für deine Fragen
+en: For your questions
+
+de: Es gibt keine dummen Fragen — nur solche, die sich niemand <strong class="t-purple">zu stellen traut</strong>.
+en: There are no stupid questions — only ones nobody <strong class="t-purple">dares to ask</strong>.
+
+de: So geht's
+en: How it works
+
+de: Sprich uns einfach an. Wir stehen den ganzen Tag hier — und <em>„ich hab überhaupt nichts verstanden“</em> ist ein <strong>perfekter</strong> Einstieg.
+en: Just talk to us. We're here all day — and <em>“I didn't understand a thing”</em> is a <strong>perfect</strong> place to start.
+
+de: Schon mal nachlesen
+en: Read up first
+
+de: Die häufigsten Fragen
+en: The most common questions
+
+de: Durchsuchbar — von „Was ist ein Qubit?“ bis „Gibt es Paralleluniversen?“
+en: Searchable — from “What is a qubit?” to “Are there parallel universes?”
+
+de: Was ständig behauptet wird — und was davon stimmt
+en: What people keep claiming — and what's actually true
+
+de: Was man dafür studiert — und was nicht
+en: What to study for it — and what not
+
+de: ✍️ Frage online stellen
+en: ✍️ Ask a question online
+
+de: Wir beantworten die Fragen im Lauf des Tages an der Station.
+en: We answer the questions at the station over the course of the day.
+
+de: Fragen, die wir gerne hören
+en: Questions we like to hear
+
+de: „Kann ich das jemals verstehen?“
+en: “Can I ever understand this?”
+
+de: Ja. Nicht heute vollständig, aber der Kern ist zugänglicher, als das Gerede darüber vermuten lässt.
+en: Yes. Not completely today, but the core is more accessible than all the talk about it suggests.
+
+de: „Wozu ist das gut?“
+en: “What is it good for?”
+
+de: Eine völlig faire Frage. Ehrliche Antwort: Bei manchem wissen wir es, bei manchem hoffen wir es, bei manchem noch gar nicht.
+en: A completely fair question. Honest answer: for some things we know, for some we hope, for some we don't know yet.
+
+de: „Glaubt ihr das wirklich?“
+en: “Do you really believe this?”
+
+de: Wir glauben nicht — wir messen. Und die Messungen stimmen mit der Theorie auf viele Nachkommastellen überein.
+en: We don't believe — we measure. And the measurements agree with the theory to many decimal places.
+
+de: Und wenn wir es nicht wissen?
+en: And if we don't know?
+
+de: Dann sagen wir das. In der Quantenphysik gibt es Fragen, über die Fachleute seit hundert Jahren streiten — <strong>„das ist offen“</strong> ist eine legitime und ziemlich spannende Antwort.
+en: Then we say so. In quantum physics there are questions experts have been arguing about for a hundred years — <strong>“that's open”</strong> is a legitimate and pretty exciting answer.
+
+de: ❓ Zu den häufigsten Fragen
+en: ❓ To the most common questions
+

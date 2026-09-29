@@ -1,0 +1,74 @@
+# Englische Texte für stations/1-schroedinger/info.html — siehe tools/build-en.py
+
+de: Was ist Superposition? · Quantenstation JKU
+en: What is superposition? · Quantum Station JKU
+
+de: Schrödingers Katze und die Superposition — ohne Formeln erklärt.
+en: Schrödinger's cat and superposition — explained without formulas.
+
+de: Station 1 · Hintergrund
+en: Station 1 · Background
+
+de: Was ist<br>Superposition?
+en: What is<br>superposition?
+
+de: Die kürzeste ehrliche Antwort: Ein Quantenobjekt muss sich nicht entscheiden — <strong class="t-purple">bis wir es messen</strong>.
+en: The shortest honest answer: a quantum object doesn't have to decide — <strong class="t-purple">until we measure it</strong>.
+
+de: Die Münze, die noch fliegt
+en: The coin that is still in the air
+
+de: Eine Münze in der Luft ist ein anschauliches Bild für Superposition — aber nur mit einer wichtigen Einschränkung: Während sie fliegt, könnte man sagen, das Ergebnis sei noch offen. Sobald sie landet, sehen wir Kopf oder Zahl.
+en: A coin in the air is a vivid picture of superposition — but only with one important caveat: while it is flying, you could say the outcome is still open. As soon as it lands, we see heads or tails.
+
+de: In der <strong>klassischen Physik</strong> ist das Ergebnis allerdings die ganze Zeit bereits festgelegt. Wenn wir alle Informationen über Geschwindigkeit, Drehung und Luftströmungen kennen würden, könnten wir prinzipiell vorhersagen, wie die Münze landet. Wir kennen die Antwort nur noch nicht.
+en: In <strong>classical physics</strong>, however, the outcome is fixed the whole time. If we knew everything about its speed, spin and the air currents, we could in principle predict how the coin will land. We just don't know the answer yet.
+
+de: Bei einem Quantenteilchen ist das anders. Vor einer Messung befindet es sich nicht einfach in einem Zustand, dessen Wert uns unbekannt ist. Es kann tatsächlich in einer <strong>Superposition mehrerer möglicher Zustände</strong> sein — vereinfacht gesagt: nicht „entweder A oder B“, sondern eine quantenmechanische Kombination aus A <strong>und</strong> B.
+en: A quantum particle is different. Before a measurement it is not simply in a state whose value we don't know. It can genuinely be in a <strong>superposition of several possible states</strong> — put simply: not “either A or B”, but a quantum-mechanical combination of A <strong>and</strong> B.
+
+de: Erst eine Messung zwingt das System dazu, ein eindeutiges Ergebnis zu liefern.
+en: Only a measurement forces the system to give a definite result.
+
+de: Die Münze ist deshalb nur eine Metapher. Bei ihr fehlt uns Wissen. Bei einem Quantensystem ist die Unbestimmtheit selbst Teil der physikalischen Realität.
+en: So the coin is only a metaphor. With the coin, we are missing knowledge. In a quantum system, the indeterminacy itself is part of physical reality.
+
+de: Der Unterschied in einem Satz
+en: The difference in one sentence
+
+de: <strong>Unwissenheit</strong> heißt: <em>die Antwort steht fest, ich kenne sie nur nicht.</em><br> <strong>Superposition</strong> heißt: <em>die Antwort steht noch gar nicht fest.</em>
+en: <strong>Ignorance</strong> means: <em>the answer is fixed, I just don't know it.</em><br> <strong>Superposition</strong> means: <em>the answer is not fixed at all yet.</em>
+
+de: Woher kommt die Katze?
+en: Where does the cat come from?
+
+de: Die ganze Geschichte von Einstein bis zur Stahlkammer
+en: The whole story, from Einstein to the steel chamber
+
+de: Die Notation
+en: The notation
+
+de: In den Rätseln taucht eine Schreibweise auf, die dir vielleicht neu ist:
+en: The puzzles use a notation that may be new to you:
+
+de: Der eine eindeutige Basiszustand. Vergleichbar mit der klassischen 0. Veranschaulicht als Farbe zum Beispiel: <strong class="t-blue">blau</strong>.
+en: One definite basis state. Comparable to the classical 0. Shown as a colour, for example: <strong class="t-blue">blue</strong>.
+
+de: Der andere eindeutige Basiszustand. Vergleichbar mit der klassischen 1. Veranschaulicht als Farbe zum Beispiel: <strong class="t-red">rot</strong>.
+en: The other definite basis state. Comparable to the classical 1. Shown as a colour, for example: <strong class="t-red">red</strong>.
+
+de: Beides mit gleicher Wahrscheinlichkeit — die <strong class="t-purple">Superposition</strong>.
+en: Both with equal probability — the <strong class="t-purple">superposition</strong>.
+
+de: Die Schreibweise mit senkrechtem Strich und spitzer Klammer, <span class="q-mono">|…⟩</span>, heißt <em>Ket</em> und stammt von Paul Dirac. Sie bedeutet schlicht: „das ist ein Quantenzustand“. Bei der Messung kollabiert die Superposition entweder in |0⟩ <strong>oder</strong> in |1⟩.
+en: The notation with a vertical bar and an angle bracket, <span class="q-mono">|…⟩</span>, is called a <em>ket</em> and goes back to Paul Dirac. It simply means: “this is a quantum state”. When measured, the superposition collapses either into |0⟩ <strong>or</strong> into |1⟩.
+
+de: Und warum interessiert das jemanden?
+en: And why would anyone care?
+
+de: Weil daraus Technik wird. Ein klassisches Bit ist 0 <em>oder</em> 1. Ein <strong>Qubit</strong> (also ein Quantenbit) kann in Superposition sein — und mit jedem zusätzlichen Qubit verdoppelt sich der Raum der Möglichkeiten, die gleichzeitig im Spiel sind.
+en: Because it turns into technology. A classical bit is 0 <em>or</em> 1. A <strong>qubit</strong> (a quantum bit) can be in superposition — and with every additional qubit, the space of possibilities in play at the same time doubles.
+
+de: Der Haken: Beim Messen bekommt man am Ende doch nur ein Ergebnis. Die ganze Kunst des Quantenrechnens besteht darin, die Möglichkeiten vorher so <strong>überlagern zu lassen</strong>, dass die falschen sich gegenseitig auslöschen — und die richtige übrig bleibt. Genau das ist <strong>Interferenz</strong>, und darum geht es in Rätsel 2 und 3.
+en: The catch: when you measure, you still get only one result in the end. The whole art of quantum computing is to let the possibilities <strong>overlap</strong> beforehand in such a way that the wrong ones cancel each other out — and the right one remains. That is exactly <strong>interference</strong>, and it is what puzzles 2 and 3 are about.
+

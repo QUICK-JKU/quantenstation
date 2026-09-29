@@ -1,0 +1,65 @@
+# Englische Texte für stations/2-bloch-sphere/index.html — siehe tools/build-en.py
+
+de: Bloch-Kugel · Quantenstation JKU
+en: Bloch Sphere · Quantum Station JKU
+
+de: Die Bloch-Kugel: die Landkarte aller Zustände, die ein einzelnes Qubit annehmen kann.
+en: The Bloch sphere: the map of all the states a single qubit can take.
+
+de: Ein Bit kennt zwei Werte. Ein <strong class="t-purple">Qubit</strong> kennt eine ganze Kugeloberfläche.
+en: A bit knows two values. A <strong class="t-purple">qubit</strong> knows the entire surface of a sphere.
+
+de: Nimm das Modell in die Hand und dreh es. <strong>Oben</strong> ist |0⟩, <strong>unten</strong> |1⟩ — und alles dazwischen ist ein echter, erlaubter Zustand.
+en: Pick up the model and turn it. <strong>At the top</strong> is |0⟩, <strong>at the bottom</strong> |1⟩ — and everything in between is a real, allowed state.
+
+de: Von der Glühbirne zur Kugel — Schritt für Schritt
+en: From the light bulb to the sphere — step by step
+
+de: Frei drehen, mit Gattern rechnen, direkt messen
+en: Rotate freely, compute with gates, measure directly
+
+de: 20 Vor-Ort-Challenges in vier Stufen
+en: 20 on-site challenges in four levels
+
+de: Die Kugel in 30 Sekunden
+en: The sphere in 30 seconds
+
+de: Nordpol
+en: North pole
+
+de: <strong class="t-blue">|0⟩</strong> — die Messung liefert garantiert 0.
+en: <strong class="t-blue">|0⟩</strong> — the measurement is guaranteed to give 0.
+
+de: Südpol
+en: South pole
+
+de: <strong class="t-red">|1⟩</strong> — die Messung liefert garantiert 1.
+en: <strong class="t-red">|1⟩</strong> — the measurement is guaranteed to give 1.
+
+de: Äquator
+en: Equator
+
+de: Perfekte Superposition: 50 % zu 50 %.
+en: Perfect superposition: 50 % to 50 %.
+
+de: Längengrad
+en: Longitude
+
+de: Die <strong>Phase</strong> — unsichtbar bei einer einzelnen Messung, aber entscheidend für Interferenz.
+en: The <strong>phase</strong> — invisible in a single measurement, but crucial for interference.
+
+de: Warum eine Kugel und keine Linie?
+en: Why a sphere and not a line?
+
+de: Weil zwei Zahlen nötig sind, um ein Qubit zu beschreiben: <strong>wie stark</strong> es zu 0 oder 1 tendiert (der Breitengrad) und <strong>welche Phase</strong> es hat (der Längengrad). Zwei Freiheiten → eine Fläche → eine Kugel.
+en: Because it takes two numbers to describe a qubit: <strong>how strongly</strong> it leans towards 0 or 1 (the latitude) and <strong>which phase</strong> it has (the longitude). Two degrees of freedom → a surface → a sphere.
+
+de: Und bei mehreren Qubits?
+en: And with several qubits?
+
+de: Da hört das schöne Bild leider auf. Zwei Qubits brauchen bereits einen Raum, den man nicht mehr zeichnen kann — und genau dort steckt <strong>Verschränkung</strong>, die eigentliche Superkraft. Die Kugel gilt nur für <em>ein einzelnes</em> Qubit.
+en: That's where the nice picture sadly ends. Two qubits already need a space that can no longer be drawn — and that is exactly where <strong>entanglement</strong> lives, the real superpower. The sphere only works for <em>a single</em> qubit.
+
+de: ▶ Kugel ausprobieren
+en: ▶ Try the sphere
+

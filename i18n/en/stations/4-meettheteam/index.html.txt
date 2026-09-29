@@ -1,0 +1,32 @@
+# Englische Texte für stations/4-meettheteam/index.html — siehe tools/build-en.py
+
+de: Meet the Team · Quantenstation JKU
+en: Meet the Team · Quantum Station JKU
+
+de: Wer hinter der Quantenstation steht — und was wir eigentlich den ganzen Tag tun.
+en: Who is behind the Quantum Station — and what we actually do all day.
+
+de: 👥 Team
+en: =
+
+de: Hinter der Forschung stecken Menschen, die genauso angefangen haben wie du: <strong class="t-purple">neugierig</strong> und ohne Plan.
+en: Behind the research are people who started out just like you: <strong class="t-purple">curious</strong> and without a plan.
+
+de: Unser Team
+en: Our team
+
+de: Tippe eine Person an und erfahre in ihren eigenen Worten, woran sie gerade forscht.
+en: Tap a person and find out, in their own words, what they are researching right now.
+
+de: Was wir hier tun
+en: What we do here
+
+de: Was man studiert, wenn man das hier machen will
+en: What to study if you want to do this
+
+de: Sprich uns an
+en: Talk to us
+
+de: Ernsthaft: Wir stehen den ganzen Tag hier und freuen uns über jede Frage. Auch über <em>„ich versteh gar nichts“</em> — das ist bei diesem Thema die ehrlichste und häufigste Reaktion.
+en: Seriously: we're here all day and happy about every question. Even about <em>“I don't understand anything”</em> — with this topic that's the most honest and most common reaction.
+

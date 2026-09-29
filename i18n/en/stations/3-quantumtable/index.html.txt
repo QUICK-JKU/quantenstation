@@ -1,0 +1,50 @@
+# Englische Texte für stations/3-quantumtable/index.html — siehe tools/build-en.py
+
+de: QuantumTable · Quantenstation JKU
+en: QuantumTable · Quantum Station JKU
+
+de: Der QuantumTable vom SCCH: Schaltkreise bauen und das Ergebnis sofort sehen.
+en: The QuantumTable by the SCCH: build circuits and see the result instantly.
+
+de: ⚛️ Table
+en: =
+
+de: Station 3 · vom SCCH
+en: Station 3 · by the SCCH
+
+de: Schaltkreise <strong class="t-red">bauen</strong> — und das Ergebnis <strong>sofort sehen</strong>.
+en: <strong class="t-red">Build</strong> circuits — and <strong>see</strong> the result <strong>instantly</strong>.
+
+de: Leg die Bausteine auf den Tisch, verbinde sie zu einem Schaltkreis und beobachte, wie sich das Messergebnis live verändert. <strong>Alex</strong> hilft dir gern beim Einstieg.
+en: Place the building blocks on the table, connect them into a circuit and watch how the measurement result changes live. <strong>Alex</strong> is happy to help you get started.
+
+de: Schaltkreis am Handy
+en: Circuits on your phone
+
+de: Ist der Tisch gerade voll? Probier die Simulation online.
+en: Is the table busy right now? Try the simulation online.
+
+de: Wie liest man einen Schaltkreis?
+en: How do you read a circuit?
+
+de: Drähte, Gatter, Messung — die Notation in 3 Minuten
+en: Wires, gates, measurement — the notation in 3 minutes
+
+de: Software Competence Center Hagenberg — und was Quanten damit zu tun haben
+en: Software Competence Center Hagenberg — and what quanta have to do with it
+
+de: Warum ein Tisch?
+en: Why a table?
+
+de: Quantenschaltkreise sind sehr abstrakt und oft schwierig vorzustellen. Auf Papier zeichnen wir Linien, Kästchen und Symbole. In echt stecken komplizierte physikalische Operationen dahinter. Am QuantumTable werden daraus Dinge, die du <strong>anfassen und umstecken</strong> kannst — und das Ergebnis erscheint sofort.
+en: Quantum circuits are very abstract and often hard to picture. On paper we draw lines, boxes and symbols. In reality there are complicated physical operations behind them. At the QuantumTable they turn into things you can <strong>touch and rearrange</strong> — and the result appears instantly.
+
+de: Das klingt nach Spielerei, ist aber genau die Arbeitsweise echter Forschung: <em>ausprobieren, beobachten, verwerfen, neu bauen</em>.
+en: That sounds like playing around, but it's exactly how real research works: <em>try, observe, discard, rebuild</em>.
+
+de: Ist das ein echter Quantencomputer?
+en: Is this a real quantum computer?
+
+de: Nein — es ist eine <strong>Simulation</strong>, und sie rechnet exakt. Ein normaler Laptop kann Quantenschaltkreise bis etwa 30 Qubits durchrechnen, die größten Supercomputer bis knapp 50. Darüber wird es für klassische Computer praktisch unmöglich — und genau dort beginnt der interessante Bereich.
+en: No — it's a <strong>simulation</strong>, and it computes exactly. A normal laptop can work through quantum circuits of up to about 30 qubits, the largest supercomputers up to just under 50. Beyond that it becomes practically impossible for classical computers — and that is exactly where things get interesting.
+

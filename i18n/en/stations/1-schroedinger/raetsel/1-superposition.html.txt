@@ -1,0 +1,59 @@
+# Englische Texte für stations/1-schroedinger/raetsel/1-superposition.html — siehe tools/build-en.py
+
+de: Rätsel 1: Die Katze ist beides gleichzeitig. Miss jeden Pol einzeln.
+en: Puzzle 1: The cat is both at once. Measure each pole on its own.
+
+de: Box 1 · Rätsel 1 von 4
+en: Box 1 · Puzzle 1 of 4
+
+de: Die Katze ist <strong class="t-blue">beides gleichzeitig</strong> — in der <em>Mitte</em> verschwimmt alles. <strong>Miss jeden Pol einzeln:</strong> ganz links die blaue Zahl, ganz rechts die rote.
+en: The cat is <strong class="t-blue">both at once</strong> — in the <em>middle</em> everything blurs. <strong>Measure each pole on its own:</strong> the blue number on the far left, the red one on the far right.
+
+de: blaue Katze
+en: blue cat
+
+de: rote Katze
+en: red cat
+
+de: So kombinierst du
+en: How to combine
+
+de: Beide Zahlen <strong>Stelle für Stelle addieren</strong>.<br> Nur die <em>letzte Ziffer</em> zählt: <span class="q-mono">7+8 → 5</span>
+en: <strong>Add</strong> both numbers <strong>digit by digit</strong>.<br> Only the <em>last digit</em> counts: <span class="q-mono">7+8 → 5</span>
+
+de: |0⟩ blau
+en: |0⟩ blue
+
+de: unlesbar
+en: unreadable
+
+de: |1⟩ rot
+en: |1⟩ red
+
+de: Messregler zwischen den beiden Polen
+en: Measuring slider between the two poles
+
+de: 📏 In der Mitte herrscht reine Superposition — <strong>nichts</strong> ist lesbar. Der Code lebt an den Polen.
+en: 📏 In the middle there is pure superposition — <strong>nothing</strong> is readable. The code lives at the poles.
+
+de: Code prüfen
+en: Check code
+
+de: Hast du die vier Ziffern? Trag sie ein.
+en: Got the four digits? Enter them.
+
+de: Vierstelliger Code
+en: Four-digit code
+
+de: Prüfen
+en: Check
+
+de: <strong>Schloss 1 geknackt.</strong><br> Weiter geht's mit <a href="2-interferenz.html">Rätsel 2 →</a>
+en: <strong>Lock 1 cracked.</strong><br> On to <a href="2-interferenz.html">puzzle 2 →</a>
+
+de: Ganz links ist nur die <strong class="t-blue">blaue</strong> Zahl scharf, ganz rechts nur die <strong class="t-red">rote</strong>. Notiere beide, dann addiere sie stellenweise — ohne Übertrag.
+en: On the far left only the <strong class="t-blue">blue</strong> number is sharp, on the far right only the <strong class="t-red">red</strong> one. Note both, then add them digit by digit — without carrying.
+
+de: Genau das ist der Kern einer Messung: Du kannst dir <strong>eine Messrichtung aussuchen</strong>, aber nicht beide gleichzeitig scharf sehen. Dazwischen liegt die Superposition — und die trägt selbst keine ablesbare Antwort. Mehr dazu im <a href="../info.html">Hintergrundtext</a>.
+en: That is the core of a measurement: you can <strong>choose one direction to measure</strong>, but you can't see both sharply at the same time. In between lies the superposition — and it carries no readable answer of its own. More on this in the <a href="../info.html">background text</a>.
+

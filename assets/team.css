@@ -1,0 +1,109 @@
+/* Meet the Team — Personenliste und Personenseiten.
+   Ergaenzt quantum.css, wird von index.html und personen/*.html geladen. */
+
+/* ---------- Karte in der Liste ---------- */
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 15px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+}
+.person + .person { margin-top: 10px; }
+.person:active { transform: scale(.995); }
+
+.avatar {
+  flex: none;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: .01em;
+  color: #fff;
+  background: var(--blue);
+}
+.avatar.a-purple { background: var(--purple); }
+.avatar.a-red    { background: var(--red); }
+.avatar.a-green  { background: var(--green); }
+.avatar.a-coral  { background: var(--coral); }
+
+.avatar.has-photo,
+.bigavatar.has-photo { background: var(--line); }
+.avatar img,
+.bigavatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.p-txt { flex: 1; min-width: 0; }
+.p-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.15;
+}
+.p-role {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+.p-line {
+  display: block;
+  margin-top: 5px;
+  font-size: 13.5px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* ---------- Personenseite ---------- */
+
+.bigavatar {
+  width: 112px; height: 112px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 40px;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: 0 10px 26px rgba(20, 22, 28, .18);
+}
+.bigavatar.a-purple { background: var(--purple); }
+.bigavatar.a-red    { background: var(--red); }
+.bigavatar.a-green  { background: var(--green); }
+.bigavatar.a-coral  { background: var(--coral); }
+
+.bignum {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.05;
+  color: var(--purple);
+}
+
+.q-figure { margin: 0; }
+.q-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--line);
+}
+.q-figure figcaption { margin-top: 8px; }

@@ -1,0 +1,59 @@
+# Englische Texte für quiz/index.html — siehe tools/build-en.py
+
+de: Quiz-Pool · Quantenstation JKU
+en: Quiz pool · Quantum Station JKU
+
+de: 18 Quantenquizze in drei Schwierigkeitsstufen — für Kinder, Schüler:innen und Studierende. Jedes gibt einen vierstelligen Code.
+en: 18 quantum quizzes in three levels of difficulty — for children, school students and university students. Each one gives a four-digit code.
+
+de: ❓ 18 Quizze
+en: ❓ 18 quizzes
+
+de: Drei Stufen · 108 Fragen
+en: Three levels · 108 questions
+
+de: Der Quiz-Pool
+en: The quiz pool
+
+de: Wie bei den vier Rätseln der Schrödinger-Box: Jedes Quiz endet mit einem <strong>vierstelligen Code</strong>. Nur ist hier für jedes Alter etwas dabei.
+en: Just like the four puzzles of the Schrödinger box: every quiz ends with a <strong>four-digit code</strong>. Only here there is something for every age.
+
+de: So läuft ein Quiz
+en: How a quiz works
+
+de: Sechs Fragen, eine nach der anderen. Falsch geraten kostet nichts — du siehst sofort, warum, und darfst es noch einmal versuchen. Am Ende steht dein Code.
+en: Six questions, one after another. A wrong guess costs nothing — you see right away why, and you can try again. At the end you get your code.
+
+de: Die Quizze brauchen JavaScript. Alle Infoseiten der Stationen funktionieren aber auch ohne.
+en: The quizzes need JavaScript. All the stations' info pages work without it, though.
+
+de: Muss ich alle Fragen richtig haben?
+en: Do I have to get every question right?
+
+de: Nein. Bei einer falschen Antwort erklären wir kurz, woran es liegt, und du wählst neu. Weiter geht es erst mit der richtigen Antwort — den <strong>Code bekommst du in jedem Fall</strong>. Die Sterne am Ende zeigen nur, wie viel auf Anhieb saß.
+en: No. If you pick a wrong answer, we briefly explain why, and you choose again. You only move on with the right answer — <strong>you get the code in any case</strong>. The stars at the end just show how much you got right first time.
+
+de: Welche Stufe passt zu mir?
+en: Which level suits me?
+
+de: <strong>Kinder</strong> braucht kein Vorwissen und kein Rechnen. <strong>Schüler:innen</strong> setzt Schulphysik voraus, rechnet aber höchstens im Kopf. <strong>Studierende</strong> verlangt echte Rechnungen mit Zahlenwerten und Einheiten — Bra-Ket inklusive. Einfach ausprobieren: Die Stufen sind unabhängig voneinander.
+en: <strong>Children</strong> needs no prior knowledge and no calculating. <strong>School students</strong> assumes school physics, but calculates in your head at most. <strong>University students</strong> requires real calculations with numerical values and units — bra-ket included. Just try it: the levels are independent of each other.
+
+de: Bleibt mein Fortschritt gespeichert?
+en: Is my progress saved?
+
+de: Ja — lokal auf diesem Gerät, ohne Login und ohne Server. Gelöste Quizze bekommen ein Häkchen und zeigen ihren Code weiter an. Auf der Startseite lässt sich alles zurücksetzen.
+en: Yes — locally on this device, without login and without a server. Solved quizzes get a tick and keep showing their code. Everything can be reset on the start page.
+
+de: Kann ich ein Quiz wiederholen?
+en: Can I repeat a quiz?
+
+de: Jederzeit. Am Ende jedes Quiz steht ein Knopf <strong>Noch einmal</strong>. Die Antwortmöglichkeiten werden dabei jedes Mal neu gemischt.
+en: Any time. At the end of every quiz there is a <strong>Once more</strong> button. The answer options are shuffled again each time.
+
+de: Lieber die vier Rätsel?
+en: Prefer the four puzzles?
+
+de: Interaktive Schlösser der Schrödinger-Box · Oberstufe
+en: Interactive locks of the Schrödinger box · upper secondary level
+

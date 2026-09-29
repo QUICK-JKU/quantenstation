@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Quiz · Quantum Station JKU</title>
+<meta name="description" content="A quiz from the Quantum Station's question pool — six questions, one four-digit code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/quantum.css">
+<link rel="stylesheet" href="../../assets/quiz.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%93%3C/text%3E%3C/svg%3E">
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="../../quiz/quiz.html">
+<link rel="alternate" hreflang="en" href="quiz.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Back to the quiz pool">←</a>
+    <div class="q-topbar-title" data-quiz-bar-title>Quiz</div>
+    <div class="q-topbar-badge">🔒 Code</div>
+    <a class="q-lang" href="../../quiz/quiz.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow" data-quiz-eyebrow>Quiz</div>
+    <h1 class="q-h1" data-quiz-title>Quiz</h1>
+    <p class="q-lead" style="max-width:420px;margin-left:auto;margin-right:auto;font-size:15px;" data-quiz-sub></p>
+  </div>
+
+  <div class="q-wrap q-mt" data-quiz-run>
+    <div class="quiz-progress">
+      <div class="q-meter"><div class="q-meter-fill" data-quiz-meter></div></div>
+      <span class="quiz-step" data-quiz-step></span>
+    </div>
+
+    <div class="q-mt-sm" data-quiz-stage tabindex="-1"></div>
+  </div>
+
+  <div class="q-wrap">
+    <div class="q-success" data-quiz-success hidden>
+      <div class="q-success-label" data-quiz-success-label>SOLVED ✓</div>
+      <div class="q-code" data-q-code></div>
+      <div class="q-body t-green" style="font-weight:600;">🔓 This is your code.</div>
+      <button class="q-btn" type="button" data-quiz-again>↺ Once more</button>
+      <a class="q-btn q-btn-green" href="index.html">Choose another quiz →</a>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="q-wrap q-mt">
+      <div class="q-note">
+        <div class="q-note-title">JavaScript is off</div>
+        <div class="q-body">
+          Without JavaScript the quiz cannot be played. The stations' info pages still work, though.
+        </div>
+      </div>
+    </div>
+  </noscript>
+
+  <div class="q-wrap q-mt">
+    <p class="q-fine q-center" style="max-width:340px;margin-left:auto;margin-right:auto;">
+      The answer options are shuffled at every start. Progress and code stay saved on this device.
+    </p>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stations">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../index.html"><span class="ico" aria-hidden="true">🏠</span>Home</a>
+    <a class="q-navitem" href="../stations/1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Cat</a>
+    <a class="q-navitem" href="../stations/2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
+    <a class="q-navitem" href="../stations/3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../stations/4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../stations/5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../assets/quantum.js"></script>
+<script src="pool.js"></script>
+<script src="../../assets/quiz.js"></script>
+</body>
+</html>

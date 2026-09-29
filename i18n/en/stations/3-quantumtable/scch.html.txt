@@ -1,0 +1,71 @@
+# Englische Texte für stations/3-quantumtable/scch.html — siehe tools/build-en.py
+
+de: Wer ist das SCCH? · QuantumTable
+en: Who is the SCCH? · QuantumTable
+
+de: Das Software Competence Center Hagenberg — die Leute hinter dem QuantumTable.
+en: The Software Competence Center Hagenberg — the people behind the QuantumTable.
+
+de: ◆ SCCH
+en: =
+
+de: Der Partner
+en: The partner
+
+de: Wer ist<br>das SCCH?
+en: Who is<br>the SCCH?
+
+de: Der QuantumTable kommt nicht von uns — er kommt vom <strong class="t-purple">Software Competence Center Hagenberg</strong>.
+en: The QuantumTable isn't from us — it comes from the <strong class="t-purple">Software Competence Center Hagenberg</strong>.
+
+de: Forschung, die ankommt
+en: Research that arrives
+
+de: Das SCCH ist ein Forschungszentrum in <strong>Hagenberg</strong> in Oberösterreich. Es arbeitet an der Schnittstelle zwischen universitärer Forschung und dem, was Unternehmen tatsächlich einsetzen können — von Software-Qualität über Datenanalyse bis zu Quantencomputing.
+en: The SCCH is a research centre in <strong>Hagenberg</strong> in Upper Austria. It works at the interface between university research and what companies can actually use — from software quality and data analysis to quantum computing.
+
+de: Genau daher stammt auch der QuantumTable: ein Gerät, das ein sperriges Thema <strong>begreifbar</strong> macht, ohne es zu verfälschen.
+en: That's also where the QuantumTable comes from: a device that makes an unwieldy topic <strong>tangible</strong> without distorting it.
+
+de: Warum Quantencomputing?
+en: Why quantum computing?
+
+de: Weil sich gerade jetzt entscheidet, wofür diese Maschinen taugen. Kandidaten sind unter anderem:
+en: Because right now it is being decided what these machines are good for. Candidates include:
+
+de: Chemie
+en: Chemistry
+
+de: Moleküle simulieren — Quantensysteme mit Quantensystemen berechnen.
+en: Simulating molecules — computing quantum systems with quantum systems.
+
+de: Optimierung
+en: Optimisation
+
+de: Routen, Lagerbestände, Zeitpläne mit riesigen Suchräumen.
+en: Routes, inventories, schedules with huge search spaces.
+
+de: Sicherheit
+en: Security
+
+de: Verfahren entwickeln, die auch dann halten, wenn es Quantencomputer gibt.
+en: Developing methods that still hold once quantum computers exist.
+
+de: Und ganz ehrlich: Bei einigen dieser Punkte ist noch offen, ob der Quantenvorteil am Ende wirklich eintritt. Das gehört zur Forschung dazu.
+en: And to be honest: for some of these points it is still open whether the quantum advantage will really materialise. That's part of research.
+
+de: Danke
+en: Thank you
+
+de: Dass der QuantumTable heute hier steht, verdanken wir dem SCCH — und <strong>Alex</strong>, der ihn betreut und dir jede Frage dazu beantwortet.
+en: We owe it to the SCCH that the QuantumTable is here today — and to <strong>Alex</strong>, who looks after it and will answer any question you have about it.
+
+de: Das könnte dich interessieren
+en: You might be interested in
+
+de: Kann man dort studieren oder arbeiten?
+en: Can you study or work there?
+
+de: Das SCCH ist ein Forschungszentrum, keine Hochschule — aber es arbeitet eng mit der JKU und dem Campus Hagenberg zusammen. Praktika, Abschlussarbeiten und Einstiegsstellen gibt es regelmäßig. Frag uns einfach vor Ort, wir sagen dir, wo du suchen musst.
+en: The SCCH is a research centre, not a university — but it works closely with JKU and the Hagenberg campus. There are regular internships, theses and entry-level positions. Just ask us on site and we'll tell you where to look.
+

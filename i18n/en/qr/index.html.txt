@@ -1,0 +1,200 @@
+# Englische Texte für qr/index.html — siehe tools/build-en.py
+
+de: QR-Codes · Quantenstation JKU
+en: QR codes · Quantum Station JKU
+
+de: QR-Codes für alle Seiten der Quantenstation erzeugen und ausdrucken.
+en: Generate and print QR codes for all pages of the Quantum Station.
+
+de: Werkzeug · QR-Codes
+en: Tool · QR codes
+
+de: 🔲 Druck
+en: 🔲 Print
+
+de: Werkzeug
+en: Tool
+
+de: QR-Codes
+en: QR codes
+
+de: Trag die Adresse ein, unter der die Seiten liegen — die Codes werden sofort neu erzeugt. Danach einfach <strong>drucken</strong>.
+en: Enter the address where the English pages live (it ends in <strong>/en/</strong>) — the codes are regenerated instantly. Then simply <strong>print</strong>.
+
+de: Basis-Adresse (mit Schrägstrich am Ende)
+en: Base address (with a slash at the end)
+
+de: https://benutzername.github.io/quantenstation/
+en: https://username.github.io/quantenstation/en/
+
+de: Adresse dieser Seite übernehmen
+en: Use the address of this page
+
+de: 🖨 Drucken
+en: 🖨 Print
+
+de: Tipp fürs Drucken
+en: Printing tip
+
+de: Die großen Codes oben sind für die <strong>Stationsschilder</strong> gedacht — mindestens 4 cm Kantenlänge drucken, dann klappt das Scannen auch aus einem halben Meter Entfernung. Der weiße Rand rundherum gehört dazu und darf nicht wegbeschnitten werden.
+en: The large codes at the top are meant for the <strong>station signs</strong> — print them at least 4 cm wide, then scanning also works from half a metre away. The white margin around them is part of the code and must not be trimmed off.
+
+de: Stationsschilder
+en: Station signs
+
+de: Diese kommen als große Schilder an die Stationen.
+en: These go on the stations as large signs.
+
+de: Alle Einzelseiten
+en: All individual pages
+
+de: Als Reserve — etwa für Handzettel oder Aushänge.
+en: As a reserve — for flyers or notices, for example.
+
+de: Quantenstation
+en: Quantum Station
+
+de: Start · Übersicht
+en: Home · Overview
+
+de: Station 1 · Info
+en: =
+
+de: Die Boxen
+en: The boxes
+
+de: Box 1 · Schloss 1
+en: Box 1 · Lock 1
+
+de: Box 1 · Schloss 2
+en: Box 1 · Lock 2
+
+de: Box 1 · Schloss 3
+en: Box 1 · Lock 3
+
+de: Rätsel 4 · Labore
+en: Puzzle 4 · Labs
+
+de: Box 1 · Schloss 4
+en: Box 1 · Lock 4
+
+de: Die zweite Katze
+en: The second cat
+
+de: Box 2 · Übersicht
+en: Box 2 · Overview
+
+de: Box 2 · Theorie
+en: Box 2 · Theory
+
+de: Rätsel 1 · Zustand
+en: Puzzle 1 · State
+
+de: Box 2 · Schloss 1
+en: Box 2 · Lock 1
+
+de: Rätsel 2 · Messung
+en: Puzzle 2 · Measurement
+
+de: Box 2 · Schloss 2
+en: Box 2 · Lock 2
+
+de: Rätsel 3 · Drehungen
+en: Puzzle 3 · Rotations
+
+de: Box 2 · Schloss 3
+en: Box 2 · Lock 3
+
+de: Rätsel 4 · Verschränkung
+en: Puzzle 4 · Entanglement
+
+de: Box 2 · Schloss 4
+en: Box 2 · Lock 4
+
+de: Station 2 · Info
+en: =
+
+de: Station 2 · Challenges
+en: =
+
+de: Schaltkreise lesen
+en: Reading circuits
+
+de: Alexander Mandl
+en: =
+
+de: Station 4 · Person
+en: =
+
+de: Johannes Kofler
+en: =
+
+de: Jadwiga Wilkens
+en: =
+
+de: Sebastian Egginger
+en: =
+
+de: Richard Kueng
+en: =
+
+de: Kristina Kirova
+en: =
+
+de: Patrick Fath
+en: =
+
+de: Elena Giovannini
+en: =
+
+de: Filipa Peres
+en: =
+
+de: Marwa Marso
+en: =
+
+de: Mario Ullrich
+en: =
+
+de: Alexander Ploier
+en: =
+
+de: Luna Lima Keller
+en: =
+
+de: Diego García Martín
+en: =
+
+de: Nina Brandl
+en: =
+
+de: 18 Quizze · 3 Stufen
+en: 18 quizzes · 3 levels
+
+de: Quiz · Kinder
+en: Quiz · Children
+
+de: Quiz · Schule
+en: Quiz · School
+
+de: Quiz · Studium
+en: Quiz · University
+
+de: poster
+en: =
+
+de: (Level
+en: =
+
+de: <div class="warn">Adresse zu lang für einen QR-Code dieser Größe.</div>
+en: <div class="warn">Address too long for a QR code of this size.</div>
+
+de: Bitte zuerst eine Basis-Adresse eintragen.
+en: Please enter a base address first.
+
+de: Die Adresse sollte mit http:// oder https:// beginnen — sonst funktioniert der Code beim Scannen nicht.
+en: The address should start with http:// or https:// — otherwise the code won't work when scanned.
+
+de: https://quick-jku.github.io/quantenstation/
+en: https://quick-jku.github.io/quantenstation/en/
+

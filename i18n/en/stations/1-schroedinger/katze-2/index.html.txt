@@ -1,0 +1,44 @@
+# Englische Texte für stations/1-schroedinger/katze-2/index.html — siehe tools/build-en.py
+
+de: Die zweite Katze · Quantenstation JKU
+en: The second cat · Quantum Station JKU
+
+de: Die zweite Schrödinger-Katze: vier Schlösser zu je vier Fragen. Ohne Tipps, ohne Lösungsanzeige — aber mit allem Nachlesbaren.
+en: The second Schrödinger cat: four locks with four questions each. No hints, no solutions shown — but everything there to read up on.
+
+de: Zurück zur Station
+en: Back to the station
+
+de: Box 2 · Rätsel
+en: Box 2 · Puzzles
+
+de: Die vier Rätsel
+en: The four puzzles
+
+de: Vier Rätsel mit je <strong>vier Fragen</strong>. Jedes gibt dir am Ende einen <strong>vierstelligen Code</strong>.
+en: Four puzzles with <strong>four questions</strong> each. Each one gives you a <strong>four-digit code</strong> at the end.
+
+de: Level Matura/Studium - Alles, was die Schlösser verlangen, steht in den <a href="theorie.html">Rechenregeln</a>.
+en: Level: school-leaving exam / university — everything the locks ask for is in the <a href="theorie.html">rules of calculation</a>.
+
+de: Zustand &amp; Rechenkraft
+en: State &amp; computing power
+
+de: Messung &amp; Kollaps
+en: Measurement &amp; collapse
+
+de: Drehungen &amp; Paare
+en: Rotations &amp; pairs
+
+de: Photonen, Winkel und Bell-Zustände — mit Rechnung
+en: Photons, angles and Bell states — with calculations
+
+de: Vorher nachlesen
+en: Read up first
+
+de: Hier kannst du alles lernen, was du für die sechzehn Fragen brauchst, von der Born’schen Regel bis zum Bell-Zustand.
+en: Here you can learn everything you need for the sixteen questions, from the Born rule to the Bell state.
+
+de: Amplituden, 2ⁿ, Messung, Gatter, Photonen, Bell — mit Beispielen
+en: Amplitudes, 2ⁿ, measurement, gates, photons, Bell — with examples
+

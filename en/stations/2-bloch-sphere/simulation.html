@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Simulating the Bloch sphere · Station 2</title>
+<meta name="description" content="Rotate the qubit state freely, with sliders or with gates — X, Y, Z, H, S, S†, T, T† and Rx/Ry/Rz — and measure it directly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AE%3C/text%3E%3C/svg%3E">
+<style>
+  /* Eine gemeinsame Spaltenbreite für Kugel, Regler und Gatter —
+     auf Tablet und Laptop etwas größer. */
+  :root { --sim-w: 360px; }
+  @media (min-width: 600px) { :root { --sim-w: 420px; } }
+  .sim-wrap { max-width: calc(var(--sim-w) + 2 * var(--pad)); }
+  .sim-col  { max-width: var(--sim-w); margin-left: auto; margin-right: auto; }
+
+  .sphere-card {
+    width: 100%;
+    max-width: var(--sim-w);
+    margin: 14px auto 0;
+    padding: 8px;
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    touch-action: none;   /* Ziehen soll nicht die Seite scrollen */
+  }
+  .sphere-card svg { display: block; width: 100%; height: auto; cursor: grab; }
+  .sphere-card svg:active { cursor: grabbing; }
+
+  .ctrl {
+    padding: 12px 14px;
+    border-radius: var(--r-md);
+    background: #fff;
+    border: 1.5px solid var(--line);
+    box-shadow: var(--shadow-sm);
+  }
+  .ctrl + .ctrl { margin-top: 11px; }
+  .ctrl-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 9px;
+  }
+  .ctrl-name { font-weight: 700; font-size: 14px; }
+  .ctrl-val {
+    font-family: var(--font-mono);
+    font-size: 14px; font-weight: 700;
+    color: var(--purple);
+  }
+  .ctrl input[type=range] {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 14px; border-radius: 10px; outline: none; margin: 0;
+  }
+  .ctrl input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer;
+  }
+  .ctrl input[type=range]::-moz-range-thumb {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer;
+  }
+
+  .presets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .preset {
+    min-height: 46px;
+    border-radius: 11px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    font-family: var(--font-mono);
+    font-size: 15px; font-weight: 700;
+    cursor: pointer;
+  }
+  .preset:active { transform: scale(.96); }
+
+  .probs { display: flex; flex-direction: column; gap: 10px; }
+  .prob-row { display: flex; align-items: center; gap: 10px; }
+  .prob-name {
+    flex: none; width: 34px;
+    font-family: var(--font-mono);
+    font-size: 15px; font-weight: 700;
+  }
+  .prob-track {
+    flex: 1; height: 14px; border-radius: 8px;
+    background: var(--line-soft); overflow: hidden;
+  }
+  .prob-fill { height: 100%; width: 50%; transition: width .18s; }
+  .prob-pct {
+    flex: none; width: 52px; text-align: right;
+    font-family: var(--font-mono);
+    font-size: 14px; font-weight: 700;
+  }
+
+  .tally { display: flex; gap: 10px; }
+  .tally-box { min-width: 0; }
+  .tally-box {
+    flex: 1; text-align: center;
+    padding: 11px 6px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+  }
+  .tally-n {
+    font-family: var(--font-display);
+    font-weight: 800; font-size: 26px; line-height: 1;
+  }
+  .tally-l {
+    margin-top: 4px;
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .08em;
+    color: var(--faint);
+  }
+
+  .gates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .gate {
+    min-height: 52px;
+    border-radius: 12px;
+    background: var(--ink);
+    border: none;
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+  }
+  .gate:active { transform: scale(.94); }
+  .gate.g-x { background: var(--red); }
+  .gate.g-y { background: var(--coral); }
+  .gate.g-z { background: var(--blue); }
+  .gate.g-h { background: var(--purple); }
+  .gate.g-s { background: var(--green); }
+  .gate.g-sdg { background: var(--green-dk); }
+  .gate.g-t { background: var(--amber); }
+  .gate.g-tdg { background: var(--amber); filter: brightness(.7); }
+
+  .history {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    min-height: 34px;
+    align-items: center;
+  }
+  .hist-chip {
+    padding: 5px 11px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 13px; font-weight: 700;
+  }
+  .gate-desc {
+    min-height: 44px;
+    font-size: 14px; line-height: 1.4;
+    color: var(--muted);
+  }
+
+  .reset-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .reset-row .q-btn { flex: 1 1 140px; }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="../../../stations/2-bloch-sphere/simulation.html">
+<link rel="alternate" hreflang="en" href="simulation.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Back">←</a>
+    <div class="q-topbar-title">Station 2 · Simulation</div>
+    <div class="q-topbar-badge">🔮 Sphere</div>
+    <a class="q-lang" href="../../../stations/2-bloch-sphere/simulation.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Try it out</div>
+    <h1 class="q-h1">Simulating the<br>Bloch sphere</h1>
+    <p class="q-lead" style="max-width:440px;margin-left:auto;margin-right:auto;font-size:15.5px;">
+      <strong>Drag</strong> across the sphere, use the sliders — or apply a <strong class="t-purple">gate</strong>. The red arrow is the state of your qubit.
+    </p>
+  </div>
+
+  <div class="q-wrap">
+    <div class="sphere-card" id="sphere-card">
+      <svg viewBox="0 0 320 320" id="svg" role="img"
+           aria-label="Bloch sphere with the current qubit state">
+        <circle cx="160" cy="160" r="110" fill="rgba(31,91,255,.045)"
+                stroke="rgba(20,22,28,.18)" stroke-width="1.5"></circle>
+
+        <path id="eq-back" fill="none" stroke="rgba(20,22,28,.16)" stroke-width="1.5" stroke-dasharray="4 4"></path>
+        <path id="mx-back" fill="none" stroke="rgba(20,22,28,.10)" stroke-width="1.5" stroke-dasharray="4 4"></path>
+        <path id="my-back" fill="none" stroke="rgba(20,22,28,.10)" stroke-width="1.5" stroke-dasharray="4 4"></path>
+
+        <line id="ax-x" stroke="rgba(20,22,28,.28)" stroke-width="1.5"></line>
+        <line id="ax-y" stroke="rgba(20,22,28,.28)" stroke-width="1.5"></line>
+        <line id="ax-z" stroke="rgba(20,22,28,.28)" stroke-width="1.5"></line>
+
+        <path id="eq-front" fill="none" stroke="rgba(20,22,28,.38)" stroke-width="2"></path>
+        <path id="mx-front" fill="none" stroke="rgba(20,22,28,.18)" stroke-width="1.5"></path>
+        <path id="my-front" fill="none" stroke="rgba(20,22,28,.18)" stroke-width="1.5"></path>
+
+        <line id="ghost" stroke="rgba(20,22,28,.22)" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"></line>
+        <line id="vec" stroke="#ff352b" stroke-width="4" stroke-linecap="round"></line>
+        <circle id="dot" r="9" fill="#ff352b" stroke="#fff" stroke-width="3"></circle>
+
+        <text id="lb-0"  font-family="IBM Plex Mono, monospace" font-size="16" font-weight="700" fill="#1f5bff" text-anchor="middle">|0⟩</text>
+        <text id="lb-1"  font-family="IBM Plex Mono, monospace" font-size="16" font-weight="700" fill="#ff352b" text-anchor="middle">|1⟩</text>
+        <text id="lb-p"  font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="#6a655c" text-anchor="middle">|+⟩</text>
+        <text id="lb-m"  font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="#6a655c" text-anchor="middle">|−⟩</text>
+        <text id="lb-i"  font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="#6a655c" text-anchor="middle">|+i⟩</text>
+        <text id="lb-ni" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="#6a655c" text-anchor="middle">|−i⟩</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm sim-wrap">
+    <div class="ctrl">
+      <div class="ctrl-head">
+        <span class="ctrl-name">θ — latitude</span>
+        <span class="ctrl-val" id="theta-val">0°</span>
+      </div>
+      <input type="range" id="theta" min="0" max="180" value="0"
+             aria-label="Polar angle theta"
+             style="background:linear-gradient(90deg,#1f5bff,#8b3dff,#ff352b);">
+    </div>
+    <div class="ctrl">
+      <div class="ctrl-head">
+        <span class="ctrl-name">φ — longitude (phase)</span>
+        <span class="ctrl-val" id="phi-val">0°</span>
+      </div>
+      <input type="range" id="phi" min="0" max="359" value="0"
+             aria-label="Azimuthal angle phi"
+             style="background:linear-gradient(90deg,#8b3dff,rgba(20,22,28,.12));">
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm sim-wrap">
+    <div class="presets">
+      <button class="preset" type="button" data-preset="0,0"    style="color:#1f5bff">|0⟩</button>
+      <button class="preset" type="button" data-preset="180,0"  style="color:#ff352b">|1⟩</button>
+      <button class="preset" type="button" data-preset="90,0"   style="color:#8b3dff">|+⟩</button>
+      <button class="preset" type="button" data-preset="90,180" style="color:#8b3dff">|−⟩</button>
+      <button class="preset" type="button" data-preset="90,90"  style="color:#8b3dff">|+i⟩</button>
+      <button class="preset" type="button" data-preset="90,270" style="color:#8b3dff">|−i⟩</button>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Or rotate with gates</h2>
+    <p class="q-fine q-mt-sm">A gate rotates the current state — wherever it happens to be.</p>
+    <div class="gates q-mt-sm sim-col">
+      <button class="gate g-x" type="button" data-gate="X">X</button>
+      <button class="gate g-y" type="button" data-gate="Y">Y</button>
+      <button class="gate g-z" type="button" data-gate="Z">Z</button>
+      <button class="gate g-h" type="button" data-gate="H">H</button>
+      <button class="gate g-s" type="button" data-gate="S">S</button>
+      <button class="gate g-sdg" type="button" data-gate="Sdg">S†</button>
+      <button class="gate g-t" type="button" data-gate="T">T</button>
+      <button class="gate g-tdg" type="button" data-gate="Tdg">T†</button>
+    </div>
+    <p class="gate-desc q-mt-sm" id="desc">
+      Tap a gate. The dashed arrow shows where the state was before.
+    </p>
+    <div class="q-card q-mt-sm sim-col">
+      <div class="q-note-title" style="color:var(--muted);">Your circuit</div>
+      <div class="history q-mt-sm" id="history">
+        <span class="q-small">|0⟩ — nothing applied yet</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt sim-wrap">
+    <div class="q-card">
+      <div class="q-note-title" style="color:var(--muted);">If you measure now</div>
+      <div class="probs q-mt-sm">
+        <div class="prob-row">
+          <span class="prob-name t-blue">|0⟩</span>
+          <span class="prob-track"><span class="prob-fill" id="p0-bar" style="background:#1f5bff"></span></span>
+          <span class="prob-pct t-blue" id="p0-pct">50 %</span>
+        </div>
+        <div class="prob-row">
+          <span class="prob-name t-red">|1⟩</span>
+          <span class="prob-track"><span class="prob-fill" id="p1-bar" style="background:#ff352b"></span></span>
+          <span class="prob-pct t-red" id="p1-pct">50 %</span>
+        </div>
+      </div>
+      <p class="q-small q-mt-sm" id="state-formula" style="font-family:var(--font-mono);text-align:center;"></p>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm sim-wrap">
+    <button class="q-btn q-btn-primary q-btn-block" type="button" id="measure">📏 Measure</button>
+    <p class="q-status q-mt-sm" id="measure-msg"></p>
+    <div class="tally">
+      <div class="tally-box">
+        <div class="tally-n t-blue" id="n0">0</div>
+        <div class="tally-l">TIMES |0⟩</div>
+      </div>
+      <div class="tally-box">
+        <div class="tally-n t-red" id="n1">0</div>
+        <div class="tally-l">TIMES |1⟩</div>
+      </div>
+      <div class="tally-box">
+        <div class="tally-n" id="ntot">0</div>
+        <div class="tally-l">MEASUREMENTS</div>
+      </div>
+    </div>
+    <div class="reset-row q-mt-sm">
+      <button class="q-btn" type="button" id="reset">↺ Back to |0⟩</button>
+      <button class="q-btn" type="button" id="reset-tally">Reset counter</button>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">All eight gates at a glance</h2>
+    <div class="q-list q-mt-sm">
+      <div class="q-card">
+        <div class="q-kv">
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--red);">X</span>
+            <span class="q-kv-val">Half a turn about the x-axis. Turns 0 into 1 — the <strong>NOT gate</strong> of the quantum world.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--coral);">Y</span>
+            <span class="q-kv-val">Half a turn about y. Also swaps the poles, but with a different phase.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--blue);">Z</span>
+            <span class="q-kv-val">Half a turn about z. The poles stay — <strong>only the phase flips</strong>.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--purple);">H</span>
+            <span class="q-kv-val">Hadamard. Brings |0⟩ to the equator: <strong>creates superposition</strong>. The most important gate of all.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--green);">S</span>
+            <span class="q-kv-val">Quarter turn about z (90°). Turns |+⟩ to the y-pole: <strong>|+i⟩</strong>.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--green-dk);">S†</span>
+            <span class="q-kv-val">S backwards (−90° about z). The <strong>inverse</strong> rotation of S. Turns |+⟩ to <strong>|−i⟩</strong>.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--amber);">T</span>
+            <span class="q-kv-val">Eighth of a turn about z (45°). The finest common phase screw — applying T twice gives exactly S.</span>
+          </div>
+          <div class="q-kv-row">
+            <span class="q-kv-key" style="color:var(--amber);">T†</span>
+            <span class="q-kv-val">T backwards (−45° about z). The inverse of T.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">And any angle at all?</h2>
+    <p class="q-body q-mt-sm">
+      X, Y, Z, S, S†, T and T† are all just <strong>special cases</strong> of a single tool: a rotation about an axis by a freely chosen angle. These have their own names:
+    </p>
+    <div class="q-card q-mt-sm">
+      <div class="q-kv">
+        <div class="q-kv-row">
+          <span class="q-kv-key">R<sub>x</sub>(θ)</span>
+          <span class="q-kv-val">Rotation by <strong>θ degrees</strong> about the x-axis (through |+⟩ and |−⟩).</span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">R<sub>y</sub>(θ)</span>
+          <span class="q-kv-val">Rotation by θ degrees about the y-axis (through |+i⟩ and |−i⟩).</span>
+        </div>
+        <div class="q-kv-row">
+          <span class="q-kv-key">R<sub>z</sub>(θ)</span>
+          <span class="q-kv-val">Rotation by θ degrees about the z-axis (through |0⟩ and |1⟩).</span>
+        </div>
+      </div>
+    </div>
+    <p class="q-body q-mt-sm">
+      On the model this means: you simply hold the sphere so that the named axis stays fixed, and swing it by the given angle. The direction of rotation follows the <strong>right-hand rule</strong>: the thumb points in the positive direction of the axis (for z upwards to |0⟩, for x to |+⟩, for y to |+i⟩), and the curled fingers give the direction of rotation for positive angles. So S = R<sub>z</sub>(90°) turns the state |+⟩ into |+i⟩.
+    </p>
+    <p class="q-body q-mt-sm">
+      This makes X = R<sub>x</sub>(180°), Y = R<sub>y</sub>(180°), Z = R<sub>z</sub>(180°) — and S = R<sub>z</sub>(90°), S† = R<sub>z</sub>(−90°), T = R<sub>z</sub>(45°), T† = R<sub>z</sub>(−45°). Everything that happens on the sphere is some combination of these three rotations.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note">
+      <div class="q-note-title">Watch out</div>
+      <div class="q-body">
+        After measuring, the arrow jumps to a <strong>pole</strong> — and stays there. The previous position is irretrievably gone. That is exactly what “the measurement destroys the superposition” means.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-note q-note-blue">
+      <div class="q-note-title">Try this</div>
+      <div class="q-body">
+        Tap <strong>H</strong>, then <strong>H</strong> once more. You end up exactly at |0⟩ again. The same half turn twice cancels itself out — a nice example of the fact that every gate is <em>reversible</em>.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Why doesn't φ change the probabilities?</summary>
+      <div class="q-acc-body">
+        Because φ is the <strong>phase</strong>. In a single measurement in the 0/1 direction it is completely invisible. It only matters when two paths meet again — then it decides whether something is reinforced or cancelled. That is exactly <a href="../1-schroedinger/raetsel/3-wellen.html">puzzle 3</a>.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Why does every gate have to be reversible?</summary>
+      <div class="q-acc-body">
+        Because a rotation never destroys information — you can turn it back. A classical AND gate can't do that: from a 0 at the output you can't reconstruct what went in. Quantum gates are <strong>always</strong> reversible. Only the measurement isn't, and that's why it comes at the very end.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>And where is entanglement?</summary>
+      <div class="q-acc-body">
+        For that you need gates that act on <strong>two</strong> qubits at once — such as CNOT. That can't be shown on a single sphere. At the <a href="../3-quantumtable/">QuantumTable</a> you can plug together exactly such circuits yourself.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Is the randomness of the measurement real?</summary>
+      <div class="q-acc-body">
+        Not here on the page — your browser rolls the dice with a pseudo-random number generator. In nature, yes: as far as we know, the outcome of a quantum measurement is <strong>fundamentally</strong> unpredictable, not just in practice.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-primary q-btn-block" href="teste-selbst.html">✓ Next: Test yourself</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stations">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Home</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Cat</a>
+    <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
+    <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+<script src="../../../assets/bloch-gates.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var BG = window.BlochGates;
+
+  var CX = 160, CY = 160, R = 110;
+  var AZ = 30 * Math.PI / 180;
+  var EL = 20 * Math.PI / 180;
+
+  var RIGHT = [-Math.sin(AZ), Math.cos(AZ), 0];
+  var UP    = [-Math.sin(EL) * Math.cos(AZ), -Math.sin(EL) * Math.sin(AZ), Math.cos(EL)];
+  var VIEW  = [ Math.cos(EL) * Math.cos(AZ),  Math.cos(EL) * Math.sin(AZ), Math.sin(EL)];
+
+  function dot(a, b) { return a[0]*b[0] + a[1]*b[1] + a[2]*b[2]; }
+  function proj(p) {
+    return { x: CX + R * dot(p, RIGHT), y: CY - R * dot(p, UP), d: dot(p, VIEW) };
+  }
+  function sph(theta, phi) {
+    var t = theta * Math.PI / 180, f = phi * Math.PI / 180;
+    return [Math.sin(t) * Math.cos(f), Math.sin(t) * Math.sin(f), Math.cos(t)];
+  }
+
+  function ringPaths(pointAt) {
+    var N = 120, front = [], back = [], curF = null, curB = null;
+    for (var k = 0; k <= N; k++) {
+      var p = proj(pointAt(k / N * 2 * Math.PI));
+      var xy = p.x.toFixed(1) + ',' + p.y.toFixed(1);
+      if (p.d >= 0) {
+        curF = curF ? curF + ' L' + xy : 'M' + xy;
+        if (curB) { back.push(curB); curB = null; }
+      } else {
+        curB = curB ? curB + ' L' + xy : 'M' + xy;
+        if (curF) { front.push(curF); curF = null; }
+      }
+    }
+    if (curF) front.push(curF);
+    if (curB) back.push(curB);
+    return { front: front.join(' '), back: back.join(' ') };
+  }
+
+  var eq = ringPaths(function (a) { return [Math.cos(a), Math.sin(a), 0]; });
+  var mx = ringPaths(function (a) { return [Math.sin(a), 0, Math.cos(a)]; });
+  var my = ringPaths(function (a) { return [0, Math.sin(a), Math.cos(a)]; });
+  function setD(id, d) { document.getElementById(id).setAttribute('d', d); }
+  setD('eq-front', eq.front); setD('eq-back', eq.back);
+  setD('mx-front', mx.front); setD('mx-back', mx.back);
+  setD('my-front', my.front); setD('my-back', my.back);
+
+  function axisLine(id, a, b) {
+    var p = proj(a), q = proj(b), e = document.getElementById(id);
+    e.setAttribute('x1', p.x); e.setAttribute('y1', p.y);
+    e.setAttribute('x2', q.x); e.setAttribute('y2', q.y);
+  }
+  axisLine('ax-x', [-1,0,0], [1,0,0]);
+  axisLine('ax-y', [0,-1,0], [0,1,0]);
+  axisLine('ax-z', [0,0,-1], [0,0,1]);
+
+  function label(id, p, dx, dy) {
+    var s = proj(p), e = document.getElementById(id);
+    e.setAttribute('x', s.x + dx); e.setAttribute('y', s.y + dy);
+  }
+  label('lb-0',  [0,0,1],  0, -14);
+  label('lb-1',  [0,0,-1], 0, 24);
+  label('lb-p',  [1,0,0], -10, 14);
+  label('lb-m',  [-1,0,0], 8, -8);
+  label('lb-i',  [0,1,0],  16, 6);
+  label('lb-ni', [0,-1,0], -18, 2);
+
+  /* ---------- gemeinsamer Zustand: theta/phi ---------- */
+  var state = { theta: 0, phi: 0 };
+  var ghost = null;      // vorherige Position, fürs gestrichelte Nachbild
+  var applied = [];      // Gatter-Verlauf (nur Gatterklicks, kein manuelles Drehen)
+  var n0 = 0, n1 = 0;
+
+  var elTheta   = document.getElementById('theta');
+  var elPhi     = document.getElementById('phi');
+  var elThetaV  = document.getElementById('theta-val');
+  var elPhiV    = document.getElementById('phi-val');
+  var vecEl     = document.getElementById('vec');
+  var ghostEl   = document.getElementById('ghost');
+  var dotEl     = document.getElementById('dot');
+  var p0bar     = document.getElementById('p0-bar');
+  var p1bar     = document.getElementById('p1-bar');
+  var p0pct     = document.getElementById('p0-pct');
+  var p1pct     = document.getElementById('p1-pct');
+  var formula   = document.getElementById('state-formula');
+  var msg       = document.getElementById('measure-msg');
+  var descEl    = document.getElementById('desc');
+  var histEl    = document.getElementById('history');
+
+  var DEFAULT_DESC = 'Tap a gate. The dashed arrow shows where the state was before.';
+
+  function vecFromState() { return sph(state.theta, state.phi); }
+
+  function setFromVec(v) {
+    var a = BG.angles(v);
+    state.theta = a.theta;
+    if (a.phi != null) state.phi = a.phi;
+  }
+
+  function render() {
+    var p = vecFromState();
+    var s = proj(p);
+    var c = proj([0, 0, 0]);
+
+    vecEl.setAttribute('x1', c.x); vecEl.setAttribute('y1', c.y);
+    vecEl.setAttribute('x2', s.x); vecEl.setAttribute('y2', s.y);
+    dotEl.setAttribute('cx', s.x); dotEl.setAttribute('cy', s.y);
+    dotEl.setAttribute('r', s.d >= 0 ? 9 : 6.5);
+    dotEl.setAttribute('opacity', s.d >= 0 ? 1 : 0.55);
+    vecEl.setAttribute('opacity', s.d >= 0 ? 1 : 0.55);
+
+    if (ghost) {
+      var g = proj(ghost);
+      ghostEl.setAttribute('x1', c.x); ghostEl.setAttribute('y1', c.y);
+      ghostEl.setAttribute('x2', g.x); ghostEl.setAttribute('y2', g.y);
+      ghostEl.setAttribute('opacity', 1);
+    } else {
+      ghostEl.setAttribute('opacity', 0);
+    }
+
+    elThetaV.textContent = Math.round(state.theta) + '°';
+    elPhiV.textContent   = Math.round(state.phi) + '°';
+    elTheta.value = Math.round(state.theta);
+    elPhi.value   = Math.round(((state.phi % 360) + 360) % 360);
+
+    var t = state.theta * Math.PI / 180;
+    var p0 = Math.pow(Math.cos(t / 2), 2);
+    var p1 = 1 - p0;
+    p0bar.style.width = (p0 * 100) + '%';
+    p1bar.style.width = (p1 * 100) + '%';
+    p0pct.textContent = Math.round(p0 * 100) + ' %';
+    p1pct.textContent = Math.round(p1 * 100) + ' %';
+
+    var a = Math.cos(t / 2).toFixed(2);
+    var b = Math.sin(t / 2).toFixed(2);
+    formula.textContent = '|ψ⟩ = ' + a + '·|0⟩ + ' + b + '·e^(i·' + Math.round(state.phi) + '°)·|1⟩';
+
+    if (!applied.length) {
+      histEl.innerHTML = '<span class="q-small">|0⟩ — nothing applied yet</span>';
+    } else {
+      histEl.innerHTML = '<span class="hist-chip">|0⟩</span>' + applied.map(function (g) {
+        return '<span class="hist-chip">' + g + '</span>';
+      }).join('');
+    }
+  }
+
+  /* manuelle Aktion: Slider, Ziehen, Preset — löscht Gatterverlauf & Nachbild */
+  function manualSet(theta, phi) {
+    state.theta = theta; state.phi = phi;
+    ghost = null; applied = [];
+    descEl.textContent = DEFAULT_DESC;
+    msg.textContent = '';
+    render();
+  }
+
+  elTheta.addEventListener('input', function () {
+    manualSet(Number(elTheta.value), state.phi);
+  });
+  elPhi.addEventListener('input', function () {
+    manualSet(state.theta, Number(elPhi.value));
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.preset'), function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-preset').split(',');
+      manualSet(Number(v[0]), Number(v[1]));
+    });
+  });
+
+  /* ---------- Ziehen auf der Kugel ---------- */
+  var card = document.getElementById('sphere-card');
+  var dragging = false, lastX = 0, lastY = 0;
+
+  card.addEventListener('pointerdown', function (e) {
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    ghost = null; applied = []; descEl.textContent = DEFAULT_DESC;
+    card.setPointerCapture(e.pointerId);
+  });
+  card.addEventListener('pointermove', function (e) {
+    if (!dragging) return;
+    var phi   = (state.phi + Math.round((e.clientX - lastX) * 1.2) + 360) % 360;
+    var theta = Math.max(0, Math.min(180, state.theta + Math.round((e.clientY - lastY) * 1.2)));
+    lastX = e.clientX; lastY = e.clientY;
+    state.theta = theta; state.phi = phi;
+    msg.textContent = '';
+    render();
+  });
+  ['pointerup', 'pointercancel'].forEach(function (ev) {
+    card.addEventListener(ev, function () { dragging = false; });
+  });
+
+  /* ---------- Gatter ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('.gate'), function (btn) {
+    btn.addEventListener('click', function () {
+      var name = btn.getAttribute('data-gate');
+      var g = BG.GATES[name];
+      var v = vecFromState();
+      ghost = v;
+      var v2 = BG.rotate(v, g.axis, g.angle);
+      setFromVec(v2);
+      applied.push(name);
+      descEl.textContent = g.desc;
+      msg.textContent = '';
+      render();
+    });
+  });
+
+  /* ---------- Messen ---------- */
+  document.getElementById('measure').addEventListener('click', function () {
+    var t = state.theta * Math.PI / 180;
+    var p0 = Math.pow(Math.cos(t / 2), 2);
+    var got0 = Math.random() < p0;
+
+    ghost = null; applied = [];
+    state.theta = got0 ? 0 : 180;
+
+    if (got0) { n0++; } else { n1++; }
+    document.getElementById('n0').textContent = n0;
+    document.getElementById('n1').textContent = n1;
+    document.getElementById('ntot').textContent = n0 + n1;
+
+    msg.textContent = got0 ? '→ measured: 0' : '→ measured: 1';
+    msg.style.color = got0 ? '#1f5bff' : '#ff352b';
+    descEl.textContent = DEFAULT_DESC;
+    render();
+  });
+
+  document.getElementById('reset').addEventListener('click', function () {
+    manualSet(0, 0);
+  });
+
+  document.getElementById('reset-tally').addEventListener('click', function () {
+    n0 = 0; n1 = 0;
+    document.getElementById('n0').textContent = '0';
+    document.getElementById('n1').textContent = '0';
+    document.getElementById('ntot').textContent = '0';
+    msg.textContent = '';
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+# Englische Texte für stations/1-schroedinger/box.html — siehe tools/build-en.py
+
+de: Die Boxen · Quantenstation JKU
+en: The boxes · Quantum Station JKU
+
+de: Die Geschichte von Schrödingers Katze und was in unseren beiden Holzkisten mit den Zahlenschlössern wirklich steckt.
+en: The story of Schrödinger's cat and what's really inside our two wooden boxes with the combination locks.
+
+de: 📦 Boxen
+en: 📦 Boxes
+
+de: Was hier<br>wirklich steht
+en: What is really<br>standing here
+
+de: Vor dir stehen <strong>zwei Holzkisten mit je vier Zahlenschlössern</strong>. Sie sind kein Quantenexperiment und wollen auch keines sein. Sie sind das Ziel der Rätsel, und was drinnen liegt, gehört dir.
+en: In front of you are <strong>two wooden boxes, each with four combination locks</strong>. They are not a quantum experiment and don't pretend to be one. They are the goal of the puzzles, and what's inside is yours.
+
+de: Die Geschichte der Katze
+en: The story of the cat
+
+de: Die Geschichte beginnt mit einem Briefwechsel. Im Sommer 1935 schreiben sich <strong>Albert Einstein</strong> und <strong>Erwin Schrödinger</strong>, und beide sind mit der neuen Quantentheorie unzufrieden. Einstein denkt sich dabei ein Fass Schießpulver aus, das nach den Regeln der Theorie zugleich explodiert und nicht explodiert. Schrödinger gefällt dieses Bild so gut, dass er noch im selben Jahr nach einem Beispiel sucht, das jeder sofort vor Augen hat, und dafür nimmt er eine Katze.
+en: The story begins with an exchange of letters. In the summer of 1935, <strong>Albert Einstein</strong> and <strong>Erwin Schrödinger</strong> write to each other, and both are unhappy with the new quantum theory. Einstein comes up with a keg of gunpowder that, according to the rules of the theory, both explodes and does not explode. Schrödinger likes this picture so much that later that year he looks for an example everyone can picture immediately — and he picks a cat.
+
+de: Der Aufbau, wie er ihn beschreibt
+en: The setup, as he describes it
+
+de: Eine Katze sitzt in einer <strong>Stahlkammer</strong>, und neben ihr steht ein Geigerzähler mit einer so winzigen Menge radioaktiver Substanz, dass in einer Stunde vielleicht <strong>ein</strong> einziges Atom zerfällt und vielleicht auch gar keines. Wenn eines zerfällt, schlägt der Zähler an und lässt einen Hammer fallen, der ein Fläschchen mit <strong>Gift</strong> zerbricht. Niemand schaut dabei zu.
+en: A cat sits in a <strong>steel chamber</strong>, and next to it is a Geiger counter with such a tiny amount of radioactive substance that within an hour perhaps <strong>one</strong> single atom decays — and perhaps none at all. If one decays, the counter clicks and releases a hammer that shatters a small flask of <strong>poison</strong>. Nobody is watching.
+
+de: Nach einer Stunde ist das Atom zerfallen <em>und</em> nicht zerfallen, und weil der Zähler am Atom hängt, der Hammer am Zähler und die Katze am Hammer, ist am Ende auch die Katze beides, wenn man konsequent weiterrechnet. Genau hier war für Schrödinger der Punkt erreicht, denn sein Gedankenexperiment war <strong>keine Behauptung, sondern ein Einwand</strong>.
+en: After an hour the atom has decayed <em>and</em> not decayed, and since the counter depends on the atom, the hammer on the counter and the cat on the hammer, in the end the cat is both as well — if you follow the calculation consistently. This is exactly where Schrödinger drew the line, because his thought experiment was <strong>not a claim, but an objection</strong>.
+
+de: Das Bild wurde danach sehr berühmt, allerdings stand es bald für genau das Gegenteil, und aus der Kritik wurde das Maskottchen der Quantenphysik. Halb recht hatte Schrödinger trotzdem, denn einzelne Teilchen sind messbar in Superposition, eine Katze wäre es dagegen nie. Je größer ein Objekt ist, desto schneller zerstört die Umgebung diesen Zustand, und dieser Vorgang heißt <strong>Dekohärenz</strong>.
+en: The image became very famous afterwards, but it soon stood for exactly the opposite, and the criticism turned into the mascot of quantum physics. Still, Schrödinger was half right: single particles are measurably in superposition, but a cat never would be. The bigger an object, the faster its surroundings destroy this state, and this process is called <strong>decoherence</strong>.
+
+de: Und was ist mit unseren Boxen?
+en: And what about our boxes?
+
+de: Unsere Boxen sind schlichte Holzkisten, an denen je vier Zahlenschlösser hängen. <strong>Box 1</strong> ist die einfachere, <strong>Box 2</strong> die schwerere. Jedes Rätsel gibt dir einen vierstelligen Code, und jeder Code öffnet genau eines der Schlösser. Erst wenn alle vier offen sind, geht der Deckel auf.
+en: Our boxes are plain wooden crates, each with four combination locks. <strong>Box 1</strong> is the easier one, <strong>Box 2</strong> the harder one. Each puzzle gives you a four-digit code, and each code opens exactly one of the locks. Only when all four are open does the lid come off.
+
+de: Drinnen wartet keine Physik, sondern eine kleine Belohnung zum Mitnehmen. Wir haben ein paar Erinnerungsstücke an diesen Tag hineingelegt, und wer die Kiste aufbekommt, darf sich etwas davon aussuchen. Mehr wird hier nicht verraten.
+en: Inside there is no physics, but a small reward to take home. We have put in a few souvenirs of this day, and whoever gets the box open may choose one. We won't give away more than that here.
+
+de: Bitte wieder zusperren
+en: Please lock it again
+
+de: Nimm dir dein Mitbringsel, schließ die Kiste danach wieder und verdrehe ihre vier Schlösser. So haben die Nächsten dieselbe Freude am Knacken wie du.
+en: Take your souvenir, then close the box again and scramble its four locks. That way the next people get the same fun cracking it as you did.
+
+de: Warum keine echte Quantenkiste?
+en: Why not a real quantum box?
+
+de: Weil man Superposition nicht aus Holz und Zahlenschlössern bauen kann. Drei Gründe stecken dahinter, und alle drei sind einen Blick wert.
+en: Because you can't build superposition out of wood and combination locks. There are three reasons behind this, and all three are worth a look.
+
+de: 1. Nichts ist wirklich unentschieden
+en: 1. Nothing is really undecided
+
+de: In einer Holzkiste liegt immer schon fest, was drinnen ist, auch wenn du es noch nicht weißt. In einem echten Quantensystem gibt es vor der Messung dagegen <strong>keinen versteckten Wert</strong>, und genau das ist der entscheidende Unterschied.
+en: In a wooden box, what's inside is always already fixed, even if you don't know it yet. In a real quantum system, by contrast, there is <strong>no hidden value</strong> before the measurement — and that is the crucial difference.
+
+de: 2. Keine echte Interferenz
+en: 2. No real interference
+
+de: Der spannendste Teil der Quantenmechanik ist, dass sich Möglichkeiten <strong>gegenseitig auslöschen</strong> können. Dafür braucht man Wellen, und die kannst du in Rätsel 2 und Rätsel 3 selbst ausprobieren.
+en: The most exciting part of quantum mechanics is that possibilities can <strong>cancel each other out</strong>. For that you need waves, and you can try them out yourself in puzzle 2 and puzzle 3.
+
+de: 3. Größe macht den Unterschied
+en: 3. Size makes the difference
+
+de: Eine echte Katze wäre niemals in Superposition. Je mehr Teilchen ein Objekt hat, desto schneller zerstört die Umgebung den Zustand, und bei Alltagsdingen dauert das unvorstellbar kurze Bruchteile einer Sekunde. Dieser Vorgang heißt <strong>Dekohärenz</strong>.
+en: A real cat would never be in superposition. The more particles an object has, the faster its surroundings destroy the state, and for everyday things that takes unimaginably tiny fractions of a second. This process is called <strong>decoherence</strong>.
+
+de: Warum dann überhaupt eine Kiste?
+en: So why a box at all?
+
+de: Echte Quantenexperimente brauchen Vakuum, Laser und oft Temperaturen nahe dem absoluten Nullpunkt, und das ist auf einer Wiese vor der Uni schwer zu haben.
+en: Real quantum experiments need vacuum, lasers and often temperatures close to absolute zero — hard to come by on a lawn in front of the university.
+
+de: Die Physik steckt deshalb nicht in den Kisten, sondern in den Rätseln, die davor liegen. Die Kisten sind der Grund, sie zu lösen, und das Mitbringsel darin ist die Erinnerung daran.
+en: So the physics is not in the boxes, but in the puzzles in front of them. The boxes are the reason to solve them, and the souvenir inside is the memory of it.
+
+de: Frag uns
+en: Ask us
+
+de: Wenn du mehr über Schrödingers Katze wissen willst, erzählen wir dir gerne direkt vor Ort davon. Antworten auf viele Fragen findest du auch im <a href="../5-ama/">FAQ</a>.
+en: If you want to know more about Schrödinger's cat, we are happy to tell you about it right here on site. You'll also find answers to many questions in the <a href="../5-ama/">FAQ</a>.
+
+de: 🔒 Zu den Rätseln
+en: 🔒 To the puzzles
+

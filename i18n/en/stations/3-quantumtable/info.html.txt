@@ -1,0 +1,71 @@
+# Englische Texte für stations/3-quantumtable/info.html — siehe tools/build-en.py
+
+de: Schaltkreise lesen · QuantumTable
+en: Reading circuits · QuantumTable
+
+de: Drähte, Gatter, Messung: die Notation von Quantenschaltkreisen in wenigen Minuten.
+en: Wires, gates, measurement: the notation of quantum circuits in a few minutes.
+
+de: Notation
+en: =
+
+de: Schaltkreise<br>lesen
+en: Reading<br>circuits
+
+de: Ein Quantenschaltkreis liest sich wie Noten: <strong>von links nach rechts</strong>, eine Zeile pro Qubit.
+en: A quantum circuit is read like sheet music: <strong>from left to right</strong>, one line per qubit.
+
+de: 1. Die „Drähte“
+en: 1. The “wires”
+
+de: Jede waagrechte Linie ist ein Qubit. Sie ist <em>kein</em> Kabel — sie ist eine <strong>Zeitachse</strong>. Links steht der Anfangszustand, meistens <span class="q-mono">|0⟩</span>, rechts das Ende.
+en: Each horizontal line is a qubit. It is <em>not</em> a cable — it is a <strong>time axis</strong>. On the left is the initial state, usually <span class="q-mono">|0⟩</span>, on the right the end.
+
+de: Zwei Qubit-Drähte
+en: Two qubit wires
+
+de: ZEIT →
+en: TIME →
+
+de: 2. Die Gatter
+en: 2. The gates
+
+de: Ein Kästchen auf einer Linie ist ein <strong>Gatter</strong> — eine Drehung des Zustands. Auf der Bloch-Kugel vor Ort kannst du dir das ansehen: <a href="../2-bloch-sphere/simulation.html">Gatter sind Drehungen</a>.
+en: A box on a line is a <strong>gate</strong> — a rotation of the state. You can see this on the Bloch sphere on site: <a href="../2-bloch-sphere/simulation.html">gates are rotations</a>.
+
+de: Ein H-Gatter auf dem oberen Draht
+en: An H gate on the upper wire
+
+de: erzeugt Superposition
+en: creates superposition
+
+de: 3. Der Punkt und das Kreuz
+en: 3. The dot and the cross
+
+de: Ein <strong>ausgefüllter Punkt</strong> markiert das Kontroll-Qubit, das <strong>⊕-Kreuz</strong> das Ziel. Zusammen ergeben sie ein <strong>CNOT</strong>-Gatter: „Kippe das Ziel, aber nur wenn die Kontrolle 1 ist.“
+en: A <strong>filled dot</strong> marks the control qubit, the <strong>⊕ cross</strong> the target. Together they make a <strong>CNOT</strong> gate: “Flip the target, but only if the control is 1.”
+
+de: Ein CNOT-Gatter
+en: A CNOT gate
+
+de: Kontrolle
+en: Control
+
+de: Ziel
+en: Target
+
+de: 4. Die Messung
+en: 4. The measurement
+
+de: Das Symbol mit dem Zeiger steht ganz rechts: die <strong>Messung</strong>. Sie beendet die Superposition, und heraus kommen ganz normale Bits.
+en: The symbol with the pointer sits on the far right: the <strong>measurement</strong>. It ends the superposition, and out come perfectly ordinary bits.
+
+de: Und weil das Ergebnis zufällig ist, führt man denselben Schaltkreis <strong>viele tausend Mal</strong> aus. Was zählt, ist die <em>Verteilung</em>, nicht ein einzelnes Ergebnis.
+en: And because the result is random, you run the same circuit <strong>many thousands of times</strong>. What counts is the <em>distribution</em>, not a single result.
+
+de: Selbst ausprobieren
+en: Try it yourself
+
+de: Bau den Bell-Zustand in zwei Tipps
+en: Build the Bell state in two taps
+

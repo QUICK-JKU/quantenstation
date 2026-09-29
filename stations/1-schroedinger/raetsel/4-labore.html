@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe6">
+<title>Rätsel 4 · Wer findet den Ort?</title>
+<meta name="description" content="Rätsel 4: Vier Labore, vier Forschende, vier Superpositionen — ein Logikrätsel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/quantum.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
+<style>
+  .clue { display: flex; gap: 9px; align-items: flex-start; font-size: 14px; line-height: 1.35; }
+  .clue + .clue { margin-top: 8px; }
+  .clue-badge {
+    flex: none;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    background: rgba(20,22,28,.08);
+    color: var(--faint);
+    transition: background .15s, color .15s;
+  }
+  .clue.is-ok .clue-badge { background: var(--green); color: #fff; }
+
+  .labs { display: flex; flex-direction: column; gap: 9px; }
+  .lab {
+    border-radius: 14px;
+    background: var(--surface);
+    border: 2px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: border-color .15s;
+  }
+  .lab-n {
+    flex: none;
+    width: 58px;
+    font-family: var(--font-mono);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--faint);
+    line-height: 1.2;
+  }
+  .lab-fields { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; min-width: 0; }
+  .lab.is-filled { border-color: rgba(31,91,255,.35); }
+  .lab.is-solved { border-color: var(--green); }
+
+  /* Vier Spalten nebeneinander erst, wenn die Auswahlfelder darin
+     noch lesbar sind (Laptop). Darunter: eine Zeile pro Labor. */
+  @media (min-width: 1000px) {
+    .labs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
+    .lab { flex-direction: column; align-items: stretch; }
+    .lab-n { width: auto; text-align: center; }
+    .lab-fields { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="4-labore.html">
+<link rel="alternate" hreflang="en" href="../../../en/stations/1-schroedinger/raetsel/4-labore.html">
+<script src="../../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+
+<header class="q-topbar">
+  <div class="q-topbar-inner">
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zur Rätselübersicht">←</a>
+    <div class="q-topbar-title">Box 1 · Rätsel 4 von 4</div>
+    <div class="q-topbar-badge">🔒 Schloss 4</div>
+    <a class="q-lang" href="../../../en/stations/1-schroedinger/raetsel/4-labore.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
+  </div>
+</header>
+
+<main class="q-main">
+  <div class="q-glow"></div>
+
+  <div class="q-wrap q-center">
+    <div class="q-eyebrow">Rätsel 4 · Schloss 4</div>
+    <h1 class="q-h1">Wer findet den Ort?</h1>
+    <p class="q-lead" style="max-width:460px;margin-left:auto;margin-right:auto;font-size:15px;">
+      Vier Quantenlabore stehen nebeneinander (links → rechts: 1 → 4). In jedem
+      arbeitet ein anderer <strong>Forscher</strong> und erforscht eine andere
+      <strong>Superposition</strong>. Ordne sie mit den Hinweisen zu.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-card">
+      <div class="q-note-title" style="color:var(--purple);">Hinweise</div>
+      <div id="clues"></div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt-sm">
+    <div class="labs" id="labs"></div>
+  </div>
+
+  <div class="q-wrap">
+    <div class="q-status q-mt-sm" id="hint"></div>
+    <div class="q-center">
+      <button class="q-btn" type="button" id="reset">↺ Zurücksetzen</button>
+    </div>
+
+    <div class="q-success" id="success" hidden>
+      <div class="q-success-label" id="success-label">GELÖST ✓</div>
+      <div class="q-code" data-q-code></div>
+      <div class="q-body t-green" style="font-weight:600;">🔓 Das ist dein Code.</div>
+      <a class="q-btn q-btn-green" href="index.html">Alle vier Schlösser →</a>
+    </div>
+
+    <p class="q-fine q-center q-mt" style="max-width:340px;margin-left:auto;margin-right:auto;">
+      Jeder Forscher und jede Superposition kommt genau einmal vor. Die Häkchen
+      zeigen, welche Hinweise schon erfüllt sind.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <details class="q-acc">
+      <summary>Tipp anzeigen</summary>
+      <div class="q-acc-body">
+        Fang mit den Hinweisen an, die <strong>keine Wahl lassen</strong>:
+        Hinweis 3 legt Bob fest, Hinweis 2 legt Labor 4 fest. Danach bleiben für
+        Diana nur noch wenige Plätze — und Hinweis 1 erledigt den Rest.
+      </div>
+    </details>
+    <details class="q-acc">
+      <summary>Was steckt dahinter?</summary>
+      <div class="q-acc-body">
+        Ehrlich gesagt: Dieses Rätsel ist <strong>kein Quanteneffekt</strong>,
+        sondern reine Logik — ausschließen, bis nur eine Möglichkeit übrig
+        bleibt. Genau diese Denkarbeit steckt vor jedem Algorithmus. In der
+        Quantenwelt ist es sogar noch strenger: Manche Größenpaare, etwa
+        <strong>Ort und Impuls</strong>, lassen sich gar nicht gleichzeitig
+        scharf festlegen. Das ist die <strong>Unschärferelation</strong>.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <a class="q-btn q-btn-block" href="index.html">← Alle Rätsel von Box 1</a>
+  </div>
+
+</main>
+
+<nav class="q-bottombar" aria-label="Stationen">
+  <div class="q-bottombar-inner">
+    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
+    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
+    <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
+    <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+  </div>
+</nav>
+
+<script src="../../../assets/quantum.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var RESEARCHERS   = ['Alice', 'Bob', 'Charlie', 'Diana'];
+  var SUPERPOSITIONS = ['Ort', 'Spin', 'Energie', 'Zustand'];
+  var CODE = '7570';
+
+  var CLUES = [
+    'Alice arbeitet im Labor direkt links von dem Forscher, der den Spin untersucht.',
+    'Im Labor ganz rechts wird die Energie gemessen.',
+    'Bob arbeitet in Labor 2.',
+    'Diana erforscht den Zustand und arbeitet nicht in Labor 1.'
+  ];
+
+  var r = ['', '', '', ''];   // Forscher pro Labor
+  var s = ['', '', '', ''];   // Superposition pro Labor
+
+  function checkClues() {
+    var iAlice = r.indexOf('Alice'), iSpin = s.indexOf('Spin');
+    var c1 = iAlice >= 0 && iSpin >= 0 && iSpin === iAlice + 1;
+    var c2 = s[3] === 'Energie';
+    var c3 = r[1] === 'Bob';
+    var iDiana = r.indexOf('Diana');
+    var c4 = iDiana >= 0 && s[iDiana] === 'Zustand' && iDiana !== 0;
+    return [c1, c2, c3, c4];
+  }
+
+  function unique(arr) {
+    var filled = arr.filter(function (x) { return x !== ''; });
+    var set = {};
+    for (var i = 0; i < filled.length; i++) {
+      if (set[filled[i]]) return false;
+      set[filled[i]] = true;
+    }
+    return true;
+  }
+
+  /* ---------- Hinweise aufbauen ---------- */
+  var cluesEl = document.getElementById('clues');
+  var clueNodes = CLUES.map(function (text, i) {
+    var row = document.createElement('div');
+    row.className = 'clue';
+    row.innerHTML = '<span class="clue-badge">' + (i + 1) + '</span><span>' + text + '</span>';
+    cluesEl.appendChild(row);
+    return row;
+  });
+
+  /* ---------- Labore aufbauen ---------- */
+  var labsEl = document.getElementById('labs');
+  var labNodes = [];
+
+  function optionsHtml(list, placeholder) {
+    var html = '<option value="">' + placeholder + '</option>';
+    list.forEach(function (v) { html += '<option value="' + v + '">' + v + '</option>'; });
+    return html;
+  }
+
+  for (var i = 0; i < 4; i++) {
+    var lab = document.createElement('div');
+    lab.className = 'lab';
+    lab.innerHTML =
+      '<div class="lab-n">LABOR ' + (i + 1) + '</div>' +
+      '<div class="lab-fields">' +
+        '<select class="q-select" aria-label="Forscher in Labor ' + (i + 1) + '">' +
+          optionsHtml(RESEARCHERS, 'Forscher…') + '</select>' +
+        '<select class="q-select" aria-label="Superposition in Labor ' + (i + 1) + '">' +
+          optionsHtml(SUPERPOSITIONS, 'Superposition…') + '</select>' +
+      '</div>';
+    labsEl.appendChild(lab);
+
+    var selects = lab.querySelectorAll('select');
+    (function (idx, selR, selS) {
+      selR.addEventListener('change', function () { r[idx] = selR.value; render(); });
+      selS.addEventListener('change', function () { s[idx] = selS.value; render(); });
+    })(i, selects[0], selects[1]);
+
+    labNodes.push({ el: lab, selR: selects[0], selS: selects[1] });
+  }
+
+  /* ---------- Zeichnen ---------- */
+  var hintEl  = document.getElementById('hint');
+  var okEl    = document.getElementById('success');
+  var okLabel = document.getElementById('success-label');
+
+  function render() {
+    var clueOk = checkClues();
+    var full = r.every(function (x) { return x !== ''; }) &&
+               s.every(function (x) { return x !== ''; });
+    var uniq = unique(r) && unique(s);
+    var allClues = clueOk.every(Boolean);
+    var solved = full && uniq && allClues;
+
+    clueNodes.forEach(function (node, i) {
+      node.classList.toggle('is-ok', clueOk[i]);
+      node.querySelector('.clue-badge').textContent = clueOk[i] ? '✓' : String(i + 1);
+    });
+
+    labNodes.forEach(function (lab, i) {
+      lab.el.classList.toggle('is-filled', !!(r[i] && s[i]));
+      lab.el.classList.toggle('is-solved', solved);
+    });
+
+    if (!full) {
+      hintEl.textContent = 'Alle acht Felder ausfüllen…';
+      hintEl.className = 'q-status q-mt-sm';
+    } else if (!uniq) {
+      hintEl.textContent = '✗ Jeder Name / jede Art nur einmal';
+      hintEl.className = 'q-status q-mt-sm is-bad';
+    } else if (!allClues) {
+      hintEl.textContent = '✗ Noch nicht alle Hinweise erfüllt';
+      hintEl.className = 'q-status q-mt-sm is-bad';
+    } else {
+      hintEl.textContent = '✓ Alle Hinweise erfüllt';
+      hintEl.className = 'q-status q-mt-sm is-good';
+    }
+
+    if (solved) {
+      okLabel.textContent = 'GELÖST ✓ — ' + r[s.indexOf('Ort')] + ' findet den Ort';
+      Q.solve({ id: 'schroedinger-4', code: CODE, block: okEl });
+    }
+  }
+
+  document.getElementById('reset').addEventListener('click', function () {
+    r = ['', '', '', ''];
+    s = ['', '', '', ''];
+    labNodes.forEach(function (lab) { lab.selR.value = ''; lab.selS.value = ''; });
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

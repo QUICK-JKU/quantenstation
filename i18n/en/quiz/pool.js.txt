@@ -1,0 +1,1739 @@
+# Englische Texte für quiz/pool.js — siehe tools/build-en.py
+
+de: Für Kinder
+en: For children
+
+de: Kinder-Quiz
+en: Children's quiz
+
+de: ab ca. 8 Jahren · zum Staunen, ohne Rechnen
+en: from about age 8 · for marvelling, no calculating
+
+de: Alles mit Alltagsbildern erklärt. Wer nichts weiß, rät einfach — falsch ist hier nur halb so wild.
+en: Everything explained with everyday pictures. If you don't know, just guess — getting it wrong is no big deal here.
+
+de: Für Schüler:innen
+en: For school students
+
+de: Schul-Quiz
+en: School quiz
+
+de: Unter- und Oberstufe · Begriffe und Zusammenhänge
+en: lower and upper secondary · terms and connections
+
+de: Physikunterricht hilft, ist aber keine Bedingung. Vereinzelt wird gerechnet — im Kopf.
+en: Physics lessons help, but they're not required. Occasionally there's some calculating — in your head.
+
+de: Für Studierende
+en: For university students
+
+de: Studi-Quiz
+en: Uni quiz
+
+de: Bachelor-Niveau · mit echter Rechnung
+en: bachelor level · with real calculations
+
+de: Formalismus, Zahlenwerte, Einheiten. Taschenrechner oder Handy-Rechner bereitlegen.
+en: Formalism, numerical values, units. Have a calculator or your phone's calculator ready.
+
+de: Schrödingers berühmtester Einfall
+en: Schrödinger's most famous idea
+
+de: Erwin Schrödinger hat sich die Katze im Karton ausgedacht. Warum?
+en: Erwin Schrödinger came up with the cat in the box. Why?
+
+de: Er wollte zeigen, wie seltsam es klingt, wenn man die Regeln der Winzlinge auf große Dinge überträgt
+en: He wanted to show how strange it sounds when you apply the rules of tiny things to big things
+
+de: Er wollte beweisen, dass Katzen zaubern können
+en: He wanted to prove that cats can do magic
+
+de: Er hatte einen Karton übrig und wusste nicht, wohin damit
+en: He had a spare box and didn't know what to do with it
+
+de: Er suchte einen Namen für seine eigene Katze
+en: He was looking for a name for his own cat
+
+de: Schrödinger fand die Idee selbst albern — genau das war der Punkt. Er wollte zeigen: Was für winzige Teilchen gilt, klingt bei einer Katze völlig verrückt.
+en: Schrödinger himself found the idea silly — that was exactly the point. He wanted to show: what holds for tiny particles sounds completely crazy for a cat.
+
+de: Er fand die Sache mit der Katze eigentlich <strong>unsinnig</strong> — und hat sie trotzdem erzählt.
+en: He actually thought the cat story was <strong>nonsense</strong> — and told it anyway.
+
+de: Solange niemand in den Karton schaut, sagt die Quantenphysik über ein winziges Teilchen darin:
+en: As long as nobody looks into the box, quantum physics says about a tiny particle inside it:
+
+de: Es kann mehrere Möglichkeiten gleichzeitig haben
+en: It can have several possibilities at the same time
+
+de: Es verschwindet einfach
+en: It simply disappears
+
+de: Es schläft
+en: It is sleeping
+
+de: Es wird größer
+en: It gets bigger
+
+de: Ein Teilchen muss sich vor dem Nachschauen nicht entscheiden. Fachleute sagen dazu <strong>Superposition</strong>.
+en: A particle doesn't have to decide before anyone looks. Experts call this <strong>superposition</strong>.
+
+de: Was passiert genau in dem Moment, in dem jemand nachschaut?
+en: What happens at the very moment someone looks?
+
+de: Es kommt genau ein Ergebnis heraus
+en: Exactly one result comes out
+
+de: Alle Möglichkeiten bleiben erhalten
+en: All possibilities remain
+
+de: Das Teilchen fliegt weg
+en: The particle flies away
+
+de: Der Karton wird durchsichtig
+en: The box becomes see-through
+
+de: Beim Messen zeigt sich immer nur <strong>ein</strong> Ergebnis. Vorher waren mehrere möglich, nachher ist eines übrig.
+en: When you measure, only <strong>one</strong> result ever shows up. Before, several were possible; afterwards, one is left.
+
+de: Gibt es in echt Katzen, die gleichzeitig schlafen und wach sind?
+en: Are there real cats that are asleep and awake at the same time?
+
+de: Nein — nur winzige Dinge wie Atome können so etwas
+en: No — only tiny things like atoms can do that
+
+de: Ja, aber nur schwarze Katzen
+en: Yes, but only black cats
+
+de: Ja, jede Katze kann das nachts
+en: Yes, every cat can do it at night
+
+de: Ja, wenn der Karton fest zu ist
+en: Yes, if the box is shut tight
+
+de: Je größer ein Ding ist, desto schneller entscheidet es sich. Eine Katze besteht aus unfassbar vielen Teilchen — sie ist immer eindeutig wach oder eindeutig nicht.
+en: The bigger a thing is, the faster it decides. A cat is made of unbelievably many particles — it is always clearly awake or clearly not.
+
+de: Wie heißt das Fachwort für „mehrere Möglichkeiten auf einmal“?
+en: What is the technical term for “several possibilities at once”?
+
+de: Supermarkt
+en: Supermarket
+
+de: Superkleber
+en: Superglue
+
+de: Sonnenposition
+en: Sun position
+
+de: <strong>Super</strong> heißt „über“ und <strong>Position</strong> heißt „Lage“ — also mehrere Lagen übereinander.
+en: <strong>Super</strong> means “over” and <strong>position</strong> means “place” — so several places on top of each other.
+
+de: Wenn Forschende dasselbe Quanten-Experiment 100-mal machen, bekommen sie:
+en: When researchers do the same quantum experiment 100 times, they get:
+
+de: mal das eine, mal das andere Ergebnis — aber in verlässlichen Anteilen
+en: sometimes one result, sometimes the other — but in reliable proportions
+
+de: jedes Mal exakt dasselbe Ergebnis
+en: exactly the same result every time
+
+de: jedes Mal ein völlig neues, noch nie gesehenes Ergebnis
+en: a completely new, never-seen-before result every time
+
+de: gar kein Ergebnis
+en: no result at all
+
+de: Die einzelne Messung ist Zufall. Aber wie oft welches Ergebnis kommt, lässt sich vorher genau ausrechnen — wie beim Würfeln.
+en: A single measurement is chance. But how often each result comes up can be calculated precisely in advance — like with dice.
+
+de: Farben, Regenbogen und Lichtteilchen
+en: Colours, rainbows and particles of light
+
+de: Licht besteht aus winzigen Portionen. Wie heißen sie?
+en: Light is made of tiny portions. What are they called?
+
+de: Protonen
+en: Protons
+
+de: Pralinen
+en: Pralines
+
+de: Pixel
+en: Pixels
+
+de: Ein <strong>Photon</strong> ist das kleinste Stückchen Licht, das es gibt. Kleiner geht nicht.
+en: A <strong>photon</strong> is the smallest bit of light there is. It doesn't get any smaller.
+
+de: Warum sehen wir im Regenbogen viele Farben?
+en: Why do we see many colours in a rainbow?
+
+de: Weil weißes Licht aus vielen Farben gemischt ist und Wassertropfen sie auffächern
+en: Because white light is a mix of many colours and water droplets fan them out
+
+de: Weil die Sonne die Farben nacheinander anschaltet
+en: Because the sun switches the colours on one after another
+
+de: Weil Regen bunt ist
+en: Because rain is colourful
+
+de: Weil unsere Augen müde werden
+en: Because our eyes get tired
+
+de: Sonnenlicht sieht weiß aus, steckt aber voller Farben. Ein Wassertropfen sortiert sie — wie ein Prisma.
+en: Sunlight looks white but is full of colours. A water droplet sorts them — like a prism.
+
+de: Bei welcher Farbe tragen die Lichtportionen am meisten Energie?
+en: For which colour do the portions of light carry the most energy?
+
+de: Violett
+en: Violet
+
+de: Rot
+en: Red
+
+de: Gelb
+en: Yellow
+
+de: Alle gleich
+en: All the same
+
+de: Am blauen und violetten Ende steckt in jedem Photon am meisten Energie. Am roten Ende am wenigsten.
+en: At the blue and violet end, each photon carries the most energy. At the red end, the least.
+
+de: Warum wirst du am Strand von der Sonne braun oder rot?
+en: Why do you get tanned or sunburnt at the beach?
+
+de: Weil UV-Photonen so viel Energie haben, dass sie die Haut verändern
+en: Because UV photons have so much energy that they change your skin
+
+de: Weil die Sonne so heiß ist wie ein Bügeleisen
+en: Because the sun is as hot as an iron
+
+de: Weil Sand die Wärme speichert
+en: Because sand stores the heat
+
+de: Weil Salzwasser die Haut färbt
+en: Because salt water colours your skin
+
+de: UV-Licht können wir nicht sehen, aber seine Photonen sind besonders energiereich. Deshalb Sonnencreme.
+en: We can't see UV light, but its photons are particularly energetic. Hence sunscreen.
+
+de: Kann man einzelne Lichtteilchen zählen?
+en: Can you count individual particles of light?
+
+de: Ja — es gibt Detektoren, die wirklich Photon für Photon zählen
+en: Yes — there are detectors that really count photon by photon
+
+de: Nein, Licht ist unteilbar wie Wasser
+en: No, light is indivisible, like water
+
+de: Nur mit einer richtig guten Lupe
+en: Only with a really good magnifying glass
+
+de: Nur nachts
+en: Only at night
+
+de: In Laboren — auch an der JKU — zählen empfindliche Detektoren einzelne Photonen. Damit macht man Quanten-Experimente.
+en: In labs — including at JKU — sensitive detectors count single photons. That's how quantum experiments are done.
+
+de: Licht ist eine Welle. Licht ist auch ein Teilchen. Was stimmt?
+en: Light is a wave. Light is also a particle. Which is true?
+
+de: Beides — je nachdem, welches Experiment man macht
+en: Both — depending on which experiment you do
+
+de: Nur die Welle, das mit den Teilchen ist ein Irrtum
+en: Only the wave; the particle thing is a mistake
+
+de: Nur das Teilchen, Wellen gibt es nicht
+en: Only the particle; there are no waves
+
+de: Keins von beidem
+en: Neither
+
+de: Das nennt man <strong>Welle-Teilchen-Dualismus</strong>. Licht ist einfach etwas Eigenes — mal passt das eine Bild besser, mal das andere.
+en: This is called <strong>wave–particle duality</strong>. Light is simply something of its own — sometimes one picture fits better, sometimes the other.
+
+de: Wie winzig ist ein Atom wirklich?
+en: How tiny is an atom really?
+
+de: Was ist kleiner?
+en: Which is smaller?
+
+de: Ein Atom
+en: An atom
+
+de: Ein Sandkorn
+en: A grain of sand
+
+de: Ein Staubkorn
+en: A speck of dust
+
+de: Ein Haar
+en: A hair
+
+de: In ein einziges Sandkorn passen ungefähr so viele Atome, wie es Sterne in vielen Galaxien gibt.
+en: A single grain of sand holds roughly as many atoms as there are stars in many galaxies.
+
+de: Woraus besteht ein Atom?
+en: What is an atom made of?
+
+de: Aus einem Kern in der Mitte und Elektronen drumherum
+en: Of a nucleus in the middle and electrons around it
+
+de: Aus lauter kleinen Atomen
+en: Of lots of little atoms
+
+de: Aus Luft
+en: Of air
+
+de: Aus Zellen
+en: Of cells
+
+de: Der Kern sitzt winzig in der Mitte, die Elektronen halten sich in einer Art Wolke darum auf.
+en: The nucleus sits tiny in the middle; the electrons hang around it in a kind of cloud.
+
+de: Wo genau ist ein Elektron im Atom?
+en: Where exactly is an electron in an atom?
+
+de: Das lässt sich nicht genau sagen — es gibt nur eine Wolke aus Wahrscheinlichkeiten
+en: That can't be said exactly — there is only a cloud of probabilities
+
+de: Es steht still an einer festen Stelle
+en: It stands still in a fixed spot
+
+de: Es sitzt mitten im Kern
+en: It sits right in the nucleus
+
+de: Es fliegt auf einer Kreisbahn wie ein Planet
+en: It flies on a circular orbit like a planet
+
+de: Das Bild mit der Planetenbahn steht in alten Büchern, stimmt aber nicht. Man kann nur sagen, <strong>wo es wahrscheinlich ist</strong>.
+en: The picture with the planetary orbit is in old books, but it's wrong. You can only say <strong>where it is likely to be</strong>.
+
+de: Ein Atom ist fast vollständig …
+en: An atom is almost completely …
+
+de: aus Metall
+en: made of metal
+
+de: aus Wasser
+en: made of water
+
+de: Wäre der Kern so groß wie eine Erbse, läge das nächste Elektron ungefähr 100 Meter weit weg. Dazwischen: nichts.
+en: If the nucleus were the size of a pea, the nearest electron would be about 100 metres away. In between: nothing.
+
+de: Warum fällt deine Hand dann nicht durch den Tisch, wenn alles fast leer ist?
+en: So why doesn't your hand fall through the table if everything is almost empty?
+
+de: Weil sich die Elektronen von Hand und Tisch gegenseitig wegdrücken
+en: Because the electrons of your hand and the table push each other away
+
+de: Weil der Tisch aus Holz ist
+en: Because the table is made of wood
+
+de: Weil die Schwerkraft es verhindert
+en: Because gravity prevents it
+
+de: Weil Luft dazwischen ist
+en: Because there's air in between
+
+de: Was sich „fest“ anfühlt, ist in Wahrheit eine Abstoßung zwischen Elektronen. Berühren im echten Sinn tut sich da gar nichts.
+en: What feels “solid” is really a repulsion between electrons. Nothing actually touches in the true sense.
+
+de: Wie viele Atome hat ein Mensch ungefähr?
+en: Roughly how many atoms does a human have?
+
+de: Mehr als es Sandkörner auf allen Stränden der Erde gibt
+en: More than there are grains of sand on all the beaches on Earth
+
+de: Etwa eine Million
+en: About a million
+
+de: Etwa so viele wie du Haare hast
+en: About as many as you have hairs
+
+de: Genau 60
+en: Exactly 60
+
+de: Rund 7 000 000 000 000 000 000 000 000 000 Stück. Das ist eine 7 mit 27 Nullen.
+en: Around 7 000 000 000 000 000 000 000 000 000 of them. That's a 7 with 27 zeros.
+
+de: Warum die Natur manchmal würfelt
+en: Why nature sometimes rolls the dice
+
+de: Du wirfst eine Münze. Bevor sie landet, ist das Ergebnis …
+en: You toss a coin. Before it lands, the result is …
+
+de: noch offen — Kopf und Zahl sind beide möglich
+en: still open — heads and tails are both possible
+
+de: schon von Anfang an sicher Kopf
+en: certain to be heads right from the start
+
+de: immer Zahl
+en: always tails
+
+de: gar nicht vorhanden
+en: not there at all
+
+de: Eine Münze ist ein gutes Bild für Superposition — auch wenn eine echte Münze eigentlich nur schnell wackelt.
+en: A coin is a good picture for superposition — even though a real coin is actually just wobbling quickly.
+
+de: Du hast fünfmal hintereinander Kopf geworfen. Wie stehen die Chancen beim nächsten Wurf?
+en: You've thrown heads five times in a row. What are the chances on the next throw?
+
+de: Genau wie immer: halbe-halbe
+en: Same as always: fifty-fifty
+
+de: Jetzt kommt sicher Zahl
+en: Now it's sure to be tails
+
+de: Jetzt kommt noch mal Kopf
+en: Now it'll be heads again
+
+de: Die Münze ist kaputt
+en: The coin is broken
+
+de: Die Münze hat kein Gedächtnis. Jeder Wurf fängt bei null an — das gilt für Quantenteilchen genauso.
+en: The coin has no memory. Every throw starts from zero — and the same goes for quantum particles.
+
+de: Wie viele Möglichkeiten hat ein normaler Würfel?
+en: How many possible results does a normal die have?
+
+de: Unendlich viele
+en: Infinitely many
+
+de: Sechs Seiten, sechs Ergebnisse — und jedes gleich wahrscheinlich.
+en: Six sides, six results — and each one equally likely.
+
+de: Was ist der Unterschied zwischen einem Würfel und einem Quantenteilchen?
+en: What is the difference between a die and a quantum particle?
+
+de: Beim Würfel steht das Ergebnis schon während des Rollens fest, beim Teilchen erst beim Messen
+en: For the die, the result is already fixed while it's rolling; for the particle, only when it is measured
+
+de: Es gibt gar keinen Unterschied
+en: There's no difference at all
+
+de: Quantenteilchen sind bunt
+en: Quantum particles are colourful
+
+de: Der Würfel ist schneller
+en: The die is faster
+
+de: Beim Würfel könnte man mit perfekter Physik alles vorausberechnen. Beim Quantenteilchen geht das grundsätzlich nicht — der Zufall ist echt.
+en: With perfect physics you could calculate everything about the die in advance. With a quantum particle that's fundamentally impossible — the randomness is real.
+
+de: Ein Zufallsgenerator aus Quantenteilchen ist besonders gut, weil …
+en: A random number generator made from quantum particles is especially good because …
+
+de: sein Zufall wirklich unvorhersehbar ist
+en: its randomness is truly unpredictable
+
+de: er besonders schnell ist
+en: it is especially fast
+
+de: er leise ist
+en: it is quiet
+
+de: er bunte Zahlen macht
+en: it makes colourful numbers
+
+de: Computer erzeugen nur „so-tun-als-ob“-Zufall nach einer Rechenregel. Quantenzufall lässt sich nicht nachrechnen — perfekt für Geheimcodes.
+en: Computers only produce “make-believe” randomness from a calculation rule. Quantum randomness can't be recalculated — perfect for secret codes.
+
+de: Kann man mit Quantenphysik in die Zukunft sehen?
+en: Can quantum physics let you see into the future?
+
+de: Nein — man kann nur sagen, wie wahrscheinlich etwas passiert
+en: No — you can only say how likely something is to happen
+
+de: Ja, aber nur bis morgen
+en: Yes, but only until tomorrow
+
+de: Ja, mit einem starken Mikroskop
+en: Yes, with a powerful microscope
+
+de: Ja, aber nur für Katzen
+en: Yes, but only for cats
+
+de: Die Quantenphysik ist erstaunlich genau — sie sagt aber Wahrscheinlichkeiten voraus, keine Einzelereignisse.
+en: Quantum physics is astonishingly precise — but it predicts probabilities, not individual events.
+
+de: Was macht der eigentlich?
+en: What does it actually do?
+
+de: Ein normaler Computer rechnet mit …
+en: A normal computer calculates with …
+
+de: Nullen und Einsen
+en: zeros and ones
+
+de: Buchstaben
+en: letters
+
+de: Farben
+en: colours
+
+de: Zahlen von 1 bis 10
+en: numbers from 1 to 10
+
+de: Jedes Bild, jedes Lied und jede Nachricht auf deinem Handy ist am Ende eine lange Reihe aus 0 und 1.
+en: Every picture, every song and every message on your phone is, in the end, a long row of 0s and 1s.
+
+de: Ein Quantencomputer rechnet mit Qubits. Was kann ein Qubit zusätzlich?
+en: A quantum computer calculates with qubits. What can a qubit do in addition?
+
+de: Es kann 0 und 1 zugleich sein
+en: It can be 0 and 1 at the same time
+
+de: Es kann bis 100 zählen
+en: It can count to 100
+
+de: Es kann sprechen
+en: It can talk
+
+de: Es braucht keinen Strom
+en: It doesn't need electricity
+
+de: Das ist wieder Superposition — diesmal als Werkzeug zum Rechnen.
+en: That's superposition again — this time as a tool for computing.
+
+de: Wird ein Quantencomputer bald dein Handy ersetzen?
+en: Will a quantum computer replace your phone soon?
+
+de: Nein — er ist nur bei ganz bestimmten Aufgaben besser
+en: No — it is only better at very specific tasks
+
+de: Ja, nächstes Jahr
+en: Yes, next year
+
+de: Ja, er ist bei allem schneller
+en: Yes, it's faster at everything
+
+de: Ja, aber nur für Spiele
+en: Yes, but only for games
+
+de: Für Videos, Chats und Spiele bleibt der normale Computer klar im Vorteil. Quantencomputer sind Spezialisten.
+en: For videos, chats and games, the normal computer stays clearly ahead. Quantum computers are specialists.
+
+de: Warum stehen Quantencomputer in riesigen Kühlgeräten?
+en: Why are quantum computers kept in huge cooling machines?
+
+de: Weil Qubits nur bei extremer Kälte ruhig genug sind
+en: Because qubits are only calm enough at extreme cold
+
+de: Damit sie nicht schmelzen
+en: So that they don't melt
+
+de: Damit die Forschenden Eis essen können
+en: So that the researchers can eat ice cream
+
+de: Weil sie sonst zu laut sind
+en: Because otherwise they're too loud
+
+de: Viele Qubits arbeiten bei etwa −273 °C — kälter als im Weltall. Schon kleinste Wärme stört sie.
+en: Many qubits work at about −273 °C — colder than outer space. Even the tiniest bit of heat disturbs them.
+
+de: Was stört ein Qubit am meisten?
+en: What disturbs a qubit most?
+
+de: Wärme, Erschütterung und Strahlung von außen
+en: Heat, vibrations and radiation from outside
+
+de: Helles Licht im Raum
+en: Bright light in the room
+
+de: Laute Musik
+en: Loud music
+
+de: Zu viele Menschen im Labor
+en: Too many people in the lab
+
+de: Wird ein Qubit von der Umgebung „angeschaut“, entscheidet es sich vorzeitig. Das nennt man <strong>Dekohärenz</strong>.
+en: If a qubit gets “looked at” by its surroundings, it decides too early. This is called <strong>decoherence</strong>.
+
+de: Wofür könnten Quantencomputer später einmal richtig nützlich sein?
+en: What could quantum computers one day be really useful for?
+
+de: Neue Medikamente und Materialien am Rechner entwerfen
+en: Designing new medicines and materials on the computer
+
+de: Videos schneller abspielen
+en: Playing videos faster
+
+de: Das WLAN verbessern
+en: Improving the Wi-Fi
+
+de: Hausaufgaben machen
+en: Doing homework
+
+de: Moleküle sind selbst Quantensysteme. Ein Quantencomputer kann sie deshalb besonders gut nachbilden.
+en: Molecules are quantum systems themselves. That's why a quantum computer can imitate them especially well.
+
+de: Laser, Spiegel und ganz viel Geduld
+en: Lasers, mirrors and lots of patience
+
+de: Womit arbeiten Quantenforschende im Labor besonders oft?
+en: What do quantum researchers work with especially often in the lab?
+
+de: Mit Lasern und Spiegeln
+en: With lasers and mirrors
+
+de: Mit Hammer und Säge
+en: With hammer and saw
+
+de: Mit Farbe und Pinsel
+en: With paint and brush
+
+de: Mit Mehl und Zucker
+en: With flour and sugar
+
+de: Ein Laser liefert sehr sauberes Licht. Mit Spiegeln schickt man es genau dorthin, wo es hin soll.
+en: A laser gives very clean light. With mirrors you send it exactly where it needs to go.
+
+de: Warum stehen die Experimente auf schweren Tischen mit Luftfedern?
+en: Why do the experiments stand on heavy tables with air springs?
+
+de: Damit vorbeifahrende Autos das Experiment nicht verwackeln
+en: So that passing cars don't shake the experiment
+
+de: Damit man sie leichter schieben kann
+en: So that they are easier to push
+
+de: Damit sie hübsch aussehen
+en: So that they look nice
+
+de: Damit sie warm bleiben
+en: So that they stay warm
+
+de: Ein Millionstel Millimeter Wackeln reicht schon, um ein Experiment zu ruinieren. Deshalb schwebt der Tisch praktisch.
+en: A millionth of a millimetre of wobble is enough to ruin an experiment. That's why the table practically floats.
+
+de: Ein Interferometer teilt einen Lichtstrahl auf und führt ihn wieder zusammen. Was sieht man dann?
+en: An interferometer splits a beam of light and brings it back together. What do you see then?
+
+de: Ein Streifenmuster aus hell und dunkel
+en: A pattern of light and dark stripes
+
+de: Nur einen einzigen Punkt
+en: Just a single dot
+
+de: Gar nichts
+en: Nothing at all
+
+de: Einen Regenbogen
+en: A rainbow
+
+de: Wo die Wellenberge zusammenpassen, wird es hell; wo Berg auf Tal trifft, dunkel. So ein Gerät gehört in vielen Quantenlaboren zur Grundausstattung.
+en: Where the wave crests match up it gets bright; where crest meets trough, dark. A device like this is standard equipment in many quantum labs.
+
+de: Wie lange dauert es, bis so ein Experiment funktioniert?
+en: How long does it take until an experiment like this works?
+
+de: Oft Wochen oder Monate — es wird sehr viel justiert
+en: Often weeks or months — there's a lot of adjusting
+
+de: Ein paar Minuten
+en: A few minutes
+
+de: Man drückt einfach auf Start
+en: You just press start
+
+de: Einen Nachmittag
+en: One afternoon
+
+de: Der größte Teil der Arbeit ist Justieren, Messen, Nachbessern. Das ist ganz normal in der Forschung.
+en: Most of the work is adjusting, measuring, improving. That's completely normal in research.
+
+de: Braucht man für Quantenforschung sehr gute Noten in allen Fächern?
+en: Do you need very good grades in all subjects for quantum research?
+
+de: Nein — Neugier und Durchhaltevermögen zählen mehr
+en: No — curiosity and perseverance count for more
+
+de: Ja, überall lauter Einser
+en: Yes, top marks everywhere
+
+de: Ja, vor allem in Turnen
+en: Yes, especially in PE
+
+de: Ja, sonst darf man nicht ins Labor
+en: Yes, otherwise you're not allowed into the lab
+
+de: Mathe und Physik helfen natürlich. Aber der wichtigste Antrieb ist die Lust, Dinge herauszufinden.
+en: Maths and physics help, of course. But the most important drive is the desire to find things out.
+
+de: Die JKU gibt es seit 1966. Wie alt wird sie 2026?
+en: JKU has existed since 1966. How old will it be in 2026?
+
+de: 60 Jahre
+en: 60 years
+
+de: 30 Jahre
+en: 30 years
+
+de: 100 Jahre
+en: 100 years
+
+de: 16 Jahre
+en: 16 years
+
+de: 60 Jahre Johannes Kepler Universität Linz — und dafür stehen wir heute mit dieser Station hier.
+en: 60 years of Johannes Kepler University Linz — and that's why we're here today with this station.
+
+de: Der Kern der Sache
+en: The heart of the matter
+
+de: Ein Qubit im Zustand |ψ⟩ = α|0⟩ + β|1⟩. Was bedeuten α und β?
+en: A qubit in the state |ψ⟩ = α|0⟩ + β|1⟩. What do α and β mean?
+
+de: Amplituden — ihre Betragsquadrate geben die Messwahrscheinlichkeiten
+en: Amplitudes — their squared magnitudes give the measurement probabilities
+
+de: Die beiden möglichen Messergebnisse selbst
+en: The two possible measurement results themselves
+
+de: Die Anzahl der Messungen
+en: The number of measurements
+
+de: Die Energie der beiden Zustände
+en: The energy of the two states
+
+de: Es gilt P(0) = |α|² und P(1) = |β|², und wegen |α|² + |β|² = 1 kommt immer genau ein Ergebnis heraus.
+en: P(0) = |α|² and P(1) = |β|², and because |α|² + |β|² = 1, exactly one result always comes out.
+
+de: Warum ist eine Superposition <em>kein</em> „wir wissen es nur noch nicht“?
+en: Why is a superposition <em>not</em> “we just don't know yet”?
+
+de: Weil sich Superpositionen überlagern und auslöschen können — bloßes Unwissen kann das nicht
+en: Because superpositions can overlap and cancel out — mere ignorance can't do that
+
+de: Weil Superpositionen länger halten
+en: Because superpositions last longer
+
+de: Weil man Unwissen messen kann
+en: Because you can measure ignorance
+
+de: Es ist tatsächlich dasselbe
+en: It really is the same thing
+
+de: Der Unterschied zeigt sich in der <strong>Interferenz</strong>. Wäre der Zustand nur unbekannt, gäbe es keine Auslöschung — man sähe keine Streifen.
+en: The difference shows up in <strong>interference</strong>. If the state were merely unknown, there would be no cancellation — you wouldn't see any stripes.
+
+de: Ein Qubit ist in (|0⟩ + |1⟩)/√2. Du misst und bekommst 1. Was liefert eine sofortige zweite Messung?
+en: A qubit is in (|0⟩ + |1⟩)/√2. You measure and get 1. What does an immediate second measurement give?
+
+de: Wieder 1, mit Sicherheit
+en: 1 again, with certainty
+
+de: Wieder zufällig 0 oder 1
+en: Randomly 0 or 1 again
+
+de: Immer 0
+en: Always 0
+
+de: Das lässt sich nicht sagen
+en: That can't be said
+
+de: Nach der Messung ist der Zustand auf |1⟩ kollabiert. Eine Wiederholung bestätigt das Ergebnis — solange nichts dazwischenkommt.
+en: After the measurement, the state has collapsed to |1⟩. Repeating it confirms the result — as long as nothing interferes in between.
+
+de: Was ist Dekohärenz?
+en: What is decoherence?
+
+de: Der Verlust der Superposition durch unkontrollierte Wechselwirkung mit der Umgebung
+en: The loss of superposition through uncontrolled interaction with the surroundings
+
+de: Das absichtliche Ausschalten eines Qubits
+en: Deliberately switching off a qubit
+
+de: Ein Rechenfehler in der Software
+en: A calculation error in the software
+
+de: Die Aufheizung des Kryostaten
+en: The heating up of the cryostat
+
+de: Die Umgebung „misst“ ständig mit. Deshalb sind Superpositionen bei großen, warmen Objekten praktisch sofort verschwunden.
+en: The surroundings are constantly “measuring” along. That's why superpositions in large, warm objects vanish practically instantly.
+
+de: Ein Qubit ist im Zustand 0,6|0⟩ + 0,8|1⟩. Wie wahrscheinlich ist das Ergebnis 1?
+en: A qubit is in the state 0.6|0⟩ + 0.8|1⟩. How likely is the result 1?
+
+de: P(1) = |0,8|² = 0,64. Man quadriert die Amplitude — nicht einfach übernehmen.
+en: P(1) = |0.8|² = 0.64. You square the amplitude — don't just take it as it is.
+
+de: Braucht es für einen „Kollaps“ zwingend einen bewussten Beobachter?
+en: Does a “collapse” necessarily require a conscious observer?
+
+de: Nein — jede ausreichende Wechselwirkung mit der Umgebung genügt
+en: No — any sufficient interaction with the surroundings will do
+
+de: Ja, ein Mensch muss hinsehen
+en: Yes, a human has to look
+
+de: Ja, mindestens eine Kamera
+en: Yes, at least a camera
+
+de: Ja, aber ein Tier reicht auch
+en: Yes, but an animal will do too
+
+de: Ein hartnäckiger Mythos. „Messung“ heißt Wechselwirkung, die Information nach außen trägt — ein Detektor tut das auch nachts, wenn niemand im Labor ist.
+en: A stubborn myth. “Measurement” means an interaction that carries information to the outside — a detector does that at night too, when nobody is in the lab.
+
+de: Das Experiment, das alles zeigt
+en: The experiment that shows it all
+
+de: Elektronen werden einzeln nacheinander auf einen Doppelspalt geschossen. Was entsteht auf dem Schirm?
+en: Electrons are fired one at a time at a double slit. What appears on the screen?
+
+de: Nach vielen Elektronen ein Interferenzmuster aus Streifen
+en: After many electrons, an interference pattern of stripes
+
+de: Zwei scharfe Striche hinter den Spalten
+en: Two sharp lines behind the slits
+
+de: Ein gleichmäßig grauer Fleck
+en: An evenly grey patch
+
+de: Gar nichts — einzelne Elektronen interferieren nicht
+en: Nothing — single electrons don't interfere
+
+de: Jedes Elektron landet als einzelner Punkt. Erst das Muster aus vielen Punkten zeigt die Wellennatur — jedes Elektron interferiert mit sich selbst.
+en: Each electron lands as a single dot. Only the pattern of many dots shows the wave nature — every electron interferes with itself.
+
+de: Nun wird an einem Spalt ein Detektor angebracht, der den Weg registriert. Was passiert mit dem Muster?
+en: Now a detector that registers the path is attached to one slit. What happens to the pattern?
+
+de: Es verschwindet — übrig bleiben zwei Häufungen
+en: It disappears — two clusters remain
+
+de: Es wird schärfer
+en: It gets sharper
+
+de: Es verschiebt sich zur Seite
+en: It shifts to the side
+
+de: Es bleibt unverändert
+en: It stays unchanged
+
+de: Sobald die Weg-Information prinzipiell verfügbar ist, gibt es keine Interferenz mehr. Das nennt man <strong>Komplementarität</strong>.
+en: As soon as the path information is available in principle, there is no more interference. This is called <strong>complementarity</strong>.
+
+de: Wo auf dem Schirm liegen die hellen Streifen?
+en: Where on the screen are the bright stripes?
+
+de: Dort, wo der Gangunterschied ein ganzzahliges Vielfaches der Wellenlänge ist
+en: Where the path difference is a whole-number multiple of the wavelength
+
+de: Dort, wo der Gangunterschied eine halbe Wellenlänge beträgt
+en: Where the path difference is half a wavelength
+
+de: Immer genau hinter den Spalten
+en: Always directly behind the slits
+
+de: Zufällig verteilt
+en: Randomly distributed
+
+de: Konstruktive Interferenz bei Δs = n·λ, destruktive bei Δs = (n + ½)·λ.
+en: Constructive interference at Δs = n·λ, destructive at Δs = (n + ½)·λ.
+
+de: Was passiert mit dem Streifenabstand, wenn man die Spalte weiter auseinanderschiebt?
+en: What happens to the spacing of the stripes when you move the slits further apart?
+
+de: Die Streifen rücken enger zusammen
+en: The stripes move closer together
+
+de: Die Streifen rücken weiter auseinander
+en: The stripes move further apart
+
+de: Der Abstand bleibt gleich
+en: The spacing stays the same
+
+de: Das Muster kippt um 90°
+en: The pattern tilts by 90°
+
+de: Der Abstand ist Δy ≈ λ·L/d — größeres d im Nenner bedeutet kleineren Abstand.
+en: The spacing is Δy ≈ λ·L/d — a larger d in the denominator means a smaller spacing.
+
+de: Funktioniert der Doppelspalt auch mit ganzen Molekülen?
+en: Does the double slit also work with whole molecules?
+
+de: Ja, sogar mit Molekülen aus tausenden Atomen — im Labor nachgewiesen
+en: Yes, even with molecules of thousands of atoms — demonstrated in the lab
+
+de: Nein, nur mit Licht
+en: No, only with light
+
+de: Nein, nur mit Elektronen
+en: No, only with electrons
+
+de: Nur theoretisch, praktisch noch nie
+en: Only in theory, never in practice
+
+de: Interferenz wurde unter anderem mit Fullerenen und noch deutlich größeren Molekülen gezeigt. Je schwerer das Teilchen, desto kürzer die Wellenlänge — und desto schwieriger das Experiment.
+en: Interference has been shown with fullerenes, among others, and with considerably larger molecules. The heavier the particle, the shorter the wavelength — and the harder the experiment.
+
+de: Grünes Licht (λ ≈ 500 nm) wird durch rotes ersetzt (λ ≈ 700 nm). Die Streifen …
+en: Green light (λ ≈ 500 nm) is replaced by red (λ ≈ 700 nm). The stripes …
+
+de: werden breiter
+en: get wider
+
+de: werden schmäler
+en: get narrower
+
+de: bleiben gleich
+en: stay the same
+
+de: Δy ist proportional zu λ. Längere Wellenlänge, größerer Streifenabstand — deshalb liegt Rot im Muster weiter außen.
+en: Δy is proportional to λ. Longer wavelength, larger stripe spacing — that's why red lies further out in the pattern.
+
+de: Wie die Quantenphysik angefangen hat
+en: How quantum physics began
+
+de: Beim Photoeffekt löst Licht Elektronen aus Metall. Wovon hängt ihre maximale kinetische Energie ab?
+en: In the photoelectric effect, light knocks electrons out of metal. What does their maximum kinetic energy depend on?
+
+de: Von der Frequenz des Lichts
+en: On the frequency of the light
+
+de: Von der Helligkeit des Lichts
+en: On the brightness of the light
+
+de: Von der Dauer der Bestrahlung
+en: On how long it is irradiated
+
+de: Von der Farbe des Metalls
+en: On the colour of the metal
+
+de: E<sub>kin</sub> = h·f − W<sub>A</sub>. Mehr Helligkeit bringt <em>mehr</em> Elektronen, aber keine schnelleren — genau das war der Bruch mit der klassischen Physik.
+en: E<sub>kin</sub> = h·f − W<sub>A</sub>. More brightness brings <em>more</em> electrons, but not faster ones — that was exactly the break with classical physics.
+
+de: Rotes Licht löst bei einem Metall keine Elektronen aus — auch bei größter Helligkeit nicht. Warum?
+en: Red light doesn't knock any electrons out of a metal — not even at the greatest brightness. Why?
+
+de: Jedes einzelne Photon hat zu wenig Energie, um die Austrittsarbeit zu überwinden
+en: Each individual photon has too little energy to overcome the work function
+
+de: Rotes Licht wird vom Metall vollständig reflektiert
+en: Red light is completely reflected by the metal
+
+de: Die Lampe ist einfach zu schwach
+en: The lamp is simply too weak
+
+de: Rotes Licht besteht nicht aus Photonen
+en: Red light doesn't consist of photons
+
+de: Ein Elektron nimmt genau ein Photon auf. Viele zu schwache Photonen helfen nicht — Energie sammeln geht nicht.
+en: An electron absorbs exactly one photon. Many photons that are too weak don't help — energy can't be collected.
+
+de: Wie hängen Energie und Frequenz eines Photons zusammen?
+en: How are the energy and frequency of a photon related?
+
+de: Das Plancksche Wirkungsquantum h ≈ 6,63·10⁻³⁴ J·s ist die Naturkonstante der Quantenphysik.
+en: Planck's constant h ≈ 6.63·10⁻³⁴ J·s is the fundamental constant of quantum physics.
+
+de: Wer erklärte den Photoeffekt 1905 — und bekam dafür den Nobelpreis?
+en: Who explained the photoelectric effect in 1905 — and won the Nobel Prize for it?
+
+de: Albert Einstein
+en: =
+
+de: Isaac Newton
+en: =
+
+de: Marie Curie
+en: =
+
+de: Niels Bohr
+en: =
+
+de: Nicht für die Relativitätstheorie, sondern für den Photoeffekt. Der Nobelpreis kam 1921.
+en: Not for the theory of relativity, but for the photoelectric effect. The Nobel Prize came in 1921.
+
+de: Ein Photon hat 2 eV Energie. Ein zweites hat die doppelte Wellenlänge. Wie viel Energie hat es?
+en: A photon has 2 eV of energy. A second one has double the wavelength. How much energy does it have?
+
+de: E ist proportional zu 1/λ. Doppelte Wellenlänge bedeutet halbe Energie.
+en: E is proportional to 1/λ. Double the wavelength means half the energy.
+
+de: Warum leuchtet eine Herdplatte erst dunkelrot und dann heller, wenn sie heißer wird?
+en: Why does a hotplate glow dark red first and then brighter as it gets hotter?
+
+de: Weil sich die Wärmestrahlung mit steigender Temperatur zu kürzeren Wellenlängen verschiebt
+en: Because thermal radiation shifts to shorter wavelengths as the temperature rises
+
+de: Weil sich das Metall chemisch verändert
+en: Because the metal changes chemically
+
+de: Weil sie mehr Strom zieht
+en: Because it draws more current
+
+de: Weil die Luft darüber zu brennen beginnt
+en: Because the air above it starts to burn
+
+de: Das ist das Wiensche Verschiebungsgesetz. Plancks Erklärung der Wärmestrahlung war 1900 die Geburtsstunde der Quantenphysik.
+en: That's Wien's displacement law. Planck's explanation of thermal radiation in 1900 was the birth of quantum physics.
+
+de: Warum Neonröhren nur bestimmte Farben können
+en: Why neon tubes can only do certain colours
+
+de: Warum kann ein Elektron im Atom nicht jede beliebige Energie haben?
+en: Why can't an electron in an atom have just any energy?
+
+de: Weil nur stehende Wellen hineinpassen — das ergibt diskrete Energieniveaus
+en: Because only standing waves fit inside — that gives discrete energy levels
+
+de: Weil der Kern es zu fest anzieht
+en: Because the nucleus attracts it too strongly
+
+de: Weil Energie generell nicht teilbar ist
+en: Because energy is generally indivisible
+
+de: Weil es sonst zu heiß würde
+en: Because it would otherwise get too hot
+
+de: Wie bei einer Gitarrensaite passen nur bestimmte Schwingungsmuster hinein. Alles dazwischen löscht sich selbst aus.
+en: As with a guitar string, only certain patterns of vibration fit. Everything in between cancels itself out.
+
+de: Ein Elektron springt von einem höheren auf ein tieferes Niveau. Was passiert?
+en: An electron jumps from a higher to a lower level. What happens?
+
+de: Es wird ein Photon mit genau der Energiedifferenz abgestrahlt
+en: A photon with exactly the energy difference is emitted
+
+de: Es wird Wärme frei, aber kein Licht
+en: Heat is released, but no light
+
+de: Das Atom wird schwerer
+en: The atom gets heavier
+
+de: Nichts Messbares
+en: Nothing measurable
+
+de: h·f = E<sub>hoch</sub> − E<sub>tief</sub>. Deshalb ist jede Spektrallinie der Fingerabdruck eines bestimmten Übergangs.
+en: h·f = E<sub>high</sub> − E<sub>low</sub>. That's why every spectral line is the fingerprint of a particular transition.
+
+de: Warum kann man aus dem Licht eines fernen Sterns ablesen, woraus er besteht?
+en: Why can you tell from the light of a distant star what it is made of?
+
+de: Weil jedes Element ein eigenes, unverwechselbares Linienmuster hat
+en: Because every element has its own unmistakable pattern of lines
+
+de: Weil Sterne ihre Zusammensetzung abstrahlen wie ein Funkspruch
+en: Because stars broadcast their composition like a radio message
+
+de: Weil Sonden Proben nehmen
+en: Because probes take samples
+
+de: Weil alle Sterne gleich aufgebaut sind
+en: Because all stars are built the same way
+
+de: Spektroskopie — die wichtigste Methode der Astrophysik. Helium wurde zuerst in der Sonne gefunden, nicht auf der Erde.
+en: Spectroscopy — the most important method in astrophysics. Helium was first found in the Sun, not on Earth.
+
+de: Was ist an Bohrs Atommodell mit den Elektronenbahnen falsch?
+en: What is wrong with Bohr's atomic model with its electron orbits?
+
+de: Elektronen bewegen sich nicht auf festen Bahnen — es gibt nur Aufenthaltswahrscheinlichkeiten
+en: Electrons don't move on fixed orbits — there are only probabilities of where they are
+
+de: Die Energieniveaus sind frei erfunden
+en: The energy levels are completely made up
+
+de: Der Kern sitzt nicht in der Mitte
+en: The nucleus isn't in the middle
+
+de: Es gibt gar keine Elektronen
+en: There are no electrons at all
+
+de: Die Energieniveaus stimmen für Wasserstoff erstaunlich gut. Die Kreisbahnen sind trotzdem ein überholtes Bild — richtig ist das Orbital.
+en: The energy levels are astonishingly accurate for hydrogen. The circular orbits are still an outdated picture — the orbital is correct.
+
+de: Warum leuchtet eine Neonröhre orange-rot und eine Natriumdampflampe gelb?
+en: Why does a neon tube glow orange-red and a sodium vapour lamp yellow?
+
+de: Weil die Gase unterschiedliche Energieniveaus und damit unterschiedliche Übergänge haben
+en: Because the gases have different energy levels and therefore different transitions
+
+de: Weil das Glas unterschiedlich gefärbt ist
+en: Because the glass is coloured differently
+
+de: Weil unterschiedliche Spannungen anliegen
+en: Because different voltages are applied
+
+de: Weil die Röhren verschieden heiß werden
+en: Because the tubes get differently hot
+
+de: Die Farbe verrät das Gas. Die gelben Straßenlampen früher waren Natriumdampf — mit einer dominanten Doppellinie bei 589 nm.
+en: The colour gives away the gas. The yellow street lamps of the past were sodium vapour — with a dominant double line at 589 nm.
+
+de: Was passiert, wenn ein Photon mit genau der passenden Energiedifferenz auf ein Atom trifft?
+en: What happens when a photon with exactly the right energy difference hits an atom?
+
+de: Es kann absorbiert werden und hebt das Elektron auf das höhere Niveau
+en: It can be absorbed and lifts the electron to the higher level
+
+de: Es prallt immer ab
+en: It always bounces off
+
+de: Es zerteilt sich in zwei Photonen
+en: It splits into two photons
+
+de: Es wird vollständig zu Wärme
+en: It turns completely into heat
+
+de: Absorption ist der umgekehrte Vorgang zur Emission. Passt die Energie nicht, geht das Photon meist einfach durch — deshalb ist Glas durchsichtig.
+en: Absorption is the reverse of emission. If the energy doesn't fit, the photon usually just passes through — that's why glass is transparent.
+
+de: Rechnen mit Drehungen
+en: Computing with rotations
+
+de: Wie viele Zahlen bräuchte man, um den Zustand von 20 Qubits vollständig zu beschreiben?
+en: How many numbers would you need to fully describe the state of 20 qubits?
+
+de: Über eine Million — nämlich 2²⁰ Amplituden
+en: Over a million — namely 2²⁰ amplitudes
+
+de: Genau 20
+en: Exactly 20
+
+de: Genau 40
+en: Exactly 40
+
+de: 2²⁰ = 1 048 576 komplexe Amplituden. Deshalb wird die Simulation eines Quantencomputers auf klassischen Rechnern so schnell aussichtslos.
+en: 2²⁰ = 1 048 576 complex amplitudes. That's why simulating a quantum computer on classical computers becomes hopeless so quickly.
+
+de: Was macht das Hadamard-Gatter H mit dem Zustand |0⟩?
+en: What does the Hadamard gate H do to the state |0⟩?
+
+de: Es erzeugt die Gleichverteilung (|0⟩ + |1⟩)/√2
+en: It creates the equal superposition (|0⟩ + |1⟩)/√2
+
+de: Es macht daraus |1⟩
+en: It turns it into |1⟩
+
+de: Es lässt |0⟩ unverändert
+en: It leaves |0⟩ unchanged
+
+de: Es misst das Qubit
+en: It measures the qubit
+
+de: H ist das Standardwerkzeug, um überhaupt erst eine Superposition herzustellen — fast jeder Algorithmus beginnt damit.
+en: H is the standard tool for creating a superposition in the first place — almost every algorithm starts with it.
+
+de: Wendet man H zweimal hintereinander auf |0⟩ an, erhält man:
+en: If you apply H twice in a row to |0⟩, you get:
+
+de: wieder exakt |0⟩
+en: exactly |0⟩ again
+
+de: ein zufälliges Ergebnis
+en: a random result
+
+de: H ist zu sich selbst invers: H·H = 1. Die zweite Anwendung löscht die Superposition durch Interferenz wieder aus — ein handfester Beleg, dass Superposition mehr ist als Unwissen.
+en: H is its own inverse: H·H = 1. The second application cancels the superposition again through interference — tangible proof that superposition is more than ignorance.
+
+de: Was tut das X-Gatter?
+en: What does the X gate do?
+
+de: Es vertauscht |0⟩ und |1⟩ — das Quanten-NOT
+en: It swaps |0⟩ and |1⟩ — the quantum NOT
+
+de: Es löscht das Qubit
+en: It deletes the qubit
+
+de: Es verdoppelt das Qubit
+en: It doubles the qubit
+
+de: Es misst in x-Richtung
+en: It measures in the x direction
+
+de: X ist die Drehung um 180° um die x-Achse der Bloch-Kugel.
+en: X is the rotation by 180° about the x-axis of the Bloch sphere.
+
+de: Warum müssen alle Quantengatter umkehrbar sein?
+en: Why must all quantum gates be reversible?
+
+de: Weil die Zeitentwicklung unitär ist — Information geht dabei nicht verloren
+en: Because time evolution is unitary — no information is lost
+
+de: Weil man sonst zu viel Strom braucht
+en: Because otherwise you'd need too much electricity
+
+de: Damit man Tippfehler korrigieren kann
+en: So that you can correct typos
+
+de: Das müssen sie gar nicht
+en: They don't have to be at all
+
+de: Ein klassisches AND ist nicht umkehrbar: Aus der 0 am Ausgang lässt sich der Eingang nicht rekonstruieren. Quantengatter sind immer Drehungen — und die kann man zurückdrehen.
+en: A classical AND is not reversible: from the 0 at the output you can't reconstruct the input. Quantum gates are always rotations — and those can be turned back.
+
+de: Das CNOT-Gatter wirkt auf zwei Qubits. Was macht es?
+en: The CNOT gate acts on two qubits. What does it do?
+
+de: Es kippt das zweite Qubit genau dann, wenn das erste 1 ist
+en: It flips the second qubit exactly when the first one is 1
+
+de: Es misst beide Qubits gleichzeitig
+en: It measures both qubits at the same time
+
+de: Es vertauscht die beiden Qubits
+en: It swaps the two qubits
+
+de: Es kopiert das erste auf das zweite
+en: It copies the first onto the second
+
+de: Aus H plus CNOT baut man ein verschränktes Paar. Kopieren geht übrigens grundsätzlich nicht — das ist das No-Cloning-Theorem.
+en: H plus CNOT makes an entangled pair. Copying, by the way, is fundamentally impossible — that's the no-cloning theorem.
+
+de: Was geht wirklich — und was nicht
+en: What really works — and what doesn't
+
+de: Zwei Qubits im Zustand (|00⟩ + |11⟩)/√2. Du misst das erste und bekommst 0. Was liefert das zweite?
+en: Two qubits in the state (|00⟩ + |11⟩)/√2. You measure the first and get 0. What does the second give?
+
+de: Ebenfalls 0, mit Sicherheit
+en: 0 as well, with certainty
+
+de: Zufällig 0 oder 1
+en: Randomly 0 or 1
+
+de: Sicher 1
+en: Certainly 1
+
+de: Das hängt vom Abstand der beiden ab
+en: That depends on the distance between the two
+
+de: Die Ergebnisse sind perfekt korreliert. Einzeln betrachtet ist jedes Qubit aber völlig zufällig — 50 zu 50.
+en: The results are perfectly correlated. Seen individually, however, each qubit is completely random — 50 to 50.
+
+de: Kann man mit Verschränkung Nachrichten schneller als Licht übertragen?
+en: Can entanglement transmit messages faster than light?
+
+de: Nein — die Einzelergebnisse sind reiner Zufall, ohne klassischen Kanal erfährt man nichts
+en: No — the individual results are pure chance; without a classical channel you learn nothing
+
+de: Ja, das ist gerade der Sinn der Sache
+en: Yes, that's the whole point
+
+de: Ja, aber nur über kurze Strecken
+en: Yes, but only over short distances
+
+de: Ja, allerdings nur einmal pro Paar
+en: Yes, but only once per pair
+
+de: Der hartnäckigste Mythos überhaupt. Wer nur seine eigene Seite ansieht, sieht Rauschen. Die Korrelation zeigt sich erst beim Vergleich der Listen — und die müssen ganz normal verschickt werden.
+en: The most stubborn myth of all. Anyone looking only at their own side sees noise. The correlation only shows up when the lists are compared — and they have to be sent the normal way.
+
+de: Was hat John Bell 1964 gezeigt?
+en: What did John Bell show in 1964?
+
+de: Dass sich Quantenmechanik und lokaler Realismus messbar unterscheiden
+en: That quantum mechanics and local realism differ measurably
+
+de: Dass Verschränkung unmöglich ist
+en: That entanglement is impossible
+
+de: Dass Einstein in dieser Frage recht hatte
+en: That Einstein was right on this question
+
+de: Dass jede Messung zwangsläufig stört
+en: That every measurement inevitably disturbs
+
+de: Bell verwandelte eine philosophische Debatte in ein Experiment. Die Messungen fielen zugunsten der Quantenmechanik aus — Nobelpreis 2022 für Aspect, Clauser und Zeilinger.
+en: Bell turned a philosophical debate into an experiment. The measurements came out in favour of quantum mechanics — Nobel Prize 2022 for Aspect, Clauser and Zeilinger.
+
+de: Wobei hilft Verschränkung in der Praxis heute schon?
+en: Where does entanglement already help in practice today?
+
+de: Beim abhörsicheren Schlüsselaustausch (Quantenkryptografie)
+en: In eavesdropping-proof key exchange (quantum cryptography)
+
+de: Beim schnelleren Internet
+en: In faster internet
+
+de: Beim Laden von Akkus
+en: In charging batteries
+
+de: Bei der Wettervorhersage
+en: In weather forecasting
+
+de: Ein Lauscher stört die Zustände zwangsläufig und verrät sich dadurch. Solche Strecken sind zwischen Städten und sogar per Satellit bereits demonstriert.
+en: An eavesdropper inevitably disturbs the states and thereby gives themselves away. Such links have already been demonstrated between cities and even via satellite.
+
+de: Stimmt es, dass Quantenphysik nur für die allerkleinsten Dinge gilt?
+en: Is it true that quantum physics only applies to the very smallest things?
+
+de: Nein — Laser, LEDs, Transistoren und MRT beruhen alle darauf
+en: No — lasers, LEDs, transistors and MRI all rely on it
+
+de: Ja, im Alltag spielt sie keine Rolle
+en: Yes, it plays no role in everyday life
+
+de: Ja, sie gilt erst unterhalb von −270 °C
+en: Yes, it only applies below −270 °C
+
+de: Ja, nur in Teilchenbeschleunigern
+en: Yes, only in particle accelerators
+
+de: Ein erheblicher Teil moderner Technik wäre ohne Quantenmechanik überhaupt nicht erklärbar — und damit auch nicht baubar.
+en: A considerable part of modern technology couldn't even be explained without quantum mechanics — and therefore couldn't be built.
+
+de: Ein Quantencomputer probiert alle Möglichkeiten gleichzeitig durch und liest die richtige ab. Stimmt das?
+en: A quantum computer tries all possibilities at once and reads off the right one. Is that true?
+
+de: Nein — die falschen Antworten müssen gezielt weginterferiert werden, sonst misst man nur Zufall
+en: No — the wrong answers have to be deliberately interfered away, otherwise you only measure chance
+
+de: Ja, genau so funktioniert er
+en: Yes, that's exactly how it works
+
+de: Ja, aber nur bei Suchproblemen
+en: Yes, but only for search problems
+
+de: Ja, wenn man oft genug misst
+en: Yes, if you measure often enough
+
+de: Die Superposition allein bringt nichts: Beim Messen käme ein zufälliges Ergebnis heraus. Die Kunst ist die <strong>Interferenz</strong> — falsche Pfade auslöschen, richtige verstärken.
+en: Superposition alone achieves nothing: measuring would give a random result. The art is <strong>interference</strong> — cancel out wrong paths, reinforce right ones.
+
+de: Amplituden, Phasen, Hilbertraum
+en: Amplitudes, phases, Hilbert space
+
+de: Ein Qubit ist im Zustand |ψ⟩ = 0,6·|0⟩ + b·|1⟩ mit reellem b > 0. Wie groß ist b?
+en: A qubit is in the state |ψ⟩ = 0.6·|0⟩ + b·|1⟩ with real b > 0. How large is b?
+
+de: Normierung: |α|² + |β|² = 1
+en: Normalisation: |α|² + |β|² = 1
+
+de: b² = 1 − 0,36 = 0,64, also b = 0,8. Amplituden sind keine Wahrscheinlichkeiten — erst ihre Betragsquadrate.
+en: b² = 1 − 0.36 = 0.64, so b = 0.8. Amplitudes are not probabilities — only their squared magnitudes are.
+
+de: Stell die Normierungsbedingung nach b² um.
+en: Rearrange the normalisation condition for b².
+
+de: Für |ψ⟩ = N·(|0⟩ + 2·|1⟩) mit reellem N > 0: Wie groß ist N?
+en: For |ψ⟩ = N·(|0⟩ + 2·|1⟩) with real N > 0: how large is N?
+
+de: N²·(1² + 2²) = 1, also N = 1/√5 ≈ 0,4472.
+en: N²·(1² + 2²) = 1, so N = 1/√5 ≈ 0.4472.
+
+de: Summiere erst die Betragsquadrate der unnormierten Amplituden.
+en: First add up the squared magnitudes of the unnormalised amplitudes.
+
+de: Wie groß ist für diesen Zustand P(1)?
+en: What is P(1) for this state?
+
+de: P(1) = |2N|² = 4/5 = 0,8. Und passend dazu P(0) = 1/5.
+en: P(1) = |2N|² = 4/5 = 0.8. And accordingly P(0) = 1/5.
+
+de: Wie viele komplexe Amplituden hat der Zustandsvektor eines Systems aus 10 Qubits?
+en: How many complex amplitudes does the state vector of a system of 10 qubits have?
+
+de: 2¹⁰ = 1024. Der Hilbertraum von n Qubits hat Dimension 2ⁿ — der Grund, warum klassische Simulation exponentiell teuer wird.
+en: 2¹⁰ = 1024. The Hilbert space of n qubits has dimension 2ⁿ — the reason why classical simulation becomes exponentially expensive.
+
+de: Welchen physikalischen Effekt hat eine <em>globale</em> Phase e<sup>iφ</sup>·|ψ⟩?
+en: What physical effect does a <em>global</em> phase e<sup>iφ</sup>·|ψ⟩ have?
+
+de: Keinen — alle Messwahrscheinlichkeiten und Erwartungswerte bleiben identisch
+en: None — all measurement probabilities and expectation values stay identical
+
+de: Sie vertauscht |0⟩ und |1⟩
+en: It swaps |0⟩ and |1⟩
+
+de: Sie zerstört die Normierung
+en: It destroys the normalisation
+
+de: Sie verändert P(0) um den Faktor cos φ
+en: It changes P(0) by the factor cos φ
+
+de: Deshalb ist der Zustandsraum eines Qubits der projektive Raum ℂP¹ — die Bloch-Kugel — und nicht die volle Einheitssphäre in ℂ².
+en: That's why the state space of a qubit is the projective space ℂP¹ — the Bloch sphere — and not the full unit sphere in ℂ².
+
+de: Und die <em>relative</em> Phase in (|0⟩ + e<sup>iφ</sup>|1⟩)/√2?
+en: And the <em>relative</em> phase in (|0⟩ + e<sup>iφ</sup>|1⟩)/√2?
+
+de: Sie ist physikalisch messbar — in der z-Basis nicht, in der x/y-Basis sehr wohl
+en: It is physically measurable — not in the z basis, but very much so in the x/y basis
+
+de: Sie ist genauso irrelevant wie die globale Phase
+en: It is just as irrelevant as the global phase
+
+de: Sie ändert nur die Normierung
+en: It only changes the normalisation
+
+de: Sie ist nur bei verschränkten Zuständen relevant
+en: It is only relevant for entangled states
+
+de: φ ist der Azimutwinkel auf der Bloch-Kugel. In der z-Basis gilt zwar immer P(0) = P(1) = ½, aber ⟨σ<sub>x</sub>⟩ = cos φ.
+en: φ is the azimuthal angle on the Bloch sphere. In the z basis, P(0) = P(1) = ½ always holds, but ⟨σ<sub>x</sub>⟩ = cos φ.
+
+de: Von der Amplitude zur Messgröße
+en: From amplitude to measured quantity
+
+de: Ein Qubit hat P(0) = 0,75 und P(1) = 0,25. Wie groß ist ⟨σ<sub>z</sub>⟩?
+en: A qubit has P(0) = 0.75 and P(1) = 0.25. What is ⟨σ<sub>z</sub>⟩?
+
+de: Erwartungswert = Summe aus Eigenwert mal zugehöriger Wahrscheinlichkeit.
+en: Expectation value = sum of eigenvalue times the corresponding probability.
+
+de: Wie groß ist ⟨σ<sub>z</sub>⟩ für |+⟩ = (|0⟩ + |1⟩)/√2?
+en: What is ⟨σ<sub>z</sub>⟩ for |+⟩ = (|0⟩ + |1⟩)/√2?
+
+de: Beide Ergebnisse sind gleich wahrscheinlich, die Beiträge +1 und −1 heben sich auf. Der Erwartungswert 0 kommt dabei als Einzelmesswert nie vor.
+en: Both results are equally likely, the contributions +1 and −1 cancel. The expectation value 0 never occurs as a single measured value.
+
+de: Ein Qubit ist präpariert in |0⟩ und wird in der x-Basis gemessen. Wie groß ist P(+)?
+en: A qubit is prepared in |0⟩ and measured in the x basis. What is P(+)?
+
+de: |0⟩ = (|+⟩ + |−⟩)/√2, also |⟨+|0⟩|² = ½. Eigenzustand der einen Observablen heißt maximale Unbestimmtheit der komplementären.
+en: |0⟩ = (|+⟩ + |−⟩)/√2, so |⟨+|0⟩|² = ½. An eigenstate of one observable means maximum uncertainty of the complementary one.
+
+de: Ein Zweiniveausystem hat E<sub>0</sub> = 0 eV und E<sub>1</sub> = 4 eV. Der Zustand liefert P(E<sub>0</sub>) = 0,25. Wie groß ist ⟨E⟩?
+en: A two-level system has E<sub>0</sub> = 0 eV and E<sub>1</sub> = 4 eV. The state gives P(E<sub>0</sub>) = 0.25. What is ⟨E⟩?
+
+de: Die Varianz einer Observablen A im Zustand |ψ⟩ verschwindet genau dann, wenn …
+en: The variance of an observable A in the state |ψ⟩ vanishes exactly when …
+
+de: |ψ⟩ ein Eigenzustand von A ist
+en: |ψ⟩ is an eigenstate of A
+
+de: ⟨A⟩ = 0 gilt
+en: ⟨A⟩ = 0 holds
+
+de: A hermitesch ist
+en: A is Hermitian
+
+de: |ψ⟩ normiert ist
+en: |ψ⟩ is normalised
+
+de: ΔA² = ⟨A²⟩ − ⟨A⟩² = 0 bedeutet: jede Einzelmessung liefert denselben Wert. Genau das ist die Definition eines Eigenzustands.
+en: ΔA² = ⟨A²⟩ − ⟨A⟩² = 0 means: every single measurement gives the same value. That is exactly the definition of an eigenstate.
+
+de: Warum müssen Observablen hermitesch sein?
+en: Why must observables be Hermitian?
+
+de: Damit die Eigenwerte reell sind und die Eigenzustände eine Orthonormalbasis bilden
+en: So that the eigenvalues are real and the eigenstates form an orthonormal basis
+
+de: Damit sie invertierbar sind
+en: So that they are invertible
+
+de: Damit sie mit dem Hamiltonoperator kommutieren
+en: So that they commute with the Hamiltonian
+
+de: Damit die Zeitentwicklung unitär bleibt
+en: So that time evolution stays unitary
+
+de: Messwerte sind reelle Zahlen — das erzwingt A = A<sup>†</sup>. Die Unitarität der Zeitentwicklung folgt separat daraus, dass H hermitesch ist.
+en: Measured values are real numbers — that forces A = A<sup>†</sup>. The unitarity of time evolution follows separately from H being Hermitian.
+
+de: de Broglie, Heisenberg, Größenordnungen
+en: de Broglie, Heisenberg, orders of magnitude
+
+de: Ein Teilchen hat den Impuls p = 6,63·10⁻²⁴ kg·m/s. Wie groß ist seine de-Broglie-Wellenlänge?
+en: A particle has momentum p = 6.63·10⁻²⁴ kg·m/s. What is its de Broglie wavelength?
+
+de: λ = h/p mit h = 6,626·10⁻³⁴ J·s
+en: λ = h/p with h = 6.626·10⁻³⁴ J·s
+
+de: λ = 6,626·10⁻³⁴ / 6,63·10⁻²⁴ ≈ 1,0·10⁻¹⁰ m = 0,1 nm — also gerade Atomgröße. Deshalb funktioniert Elektronenbeugung an Kristallen.
+en: λ = 6.626·10⁻³⁴ / 6.63·10⁻²⁴ ≈ 1.0·10⁻¹⁰ m = 0.1 nm — just about the size of an atom. That's why electron diffraction works on crystals.
+
+de: Rechne zuerst in Metern, dann 1 nm = 10⁻⁹ m.
+en: Calculate in metres first, then 1 nm = 10⁻⁹ m.
+
+de: Ein Elektron ist auf Δx = 1,0·10⁻¹⁰ m lokalisiert. Wie groß ist die minimale Impulsunschärfe Δp?
+en: An electron is localised to Δx = 1.0·10⁻¹⁰ m. What is the minimum momentum uncertainty Δp?
+
+de: Δx·Δp ≥ ħ/2 mit ħ = 1,055·10⁻³⁴ J·s · Antwort in Einheiten von 10⁻²⁵ kg·m/s
+en: Δx·Δp ≥ ħ/2 with ħ = 1.055·10⁻³⁴ J·s · answer in units of 10⁻²⁵ kg·m/s
+
+de: Δp = ħ/(2Δx) = 1,055·10⁻³⁴ / (2·10⁻¹⁰) ≈ 5,3·10⁻²⁵ kg·m/s. Das entspricht einer Geschwindigkeitsunschärfe von rund 580 km/s.
+en: Δp = ħ/(2Δx) = 1.055·10⁻³⁴ / (2·10⁻¹⁰) ≈ 5.3·10⁻²⁵ kg·m/s. That corresponds to a velocity uncertainty of around 580 km/s.
+
+de: Δp = ħ/(2·Δx) — und danach die Zehnerpotenz 10⁻²⁵ abspalten.
+en: Δp = ħ/(2·Δx) — and then split off the power of ten 10⁻²⁵.
+
+de: Praktische Faustformel: E[eV] = 1240 / λ[nm]
+en: Practical rule of thumb: E[eV] = 1240 / λ[nm]
+
+de: 1240/620 = 2,0 eV — rotes Licht. Der sichtbare Bereich liegt grob zwischen 1,6 eV (rot) und 3,1 eV (violett).
+en: 1240/620 = 2.0 eV — red light. The visible range lies roughly between 1.6 eV (red) and 3.1 eV (violet).
+
+de: Welche Wellenlänge gehört zu einem Photon mit 3,1 eV?
+en: Which wavelength belongs to a photon with 3.1 eV?
+
+de: 1240/3,1 = 400 nm — der violette Rand des sichtbaren Spektrums.
+en: 1240/3.1 = 400 nm — the violet edge of the visible spectrum.
+
+de: Warum beobachtet man bei einem fliegenden Fußball keine Beugung?
+en: Why don't you observe diffraction with a flying football?
+
+de: Seine de-Broglie-Wellenlänge liegt bei etwa 10⁻³⁴ m — unmessbar klein gegen jedes Hindernis
+en: Its de Broglie wavelength is about 10⁻³⁴ m — immeasurably small compared with any obstacle
+
+de: Weil er zu schnell ist
+en: Because it's too fast
+
+de: Weil er aus zu vielen Atomen besteht, die einander stören
+en: Because it consists of too many atoms that disturb each other
+
+de: Weil die Quantenmechanik für Makroskopisches schlicht nicht gilt
+en: Because quantum mechanics simply doesn't apply to macroscopic things
+
+de: λ = h/(m·v): Bei m ≈ 0,4 kg und v ≈ 20 m/s kommt man auf rund 8·10⁻³⁵ m. Es gibt keinen Spalt, der eng genug wäre.
+en: λ = h/(m·v): with m ≈ 0.4 kg and v ≈ 20 m/s you get around 8·10⁻³⁵ m. There is no slit narrow enough.
+
+de: Was besagt die Unschärferelation <em>nicht</em>?
+en: What does the uncertainty principle <em>not</em> say?
+
+de: Dass unsere Messgeräte einfach noch zu ungenau sind
+en: That our measuring devices are simply still too imprecise
+
+de: Dass Δx und Δp eines Zustands nicht beide beliebig klein sein können
+en: That Δx and Δp of a state can't both be arbitrarily small
+
+de: Dass sie aus der Nichtvertauschbarkeit [x̂, p̂] = iħ folgt
+en: That it follows from the non-commutativity [x̂, p̂] = iħ
+
+de: Dass sie auch für Energie und Zeit ein Analogon hat
+en: That it also has an analogue for energy and time
+
+de: Die Unschärfe ist eine Eigenschaft des Zustands, keine Schwäche der Apparatur. Δx und Δp sind Streuungen über viele identisch präparierte Systeme.
+en: The uncertainty is a property of the state, not a weakness of the apparatus. Δx and Δp are spreads over many identically prepared systems.
+
+de: Wasserstoff, Potentialtopf, Auswahlregeln
+en: Hydrogen, potential well, selection rules
+
+de: Wie groß ist die Bindungsenergie des Wasserstoff-Elektrons im Zustand n = 2?
+en: What is the binding energy of the hydrogen electron in the state n = 2?
+
+de: E<sub>2</sub> = −13,6/4 = −3,4 eV; die Bindungsenergie ist der Betrag davon.
+en: E<sub>2</sub> = −13.6/4 = −3.4 eV; the binding energy is its absolute value.
+
+de: Welche Energie hat das Photon beim Übergang n = 3 → n = 2?
+en: What is the energy of the photon in the transition n = 3 → n = 2?
+
+de: ΔE = 13,6·(1/4 − 1/9) = 13,6·5/36 ≈ 1,89 eV. Das ist die H-α-Linie der Balmer-Serie.
+en: ΔE = 13.6·(1/4 − 1/9) = 13.6·5/36 ≈ 1.89 eV. That is the H-α line of the Balmer series.
+
+de: ΔE = E<sub>3</sub> − E<sub>2</sub> — also die Differenz zweier negativer Zahlen.
+en: ΔE = E<sub>3</sub> − E<sub>2</sub> — i.e. the difference of two negative numbers.
+
+de: Welche Wellenlänge hat diese Linie?
+en: What is the wavelength of this line?
+
+de: 1240/1,89 ≈ 656 nm — das charakteristische Rot, in dem Wasserstoffnebel am Nachthimmel leuchten.
+en: 1240/1.89 ≈ 656 nm — the characteristic red in which hydrogen nebulae glow in the night sky.
+
+de: Wie viel Energie braucht man mindestens, um Wasserstoff aus dem Grundzustand zu ionisieren?
+en: What is the minimum energy needed to ionise hydrogen from the ground state?
+
+de: Ionisation heißt n = 1 → n = ∞, also 13,6 eV — die Rydberg-Energie.
+en: Ionisation means n = 1 → n = ∞, so 13.6 eV — the Rydberg energy.
+
+de: Im unendlich tiefen Potentialtopf gilt E<sub>n</sub> ∝ n². Wie groß ist E<sub>3</sub>/E<sub>1</sub>?
+en: In an infinitely deep potential well, E<sub>n</sub> ∝ n². What is E<sub>3</sub>/E<sub>1</sub>?
+
+de: Der Faktor ist 3² = 9. Anders als beim Wasserstoff rücken die Niveaus hier mit wachsendem n immer weiter auseinander.
+en: The factor is 3² = 9. Unlike in hydrogen, the levels here move further and further apart as n grows.
+
+de: Warum ist die Grundzustandsenergie im Potentialtopf nicht null?
+en: Why is the ground-state energy in the potential well not zero?
+
+de: Weil ein exakt ruhendes, lokalisiertes Teilchen die Unschärferelation verletzen würde
+en: Because a particle that is exactly at rest and localised would violate the uncertainty principle
+
+de: Weil die Wände Energie abgeben
+en: Because the walls give off energy
+
+de: Weil man den Nullpunkt der Energie beliebig wählen kann
+en: Because the zero point of energy can be chosen freely
+
+de: Weil das Teilchen thermische Energie besitzt
+en: Because the particle has thermal energy
+
+de: Die Einsperrung auf die Breite L erzwingt Δp ≳ ħ/(2L) und damit eine Nullpunktsenergie. Sie bleibt selbst bei T = 0 bestehen.
+en: Confinement to the width L forces Δp ≳ ħ/(2L) and thus a zero-point energy. It remains even at T = 0.
+
+de: Zustände als Drehungen lesen
+en: Reading states as rotations
+
+de: Ein Qubit ist |ψ⟩ = cos(θ/2)|0⟩ + sin(θ/2)|1⟩ mit θ = 60°. Wie groß ist P(1)?
+en: A qubit is |ψ⟩ = cos(θ/2)|0⟩ + sin(θ/2)|1⟩ with θ = 60°. What is P(1)?
+
+de: θ ist der Polarwinkel gegen die +z-Achse der Bloch-Kugel
+en: θ is the polar angle measured from the +z-axis of the Bloch sphere
+
+de: P(1) = sin²(30°) = 0,25. Der halbe Winkel im Argument ist der Grund, warum antipodale Punkte auf der Kugel orthogonale Zustände sind.
+en: P(1) = sin²(30°) = 0.25. The half angle in the argument is the reason why antipodal points on the sphere are orthogonal states.
+
+de: Achte auf θ/2 — nicht θ.
+en: Watch out for θ/2 — not θ.
+
+de: Welcher Polarwinkel θ ergibt P(0) = P(1) = 0,5?
+en: Which polar angle θ gives P(0) = P(1) = 0.5?
+
+de: sin²(θ/2) = ½ bei θ/2 = 45°, also θ = 90° — der Äquator der Bloch-Kugel. Dort liegen |+⟩, |−⟩ und die y-Eigenzustände.
+en: sin²(θ/2) = ½ at θ/2 = 45°, so θ = 90° — the equator of the Bloch sphere. That's where |+⟩, |−⟩ and the y eigenstates lie.
+
+de: Auf |0⟩ wirkt die Drehung R<sub>y</sub>(120°). Wie groß ist danach P(1)?
+en: The rotation R<sub>y</sub>(120°) acts on |0⟩. What is P(1) afterwards?
+
+de: Eine Drehung um die y-Achse verschiebt θ direkt: θ = 120°, also P(1) = sin²(60°) = 3/4.
+en: A rotation about the y-axis shifts θ directly: θ = 120°, so P(1) = sin²(60°) = 3/4.
+
+de: Was macht das Z-Gatter mit |+⟩ = (|0⟩ + |1⟩)/√2?
+en: What does the Z gate do to |+⟩ = (|0⟩ + |1⟩)/√2?
+
+de: Es macht daraus |−⟩ = (|0⟩ − |1⟩)/√2
+en: It turns it into |−⟩ = (|0⟩ − |1⟩)/√2
+
+de: Es lässt |+⟩ unverändert
+en: It leaves |+⟩ unchanged
+
+de: Es misst in z-Richtung
+en: It measures in the z direction
+
+de: Z ist die 180°-Drehung um die z-Achse. Auf |0⟩ und |1⟩ wirkt es nur als (unbeobachtbare) Phase, auf Äquatorzustände dagegen sehr deutlich.
+en: Z is the 180° rotation about the z-axis. On |0⟩ and |1⟩ it only acts as an (unobservable) phase, but on equator states very clearly.
+
+de: Welcher Drehung entspricht das S-Gatter?
+en: Which rotation does the S gate correspond to?
+
+de: 90° um die z-Achse
+en: 90° about the z-axis
+
+de: 180° um die z-Achse
+en: 180° about the z-axis
+
+de: 90° um die x-Achse
+en: 90° about the x-axis
+
+de: 45° um die y-Achse
+en: 45° about the y-axis
+
+de: S = diag(1, i) ist die Wurzel aus Z: S² = Z. Entsprechend ist T = diag(1, e<sup>iπ/4</sup>) die Wurzel aus S.
+en: S = diag(1, i) is the square root of Z: S² = Z. Correspondingly, T = diag(1, e<sup>iπ/4</sup>) is the square root of S.
+
+de: Warum reichen zwei Winkel (θ, φ) aus, um jeden reinen Ein-Qubit-Zustand zu beschreiben?
+en: Why are two angles (θ, φ) enough to describe every pure single-qubit state?
+
+de: Weil von vier reellen Parametern die Normierung einen und die globale Phase einen weiteren wegnimmt
+en: Because of four real parameters, normalisation removes one and the global phase another
+
+de: Weil komplexe Amplituden immer reell gewählt werden können
+en: Because complex amplitudes can always be chosen real
+
+de: Weil ein Qubit nur zwei Messergebnisse hat
+en: Because a qubit only has two measurement results
+
+de: Weil die Bloch-Kugel eine Näherung ist
+en: Because the Bloch sphere is an approximation
+
+de: α und β sind zwei komplexe Zahlen, also 4 reelle Freiheitsgrade. 4 − 1 (Normierung) − 1 (globale Phase) = 2. Gemischte Zustände brauchen zusätzlich den Radius im Inneren der Kugel.
+en: α and β are two complex numbers, i.e. 4 real degrees of freedom. 4 − 1 (normalisation) − 1 (global phase) = 2. Mixed states additionally need the radius inside the sphere.
+
+de: Korrelationen jenseits der klassischen Grenze
+en: Correlations beyond the classical limit
+
+de: Zwei Qubits sind im Bell-Zustand |Φ⁺⟩ = (|00⟩ + |11⟩)/√2. Wie groß ist P(01)?
+en: Two qubits are in the Bell state |Φ⁺⟩ = (|00⟩ + |11⟩)/√2. What is P(01)?
+
+de: Die Amplitude von |01⟩ ist exakt null. Gemischte Ergebnisse kommen bei |Φ⁺⟩ nie vor — nur 00 und 11, je zur Hälfte.
+en: The amplitude of |01⟩ is exactly zero. Mixed results never occur for |Φ⁺⟩ — only 00 and 11, half the time each.
+
+de: Wie groß ist die Reinheit Tr(ρ²) des <em>reduzierten</em> Zustands eines einzelnen Qubits aus |Φ⁺⟩?
+en: What is the purity Tr(ρ²) of the <em>reduced</em> state of a single qubit from |Φ⁺⟩?
+
+de: ρ<sub>A</sub> = Tr<sub>B</sub>(|Φ⁺⟩⟨Φ⁺|)
+en: =
+
+de: ρ<sub>A</sub> = ½·1, also Tr(ρ²) = ½ — der Minimalwert für ein Qubit. Das Teilsystem ist maximal gemischt, die Verschränkungsentropie beträgt genau 1 Bit. Die volle Information steckt allein in der Korrelation.
+en: ρ<sub>A</sub> = ½·1, so Tr(ρ²) = ½ — the minimum value for a qubit. The subsystem is maximally mixed, the entanglement entropy is exactly 1 bit. All the information lies in the correlation alone.
+
+de: Der reduzierte Zustand ist maximal gemischt. Für ρ = ½·1 ist Tr(ρ²) = 2·(½)².
+en: The reduced state is maximally mixed. For ρ = ½·1, Tr(ρ²) = 2·(½)².
+
+de: Wie groß ist der maximale CHSH-Wert, den die Quantenmechanik erlaubt?
+en: What is the maximum CHSH value that quantum mechanics allows?
+
+de: Klassisch (lokal-realistisch) gilt |S| ≤ 2
+en: Classically (local-realistically), |S| ≤ 2
+
+de: Die Tsirelson-Schranke ist 2√2 ≈ 2,828. Bemerkenswert: Stärkere Korrelationen wären mathematisch denkbar, ohne die Relativitätstheorie zu verletzen — die Natur schöpft das nicht aus.
+en: The Tsirelson bound is 2√2 ≈ 2.828. Remarkably, stronger correlations would be mathematically conceivable without violating relativity — nature doesn't use them.
+
+de: Der Wert ist 2·√2.
+en: The value is 2·√2.
+
+de: Ein experimentell nachgewiesener Bell-Verstoß schließt aus:
+en: An experimentally demonstrated Bell violation rules out:
+
+de: Theorien, die zugleich lokal und realistisch sind
+en: Theories that are both local and realistic
+
+de: jede Form von Determinismus
+en: any form of determinism
+
+de: die Existenz verborgener Variablen überhaupt
+en: the existence of hidden variables at all
+
+de: die Gültigkeit der Relativitätstheorie
+en: the validity of the theory of relativity
+
+de: Ausgeschlossen wird die <em>Konjunktion</em> aus Lokalität und Realismus. Nichtlokale verborgene Variablen — etwa die Bohmsche Mechanik — bleiben mit allen Messdaten verträglich.
+en: What is ruled out is the <em>conjunction</em> of locality and realism. Non-local hidden variables — such as Bohmian mechanics — remain compatible with all measured data.
+
+de: Grovers Algorithmus durchsucht eine unstrukturierte Datenbank mit N = 10⁶ Einträgen. Wie viele Auswertungen braucht er ungefähr?
+en: Grover's algorithm searches an unstructured database with N = 10⁶ entries. Roughly how many evaluations does it need?
+
+de: etwa 10³
+en: about 10³
+
+de: etwa 10⁶
+en: about 10⁶
+
+de: etwa 5·10⁵
+en: about 5·10⁵
+
+de: etwa 20
+en: about 20
+
+de: O(√N) ≈ π/4·√10⁶ ≈ 785. Das ist ein quadratischer Vorteil — kein exponentieller. Einen exponentiellen Sprung liefern nur bestimmte Algorithmen, etwa Shors Faktorisierung.
+en: O(√N) ≈ π/4·√10⁶ ≈ 785. That's a quadratic advantage — not an exponential one. Only certain algorithms, such as Shor's factorisation, deliver an exponential leap.
+
+de: Warum widerspricht Quantenteleportation nicht dem No-Cloning-Theorem?
+en: Why doesn't quantum teleportation contradict the no-cloning theorem?
+
+de: Weil der ursprüngliche Zustand durch die Bell-Messung zerstört wird — es entsteht keine zweite Kopie
+en: Because the original state is destroyed by the Bell measurement — no second copy is created
+
+de: Weil dabei nichts wirklich übertragen wird
+en: Because nothing is really transmitted
+
+de: Weil sie nur mit klassischen Zuständen funktioniert
+en: Because it only works with classical states
+
+de: Weil die Kopie stets unvollkommen bleibt
+en: Because the copy always remains imperfect
+
+de: Teleportation ist ein Verschieben, kein Vervielfältigen. Und weil zwei klassische Bits mitgeschickt werden müssen, bleibt sie an die Lichtgeschwindigkeit gebunden.
+en: Teleportation is moving, not copying. And because two classical bits have to be sent along, it remains bound to the speed of light.
+
+de: leer
+en: empty
+
+de: randvoll
+en: packed full
+
+de: verschwinden
+en: disappear
+

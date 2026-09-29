@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schrödinger-Box — Anleitung (Druck)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---------------------------------------------------------------------
+     PAGE SIZE — gleiches Raster wie die Bloch-Referenzkarten.
+
+     Eine Seite ist die BEDRUCKBARE Flaeche von A4, 194 x 281 mm
+     (733 x 1062 px @ 96dpi), nicht das volle Blatt — ein normaler Drucker
+     kann nicht bis zum Rand drucken. @page gibt 8 mm Rand zurueck.
+     Im Druckdialog "Tatsaechliche Groesse" / 100 % waehlen.
+  --------------------------------------------------------------------- */
+  :root {
+    --ink: #14161c; --muted: #6a655c; --faint: #8a847a;
+    --line: rgba(20,22,28,.14);
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+    /* Station 1 traegt Blau und Rot wie die halb-blaue, halb-rote Katze. */
+    --s1: #6a3df0; --s1-dk: #3b1f96;
+    --b1: #1f8a5b; --b1-dk: #14603f; --b1-tint: rgba(31,138,91,.10);
+    --b2: #ff352b; --b2-dk: #a3221b; --b2-tint: rgba(255,53,43,.09);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #dfe3ea; }
+  body { font-family: var(--font-body); color: var(--ink); }
+
+  .sheet-stack {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 40px; padding: 40px 20px;
+  }
+
+  article.page {
+    width: 733px; height: 1062px; flex: none;
+    background: #ffffff;
+    box-shadow: 0 14px 40px rgba(15,35,80,.22);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* ---------- Kopfband ---------- */
+  .band {
+    position: relative; flex: none; color: #fff;
+    padding: 18px 34px 17px; overflow: hidden;
+    background: linear-gradient(135deg, var(--s1) 0%, var(--s1-dk) 100%);
+  }
+  .band svg.atom { position: absolute; right: -40px; top: -46px; width: 190px; height: 190px; opacity: .22; }
+  .head-row { position: relative; display: flex; align-items: center; gap: 18px; }
+  .cat-badge {
+    flex: none; width: 78px; height: 78px; border-radius: 50%;
+    background: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 42px; line-height: 1;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  }
+  .pill {
+    font-family: var(--font-mono); font-weight: 600; font-size: 14px;
+    letter-spacing: .09em; padding: 5px 11px; border-radius: 999px;
+    background: rgba(255,255,255,.24); display: inline-block;
+  }
+  .band h1 {
+    margin: 7px 0 0; font-family: var(--font-display); font-weight: 800;
+    font-size: 34px; line-height: 1.06; letter-spacing: -.01em;
+  }
+
+  /* ---------- Koerper ---------- */
+  .body { flex: 1; min-height: 0; padding: 18px 34px 14px; display: flex; flex-direction: column; gap: 9px; }
+  .body p { margin: 0; font-size: 19.5px; line-height: 1.4; color: #232323; text-wrap: pretty; }
+
+  .subhead {
+    font-family: var(--font-mono); font-weight: 700; font-size: 18px;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 2px 0 0;
+  }
+
+  /* ---------- Anleitung in Schritten ---------- */
+  .steps { display: flex; flex-direction: column; gap: 6px; }
+  .step { display: flex; align-items: flex-start; gap: 14px; }
+  .step-num {
+    flex: none; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--s1); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 800; font-size: 18px;
+  }
+  .step-txt { font-size: 17.5px; line-height: 1.3; padding-top: 5px; }
+  .step-txt b { font-weight: 700; }
+
+  /* ---------- QR-Code oben, fuehrt auf die Stationsseite ---------- */
+  .intro-row { display: flex; align-items: center; gap: 20px; }
+  .intro-row p { flex: 1; }
+  .intro-qr {
+    flex: none; display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .intro-qr svg { width: 132px; height: 132px; display: block; }
+  .intro-qr .qr-box { width: 132px; height: 132px; }
+  .qr-box {
+    border: 2px dashed var(--faint); border-radius: 11px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    font-family: var(--font-mono); font-weight: 700; font-size: 28px; color: var(--faint);
+  }
+  .qr-box span { font-size: 9.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+  .intro-qr .qr-caption {
+    font-family: var(--font-mono); font-weight: 700; font-size: 11.5px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ---------- die zwei Kisten: Kopfleiste, helle Flaeche, Foto ---------- */
+  .boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; min-height: 0; }
+  .box {
+    border-radius: 16px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .box-head {
+    color: #fff; padding: 9px 16px;
+    font-family: var(--font-mono); font-weight: 700; font-size: 15px;
+    letter-spacing: .08em; text-transform: uppercase;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+  }
+  .box-head em { font-style: normal; font-weight: 600; opacity: .85; font-size: 13px; }
+  .box.b1 .box-head { background: linear-gradient(135deg, var(--b1) 0%, var(--b1-dk) 100%); }
+  .box.b2 .box-head { background: linear-gradient(135deg, var(--b2) 0%, var(--b2-dk) 100%); }
+  /* Die helle Flaeche ist der Rahmen um das Foto. */
+  .box-inner { padding: 13px; flex: 1; display: flex; align-items: center; }
+  .box.b1 .box-inner { background: var(--b1-tint); }
+  .box.b2 .box-inner { background: var(--b2-tint); }
+
+  /* Die Gravur der jeweiligen Kiste. Sie wird vollstaendig gezeigt
+     (object-fit: contain), nicht beschnitten. */
+  .box-foto, .box-foto-platzhalter {
+    width: 100%; aspect-ratio: 16 / 9; border-radius: 10px;
+    object-fit: contain; display: block; background: #fff;
+  }
+  /* Reserve, falls ein Motiv einmal fehlt */
+  .box-foto-platzhalter {
+    border: 2px dashed var(--faint);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-weight: 600; font-size: 12px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--faint);
+  }
+
+  /* ---------- Hinweis am Fuss des Koerpers ---------- */
+  .hint {
+    border: 2px solid var(--line); border-left: 6px solid var(--s1);
+    border-radius: 12px; padding: 8px 15px;
+    font-size: 15.5px; line-height: 1.33; color: #2c2c2c;
+  }
+  .hint b { color: var(--ink); }
+
+  /* ---------- Fuss ---------- */
+  .foot {
+    flex: none; background: var(--ink); color: #cfd3dc;
+    padding: 10px 34px; display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: .06em;
+  }
+
+  /* ---------- Bedienleiste, nur am Bildschirm ---------- */
+  .toolbar {
+    width: 733px; display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 13px; color: #33383f;
+  }
+  .toolbar input {
+    flex: 1; font-family: inherit; font-size: 13px;
+    padding: 9px 11px; border: 1.5px solid #b9c0cc; border-radius: 9px; background: #fff;
+  }
+  .toolbar button {
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    padding: 9px 14px; border: 0; border-radius: 9px;
+    background: var(--ink); color: #fff; cursor: pointer;
+  }
+
+  /* ---------- Druck ---------- */
+  @page { size: A4; margin: 8mm; }
+  @media print {
+    html, body { background: #fff !important; }
+    .toolbar { display: none !important; }
+    .sheet-stack { gap: 0 !important; padding: 0 !important; background: #fff !important; }
+    article.page {
+      box-shadow: none !important; width: 194mm !important; height: 281mm !important;
+      break-after: page; page-break-after: always;
+    }
+    article.page:last-child { break-after: auto; page-break-after: auto; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet-stack">
+
+  <div class="toolbar">
+    <label for="basis">Basis-Adresse der Website</label>
+    <input id="basis" type="url" placeholder="https://quick-jku.github.io/quantenstation/">
+    <button type="button" id="neu">QR-Codes erzeugen</button>
+  </div>
+
+  <article class="page">
+
+    <header class="band">
+      <svg class="atom" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#ffffff" stroke-width="2">
+          <ellipse cx="100" cy="100" rx="78" ry="30"></ellipse>
+          <ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(60 100 100)"></ellipse>
+          <ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(120 100 100)"></ellipse>
+        </g>
+        <circle cx="100" cy="100" r="8" fill="#ffffff"></circle>
+      </svg>
+      <div class="head-row">
+        <div class="cat-badge">🐱</div>
+        <div>
+          <span class="pill">STATION 1 · SCHRÖDINGER-BOX</span>
+          <h1>Knack die Schlösser,<br>befrei die Katze</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <div class="intro-row">
+        <p>
+          Vor dir stehen zwei Holzkisten mit je vier Zahlenschlössern. Scanne
+          den Code mit deinem Handy und du kommst zu den Rätseln.
+        </p>
+        <div class="intro-qr">
+          <div class="qr-box" data-qr="stations/1-schroedinger/">QR<span>URL fehlt</span></div>
+          <div class="qr-caption">Hier scannen</div>
+        </div>
+      </div>
+
+      <div class="subhead">So geht es</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-txt">
+            <b>Code scannen</b> und die Infos auf der Seite durchlesen. Dort
+            steht, worum es bei Schrödingers Katze überhaupt geht.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-txt">
+            <b>Kiste aussuchen</b> und die passende Rätselseite öffnen.
+            Box 1 ist einfach, Box 2 ist schwer.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-txt">
+            Jedes gelöste Rätsel gibt dir einen <b>vierstelligen Code</b>. Der
+            öffnet genau eines der vier Schlösser.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-txt">
+            Sind alle vier offen, kannst du den Deckel öffnen und dir eine
+            <b>kleine Erinnerung</b> herausnehmen.
+          </div>
+        </div>
+      </div>
+
+      <div class="boxes">
+
+        <section class="box b1">
+          <div class="box-head"><span>Box 1</span><em>einfach</em></div>
+          <div class="box-inner">
+            <img class="box-foto" src="../../../assets/box-1.png"
+                 alt="Gravur auf Kiste 1: Katzen, ein Karton und der Schriftzug Schrödinger's cat is alive und dead">
+          </div>
+        </section>
+
+        <section class="box b2">
+          <div class="box-head"><span>Box 2</span><em>schwer</em></div>
+          <div class="box-inner">
+            <img class="box-foto" src="../../../assets/box-2.png"
+                 alt="Gravur auf Kiste 2: Quantum Enclosure System mit lebender und zerfallender Katze">
+          </div>
+        </section>
+
+      </div>
+
+      <div class="hint">
+        <b>Bitte wieder zusperren.</b> Schließ die Kiste nach dem Öffnen und
+        verdrehe die Schlösser, damit die Nächsten dieselbe Freude am Knacken
+        haben. Wir stehen daneben und helfen gern.
+      </div>
+
+    </div>
+
+    <footer class="foot">
+      <span>60 JAHRE JKU · STATION 1 — SCHRÖDINGER-BOX</span>
+      <span>ANLEITUNG</span>
+    </footer>
+
+  </article>
+
+</div>
+
+<script src="../../../assets/site.js"></script>
+<script src="../../../assets/qr.js"></script>
+<script>
+  /* Die Basis-Adresse kommt aus assets/site.js. Zum Testen lässt sie
+     sich hier überschreiben (gespeichert wie beim QR-Werkzeug unter qr/).
+     Ohne Adresse bliebe der gestrichelte Platzhalter stehen, damit
+     niemand versehentlich einen toten Code druckt. */
+  (function () {
+    var STORE = 'jku60-qr-basis';
+    var feld = document.getElementById('basis');
+
+    function gespeichert() {
+      try { return localStorage.getItem(STORE) || ''; } catch (e) { return ''; }
+    }
+
+    function zeichnen(basis) {
+      basis = (basis || '').trim();
+      if (basis && basis.slice(-1) !== '/') basis += '/';
+      document.querySelectorAll('[data-qr]').forEach(function (el) {
+        var pfad = el.getAttribute('data-qr');
+        if (!basis) return;
+        var svg = QR.svg(basis + pfad, { ec: 'M', quiet: 4 });
+        var huelle = document.createElement('div');
+        huelle.innerHTML = svg;
+        var neu = huelle.firstElementChild;
+        neu.setAttribute('data-qr', pfad);
+        neu.setAttribute('width', '132');
+        neu.setAttribute('height', '132');
+        el.replaceWith(neu);
+      });
+    }
+
+    feld.value = window.QUANTENSTATION_URL || gespeichert();
+    zeichnen(feld.value);
+
+    document.getElementById('neu').addEventListener('click', function () {
+      var wert = feld.value.trim();
+      try { localStorage.setItem(STORE, wert); } catch (e) {}
+      location.reload();
+    });
+  })();
+</script>
+</body>
+</html>
