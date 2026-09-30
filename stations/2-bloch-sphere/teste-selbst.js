@@ -100,8 +100,10 @@
 
   /* θ/φ-Zahleneingabe mit Toleranz. */
   function anglePicker(host, expected, tolerance, onDone) {
-    var form = el('form', 'angle-row');
+    var form = el('form');
     form.setAttribute('novalidate', '');
+    var row = el('div', 'angle-row');
+    form.appendChild(row);
 
     function field(labelTxt, ph) {
       var f = el('div', 'angle-field');
@@ -110,7 +112,7 @@
       inp.type = 'text'; inp.inputMode = 'decimal'; inp.className = 'q-input';
       inp.placeholder = ph; inp.autocomplete = 'off';
       f.appendChild(inp);
-      form.appendChild(f);
+      row.appendChild(f);
       return inp;
     }
 
@@ -119,10 +121,10 @@
 
     var btn = el('button', 'q-btn q-btn-primary q-btn-block q-mt-sm', tr('Prüfen', 'Check'));
     btn.type = 'submit';
+    form.appendChild(btn);
 
     var wrap = el('div');
     wrap.appendChild(form);
-    wrap.appendChild(btn);
     host.appendChild(wrap);
 
     var misses = 0, done = false;
@@ -320,24 +322,26 @@
   function renderCount(ch, body, onDone) {
     body.appendChild(el('p', 'q-body', ch.prompt));
 
-    var form = el('form', 'angle-row');
+    var form = el('form');
     form.setAttribute('novalidate', '');
+    var row = el('div', 'angle-row');
+    form.appendChild(row);
     function field(labelTxt) {
       var f = el('div', 'angle-field');
       f.appendChild(el('label', null, labelTxt));
       var inp = el('input');
       inp.type = 'text'; inp.inputMode = 'numeric'; inp.className = 'q-input'; inp.autocomplete = 'off';
       f.appendChild(inp);
-      form.appendChild(f);
+      row.appendChild(f);
       return inp;
     }
     var back = field(tr('zurück zu |+⟩', 'back to |+⟩'));
     var minus = field(tr('bis |−⟩', 'until |−⟩'));
     var btn = el('button', 'q-btn q-btn-primary q-btn-block q-mt-sm', tr('Prüfen', 'Check'));
     btn.type = 'submit';
+    form.appendChild(btn);
 
     body.appendChild(form);
-    body.appendChild(btn);
 
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
