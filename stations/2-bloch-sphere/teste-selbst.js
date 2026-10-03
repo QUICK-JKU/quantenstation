@@ -4,7 +4,7 @@
 
    Ablauf vor Ort: Aufgabe hier lesen → Drehung mit dem Magneten
    auf der echten Kugel ausführen → Ergebnis hier eingeben und
-   sofort prüfen lassen. Level 4 wird direkt mit assets/bloch-
+   sofort prüfen lassen. Level 3 wird direkt mit assets/bloch-
    gates.js simuliert statt nur gegen eine feste Liste geprüft —
    das deckt auch Sonderfälle ab, die beim Ausdenken übersehen
    wurden.
@@ -105,9 +105,11 @@
     var row = el('div', 'angle-row');
     form.appendChild(row);
 
-    function field(labelTxt, ph) {
+    function field(labelHtml, ph) {
       var f = el('div', 'angle-field');
-      f.appendChild(el('label', null, labelTxt));
+      var lab = el('label');
+      lab.innerHTML = labelHtml;
+      f.appendChild(lab);
       var inp = el('input');
       inp.type = 'text'; inp.inputMode = 'decimal'; inp.className = 'q-input';
       inp.placeholder = ph; inp.autocomplete = 'off';
@@ -116,8 +118,8 @@
       return inp;
     }
 
-    var thetaInp = field(tr('θ in Grad', 'θ in degrees'), '0–180');
-    var phiInp = expected.phi_deg == null ? null : field(tr('φ in Grad', 'φ in degrees'), '0–360');
+    var thetaInp = field('<b class="ang-theta">θ</b>' + tr(' in Grad (ab +Z)', ' in degrees (from +Z)'), '0–180');
+    var phiInp = expected.phi_deg == null ? null : field('<b class="ang-phi">φ</b>' + tr(' in Grad (+X → +Y)', ' in degrees (+X → +Y)'), '0–360');
 
     var btn = el('button', 'q-btn q-btn-primary q-btn-block q-mt-sm', tr('Prüfen', 'Check'));
     btn.type = 'submit';
@@ -396,6 +398,218 @@
     return card;
   }
 
+  /* ---------- Gatter-Glossar je Stufe ---------- */
+
+  /* Dieselben Beschreibungen wie auf den gedruckten Karten
+     (challenge-cards/canvas.html, GATE_INFO / AXIS_DESC): erst die
+     Drehung (Winkel + Achse), dann zwei Beispiele, die sich direkt an
+     der echten Kugel nachprüfen lassen. */
+  function gateInfo() {
+    return {
+      X:   tr('Dreht 180° um die x-Achse: |0⟩ auf |1⟩, lässt |+⟩ unverändert.',
+              'Rotates 180° about the x-axis: |0⟩ to |1⟩, leaves |+⟩ unchanged.'),
+      Y:   tr('Dreht 180° um die y-Achse: |0⟩ auf |1⟩, lässt |+i⟩ unverändert.',
+              'Rotates 180° about the y-axis: |0⟩ to |1⟩, leaves |+i⟩ unchanged.'),
+      Z:   tr('Dreht 180° um die z-Achse: |+⟩ auf |−⟩, lässt |0⟩ unverändert.',
+              'Rotates 180° about the z-axis: |+⟩ to |−⟩, leaves |0⟩ unchanged.'),
+      H:   tr('Dreht 180° um die Achse zwischen x und z: |0⟩ auf |+⟩, |1⟩ auf |−⟩.',
+              'Rotates 180° about the axis between x and z: |0⟩ to |+⟩, |1⟩ to |−⟩.'),
+      S:   tr('Dreht 90° um die z-Achse: |+⟩ auf |+i⟩, lässt |0⟩ unverändert.',
+              'Rotates 90° about the z-axis: |+⟩ to |+i⟩, leaves |0⟩ unchanged.'),
+      Sdg: tr('Dreht −90° um die z-Achse: |+⟩ auf |−i⟩, lässt |0⟩ unverändert.',
+              'Rotates −90° about the z-axis: |+⟩ to |−i⟩, leaves |0⟩ unchanged.'),
+      T:   tr('Dreht 45° um die z-Achse: |+⟩ ein Achtel Richtung |+i⟩ (2×T = S), lässt |0⟩ unverändert.',
+              'Rotates 45° about the z-axis: |+⟩ an eighth of a turn towards |+i⟩ (2×T = S), leaves |0⟩ unchanged.'),
+      Tdg: tr('Dreht −45° um die z-Achse: |+⟩ ein Achtel Richtung |−i⟩, lässt |0⟩ unverändert.',
+              'Rotates −45° about the z-axis: |+⟩ an eighth of a turn towards |−i⟩, leaves |0⟩ unchanged.'),
+      Rx:  tr('Dreht um θ um die x-Achse, lässt |+⟩/|−⟩ unverändert; z. B. bei 90°: dreht |0⟩ auf |−i⟩.',
+              'Rotates by θ about the x-axis, leaves |+⟩/|−⟩ unchanged; e.g. at 90°: turns |0⟩ into |−i⟩.'),
+      Ry:  tr('Dreht um θ um die y-Achse, lässt |+i⟩/|−i⟩ unverändert; z. B. bei 90°: dreht |0⟩ auf |+⟩.',
+              'Rotates by θ about the y-axis, leaves |+i⟩/|−i⟩ unchanged; e.g. at 90°: turns |0⟩ into |+⟩.'),
+      Rz:  tr('Dreht um θ um die z-Achse, lässt |0⟩/|1⟩ unverändert; z. B. bei 90°: dreht |+⟩ auf |+i⟩ (= S).',
+              'Rotates by θ about the z-axis, leaves |0⟩/|1⟩ unchanged; e.g. at 90°: turns |+⟩ into |+i⟩ (= S).')
+    };
+  }
+
+  /* Alle Gatter, die eine Stufe braucht — in der Reihenfolge des ersten
+     Auftretens, ohne Doppelte; Rx/Ry/Rz stehen je einmal für alle Winkel. */
+  function levelGateKeys(level) {
+    var names = [];
+    DATA.challenges.filter(function (c) { return c.level === level; }).forEach(function (c) {
+      if (c.sequence) names = names.concat(c.sequence);
+      if (c.template) names = names.concat(c.template);
+      if (c.allowed_gates) names = names.concat(c.allowed_gates);
+      if (c.options) names = names.concat(c.options);
+      if (c.type === 'count') names.push('T');
+      if (c.A) names = names.concat(c.A.sequence, c.B.sequence);
+    });
+    var seen = {}, keys = [];
+    names.forEach(function (n) {
+      var m = /^(R[xyz])\(/.exec(n);
+      var key = m ? m[1] : n;
+      if (n === '?' || seen[key]) return;
+      seen[key] = true;
+      keys.push(key);
+    });
+    return keys;
+  }
+
+  function gateGlossary(level) {
+    var info = gateInfo();
+    var keys = levelGateKeys(level).filter(function (k) { return info[k]; });
+    var d = el('details', 'q-acc gate-info');
+    d.open = true;
+    d.appendChild(el('summary', null, tr('Die Gatter dieser Stufe', 'The gates in this level')));
+    var body = el('div', 'q-acc-body');
+    keys.forEach(function (k) {
+      var row = el('div', 'gate-info-row');
+      var label = /^R[xyz]$/.test(k) ? k + '(θ)' : formatGate(k);
+      row.appendChild(el('span', 'gate-chip', label));
+      var desc = el('span', 'gate-info-desc');
+      /* Kets zusammenhalten, sonst bricht |−i⟩ mitten im Zustand um. */
+      desc.innerHTML = info[k].replace(/\|[^|⟩ ]+⟩/g, '<span style="white-space:nowrap">$&</span>');
+      row.appendChild(desc);
+      body.appendChild(row);
+    });
+    d.appendChild(body);
+    return d;
+  }
+
+  /* ---------- Winkel-Anleitung (θ / φ) für die Aufgaben mit Winkeleingabe ---------- */
+
+  /* Kleine Kugel mit einem Beispielpunkt. Die Geometrie wird hier
+     gerechnet (statt fest gezeichnet), damit Bogen und Hilfslinien
+     garantiert zu den Winkeln passen. Blickrichtung: von schräg oben,
+     +X zeigt nach vorn-links, +Y nach rechts, +Z nach oben. */
+  function angleDiagram(thetaDeg, phiDeg) {
+    var R = 100, cx = 150, cy = 148;
+    var al = 250 * Math.PI / 180, ev = 18 * Math.PI / 180;
+    var rad = Math.PI / 180;
+
+    function P(x, y, z) {
+      var xr = x * Math.cos(al) - y * Math.sin(al);
+      var yr = x * Math.sin(al) + y * Math.cos(al);
+      return {
+        x: cx + R * xr,
+        y: cy - R * (z * Math.cos(ev) + yr * Math.sin(ev)),
+        front: (-yr * Math.cos(ev) + z * Math.sin(ev)) >= 0
+      };
+    }
+    function f(n) { return n.toFixed(1); }
+    function line(a, b, attrs) {
+      return '<line x1="' + f(a.x) + '" y1="' + f(a.y) + '" x2="' + f(b.x) + '" y2="' + f(b.y) + '" ' + attrs + '/>';
+    }
+    function path(pts, attrs) {
+      return '<polyline fill="none" points="' + pts.map(function (q) { return f(q.x) + ',' + f(q.y); }).join(' ') + '" ' + attrs + '/>';
+    }
+    function text(q, dx, dy, str, attrs) {
+      return '<text x="' + f(q.x + dx) + '" y="' + f(q.y + dy) + '" ' + attrs + '>' + str + '</text>';
+    }
+    /* Kreis in 3D, aufgeteilt in sichtbaren (vorn) und verdeckten (hinten) Teil. */
+    function ring(fn, frontAttrs, backAttrs) {
+      var out = '', run = [], runFront = null;
+      for (var t = 0; t <= 360; t += 4) {
+        var q = fn(t * rad);
+        if (runFront !== null && q.front !== runFront) {
+          run.push(q);   // Übergangspunkt in beiden Teilen, damit keine Lücke bleibt
+          out += path(run, runFront ? frontAttrs : backAttrs);
+          run = [];
+        }
+        run.push(q);
+        runFront = q.front;
+      }
+      if (run.length > 1) out += path(run, runFront ? frontAttrs : backAttrs);
+      return out;
+    }
+
+    var th = thetaDeg * rad, ph = phiDeg * rad;
+    var O = P(0, 0, 0);
+    var V = P(Math.sin(th) * Math.cos(ph), Math.sin(th) * Math.sin(ph), Math.cos(th));
+    var F = P(Math.sin(th) * Math.cos(ph), Math.sin(th) * Math.sin(ph), 0);   // Fußpunkt auf dem Äquator
+
+    var svg = '<svg class="angle-svg" viewBox="0 0 300 282" role="img" aria-label="' +
+      tr('Bloch-Kugel mit den Winkeln θ (von +Z) und φ (von +X nach +Y)', 'Bloch sphere with the angles θ (from +Z) and φ (from +X towards +Y)') + '">';
+
+    svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + R + '" fill="#fbf9f3" stroke="#14161c" stroke-opacity=".35" stroke-width="1.5"/>';
+
+    // Äquator
+    svg += ring(function (t) { return P(Math.cos(t), Math.sin(t), 0); },
+      'stroke="#14161c" stroke-opacity=".45" stroke-width="1.3"',
+      'stroke="#14161c" stroke-opacity=".25" stroke-width="1.1" stroke-dasharray="3 3"');
+    // Meridian durch den Punkt (die Ebene, in der θ gemessen wird)
+    svg += ring(function (t) { return P(Math.sin(t) * Math.cos(ph), Math.sin(t) * Math.sin(ph), Math.cos(t)); },
+      'stroke="#1f5bff" stroke-opacity=".35" stroke-width="1.1"',
+      'stroke="#1f5bff" stroke-opacity=".2" stroke-width="1" stroke-dasharray="3 3"');
+
+    // Achsen
+    var ax = 'stroke="#14161c" stroke-opacity=".55" stroke-width="1.3"';
+    svg += line(P(0, 0, -1), P(0, 0, 1.2), ax);
+    svg += line(O, P(1.2, 0, 0), ax);
+    svg += line(O, P(0, 1.2, 0), ax);
+    var lab = 'font-family="IBM Plex Mono, monospace" font-size="12.5" font-weight="700" fill="#14161c"';
+    svg += text(P(0, 0, 1.2), 0, -7, '+Z', lab + ' text-anchor="middle"');
+    svg += text(P(0, 0, 1.2), 0, -20, '|0⟩', lab + ' text-anchor="middle" fill-opacity=".6"');
+    svg += text(P(0, 0, -1), 0, 16, '|1⟩', lab + ' text-anchor="middle" fill-opacity=".6"');
+    svg += text(P(1.2, 0, 0), -6, 14, '+X', lab + ' text-anchor="end"');
+    svg += text(P(0, 1.2, 0), 7, 4, '+Y', lab);
+
+    // Hilfslinien vom Punkt zum Äquator und zurück zum Mittelpunkt
+    var dot = 'stroke="#14161c" stroke-opacity=".6" stroke-width="1.3" stroke-dasharray="2 3"';
+    svg += line(V, F, dot);
+    svg += line(O, F, dot);
+
+    // φ: Bogen auf dem Äquator von +X bis zum Fußpunkt
+    var phiArc = [], u;
+    for (u = 0; u < phiDeg; u += 2) phiArc.push(P(0.42 * Math.cos(u * rad), 0.42 * Math.sin(u * rad), 0));
+    phiArc.push(P(0.42 * Math.cos(ph), 0.42 * Math.sin(ph), 0));
+    svg += path(phiArc, 'stroke="#c98a1a" stroke-width="3" stroke-linecap="round"');
+
+    // θ: Bogen von +Z bis zum Punkt
+    var thArc = [], t;
+    for (t = 0; t < thetaDeg; t += 2) thArc.push(P(0.5 * Math.sin(t * rad) * Math.cos(ph), 0.5 * Math.sin(t * rad) * Math.sin(ph), 0.5 * Math.cos(t * rad)));
+    thArc.push(P(0.5 * Math.sin(th) * Math.cos(ph), 0.5 * Math.sin(th) * Math.sin(ph), 0.5 * Math.cos(th)));
+    svg += path(thArc, 'stroke="#1f5bff" stroke-width="3" stroke-linecap="round"');
+
+    // Zustandsvektor + Punkt
+    svg += line(O, V, 'stroke="#14161c" stroke-width="2.6" stroke-linecap="round"');
+    svg += '<circle cx="' + f(V.x) + '" cy="' + f(V.y) + '" r="6" fill="#8b3dff" stroke="#fff" stroke-width="1.6"/>';
+
+    // Winkelbeschriftung
+    var greek = 'font-family="Georgia, serif" font-size="21" font-style="italic" font-weight="700"';
+    var tm = thetaDeg / 2 * rad;
+    var tl = P(0.72 * Math.sin(tm) * Math.cos(ph), 0.72 * Math.sin(tm) * Math.sin(ph), 0.72 * Math.cos(tm));
+    svg += text(tl, -16, 6, 'θ', greek + ' fill="#1f5bff"');
+    var pm = phiDeg / 2 * rad;
+    var pl = P(0.62 * Math.cos(pm), 0.62 * Math.sin(pm), 0);
+    svg += text(pl, 2, 20, 'φ', greek + ' fill="#c98a1a"');
+
+    return svg + '</svg>';
+  }
+
+  function angleGuide() {
+    var TH = 50, PH = 40;
+    var d = el('details', 'q-acc angle-guide');
+    d.open = true;
+    d.appendChild(el('summary', null, tr('So liest du θ und φ', 'How to read θ and φ')));
+    var body = el('div', 'q-acc-body');
+    var fig = el('div', 'angle-fig');
+    fig.innerHTML = angleDiagram(TH, PH);
+    body.appendChild(fig);
+    var txt = el('div', 'angle-guide-text');
+    txt.innerHTML =
+      '<p><b class="ang-theta">θ</b> ' + tr(
+        '(Theta) misst, wie weit der Punkt vom <strong>Nordpol |0⟩ (+Z)</strong> weggedreht ist: 0° = |0⟩, 90° = Äquator, 180° = |1⟩.',
+        '(theta) measures how far the point is turned away from the <strong>north pole |0⟩ (+Z)</strong>: 0° = |0⟩, 90° = equator, 180° = |1⟩.') + '</p>' +
+      '<p><b class="ang-phi">φ</b> ' + tr(
+        '(Phi) misst, wie weit der Punkt <strong>um die z-Achse</strong> gedreht ist — ab +X in Richtung +Y, von 0° bis 360°. An den Polen gibt es kein φ.',
+        '(phi) measures how far the point is turned <strong>around the z-axis</strong> — from +X towards +Y, from 0° to 360°. There is no φ at the poles.') + '</p>' +
+      '<p>' + tr('Im Bild: ', 'In the picture: ') + '<b class="ang-theta">θ = ' + TH + '°</b>, <b class="ang-phi">φ = ' + PH + '°</b>.</p>' +
+      '<p class="q-fine">' + tr('Zum Vergleich', 'For comparison') + ': |+⟩ → θ 90°, φ 0° · |+i⟩ → θ 90°, φ 90° · |−⟩ → θ 90°, φ 180° · |−i⟩ → θ 90°, φ 270°</p>';
+    body.appendChild(txt);
+    d.appendChild(body);
+    return d;
+  }
+
   /* ---------- Level-Auswahl + Liste ---------- */
 
   function renderLevelPills(container, onChange) {
@@ -418,6 +632,11 @@
 
     function show(lv) {
       list.innerHTML = '';
+      var levelChallenges = DATA.challenges.filter(function (c) { return c.level === lv; });
+      if (levelChallenges.some(function (c) { return c.type === 'sequence' && c.expected.state === null; })) {
+        list.appendChild(angleGuide());
+      }
+      list.appendChild(gateGlossary(lv));
       DATA.challenges
         .filter(function (c) { return c.level === lv; })
         .forEach(function (ch, i) { list.appendChild(challengeCard(ch, i + 1)); });

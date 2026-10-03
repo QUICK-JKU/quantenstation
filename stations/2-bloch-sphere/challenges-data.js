@@ -9,7 +9,7 @@
    der Quelle für die gedruckten Referenzkarten — beide Dateien
    müssen bei einer Änderung an den Aufgaben synchron gehalten
    werden. Die Prüf-Logik hier steht in teste-selbst.js und nutzt
-   assets/bloch-gates.js, um Freitext-Antworten (Level 4) direkt
+   assets/bloch-gates.js, um Freitext-Antworten (Level 3) direkt
    zu simulieren statt nur Strings zu vergleichen.
 
    Konventionen: siehe meta.conventions unten — sie sind identisch
@@ -104,69 +104,31 @@ window.BLOCH_CHALLENGES = {
     },
 
     {
-      id: 'L3-1', level: 3, type: 'sequence',
-      start: '0', start_label: '|0⟩', sequence: ['H', 'T'],
-      expected: { state: null, label: null, theta_deg: 90.0, phi_deg: 45.0, bloch: [0.707107, 0.707107, 0.0] },
-      trace: [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.707107, 0.707107, 0.0]],
-      tolerance_deg: 15
-    },
-    {
-      id: 'L3-2', level: 3, type: 'sequence',
-      start: '0', start_label: '|0⟩', sequence: ['H', 'T', 'S'],
-      expected: { state: null, label: null, theta_deg: 90.0, phi_deg: 135.0, bloch: [-0.707107, 0.707107, 0.0] },
-      trace: [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.707107, 0.707107, 0.0], [-0.707107, 0.707107, 0.0]],
-      tolerance_deg: 15
-    },
-    {
-      id: 'L3-3', level: 3, type: 'sequence',
-      start: '0', start_label: '|0⟩', sequence: ['Rx(90deg)', 'T'],
-      expected: { state: null, label: null, theta_deg: 90.0, phi_deg: 315.0, bloch: [0.707107, -0.707107, 0.0] },
-      trace: [[0.0, 0.0, 1.0], [0.0, -1.0, 0.0], [0.707107, -0.707107, 0.0]],
-      tolerance_deg: 15
-    },
-    {
-      id: 'L3-4', level: 3, type: 'sequence',
-      start: '0', start_label: '|0⟩', sequence: ['Ry(45deg)', 'Rz(90deg)'],
-      expected: { state: null, label: null, theta_deg: 45.0, phi_deg: 90.0, bloch: [0.0, 0.707107, 0.707107] },
-      trace: [[0.0, 0.0, 1.0], [0.707107, 0.0, 0.707107], [0.0, 0.707107, 0.707107]],
-      tolerance_deg: 15
-    },
-    {
-      id: 'L3-5', level: 3, type: 'sequence',
-      start: '0', start_label: '|0⟩', sequence: ['Ry(135deg)', 'T', 'T'],
-      expected: { state: null, label: null, theta_deg: 135.0, phi_deg: 90.0, bloch: [0.0, 0.707107, -0.707107] },
-      trace: [[0.0, 0.0, 1.0], [0.707107, 0.0, -0.707107], [0.5, 0.5, -0.707107], [0.0, 0.707107, -0.707107]],
-      tolerance_deg: 15
-    },
-
-    {
-      id: 'L4-1', level: 4, type: 'free_sequence',
+      id: 'L3-1', level: 3, type: 'free_sequence',
       prompt: 'Verwandle |0⟩ in |1⟩ — nur mit H und S. Geht es mit möglichst wenigen Gattern?',
       start: '0', target: '1', allowed_gates: ['H', 'S'],
       optimal_length: 4, optimal_solutions: [['H', 'S', 'S', 'H']]
     },
     {
-      id: 'L4-2', level: 4, type: 'fill_gap',
+      id: 'L3-2', level: 3, type: 'fill_gap',
       prompt: 'Füll die Lücke, sodass |0⟩ am Ende bei |1⟩ landet.',
       start: '0', template: ['H', 'S', '?', 'Sdg', 'H'], target: '1',
       options: ['X', 'Y', 'Z', 'H', 'S', 'Sdg', 'T', 'Tdg'],
       valid: ['X', 'Z', 'H']
     },
     {
-      id: 'L4-3', level: 4, type: 'identify_gate',
-      prompt: 'Mysteriöses Gatter: |0⟩ bleibt |0⟩, aber |+⟩ wird zu |−i⟩. Wie heißt es?',
-      tests: [{ in: '0', out: '0' }, { in: '+', out: '-i' }],
-      options: ['X', 'Y', 'Z', 'H', 'S', 'Sdg', 'T', 'Tdg'],
-      valid: ['Sdg'],
-      explanation: 'S† = Rz(−90°): lässt die z-Achse fest, dreht +X nach −Y.'
+      id: 'L3-3', level: 3, type: 'free_sequence',
+      prompt: 'Verwandle |+⟩ in |−i⟩ — nur mit S und T. Geht es mit möglichst wenigen Gattern?',
+      start: '+', target: '-i', allowed_gates: ['S', 'T'],
+      optimal_length: 3, optimal_solutions: [['S', 'S', 'S']]
     },
     {
-      id: 'L4-4', level: 4, type: 'count',
+      id: 'L3-4', level: 3, type: 'count',
       prompt: 'Start bei |+⟩, wende nur T an. Wie oft, bis du wieder bei |+⟩ bist? Wie oft, bis du bei |−⟩ bist?',
       start: '+', answers: { return_to_start: 8, reach_minus: 4 }
     },
     {
-      id: 'L4-5', level: 4, type: 'compare_orders',
+      id: 'L3-5', level: 3, type: 'compare_orders',
       prompt: 'Reihenfolge zählt: von |0⟩ aus einmal A, dann getrennt B. Wo landest du jeweils?',
       start: '0',
       A: {
@@ -177,6 +139,42 @@ window.BLOCH_CHALLENGES = {
         sequence: ['Ry(90deg)', 'Rz(90deg)', 'Rx(90deg)'], expected: '0',
         trace: [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]
       }
+    },
+
+    {
+      id: 'L4-1', level: 4, type: 'sequence',
+      start: '0', start_label: '|0⟩', sequence: ['H', 'T'],
+      expected: { state: null, label: null, theta_deg: 90.0, phi_deg: 45.0, bloch: [0.707107, 0.707107, 0.0] },
+      trace: [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.707107, 0.707107, 0.0]],
+      tolerance_deg: 15
+    },
+    {
+      id: 'L4-2', level: 4, type: 'sequence',
+      start: '0', start_label: '|0⟩', sequence: ['H', 'T', 'S'],
+      expected: { state: null, label: null, theta_deg: 90.0, phi_deg: 135.0, bloch: [-0.707107, 0.707107, 0.0] },
+      trace: [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.707107, 0.707107, 0.0], [-0.707107, 0.707107, 0.0]],
+      tolerance_deg: 15
+    },
+    {
+      id: 'L4-3', level: 4, type: 'sequence',
+      start: '0', start_label: '|0⟩', sequence: ['Rx(90deg)', 'T'],
+      expected: { state: null, label: null, theta_deg: 90.0, phi_deg: 315.0, bloch: [0.707107, -0.707107, 0.0] },
+      trace: [[0.0, 0.0, 1.0], [0.0, -1.0, 0.0], [0.707107, -0.707107, 0.0]],
+      tolerance_deg: 15
+    },
+    {
+      id: 'L4-4', level: 4, type: 'sequence',
+      start: '0', start_label: '|0⟩', sequence: ['Ry(45deg)', 'Rz(90deg)'],
+      expected: { state: null, label: null, theta_deg: 45.0, phi_deg: 90.0, bloch: [0.0, 0.707107, 0.707107] },
+      trace: [[0.0, 0.0, 1.0], [0.707107, 0.0, 0.707107], [0.0, 0.707107, 0.707107]],
+      tolerance_deg: 15
+    },
+    {
+      id: 'L4-5', level: 4, type: 'sequence',
+      start: '0', start_label: '|0⟩', sequence: ['Ry(135deg)', 'T', 'T'],
+      expected: { state: null, label: null, theta_deg: 135.0, phi_deg: 90.0, bloch: [0.0, 0.707107, -0.707107] },
+      trace: [[0.0, 0.0, 1.0], [0.707107, 0.0, -0.707107], [0.5, 0.5, -0.707107], [0.0, 0.707107, -0.707107]],
+      tolerance_deg: 15
     }
   ]
 };

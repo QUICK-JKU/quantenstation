@@ -21,6 +21,9 @@ en: Tap a person and find out, in their own words, what they are researching rig
 de: Was wir hier tun
 en: What we do here
 
+de: Wer wir sind, was wir erreicht haben und wie wir arbeiten
+en: Who we are, what we have achieved and how we work
+
 de: Was man studiert, wenn man das hier machen will
 en: What to study if you want to do this
 

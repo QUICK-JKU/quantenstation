@@ -510,218 +510,6 @@
     {
       "id": "L3-1",
       "level": 3,
-      "type": "sequence",
-      "start": "0",
-      "start_label": "|0>",
-      "sequence": [
-        "H",
-        "T"
-      ],
-      "expected": {
-        "state": null,
-        "label": null,
-        "theta_deg": 90.0,
-        "phi_deg": 45.0,
-        "bloch": [
-          0.707107,
-          0.707107,
-          0.0
-        ]
-      },
-      "trace": [
-        [
-          0.0,
-          0.0,
-          1.0
-        ],
-        [
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.707107,
-          0.707107,
-          0.0
-        ]
-      ],
-      "tolerance_deg": 15
-    },
-    {
-      "id": "L3-2",
-      "level": 3,
-      "type": "sequence",
-      "start": "0",
-      "start_label": "|0>",
-      "sequence": [
-        "H",
-        "T",
-        "S"
-      ],
-      "expected": {
-        "state": null,
-        "label": null,
-        "theta_deg": 90.0,
-        "phi_deg": 135.0,
-        "bloch": [
-          -0.707107,
-          0.707107,
-          0.0
-        ]
-      },
-      "trace": [
-        [
-          0.0,
-          0.0,
-          1.0
-        ],
-        [
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.707107,
-          0.707107,
-          0.0
-        ],
-        [
-          -0.707107,
-          0.707107,
-          0.0
-        ]
-      ],
-      "tolerance_deg": 15
-    },
-    {
-      "id": "L3-3",
-      "level": 3,
-      "type": "sequence",
-      "start": "0",
-      "start_label": "|0>",
-      "sequence": [
-        "Rx(90deg)",
-        "T"
-      ],
-      "expected": {
-        "state": null,
-        "label": null,
-        "theta_deg": 90.0,
-        "phi_deg": 315.0,
-        "bloch": [
-          0.707107,
-          -0.707107,
-          0.0
-        ]
-      },
-      "trace": [
-        [
-          0.0,
-          0.0,
-          1.0
-        ],
-        [
-          0.0,
-          -1.0,
-          0.0
-        ],
-        [
-          0.707107,
-          -0.707107,
-          0.0
-        ]
-      ],
-      "tolerance_deg": 15
-    },
-    {
-      "id": "L3-4",
-      "level": 3,
-      "type": "sequence",
-      "start": "0",
-      "start_label": "|0>",
-      "sequence": [
-        "Ry(45deg)",
-        "Rz(90deg)"
-      ],
-      "expected": {
-        "state": null,
-        "label": null,
-        "theta_deg": 45.0,
-        "phi_deg": 90.0,
-        "bloch": [
-          0.0,
-          0.707107,
-          0.707107
-        ]
-      },
-      "trace": [
-        [
-          0.0,
-          0.0,
-          1.0
-        ],
-        [
-          0.707107,
-          0.0,
-          0.707107
-        ],
-        [
-          0.0,
-          0.707107,
-          0.707107
-        ]
-      ],
-      "tolerance_deg": 15
-    },
-    {
-      "id": "L3-5",
-      "level": 3,
-      "type": "sequence",
-      "start": "0",
-      "start_label": "|0>",
-      "sequence": [
-        "Ry(135deg)",
-        "T",
-        "T"
-      ],
-      "expected": {
-        "state": null,
-        "label": null,
-        "theta_deg": 135.0,
-        "phi_deg": 90.0,
-        "bloch": [
-          0.0,
-          0.707107,
-          -0.707107
-        ]
-      },
-      "trace": [
-        [
-          0.0,
-          0.0,
-          1.0
-        ],
-        [
-          0.707107,
-          0.0,
-          -0.707107
-        ],
-        [
-          0.5,
-          0.5,
-          -0.707107
-        ],
-        [
-          0.0,
-          0.707107,
-          -0.707107
-        ]
-      ],
-      "tolerance_deg": 15
-    },
-    {
-      "id": "L4-1",
-      "level": 4,
       "type": "free_sequence",
       "prompt": "Turn |0> into |1> using only H and S. Fewest gates?",
       "start": "0",
@@ -742,8 +530,8 @@
       "checker": "simulate entered sequence; correct if final state == target; 'optimal' badge if length == optimal_length"
     },
     {
-      "id": "L4-2",
-      "level": 4,
+      "id": "L3-2",
+      "level": 3,
       "type": "fill_gap",
       "prompt": "Fill the gap so |0> ends at |1>.",
       "start": "0",
@@ -772,38 +560,28 @@
       ]
     },
     {
-      "id": "L4-3",
-      "level": 4,
-      "type": "identify_gate",
-      "prompt": "Mystery gate: |0> stays |0>, but |+> goes to |-i>. Name it.",
-      "tests": [
-        {
-          "in": "0",
-          "out": "0"
-        },
-        {
-          "in": "+",
-          "out": "-i"
-        }
-      ],
-      "options": [
-        "X",
-        "Y",
-        "Z",
-        "H",
+      "id": "L3-3",
+      "level": 3,
+      "type": "free_sequence",
+      "prompt": "Turn |+> into |-i> using only S and T. Fewest gates?",
+      "start": "+",
+      "target": "-i",
+      "allowed_gates": [
         "S",
-        "Sdg",
-        "T",
-        "Tdg"
+        "T"
       ],
-      "valid": [
-        "Sdg"
-      ],
-      "explanation": "S-dagger = Rz(-90 deg): fixes the Z axis, turns +X to -Y."
+      "optimal_length": 3,
+      "optimal_solutions": [
+        [
+          "S",
+          "S",
+          "S"
+        ]
+      ]
     },
     {
-      "id": "L4-4",
-      "level": 4,
+      "id": "L3-4",
+      "level": 3,
       "type": "count",
       "prompt": "Start at |+>, apply only T. How many T gates to return to |+>? How many to reach |->?",
       "start": "+",
@@ -813,8 +591,8 @@
       }
     },
     {
-      "id": "L4-5",
-      "level": 4,
+      "id": "L3-5",
+      "level": 3,
       "type": "compare_orders",
       "prompt": "Order matters: from |0> do A, then separately B. What are the end states?",
       "start": "0",
@@ -878,6 +656,218 @@
           ]
         ]
       }
+    },
+    {
+      "id": "L4-1",
+      "level": 4,
+      "type": "sequence",
+      "start": "0",
+      "start_label": "|0>",
+      "sequence": [
+        "H",
+        "T"
+      ],
+      "expected": {
+        "state": null,
+        "label": null,
+        "theta_deg": 90.0,
+        "phi_deg": 45.0,
+        "bloch": [
+          0.707107,
+          0.707107,
+          0.0
+        ]
+      },
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.707107,
+          0.707107,
+          0.0
+        ]
+      ],
+      "tolerance_deg": 15
+    },
+    {
+      "id": "L4-2",
+      "level": 4,
+      "type": "sequence",
+      "start": "0",
+      "start_label": "|0>",
+      "sequence": [
+        "H",
+        "T",
+        "S"
+      ],
+      "expected": {
+        "state": null,
+        "label": null,
+        "theta_deg": 90.0,
+        "phi_deg": 135.0,
+        "bloch": [
+          -0.707107,
+          0.707107,
+          0.0
+        ]
+      },
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.707107,
+          0.707107,
+          0.0
+        ],
+        [
+          -0.707107,
+          0.707107,
+          0.0
+        ]
+      ],
+      "tolerance_deg": 15
+    },
+    {
+      "id": "L4-3",
+      "level": 4,
+      "type": "sequence",
+      "start": "0",
+      "start_label": "|0>",
+      "sequence": [
+        "Rx(90deg)",
+        "T"
+      ],
+      "expected": {
+        "state": null,
+        "label": null,
+        "theta_deg": 90.0,
+        "phi_deg": 315.0,
+        "bloch": [
+          0.707107,
+          -0.707107,
+          0.0
+        ]
+      },
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.707107,
+          -0.707107,
+          0.0
+        ]
+      ],
+      "tolerance_deg": 15
+    },
+    {
+      "id": "L4-4",
+      "level": 4,
+      "type": "sequence",
+      "start": "0",
+      "start_label": "|0>",
+      "sequence": [
+        "Ry(45deg)",
+        "Rz(90deg)"
+      ],
+      "expected": {
+        "state": null,
+        "label": null,
+        "theta_deg": 45.0,
+        "phi_deg": 90.0,
+        "bloch": [
+          0.0,
+          0.707107,
+          0.707107
+        ]
+      },
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.707107,
+          0.0,
+          0.707107
+        ],
+        [
+          0.0,
+          0.707107,
+          0.707107
+        ]
+      ],
+      "tolerance_deg": 15
+    },
+    {
+      "id": "L4-5",
+      "level": 4,
+      "type": "sequence",
+      "start": "0",
+      "start_label": "|0>",
+      "sequence": [
+        "Ry(135deg)",
+        "T",
+        "T"
+      ],
+      "expected": {
+        "state": null,
+        "label": null,
+        "theta_deg": 135.0,
+        "phi_deg": 90.0,
+        "bloch": [
+          0.0,
+          0.707107,
+          -0.707107
+        ]
+      },
+      "trace": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.707107,
+          0.0,
+          -0.707107
+        ],
+        [
+          0.5,
+          0.5,
+          -0.707107
+        ],
+        [
+          0.0,
+          0.707107,
+          -0.707107
+        ]
+      ],
+      "tolerance_deg": 15
     }
   ],
   "team_challenge": {
@@ -886,7 +876,7 @@
       "L1-1",
       "L1-4",
       "L2-5",
-      "L3-1"
+      "L4-1"
     ],
     "code": [
       "|->",

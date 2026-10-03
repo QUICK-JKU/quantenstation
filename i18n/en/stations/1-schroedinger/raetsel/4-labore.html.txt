@@ -90,3 +90,15 @@ en: SOLVED ✓ —
 de: findet den Ort
 en: finds the position
 
+# Markup der Farbhervorhebung (Namen farbig, Superposition fett) — nichts zu uebersetzen
+de: <span class="who 
+en: =
+
+de: who 
+en: =
+
+de: GELÖST ✓ — <span class="who 
+en: SOLVED ✓ — <span class="who 
+
+de: </span> findet den <span class="sup">Ort</span>
+en: </span> finds the <span class="sup">position</span>

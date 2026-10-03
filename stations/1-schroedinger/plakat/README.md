@@ -64,6 +64,26 @@ Jede Kiste besteht aus drei Teilen: der dunklen Kopfleiste mit
 darunter als Rahmen, und dem Motiv darin. Kein Beschreibungstext und kein
 eigener QR-Code.
 
+## Das Lösungsblatt
+
+`loesungen.html` ist das Gegenstück für das Team: zwei A4-Blätter mit allen
+acht Codes, einem pro Schloss, dazu der Rechenweg beziehungsweise die
+richtigen Antworten. Blatt 1 ist Box 1 (grün), Blatt 2 ist Box 2 (rot).
+
+Jede Zeile zeigt die Farbe des echten Vorhängeschlosses. Die Zuordnung ist
+in beiden Kisten dieselbe und folgt den Farben, die auf der Website ohnehin
+schon an den Rätseln hängen:
+
+| Schloss | Farbe | Box 1 | Box 2 |
+|---|---|---|---|
+| 1 | Dunkelblau | 4540 | 2841 |
+| 2 | Rot | 6060 | 5073 |
+| 3 | Schwarz | 3060 | 9316 |
+| 4 | Silber | 7570 | 6482 |
+
+Die Blätter tragen oben den Hinweis **Nur für das Team**. Sie gehören nicht
+zu den Besucherunterlagen und sollten am Stand getrennt vom Plakat liegen.
+
 ## Drucken
 
 Das Blatt ist exakt die bedruckbare Fläche von A4 (194 × 281 mm,

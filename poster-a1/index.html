@@ -274,7 +274,7 @@ html, body { margin: 0; background: #dfe3ea; }
 .photo-pair figure { gap: 10px; }
 .photo-pair img { height: 230px; border-radius: 22px; }
 .photo-pair img.atome { object-position: 55% 60%; }
-.photo-pair figcaption { font-size: 25px; line-height: 1.28; }
+.photo-pair figcaption { font-size: 28px; line-height: 1.25; }
 
 /* ==========================================================================
    HAUPTTEIL
@@ -287,13 +287,13 @@ html, body { margin: 0; background: #dfe3ea; }
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  padding: 30px 90px 24px;
+  padding: 24px 90px 24px;
 }
 .content > section { position: relative; }
 
 .section-title {
   margin: 0 0 20px;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
   border-bottom: 4px solid var(--ink);
   display: flex;
   align-items: baseline;
@@ -314,8 +314,8 @@ html, body { margin: 0; background: #dfe3ea; }
   columns: 3;
   column-gap: 70px;
   column-rule: 2px solid var(--rule);
-  font-size: 27px;
-  line-height: 1.38;
+  font-size: 28px;
+  line-height: 1.34;
   color: #222;
 }
 .explainer h4 {
@@ -327,19 +327,19 @@ html, body { margin: 0; background: #dfe3ea; }
   color: var(--blue-link);
   break-after: avoid;
 }
-.explainer p { margin: 0 0 16px; text-wrap: pretty; }
+.explainer p { margin: 0 0 14px; text-wrap: pretty; }
 .explainer p:last-child { margin-bottom: 0; }
 
 .bloch-figure {
   float: right;
-  width: 170px;
+  width: 220px;
   margin: 4px 0 8px 22px;
 }
-.bloch-figure svg { display: block; width: 170px; height: auto; }
+.bloch-figure svg { display: block; width: 220px; height: auto; }
 .bloch-figure figcaption {
   margin-top: 4px;
-  font-size: 23px;
-  line-height: 1.25;
+  font-size: 28px;
+  line-height: 1.2;
   color: var(--muted);
 }
 
@@ -369,7 +369,7 @@ html, body { margin: 0; background: #dfe3ea; }
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 12px 28px;
+  padding: 10px 28px;
   border-radius: 24px 24px 0 0;
   background: var(--c);
   color: #fff;
@@ -400,7 +400,7 @@ html, body { margin: 0; background: #dfe3ea; }
   display: block;
   margin-top: 6px;
   font-family: var(--font-mono);
-  font-size: 24px;
+  font-size: 28px;
   letter-spacing: .1em;
   font-weight: 600;
 }
@@ -409,8 +409,8 @@ html, body { margin: 0; background: #dfe3ea; }
   flex-direction: column;
   gap: 10px;
   padding: 14px 28px 18px;
-  font-size: 27px;
-  line-height: 1.34;
+  font-size: 28px;
+  line-height: 1.3;
   color: #262626;
 }
 .station__body p { margin: 0; text-wrap: pretty; }
@@ -423,8 +423,8 @@ html, body { margin: 0; background: #dfe3ea; }
 }
 .station__body b {
   font-family: var(--font-mono);
-  font-size: 24px;
-  letter-spacing: .1em;
+  font-size: 28px;
+  letter-spacing: .08em;
   color: var(--c-dark);
 }
 
@@ -460,7 +460,7 @@ html, body { margin: 0; background: #dfe3ea; }
 .site-footer__uni {
   font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: .08em;
 }
 .site-footer__credits {
@@ -482,7 +482,7 @@ html, body { margin: 0; background: #dfe3ea; }
 .cat--qr        { right: 34px;  top: -44px;  width: 72px; height: 45px; color: #fff;            opacity: .55; }
 .cat--photo     { left: 22px;   top: -26px; width: 52px; height: 62px; color: var(--navy);     opacity: .55; }
 .cat--bloch     {                                                       color: var(--ink);      opacity: .7;  }
-.cat--explainer { left: calc(66.6% + 12px); bottom: -8px; width: 50px; height: 60px; color: var(--blue-link); opacity: .22; }
+.cat--explainer { left: calc(66.6% - 8px); bottom: -8px; width: 50px; height: 60px; color: var(--blue-link); opacity: .22; }
 .cat--station1  { right: 250px; top: -50px;  width: 82px; height: 51px; color: var(--c); }
 .cat--station3  { right: 40px;  top: -50px;  width: 82px; height: 51px; color: var(--c); }
 .cat--footer    { right: 110px; bottom: 242px; width: 44px; height: 53px; color: var(--ink);    opacity: .8;  }
@@ -551,7 +551,7 @@ html, body { margin: 0; background: #dfe3ea; }
 
       <h1 class="hero__title">Machen wir 60 Jahre JKU <em>messbar.</em></h1>
 
-      <p class="hero__lead">Bei uns schaust du nicht nur zu, sondern probierst selbst aus, wie ein Quantencomputer denkt – ganz ohne Vorwissen. Und halte die Augen offen: Auf diesem Plakat haben sich sieben Katzen versteckt.</p>
+      <p class="hero__lead">Bei uns schaust du nicht nur zu, sondern probierst selbst aus, wie ein Quantencomputer denkt – ganz ohne Vorwissen. </p>
 
       <div class="hero__howto">
         <div class="qr-card">
@@ -567,21 +567,21 @@ html, body { margin: 0; background: #dfe3ea; }
             <span class="steps__num">1</span>
             <div>
               <h3>Scannen</h3>
-              <p>Scanne den QR-Code mit deinem Handy, und die Website öffnet sich direkt – eine App brauchst du nicht.</p>
+              <p>Scanne den QR-Code mit deinem Handy, und die Website mit allen Infos für diese Station öffnet sich direkt.</p>
             </div>
           </li>
           <li>
             <span class="steps__num">2</span>
             <div>
               <h3>Wählen</h3>
-              <p>Besuche die Stationen in beliebiger Reihenfolge. Ist gerade viel los, überbrückst du die Wartezeit mit einem Rätsel am Handy.</p>
+              <p>Besuche die Stationen in beliebiger Reihenfolge. Ist gerade viel los, findest du genug Infos und Simulationen auf der Webseite zum Überbrücken.</p>
             </div>
           </li>
           <li>
             <span class="steps__num">3</span>
             <div>
               <h3>Ausprobieren</h3>
-              <p>Drehe Modelle, stecke Schaltkreise und knacke Rätsel, von denen jedes mit einem vierstelligen Code endet.</p>
+              <p>Drehe Modelle, stecke Schaltkreise und knacke Rätsel – hier darfst du alles selbst ausprobieren.</p>
             </div>
           </li>
         </ol>
@@ -621,16 +621,16 @@ html, body { margin: 0; background: #dfe3ea; }
       <div class="explainer">
         <h4>Rechnen mit Qubits</h4>
         <figure class="bloch-figure">
-          <svg viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg viewBox="0 -10 220 262" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="110" cy="120" r="80" fill="rgba(31,91,255,.07)" stroke="#14161c" stroke-opacity=".55" stroke-width="3"/>
             <ellipse cx="110" cy="120" rx="80" ry="26" fill="none" stroke="#14161c" stroke-opacity=".4" stroke-width="2.5" stroke-dasharray="7 6"/>
             <ellipse cx="110" cy="120" rx="26" ry="80" fill="none" stroke="#14161c" stroke-opacity=".25" stroke-width="2"/>
             <line x1="110" y1="32" x2="110" y2="208" stroke="#14161c" stroke-opacity=".55" stroke-width="2.5"/>
             <line x1="110" y1="120" x2="160" y2="66" stroke="#ff352b" stroke-width="6" stroke-linecap="round"/>
             <circle cx="160" cy="66" r="9" fill="#ff352b" stroke="#fff" stroke-width="3"/>
-            <g font-family="IBM Plex Mono, monospace" font-weight="700" font-size="21" fill="#1f4fd8" text-anchor="middle">
+            <g font-family="IBM Plex Mono, monospace" font-weight="700" font-size="28" fill="#1f4fd8" text-anchor="middle">
               <text x="110" y="24">|0⟩</text>
-              <text x="110" y="234">|1⟩</text>
+              <text x="110" y="240">|1⟩</text>
             </g>
             <use class="cat cat--bloch" href="#cat" x="176" y="196" width="22" height="26"/>
           </svg>
@@ -642,7 +642,7 @@ html, body { margin: 0; background: #dfe3ea; }
         <p>Misst man ein Qubit, erhält man trotzdem immer 0 oder 1. Wie wahrscheinlich welches Ergebnis ist, hängt vom Zustand ab, und nach der Messung kollabiert dieser. Gerechnet wird mit Gattern: Jedes Gatter dreht den Zustand auf der Kugel um einen vorgegebenen Winkel und damit kann man rechnen.</p>
 
         <h4>Verschränkung und Interferenz</h4>
-        <p>Zwei Qubits können so eng zusammenhängen, dass man sie nur noch gemeinsam beschreiben kann. Das ist einer der Effekte, die wir klassisch nicht erreichen. Weil n Qubits 2<sup>n</sup> Zahlen brauchen – bei 50 Qubits schon rund eine Billiarde –, kommen normale Computer hier rasch an ihre Grenzen. Dabei probiert ein Quantencomputer nicht einfach alles gleichzeitig aus, sondern sorgt dafür, dass sich falsche Antworten gegenseitig auslöschen und richtige verstärken.</p>
+        <p>Zwei Qubits können so eng zusammenhängen, dass man sie nur noch gemeinsam beschreiben kann. Das ist einer der Effekte, die wir klassisch nicht erreichen. Weil n Qubits 2<sup>n</sup> Zahlen brauchen – bei 50 Qubits schon rund eine Billiarde –, kommen normale Computer hier rasch an ihre Grenzen beim Simulieren. Dabei probiert ein Quantencomputer nicht einfach alles gleichzeitig aus, sondern sorgt dafür, dass sich falsche Antworten gegenseitig auslöschen und richtige verstärken.</p>
 
         <h4>Wie baut man Qubits – und wozu?</h4>
         <p>Qubits lassen sich auf ganz unterschiedliche Arten bauen: Supraleitende Schaltkreise müssen fast bis zum absoluten Nullpunkt gekühlt werden, während Atome und Ionen mit Laserlicht festgehalten werden und manche Rechner mit einzelnen Lichtteilchen sogar bei Raumtemperatur arbeiten. Eines Tages sollen sie helfen, neue Materialien und Medikamente zu entwickeln oder schwierige Planungsaufgaben zu lösen, und auch für besonders genaue Messgeräte sind Quanten wichtig.</p>
@@ -705,7 +705,7 @@ html, body { margin: 0; background: #dfe3ea; }
           </div>
           <div class="station__body">
             <p class="tagline">Hier lernst du die Menschen kennen, die hinter der Forschung stehen.</p>
-            <p><b>VOR ORT </b>Unser Team stellt sich selbst in kurzen Steckbriefen vor und erklärt, woran wir gerade arbeiten</p>
+            <p><b>VOR ORT </b>Unser Team stellt sich selbst in kurzen Steckbriefen vor und erklärt, woran wir gerade arbeiten.</p>
             <p><b>AM HANDY </b>Sind die Mappen vor Ort gerade besetzt, findest du alle Steckbriefe auch online.</p>
           </div>
         </div>
@@ -721,7 +721,7 @@ html, body { margin: 0; background: #dfe3ea; }
   <footer class="site-footer">
     <img src="img/logo-sloths.svg" alt="The Sloths – Quantum Information &amp; Computation @ Kepler">
     <div class="site-footer__text">
-      <span class="site-footer__institute">Institut für Integrierte Schaltungen und Quantencomputing</span>
+      <span class="site-footer__institute">Institut für Integrierte Schaltungen und Quantum Computing</span>
       <span class="site-footer__uni">JOHANNES KEPLER UNIVERSITÄT LINZ · 60 JAHRE JKU</span>
     </div>
   </footer>

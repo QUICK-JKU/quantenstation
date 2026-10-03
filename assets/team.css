@@ -107,3 +107,27 @@
   border: 1.5px solid var(--line);
 }
 .q-figure figcaption { margin-top: 8px; }
+
+/* ---------- Vorstellungsseite „We are the QuiCK Sloths“ ---------- */
+
+.q-strong { font-weight: 700; }
+
+.q-figgrid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 560px) {
+  .q-figgrid { grid-template-columns: 1fr 1fr; }
+  .q-figgrid-3 { grid-template-columns: 1fr 1fr 1fr; }
+}
+.q-figgrid-3 .q-figure img { aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* Das Maskottchen hat einen weißen Hintergrund: auf dem Papierton
+   wird er herausmultipliziert. */
+.q-mascot { max-width: 260px; margin: 0 auto; text-align: center; }
+.q-mascot img { border: 0; border-radius: 0; mix-blend-mode: multiply; }
+
+.award-year {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .08em;
+  color: var(--coral);
+  margin-bottom: 3px;
+}

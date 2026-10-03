@@ -24,6 +24,23 @@
   }
   .clue.is-ok .clue-badge { background: var(--green); color: #fff; }
 
+  /* Jede Person hat ihre Farbe, die Superpositionen stehen fett.
+     Gleiche Zuordnung wie auf dem Loesungsblatt unter ../plakat/. */
+  .who { font-weight: 700; }
+  .w-alice   { color: #1f5bff; }
+  .w-bob     { color: #ff352b; }
+  .w-diana   { color: #8b3dff; }
+  .w-charlie { color: #1f8a5b; }
+  .sup { font-weight: 700; color: var(--ink); }
+
+  /* Die Auswahlfelder tragen die Farbe der gewaehlten Person
+     beziehungsweise die fette Schrift der Superposition. */
+  select.q-select.w-alice,
+  select.q-select.w-bob,
+  select.q-select.w-diana,
+  select.q-select.w-charlie,
+  select.q-select.is-sup { font-weight: 700; }
+
   .labs { display: flex; flex-direction: column; gap: 9px; }
   .lab {
     border-radius: 14px;
@@ -188,10 +205,30 @@
 
   /* ---------- Hinweise aufbauen ---------- */
   var cluesEl = document.getElementById('clues');
+
+  // Namen und Superpositionen im Hinweistext hervorheben.
+  var FARBE = { Alice: 'w-alice', Bob: 'w-bob', Diana: 'w-diana', Charlie: 'w-charlie' };
+
+  function hervorheben(text) {
+    RESEARCHERS.forEach(function (n) {
+      text = text.replace(new RegExp('\\b' + n + '\\b', 'g'),
+        '<span class="who ' + FARBE[n] + '">' + n + '</span>');
+    });
+    SUPERPOSITIONS.forEach(function (w) {
+      // Ohne Rücksicht auf Groß- und Kleinschreibung: In der englischen
+      // Fassung stehen dieselben Begriffe im Satz teils klein („spin“).
+      text = text.replace(new RegExp('\\b' + w + '\\b', 'gi'), function (treffer) {
+        return '<span class="sup">' + treffer + '</span>';
+      });
+    });
+    return text;
+  }
+
   var clueNodes = CLUES.map(function (text, i) {
     var row = document.createElement('div');
     row.className = 'clue';
-    row.innerHTML = '<span class="clue-badge">' + (i + 1) + '</span><span>' + text + '</span>';
+    row.innerHTML = '<span class="clue-badge">' + (i + 1) + '</span><span>' +
+                    hervorheben(text) + '</span>';
     cluesEl.appendChild(row);
     return row;
   });
@@ -249,6 +286,10 @@
     labNodes.forEach(function (lab, i) {
       lab.el.classList.toggle('is-filled', !!(r[i] && s[i]));
       lab.el.classList.toggle('is-solved', solved);
+
+      // Gewaehlte Person in ihrer Farbe, gewaehlte Superposition fett.
+      lab.selR.className = 'q-select' + (r[i] ? ' who ' + FARBE[r[i]] : '');
+      lab.selS.className = 'q-select' + (s[i] ? ' is-sup' : '');
     });
 
     if (!full) {
@@ -266,7 +307,9 @@
     }
 
     if (solved) {
-      okLabel.textContent = 'SOLVED ✓ — ' + r[s.indexOf('Position')] + ' finds the position';
+      var wer = r[s.indexOf('Position')];
+      okLabel.innerHTML = 'SOLVED ✓ — <span class="who ' + FARBE[wer] + '">' +
+                          wer + '</span> finds the <span class="sup">position</span>';
       Q.solve({ id: 'schroedinger-4', code: CODE, block: okEl });
     }
   }

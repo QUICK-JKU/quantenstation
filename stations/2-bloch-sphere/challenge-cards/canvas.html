@@ -85,16 +85,21 @@
   /* Placeholder until the station's site has a final URL — swap for a real
      QR (see the TODO above INTRO_HTML) without touching the layout. */
   .qr-box {
-    flex: none; width: 92px; height: 92px; border: 2px dashed var(--faint); border-radius: 11px;
+    flex: none; width: 150px; height: 150px; border: 2px dashed var(--faint); border-radius: 11px;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-    font-family: var(--font-mono); font-weight: 700; font-size: 21px; color: var(--faint);
+    font-family: var(--font-mono); font-weight: 700; font-size: 30px; color: var(--faint);
   }
-  .qr-box span { font-size: 8.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+  .qr-box span { font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
   .qr-box.is-filled { border: 0; }
   .qr-box.is-filled svg { width: 100%; height: 100%; display: block; }
 
   .gate-info { display: grid; grid-template-columns: 1fr; gap: 3px 18px; }
   .gate-info .gi-item { display: flex; align-items: baseline; gap: 10px; font-size: 18px; line-height: 1.22; color: var(--ink); }
+  /* Stufen mit vielen Gattern (Level 3): zweispaltig und etwas kleiner,
+     damit der große QR-Code noch auf die Seite passt. */
+  .gate-info.dense { grid-template-columns: 1fr 1fr; gap: 4px 20px; }
+  .gate-info.dense .gi-item { font-size: 15px; line-height: 1.2; }
+  .gate-info.dense .gi-item b { font-size: 15px; min-width: 46px; }
   .gate-info .gi-item b { flex: none; font-family: var(--font-mono); font-weight: 700; font-size: 18px; color: var(--ink); min-width: 62px; }
 
   /* ---------- gate chips ---------- */
@@ -666,218 +671,6 @@
   {
     "id": "L3-1",
     "level": 3,
-    "type": "sequence",
-    "start": "0",
-    "start_label": "|0>",
-    "sequence": [
-      "H",
-      "T"
-    ],
-    "expected": {
-      "state": null,
-      "label": null,
-      "theta_deg": 90.0,
-      "phi_deg": 45.0,
-      "bloch": [
-        0.707107,
-        0.707107,
-        0.0
-      ]
-    },
-    "trace": [
-      [
-        0.0,
-        0.0,
-        1.0
-      ],
-      [
-        1.0,
-        0.0,
-        0.0
-      ],
-      [
-        0.707107,
-        0.707107,
-        0.0
-      ]
-    ],
-    "tolerance_deg": 15
-  },
-  {
-    "id": "L3-2",
-    "level": 3,
-    "type": "sequence",
-    "start": "0",
-    "start_label": "|0>",
-    "sequence": [
-      "H",
-      "T",
-      "S"
-    ],
-    "expected": {
-      "state": null,
-      "label": null,
-      "theta_deg": 90.0,
-      "phi_deg": 135.0,
-      "bloch": [
-        -0.707107,
-        0.707107,
-        0.0
-      ]
-    },
-    "trace": [
-      [
-        0.0,
-        0.0,
-        1.0
-      ],
-      [
-        1.0,
-        0.0,
-        0.0
-      ],
-      [
-        0.707107,
-        0.707107,
-        0.0
-      ],
-      [
-        -0.707107,
-        0.707107,
-        0.0
-      ]
-    ],
-    "tolerance_deg": 15
-  },
-  {
-    "id": "L3-3",
-    "level": 3,
-    "type": "sequence",
-    "start": "0",
-    "start_label": "|0>",
-    "sequence": [
-      "Rx(90deg)",
-      "T"
-    ],
-    "expected": {
-      "state": null,
-      "label": null,
-      "theta_deg": 90.0,
-      "phi_deg": 315.0,
-      "bloch": [
-        0.707107,
-        -0.707107,
-        0.0
-      ]
-    },
-    "trace": [
-      [
-        0.0,
-        0.0,
-        1.0
-      ],
-      [
-        0.0,
-        -1.0,
-        0.0
-      ],
-      [
-        0.707107,
-        -0.707107,
-        0.0
-      ]
-    ],
-    "tolerance_deg": 15
-  },
-  {
-    "id": "L3-4",
-    "level": 3,
-    "type": "sequence",
-    "start": "0",
-    "start_label": "|0>",
-    "sequence": [
-      "Ry(45deg)",
-      "Rz(90deg)"
-    ],
-    "expected": {
-      "state": null,
-      "label": null,
-      "theta_deg": 45.0,
-      "phi_deg": 90.0,
-      "bloch": [
-        0.0,
-        0.707107,
-        0.707107
-      ]
-    },
-    "trace": [
-      [
-        0.0,
-        0.0,
-        1.0
-      ],
-      [
-        0.707107,
-        0.0,
-        0.707107
-      ],
-      [
-        0.0,
-        0.707107,
-        0.707107
-      ]
-    ],
-    "tolerance_deg": 15
-  },
-  {
-    "id": "L3-5",
-    "level": 3,
-    "type": "sequence",
-    "start": "0",
-    "start_label": "|0>",
-    "sequence": [
-      "Ry(135deg)",
-      "T",
-      "T"
-    ],
-    "expected": {
-      "state": null,
-      "label": null,
-      "theta_deg": 135.0,
-      "phi_deg": 90.0,
-      "bloch": [
-        0.0,
-        0.707107,
-        -0.707107
-      ]
-    },
-    "trace": [
-      [
-        0.0,
-        0.0,
-        1.0
-      ],
-      [
-        0.707107,
-        0.0,
-        -0.707107
-      ],
-      [
-        0.5,
-        0.5,
-        -0.707107
-      ],
-      [
-        0.0,
-        0.707107,
-        -0.707107
-      ]
-    ],
-    "tolerance_deg": 15
-  },
-  {
-    "id": "L4-1",
-    "level": 4,
     "type": "free_sequence",
     "start": "0",
     "prompt": "Turn |0> into |1> using only H and S. Fewest gates?",
@@ -897,8 +690,8 @@
     ]
   },
   {
-    "id": "L4-2",
-    "level": 4,
+    "id": "L3-2",
+    "level": 3,
     "type": "fill_gap",
     "start": "0",
     "prompt": "Fill the gap so |0> ends at |1>.",
@@ -927,38 +720,28 @@
     ]
   },
   {
-    "id": "L4-3",
-    "level": 4,
-    "type": "identify_gate",
-    "prompt": "Mystery gate: |0> stays |0>, but |+> goes to |-i>. Name it.",
-    "options": [
-      "X",
-      "Y",
-      "Z",
-      "H",
+    "id": "L3-3",
+    "level": 3,
+    "type": "free_sequence",
+    "start": "+",
+    "prompt": "Turn |+> into |-i> using only S and T. Fewest gates?",
+    "target": "-i",
+    "allowed_gates": [
       "S",
-      "Sdg",
-      "T",
-      "Tdg"
+      "T"
     ],
-    "valid": [
-      "Sdg"
-    ],
-    "tests": [
-      {
-        "in": "0",
-        "out": "0"
-      },
-      {
-        "in": "+",
-        "out": "-i"
-      }
-    ],
-    "explanation": "S-dagger = Rz(-90 deg): fixes the Z axis, turns +X to -Y."
+    "optimal_length": 3,
+    "optimal_solutions": [
+      [
+        "S",
+        "S",
+        "S"
+      ]
+    ]
   },
   {
-    "id": "L4-4",
-    "level": 4,
+    "id": "L3-4",
+    "level": 3,
     "type": "count",
     "start": "+",
     "prompt": "Start at |+>, apply only T. How many T gates to return to |+>? How many to reach |->?",
@@ -968,8 +751,8 @@
     }
   },
   {
-    "id": "L4-5",
-    "level": 4,
+    "id": "L3-5",
+    "level": 3,
     "type": "compare_orders",
     "start": "0",
     "prompt": "Order matters: from |0> do A, then separately B. What are the end states?",
@@ -1033,6 +816,218 @@
         ]
       ]
     }
+  },
+  {
+    "id": "L4-1",
+    "level": 4,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "T"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 90.0,
+      "phi_deg": 45.0,
+      "bloch": [
+        0.707107,
+        0.707107,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.707107,
+        0.707107,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L4-2",
+    "level": 4,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "H",
+      "T",
+      "S"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 90.0,
+      "phi_deg": 135.0,
+      "bloch": [
+        -0.707107,
+        0.707107,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.707107,
+        0.707107,
+        0.0
+      ],
+      [
+        -0.707107,
+        0.707107,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L4-3",
+    "level": 4,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "Rx(90deg)",
+      "T"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 90.0,
+      "phi_deg": 315.0,
+      "bloch": [
+        0.707107,
+        -0.707107,
+        0.0
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.707107,
+        -0.707107,
+        0.0
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L4-4",
+    "level": 4,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "Ry(45deg)",
+      "Rz(90deg)"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 45.0,
+      "phi_deg": 90.0,
+      "bloch": [
+        0.0,
+        0.707107,
+        0.707107
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.707107,
+        0.0,
+        0.707107
+      ],
+      [
+        0.0,
+        0.707107,
+        0.707107
+      ]
+    ],
+    "tolerance_deg": 15
+  },
+  {
+    "id": "L4-5",
+    "level": 4,
+    "type": "sequence",
+    "start": "0",
+    "start_label": "|0>",
+    "sequence": [
+      "Ry(135deg)",
+      "T",
+      "T"
+    ],
+    "expected": {
+      "state": null,
+      "label": null,
+      "theta_deg": 135.0,
+      "phi_deg": 90.0,
+      "bloch": [
+        0.0,
+        0.707107,
+        -0.707107
+      ]
+    },
+    "trace": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.707107,
+        0.0,
+        -0.707107
+      ],
+      [
+        0.5,
+        0.5,
+        -0.707107
+      ],
+      [
+        0.0,
+        0.707107,
+        -0.707107
+      ]
+    ],
+    "tolerance_deg": 15
   }
 ];
     /* ===== END GENERATED ===================================================== */
@@ -1133,11 +1128,11 @@
      prompt from data.json still drives the actual checking logic in
      bodyXxx() below — this is display text only. */
   var DE_TITLE_SUB = {
-    'L4-1': { title: 'Starte in |0⟩ und gelange zu |1⟩ — nur mit H und S', sub: 'Geht es auch mit weniger als 4 Gattern?' },
-    'L4-2': { title: 'Fülle die Lücke', sub: 'Ziel: |0⟩ → |1⟩' },
-    'L4-3': { title: 'Mysteriöses Gatter', sub: '|0⟩ bleibt |0⟩, |+⟩ wird zu |−i⟩ — wie heißt es?' },
-    'L4-4': { title: 'Perioden zählen', sub: 'Start |+⟩, nur T: wie oft bis |+⟩? Wie oft bis |−⟩?' },
-    'L4-5': { title: 'Was sind die Ergebnisse?', sub: 'Von |0⟩: einmal Reihenfolge A, einmal B — wie enden sie?' }
+    'L3-1': { title: 'Starte in |0⟩ und gelange zu |1⟩ — nur mit H und S', sub: 'Geht es auch mit weniger als 4 Gattern?' },
+    'L3-2': { title: 'Fülle die Lücke', sub: 'Ziel: |0⟩ → |1⟩' },
+    'L3-3': { title: 'Starte in |+⟩ und gelange zu |−i⟩ — nur mit S und T', sub: 'Geht es mit möglichst wenigen Gattern?' },
+    'L3-4': { title: 'Perioden zählen', sub: 'Start |+⟩, nur T: wie oft bis |+⟩? Wie oft bis |−⟩?' },
+    'L3-5': { title: 'Was sind die Ergebnisse?', sub: 'Von |0⟩: einmal Reihenfolge A, einmal B — wie enden sie?' }
   };
 
   function titleAndSub(c) {
@@ -1215,7 +1210,7 @@
       seen[g.key] = true;
       rows.push('<div class="gi-item"><b>' + (g.glossaryLabel || g.label) + '</b><span>' + g.desc + '</span></div>');
     });
-    return '<div class="gate-info">' + rows.join('') + '</div>';
+    return '<div class="gate-info' + (rows.length > 8 ? ' dense' : '') + '">' + rows.join('') + '</div>';
   }
 
   function rowShell(c, lvl, bodyHtml) {
@@ -1257,13 +1252,6 @@
     }
   };
 
-  /* data.json keeps the original English explanation from the simulator;
-     the printed cards are German, so this one hand-written field lives
-     here rather than in the data file. Only used on the solved variant. */
-  var DE_EXPLANATION = {
-    'L4-3': 'S† = Rz(−90°): lässt die z-Achse unverändert und dreht +X nach −Y.'
-  };
-
   /* Same rows, with the answer included — the staff reference variant. */
   var SOLUTION_ROW_BUILDERS = {
     sequence: function (c, lvl) {
@@ -1290,7 +1278,7 @@
       return rowShell(c, lvl,
         '<span class="lr-line">' + tests + '</span>' +
         '<span class="lr-target">Antwort: ' + c.valid.map(function (v) { return parseGate(v).label; }).join(', ') + '</span>' +
-        '<span class="lr-line" style="flex:0 0 100%;color:var(--muted);font-style:italic;">' + (DE_EXPLANATION[c.id] || c.explanation) + '</span>');
+        '<span class="lr-line" style="flex:0 0 100%;color:var(--muted);font-style:italic;">' + (c.explanation || '') + '</span>');
     },
     count: function (c, lvl) {
       return rowShell(c, lvl,

@@ -30,7 +30,7 @@ Zahlen-Abzeichen im Kopf macht die Stufe auf einen Blick erkennbar.
 (die Konstanten `META`, `CHALLENGES`). Alles andere in `canvas.html` —
 Styling, `INTRO_HTML` (Aufgabentext + QR-Platzhalter), das Gatter-Glossar
 (`GATE_INFO`/`AXIS_DESC`, zusammengestellt pro Seite via
-`levelGateNames`/`gateInfoGrid`), die deutschen Kurztitel für Level 4
+`levelGateNames`/`gateInfoGrid`), die deutschen Kurztitel für Level 3
 (`DE_TITLE_SUB`), und die beiden Zeilen-Layout-Sets pro Aufgabentyp
 (`TASK_ROW_BUILDERS` ohne Lösung, `SOLUTION_ROW_BUILDERS` mit Lösung,
 ausgewählt in `levelPage(level, withSolutions)`) — bleibt beim Neu-Bauen
@@ -62,7 +62,7 @@ python build.py
 2. `python build.py` ausführen.
 3. `canvas.html` im Browser öffnen und prüfen (siehe unten).
 
-Die Prompts der fünf Level-4-Aufgaben liegen im Original auf Englisch vor;
+Die Prompts der fünf Level-3-Aufgaben liegen im Original auf Englisch vor;
 die deutschen Karten-Titel dafür stehen bewusst hand-geschrieben in
 `canvas.html` (`DE_TITLE_SUB`), nicht in `data.json` — das ist reine
 Anzeige-Übersetzung, keine Aufgaben-Logik. Jeder Titel/Untertitel ist als

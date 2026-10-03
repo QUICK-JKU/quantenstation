@@ -42,15 +42,11 @@ en: Fill the gap so that |0⟩ ends up at |1⟩.
 de: Tdg
 en: =
 
-de: Mysteriöses Gatter: |0⟩ bleibt |0⟩, aber |+⟩ wird zu |−i⟩. Wie heißt es?
-en: Mystery gate: |0⟩ stays |0⟩, but |+⟩ becomes |−i⟩. What is it called?
-
-de: S† = Rz(−90°): lässt die z-Achse fest, dreht +X nach −Y.
-en: S† = Rz(−90°): keeps the z-axis fixed, turns +X into −Y.
-
 de: Start bei |+⟩, wende nur T an. Wie oft, bis du wieder bei |+⟩ bist? Wie oft, bis du bei |−⟩ bist?
 en: Start at |+⟩ and apply only T. How many times until you are back at |+⟩? How many until you reach |−⟩?
 
 de: Reihenfolge zählt: von |0⟩ aus einmal A, dann getrennt B. Wo landest du jeweils?
 en: Order matters: starting from |0⟩, do A once, then separately B. Where do you end up in each case?
 
+de: Verwandle |+⟩ in |−i⟩ — nur mit S und T. Geht es mit möglichst wenigen Gattern?
+en: Turn |+⟩ into |−i⟩ — using only S and T. Can you do it with as few gates as possible?
