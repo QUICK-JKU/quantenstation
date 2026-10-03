@@ -1,0 +1,119 @@
+# Englische Texte für stations/4-meettheteam/quick-sloths.html — siehe tools/build-en.py
+# (Die Seite wird von tools/build-team.py aus team-data.json erzeugt.)
+
+de: We are the QuiCK Sloths. · Meet the Team
+en: =
+
+de: Wir sind die Abteilung für Quantum Computing am Institut für Integrierte Schaltungen und Quantum Computing an der JKU Linz.
+en: We are the Quantum Computing department at the Institute for Integrated Circuits and Quantum Computing at JKU Linz.
+
+de: 🦥 Wir
+en: 🦥 Us
+
+de: 60 Jahre JKU · Meet the Team
+en: 60 Years of JKU · Meet the Team
+
+de: Das waren wir im Sommer 2025, seither ist unsere Gruppe gewachsen.
+en: That was us in summer 2025 — our group has grown since then.
+
+de: Quantenwissenschaften gehören zu den spannendsten Technologiefeldern unserer Zeit. Unser interdisziplinäres Team arbeitet an der Schnittstelle von Informatik, Physik und Mathematik und entwickelt neue Ansätze für zentrale Herausforderungen in Wissenschaft und Anwendung.
+en: Quantum science is among the most exciting fields of technology of our time. Our interdisciplinary team works at the intersection of computer science, physics and mathematics and develops new approaches to central challenges in science and applications.
+
+de: In der akademischen Forschung priorisieren wir Qualität über Quantität und überlegen uns zunächst, welche Probleme wir mit welchen Methoden angehen wollen – und warum das wichtig ist. Daher veröffentlichen wir womöglich weniger als andere Forschungsgruppen, verfolgen dabei jedoch den Anspruch, dass unsere Publikationen tatsächlich eine nachhaltige Wirkung entfalten. Dieser Ansatz wurde mit mehreren hochkarätigen nationalen und internationalen Forschungsförderungen belohnt.
+en: In academic research, we prioritise quality over quantity and first think about which problems we want to tackle with which methods — and why that matters. We may therefore publish less than other research groups, but we aim for our publications to have a lasting impact. This approach has been rewarded with several high-profile national and international research grants.
+
+de: In der Hochschullehre verfolgen wir eine anglo-amerikanische Lehrphilosophie, die Neugier und Zusammenarbeit fördert sowie ein tiefgreifendes Verständnis in den Mittelpunkt stellt. Für diesen Ansatz wurden wir 2023 und 2026 mit insgesamt drei Kepler Awards für herausragende Lehre ausgezeichnet.
+en: In university teaching, we follow an Anglo-American teaching philosophy that encourages curiosity and collaboration and puts deep understanding at the centre. For this approach we received a total of three Kepler Awards for excellent teaching, in 2023 and 2026.
+
+de: „The Sound of Entanglement“ beim Ars Electronica Festival 2024
+en: “The Sound of Entanglement” at the Ars Electronica Festival 2024
+
+de: Im Bereich des gesellschaftlichen Engagements haben wir erfolgreiche Kooperationen an der Schnittstelle von Kunst und Wissenschaft mitinitiiert: „The Sound of Entanglement“ bildete den Auftakt des Ars Electronica Festivals 2024 (mit über 3.000 Besucher*Innen). Dafür haben wir 2025 den Kepler Award für Wissenschaftskommunikation erhalten. Angespornt durch diesen Erfolg produzieren wir derzeit einen eigenen Dokumentarfilm über den aktuellen Stand des Quantencomputings, mit Drehorten in Innsbruck, München, Pasadena und Linz.
+en: In the area of social engagement, we have co-initiated successful collaborations at the intersection of art and science: “The Sound of Entanglement” opened the Ars Electronica Festival 2024 (with over 3,000 visitors). For it, we received the Kepler Award for science communication in 2025. Spurred on by this success, we are currently producing our own documentary about the current state of quantum computing, with filming locations in Innsbruck, Munich, Pasadena and Linz.
+
+de: Man darf also gespannt sein.
+en: So there is plenty to look forward to.
+
+de: Team-Maskottchen: Slomo
+en: Team mascot: Slomo
+
+de: Wir präsentieren unsere Arbeit gerne dem öffentlichen Publikum
+en: We love presenting our work to the public
+
+de: The Sound Of Entanglement eröffnete das Ars Electronica Festival 2024 im Linzer Mariendom und war seither auch schon an der Johns Hopkins University in Washington DC.
+en: The Sound Of Entanglement opened the Ars Electronica Festival 2024 in Linz's Mariendom cathedral and has since also been performed at Johns Hopkins University in Washington DC.
+
+de: Nina Brandl vertritt unsere Gruppe seit 2 Jahren beim „Sciencity – die Brainstage“ am Linzer Hauptplatz.
+en: For 2 years now, Nina Brandl has represented our group at “Sciencity – die Brainstage” on Linz's main square.
+
+de: Alexander Ploier präsentiert The Sound Of Entanglement regelmäßig in Interviews und bei Veranstaltungen, wie dem Pint of Science Festival 2026.
+en: Alexander Ploier regularly presents The Sound Of Entanglement in interviews and at events, such as the Pint of Science Festival 2026.
+
+de: Johannes Kofler spricht über seine Arbeit in Podcasts wie „Quanten in der Industrie“ und dem „Paradox Podcast“, sowie im Interview mit Ö1.
+en: Johannes Kofler talks about his work in podcasts such as “Quanten in der Industrie” and the “Paradox Podcast”, as well as in an interview with Ö1.
+
+de: Darüber hinaus nehmen die Wissenschaftler*Innen regelmäßig an Veranstaltungen zur Wissenschaftsvermittlung an das öffentliche Publikum – an Erwachsene und auch Kinder – teil.
+en: Beyond that, our scientists regularly take part in public outreach events — for adults and for children alike.
+
+de: Weitere Eindrücke von „The Sound of Entanglement“ beim Ars Electronica Festival 2024
+en: More impressions of “The Sound of Entanglement” at the Ars Electronica Festival 2024
+
+de: Einige Erfolge unseres Teams
+en: Some successes of our team
+
+de: ZONTA STEM Award
+en: =
+
+de: Kristina Kirova
+en: =
+
+de: Frontiers of Science Award
+en: =
+
+de: Richard Küng für die Arbeit „Predicting Many Properties of a Quantum State with very few Measurements“
+en: Richard Küng for the paper “Predicting Many Properties of a Quantum State with very few Measurements”
+
+de: JKU Kepler Awards in Science Communications
+en: =
+
+de: Johannes Kofler, Alexander Ploier und Richard Küng für The Sound Of Entanglement
+en: Johannes Kofler, Alexander Ploier and Richard Küng for The Sound Of Entanglement
+
+de: Kristina Kirova für ihr Video mit dem Titel „explaining a novel quantum framework“ im OxA Science Association&#x27;s Advent Calendar
+en: Kristina Kirova for her video “explaining a novel quantum framework” in the OxA Science Association&#x27;s Advent Calendar
+
+de: Kepler Awards for Excellence in Teaching
+en: =
+
+de: Kristina Kirova und Jadwiga Wilkens in der Kategorie Best Practice für ihr Lehrkonzept in der Lehrveranstaltung UE: Quantum Computing
+en: Kristina Kirova and Jadwiga Wilkens in the Best Practice category for their teaching concept in the course UE: Quantum Computing
+
+de: JKU Kepler Awards
+en: =
+
+de: Verleihung des 2025 JKU Kepler Awards in Science Communications
+en: Presentation of the 2025 JKU Kepler Awards in Science Communications
+
+de: Bei der Preisverleihung des 2026 JKU Kepler Award in Science Communications wurde Kristina Kirova ausgezeichnet.
+en: Kristina Kirova was honoured at the 2026 JKU Kepler Award in Science Communications ceremony.
+
+de: Verleihung der JKU Kepler Awards 2023
+en: Presentation of the JKU Kepler Awards 2023
+
+de: Auszeichnungen und Impressionen
+en: Awards and impressions
+
+de: Richard Küng wird mit dem 2025 Frontiers of Science Award beim International Congress of Basic Science in Peking ausgezeichnet.
+en: Richard Küng receives the 2025 Frontiers of Science Award at the International Congress of Basic Science in Beijing.
+
+de: Kristina Kirova mit dem 2025 ZONTA STEM Award
+en: Kristina Kirova with the 2025 ZONTA STEM Award
+
+de: Unser Team
+en: Our team
+
+de: Zu den Personen
+en: To the people
+
+de: Lerne die Forscher*innen einzeln kennen
+en: Get to know the researchers one by one

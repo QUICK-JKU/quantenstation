@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lösungsblatt · Bloch-Kugel</title>
+<meta name="description" content="Kompakte Lösungstabelle aller 20 Vor-Ort-Challenges der Bloch-Kugel-Station — Reserve, falls die Prüfung auf der Website einmal nicht geht.">
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AE%3C/text%3E%3C/svg%3E">
+<style>
+  /* Printable A4 reference sheet — plain, dense, no kiosk chrome.
+     Source of truth is challenges-data.js (same file the live "teste
+     selbst" checker uses), loaded below and rendered into the table —
+     never hand-copied, so this can't drift out of sync with the site. */
+  :root {
+    --ink: #14161c; --muted: #5d584f; --faint: #8a847a; --line: rgba(20,22,28,.16);
+    --bg: #f3efe6; --card: #fff;
+    --l1: #1f8a5b; --l2: #1f5bff; --l3: #c98a1a; --l4: #ff352b;
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 28px 22px 60px; }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: 30px; margin: 0 0 4px; letter-spacing: -.01em; }
+  .sub { margin: 0 0 18px; font-size: 14.5px; color: var(--muted); line-height: 1.4; max-width: 640px; }
+  .top-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+  .print-btn {
+    font-family: var(--font-mono); font-weight: 700; font-size: 13px; letter-spacing: .04em;
+    padding: 10px 16px; border-radius: 10px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink);
+    cursor: pointer; flex: none;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 6px; }
+  caption { text-align: left; font-family: var(--font-mono); font-weight: 700; font-size: 12.5px;
+    letter-spacing: .1em; text-transform: uppercase; color: #fff; padding: 7px 10px; border-radius: 8px 8px 0 0; }
+  thead th {
+    text-align: left; font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--muted); padding: 6px 10px; border-bottom: 2px solid var(--ink);
+  }
+  tbody td { padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; background: var(--card); }
+  tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+  td.id { font-family: var(--font-mono); font-weight: 700; white-space: nowrap; }
+  td.sol { font-weight: 700; }
+  .lvl-block { margin-bottom: 22px; break-inside: avoid; }
+  .gate { font-family: var(--font-mono); }
+
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin: 4px 0 20px; font-size: 12.5px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); color: var(--muted); }
+  .legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+  footer { margin-top: 24px; font-size: 12px; color: var(--faint); font-family: var(--font-mono); }
+
+  @page { size: A4; margin: 14mm; }
+  @media print {
+    body { background: #fff; }
+    .no-print { display: none !important; }
+    .lvl-block { break-inside: avoid; }
+  }
+</style>
+<!-- lang:start -->
+<link rel="alternate" hreflang="de" href="loesungsblatt.html">
+<link rel="alternate" hreflang="en" href="../../en/stations/2-bloch-sphere/loesungsblatt.html">
+<script src="../../assets/lang.js"></script>
+<!-- lang:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="top-row">
+    <div>
+      <h1>Lösungsblatt · Bloch-Kugel</h1>
+      <p class="sub">
+        Alle 20 Vor-Ort-Challenges kompakt mit Lösung — als Reserve für
+        Betreuer:innen, falls die Prüfung auf <code>teste-selbst.html</code>
+        einmal nicht geht. Quelle: <code>challenges-data.js</code>, dieselbe
+        Datei wie auf der Website.
+      </p>
+    </div>
+    <button class="print-btn no-print" type="button" onclick="window.print()">🖨 Drucken</button>
+  </div>
+
+  <div class="legend">
+    <span><i style="background:var(--l1)"></i>Level 1 · Leicht</span>
+    <span><i style="background:var(--l2)"></i>Level 2 · Mittel</span>
+    <span><i style="background:var(--l3)"></i>Level 3 · Schwer</span>
+    <span><i style="background:var(--l4)"></i>Level 4 · Experte</span>
+  </div>
+
+  <div id="out">Lade Aufgaben …</div>
+
+  <footer>60 Jahre JKU · Station 2 — Bloch-Kugel · nur für Betreuer:innen</footer>
+</div>
+
+<script src="challenges-data.js"></script>
+<script>
+(function () {
+  'use strict';
+  var DATA = window.BLOCH_CHALLENGES;
+  var out = document.getElementById('out');
+  if (!DATA) { out.textContent = 'challenges-data.js konnte nicht geladen werden.'; return; }
+
+  var LEVELS = { 1: ['Leicht', 'var(--l1)'], 2: ['Mittel', 'var(--l2)'], 3: ['Schwer', 'var(--l3)'], 4: ['Experte', 'var(--l4)'] };
+  var KET = { '0': '|0⟩', '1': '|1⟩', '+': '|+⟩', '-': '|−⟩', '+i': '|+i⟩', '-i': '|−i⟩' };
+  function ket(c) { return c == null ? '—' : (KET[c] || ('|' + c + '⟩')); }
+  var PRETTY = { Sdg: 'S†', Tdg: 'T†' };
+  function gate(tok) {
+    if (PRETTY[tok]) return PRETTY[tok];
+    var m = /^(Rx|Ry|Rz)\((-?[\d.]+)deg\)$/.exec(tok);
+    return m ? m[1] + '(' + m[2] + '°)' : tok;
+  }
+  function seq(list) { return '<span class="gate">' + list.map(gate).join(' → ') + '</span>'; }
+  function num(n) { var r = Math.round(n * 100) / 100; return Object.is(r, -0) ? '0' : String(r); }
+  function angle(theta, phi) { return 'θ=' + num(theta) + '°' + (phi == null ? '' : ', φ=' + num(phi) + '°'); }
+
+  function row(c) {
+    var start = ket(c.start), task = '', sol = '';
+    switch (c.type) {
+      case 'sequence':
+        task = ket(c.start) + ' <span class="gate">→</span> ' + seq(c.sequence);
+        sol = c.expected.state != null ? ket(c.expected.state) + ' <span class="gate">(' + angle(c.expected.theta_deg, c.expected.phi_deg) + ')</span>' : angle(c.expected.theta_deg, c.expected.phi_deg);
+        break;
+      case 'free_sequence':
+        task = 'Start ' + start + ' · erlaubt: <span class="gate">' + c.allowed_gates.map(gate).join(', ') + '</span> · Ziel ' + ket(c.target);
+        sol = seq(c.optimal_solutions[0]) + ' <span class="gate">(' + c.optimal_length + ' Gatter)</span>';
+        break;
+      case 'fill_gap':
+        task = seq(c.template);
+        sol = 'gültig: <span class="gate">' + c.valid.map(gate).join(', ') + '</span> → ' + ket(c.target);
+        break;
+      case 'identify_gate':
+        task = c.tests.map(function (t) { return ket(t.in) + '→' + ket(t.out); }).join('  ·  ');
+        sol = '<span class="gate">' + c.valid.map(gate).join(', ') + '</span>';
+        break;
+      case 'count':
+        task = 'Start ' + ket(c.start) + ', nur T';
+        sol = c.answers.return_to_start + '× bis zurück zu ' + ket(c.start) + ' · ' + c.answers.reach_minus + '× bis |−⟩';
+        break;
+      case 'compare_orders':
+        task = 'A: ' + seq(c.A.sequence) + '<br>B: ' + seq(c.B.sequence);
+        sol = 'A ⇒ ' + ket(c.A.expected) + '<br>B ⇒ ' + ket(c.B.expected);
+        break;
+    }
+    return '<tr><td class="id">' + c.id + '</td><td>' + start + '</td><td>' + task + '</td><td class="sol">' + sol + '</td></tr>';
+  }
+
+  var html = [1, 2, 3, 4].map(function (lvl) {
+    var meta = LEVELS[lvl];
+    var rows = DATA.challenges.filter(function (c) { return c.level === lvl; }).map(row).join('');
+    return '<div class="lvl-block"><table>' +
+      '<caption style="background:' + meta[1] + '">Level ' + lvl + ' · ' + meta[0] + '</caption>' +
+      '<thead><tr><th>ID</th><th>Start</th><th>Aufgabe</th><th>Lösung</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div>';
+  }).join('');
+
+  out.innerHTML = html;
+})();
+</script>
+</body>
+</html>
