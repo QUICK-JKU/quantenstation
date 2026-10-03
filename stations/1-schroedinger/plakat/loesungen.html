@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schrödinger-Box — Lösungen (Druck)</title>
+<link rel="stylesheet" href="../../../assets/fonts/fonts.css">
+<style>
+  /* ---------------------------------------------------------------------
+     NUR FUER DAS TEAM. Zwei A4-Blaetter mit allen Codes.
+     Gleiches Raster wie canvas.html und die Bloch-Referenzkarten:
+     die bedruckbare Flaeche von A4, 194 x 281 mm (733 x 1062 px @ 96dpi).
+     Im Druckdialog "Tatsaechliche Groesse" / 100 % waehlen.
+  --------------------------------------------------------------------- */
+  :root {
+    --ink: #14161c; --muted: #6a655c; --faint: #8a847a;
+    --line: rgba(20,22,28,.14);
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+    --b1: #1f8a5b; --b1-dk: #14603f; --b1-tint: rgba(31,138,91,.10);
+    --b2: #ff352b; --b2-dk: #a3221b; --b2-tint: rgba(255,53,43,.09);
+
+    /* Die vier echten Schloesser */
+    --s-rot:     #d92b1f;
+    --s-schwarz: #14161c;
+    --s-silber:  #b9bdc4;
+    --s-blau:    #17347a;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #dfe3ea; }
+  body { font-family: var(--font-body); color: var(--ink); }
+
+  .sheet-stack {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 40px; padding: 40px 20px;
+  }
+
+  article.page {
+    width: 733px; height: 1062px; flex: none;
+    background: #ffffff;
+    box-shadow: 0 14px 40px rgba(15,35,80,.22);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* ---------- Kopfband ---------- */
+  .band {
+    position: relative; flex: none; color: #fff;
+    padding: 18px 34px 17px; overflow: hidden;
+  }
+  .band svg.atom { position: absolute; right: -40px; top: -46px; width: 190px; height: 190px; opacity: .22; }
+  .head-row { position: relative; display: flex; align-items: center; gap: 18px; }
+  .box-badge {
+    flex: none; width: 78px; height: 78px; border-radius: 50%;
+    background: #fff; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 800; font-size: 40px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  }
+  .pill {
+    font-family: var(--font-mono); font-weight: 600; font-size: 14px;
+    letter-spacing: .09em; padding: 5px 11px; border-radius: 999px;
+    background: rgba(255,255,255,.24); display: inline-block;
+  }
+  .band h1 {
+    margin: 7px 0 0; font-family: var(--font-display); font-weight: 800;
+    font-size: 32px; line-height: 1.06; letter-spacing: -.01em;
+  }
+
+  /* ---------- Koerper ---------- */
+  .body { flex: 1; min-height: 0; padding: 16px 34px 14px; display: flex; flex-direction: column; gap: 11px; }
+  .warn {
+    border: 2px solid var(--ink); border-radius: 11px; padding: 8px 14px;
+    font-family: var(--font-mono); font-weight: 700; font-size: 13px;
+    letter-spacing: .07em; text-transform: uppercase;
+  }
+
+  /* ---------- eine Zeile pro Schloss ---------- */
+  /* Die vier Zeilen verteilen sich ueber die Seite, damit beide Blaetter
+     gefuellt aussehen, auch wenn Blatt 1 weniger Text hat. */
+  .locks { display: flex; flex-direction: column; gap: 10px; flex: 1;
+           justify-content: space-between; }
+  .lock {
+    border: 1.5px solid var(--line); border-radius: 13px;
+    padding: 10px 14px; display: flex; gap: 14px; align-items: flex-start;
+  }
+  .chip {
+    flex: none; width: 74px;
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+  }
+  .dot {
+    width: 42px; height: 42px; border-radius: 50%;
+    border: 2px solid rgba(20,22,28,.35);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-weight: 700; font-size: 17px; color: #fff;
+  }
+  .dot.d-rot     { background: var(--s-rot); }
+  .dot.d-schwarz { background: var(--s-schwarz); }
+  .dot.d-silber  { background: var(--s-silber); color: #14161c; }
+  .dot.d-blau    { background: var(--s-blau); }
+  .chip span {
+    font-family: var(--font-mono); font-weight: 700; font-size: 10px;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+  }
+
+  .lock-txt { flex: 1; min-width: 0; }
+  .lock-head { display: flex; align-items: baseline; gap: 12px; }
+  .lock-title { font-family: var(--font-display); font-weight: 700; font-size: 20px; }
+  .code {
+    margin-left: auto; flex: none;
+    font-family: var(--font-mono); font-weight: 700; font-size: 27px;
+    letter-spacing: .12em; color: var(--ink);
+    background: #f1f0eb; border-radius: 9px; padding: 3px 12px;
+  }
+  .lock-sub {
+    font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--faint); margin-top: 2px;
+  }
+  .lock-body { margin-top: 6px; font-size: 15px; line-height: 1.36; color: #2c2c2c; }
+  .lock-body b { color: var(--ink); }
+  /* Rätsel 4: die vier Forschenden je in einer Farbe, damit sich die
+     Zuordnung auf einen Blick lesen lässt. Die Superposition daneben
+     steht fett. */
+  .who { font-weight: 700; }
+  .w-alice   { color: #1f5bff; }
+  .w-bob     { color: #ff352b; }
+  .w-diana   { color: #8b3dff; }
+  .w-charlie { color: #1f8a5b; }
+
+  .lock-body ol { margin: 4px 0 0; padding-left: 20px; }
+  .lock-body li { margin-top: 2px; }
+
+  /* ---------- Fuss ---------- */
+  .foot {
+    flex: none; background: var(--ink); color: #cfd3dc;
+    padding: 10px 34px; display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: .06em;
+  }
+
+  /* ---------- Druck ---------- */
+  @page { size: A4; margin: 8mm; }
+  @media print {
+    html, body { background: #fff !important; }
+    .sheet-stack { gap: 0 !important; padding: 0 !important; background: #fff !important; }
+    article.page {
+      box-shadow: none !important; width: 194mm !important; height: 281mm !important;
+      break-after: page; page-break-after: always;
+    }
+    article.page:last-child { break-after: auto; page-break-after: auto; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet-stack">
+
+  <!-- ================= Blatt 1 · Box 1 ================= -->
+  <article class="page">
+
+    <header class="band" style="background:linear-gradient(135deg,var(--b1) 0%,var(--b1-dk) 100%);">
+      <svg class="atom" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#ffffff" stroke-width="2">
+          <ellipse cx="100" cy="100" rx="78" ry="30"></ellipse>
+          <ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(60 100 100)"></ellipse>
+          <ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(120 100 100)"></ellipse>
+        </g>
+        <circle cx="100" cy="100" r="8" fill="#ffffff"></circle>
+      </svg>
+      <div class="head-row">
+        <div class="box-badge" style="color:var(--b1-dk)">1</div>
+        <div>
+          <span class="pill">STATION 1 · LÖSUNGEN</span>
+          <h1>Box 1 · einfach</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <div class="warn">Nur für das Team · nicht auslegen</div>
+
+      <div class="locks">
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-blau">1</div>
+            <span>Dunkelblau</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Superposition</span>
+              <span class="code">4540</span>
+            </div>
+            <div class="lock-sub">Regler · Rätsel 1</div>
+            <div class="lock-body">
+              Regler ganz links zeigt Blau <b>2395</b>, ganz rechts Rot
+              <b>2255</b>. Beide Zahlen stellenweise addieren und pro Stelle
+              nur die letzte Ziffer behalten: 4, 5, 14→4, 10→0.
+            </div>
+          </div>
+        </div>
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-rot">2</div>
+            <span>Rot</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Interferenz</span>
+              <span class="code">6060</span>
+            </div>
+            <div class="lock-sub">Labyrinth · Rätsel 2</div>
+            <div class="lock-body">
+              Es gibt genau <b>einen</b> gültigen Weg. Von der Fahne unten
+              links: zweimal hoch, vier Felder nach rechts, eine Reihe runter,
+              zwei nach rechts, vier Felder hoch, ein Feld nach rechts ins
+              Schloss. Dabei kommen 6, 0, 6, 0 zusammen.
+            </div>
+          </div>
+        </div>
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-schwarz">3</div>
+            <span>Schwarz</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Wellen in Phase</span>
+              <span class="code">3060</span>
+            </div>
+            <div class="lock-sub">Drei Regler · Rätsel 3</div>
+            <div class="lock-body">
+              Die drei Phasen müssen auf <b>45°</b>, <b>210°</b> und
+              <b>300°</b> stehen. Dann springt die Anzeige auf 100 % und der
+              Code erscheint.
+            </div>
+          </div>
+        </div>
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-silber">4</div>
+            <span>Silber</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Wer findet den Ort?</span>
+              <span class="code">7570</span>
+            </div>
+            <div class="lock-sub">Logikgitter · Rätsel 4</div>
+            <div class="lock-body">
+              Labor 1 <span class="who w-alice">Alice</span> <b>Ort</b> ·
+              Labor 2 <span class="who w-bob">Bob</span> <b>Spin</b> ·
+              Labor 3 <span class="who w-diana">Diana</span> <b>Zustand</b> ·
+              Labor 4 <span class="who w-charlie">Charlie</span> <b>Energie</b>.
+              Einstieg: <span class="who w-bob">Bob</span> steht fest, ganz
+              rechts wird <b>Energie</b> gemessen, danach bleibt für
+              <span class="who w-diana">Diana</span> nur Labor 3.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="foot">
+      <span>60 JAHRE JKU · STATION 1 — SCHRÖDINGER-BOX</span>
+      <span>BOX 1 · LÖSUNGEN</span>
+    </footer>
+
+  </article>
+
+  <!-- ================= Blatt 2 · Box 2 ================= -->
+  <article class="page">
+
+    <header class="band" style="background:linear-gradient(135deg,var(--b2) 0%,var(--b2-dk) 100%);">
+      <svg class="atom" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#ffffff" stroke-width="2">
+          <ellipse cx="100" cy="100" rx="78" ry="30"></ellipse>
+          <ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(60 100 100)"></ellipse>
+          <ellipse cx="100" cy="100" rx="78" ry="30" transform="rotate(120 100 100)"></ellipse>
+        </g>
+        <circle cx="100" cy="100" r="8" fill="#ffffff"></circle>
+      </svg>
+      <div class="head-row">
+        <div class="box-badge" style="color:var(--b2-dk)">2</div>
+        <div>
+          <span class="pill">STATION 1 · LÖSUNGEN</span>
+          <h1>Box 2 · schwer</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <div class="warn">Nur für das Team · Antwortreihenfolge wird gemischt</div>
+
+      <div class="locks">
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-blau">1</div>
+            <span>Dunkelblau</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Zustand &amp; Rechenkraft</span>
+              <span class="code">2841</span>
+            </div>
+            <div class="lock-body">
+              <ol>
+                <li>b = <b>0,8</b></li>
+                <li><b>1024</b> Amplituden</li>
+                <li>Nein, die falschen Antworten müssen weginterferiert werden</li>
+                <li>Es erzeugt die Gleichverteilung (|0⟩ + |1⟩)/√2</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-rot">2</div>
+            <span>Rot</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Messung &amp; Kollaps</span>
+              <span class="code">5073</span>
+            </div>
+            <div class="lock-body">
+              <ol>
+                <li>Weil sich Superpositionen überlagern und auslöschen können</li>
+                <li>Wieder 1, mit Sicherheit</li>
+                <li><b>64 %</b></li>
+                <li>Nein, jede ausreichende Wechselwirkung genügt</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-schwarz">3</div>
+            <span>Schwarz</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Drehungen &amp; Paare</span>
+              <span class="code">9316</span>
+            </div>
+            <div class="lock-body">
+              <ol>
+                <li><b>2,0 eV</b> (1240 / 620)</li>
+                <li>P(1) = <b>0,75</b> (sin² 60°)</li>
+                <li>Es macht daraus |−⟩ = (|0⟩ − |1⟩)/√2</li>
+                <li>P(01) = <b>0</b></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="lock">
+          <div class="chip">
+            <div class="dot d-silber">4</div>
+            <span>Silber</span>
+          </div>
+          <div class="lock-txt">
+            <div class="lock-head">
+              <span class="lock-title">Verschränkung im Alltag</span>
+              <span class="code">6482</span>
+            </div>
+            <div class="lock-body">
+              <ol>
+                <li>Nein, Laser, LEDs, Transistoren und MRT beruhen darauf</li>
+                <li>Nein, die Einzelergebnisse sind reiner Zufall</li>
+                <li>Beim abhörsicheren Schlüsselaustausch</li>
+                <li>Nein, er ist nur bei bestimmten Aufgaben besser</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="foot">
+      <span>60 JAHRE JKU · STATION 1 — SCHRÖDINGER-BOX</span>
+      <span>BOX 2 · LÖSUNGEN</span>
+    </footer>
+
+  </article>
+
+</div>
+
+</body>
+</html>
