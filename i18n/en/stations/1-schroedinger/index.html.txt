@@ -1,5 +1,35 @@
 # Englische Texte für stations/1-schroedinger/index.html — siehe tools/build-en.py
 
+de: Woher kommt die Katze?
+en: Where does the cat come from?
+
+de: Die ganze Geschichte von Einstein bis zur Stahlkammer
+en: The whole story, from Einstein to the steel chamber
+
+de: Rätsel 1: Superposition
+en: Puzzle 1: Superposition
+
+de: Rätsel 2: Interferenz
+en: Puzzle 2: Interference
+
+de: Rätsel 3: Wellen in Phase
+en: Puzzle 3: Waves in phase
+
+de: Rätsel 4: Wer findet den Ort?
+en: Puzzle 4: Who finds the position?
+
+de: Rätsel 1: Zustand &amp; Rechenkraft
+en: Puzzle 1: State &amp; computing power
+
+de: Rätsel 2: Messung &amp; Kollaps
+en: Puzzle 2: Measurement &amp; collapse
+
+de: Rätsel 3: Drehungen &amp; Paare
+en: Puzzle 3: Rotations &amp; pairs
+
+de: Rätsel 4: Verschränkung im Alltag
+en: Puzzle 4: Entanglement in everyday life
+
 de: Schrödinger-Box · Quantenstation JKU
 en: Schrödinger Box · Quantum Station JKU
 
@@ -75,3 +105,134 @@ en: Four locks · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger
 de: Vier Schlösser · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> gelöst
 en: Four locks · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> solved
 
+de: Rätsel direkt öffnen
+en: Open puzzles directly
+
+de: Box 1 · Rätsel 1
+en: Box 1 · Puzzle 1
+
+de: Box 1 · Rätsel 2
+en: Box 1 · Puzzle 2
+
+de: Box 1 · Rätsel 3
+en: Box 1 · Puzzle 3
+
+de: Box 1 · Rätsel 4
+en: Box 1 · Puzzle 4
+
+de: Box 2 · Rätsel 1
+en: Box 2 · Puzzle 1
+
+de: Box 2 · Rätsel 2
+en: Box 2 · Puzzle 2
+
+de: Box 2 · Rätsel 3
+en: Box 2 · Puzzle 3
+
+de: Box 2 · Rätsel 4
+en: Box 2 · Puzzle 4
+
+de: Jedes Rätsel gibt dir einen <strong>vierstelligen Code</strong>. Jeder Code öffnet ein Schloss.
+en: Each puzzle gives you a <strong>four-digit code</strong>. Each code opens one lock.
+
+de: Level <strong>Oberstufe</strong> · Reihenfolge egal · Fortschritt bleibt auf diesem Handy gespeichert.
+en: Level <strong>upper secondary school</strong> · any order · progress stays saved on this phone.
+
+de: Miss jeden Pol einzeln — in der Mitte ist nichts lesbar
+en: Measure each pole on its own — nothing is readable in the middle
+
+de: Interferenz
+en: Interference
+
+de: Durchs Labyrinth — jede Kachel die andere Farbe
+en: Through the maze — every tile the other colour
+
+de: Drei Wellen überlagern, bis die Zielkurve passt
+en: Superpose three waves until the target curve fits
+
+de: Vier Labore, vier Forschende — ein Logikrätsel
+en: Four labs, four researchers — a logic puzzle
+
+de: Was in den Rätseln steckt
+en: What's in the puzzles
+
+de: Jedes der vier Rätsel spielt ein Prinzip durch, und jedes davon steckt auch in einem echten Quantencomputer.
+en: Each of the four puzzles plays through one principle, and each of them is also at work in a real quantum computer.
+
+de: Der Regler steht zwischen Blau und Rot, und in der Mitte kannst du <strong>nichts</strong> ablesen. Messen lassen sich nur die beiden Pole. Im Rechner heißt das, dass ein Qubit beide Antworten gleichzeitig trägt und <strong>n</strong> Qubits alle 2<sup>n</sup> Kombinationen auf einmal.
+en: The slider sits between blue and red, and in the middle you can read <strong>nothing</strong>. Only the two poles can be measured. In a computer this means that a qubit carries both answers at once, and <strong>n</strong> qubits carry all 2<sup>n</sup> combinations at once.
+
+de: Im <strong>Labyrinth</strong> führt nicht jeder Weg zum Ziel, denn nur Felder mit wechselnder Farbe passen zusammen und der Rest ist eine Sackgasse. Genauso rechnet ein Quantenalgorithmus, indem er die falschen Wege sich gegenseitig <strong>auslöschen</strong> lässt und den richtigen verstärkt. Ohne diesen Trick wäre das gleichzeitige Rechnen wertlos, weil beim Messen nur Zufall herauskäme.
+en: In the <strong>maze</strong> not every path leads to the goal, because only tiles of alternating colour fit together and the rest is a dead end. A quantum algorithm computes in just this way, by letting the wrong paths <strong>cancel each other out</strong> and reinforcing the right one. Without this trick, computing everything at once would be worthless, because measuring would only give you chance.
+
+de: Drei Wellen werden überlagert, bis die Zielkurve steht, und sie addieren sich nur bei passender <strong>Phase</strong>. Genau diese Phasen verstellen die Gatter in einem Quantencomputer.
+en: Three waves are superposed until the target curve is reached, and they only add up with the right <strong>phase</strong>. It is exactly these phases that the gates in a quantum computer adjust.
+
+de: Rätsel 4 · Logik
+en: Puzzle 4 · Logic
+
+de: Vier Labore und vier Forschende, und aus den Hinweisen wird eine Lösung eingekreist. Das ist kein Quanteneffekt, sondern sauberes Ausschließen, also die Denkarbeit vor jedem Algorithmus.
+en: Four labs and four researchers, and the clues narrow it down to one solution. That's not a quantum effect but careful elimination — the thinking that comes before every algorithm.
+
+de: Ich komme bei Rätsel 1 nicht weiter
+en: I'm stuck on puzzle 1
+
+de: Schieb den Regler ganz nach <strong>links</strong> und notiere die blaue Zahl. Dann ganz nach <strong>rechts</strong> für die rote. Danach beide Zahlen <strong>Stelle für Stelle</strong> addieren — und pro Stelle nur die letzte Ziffer behalten.
+en: Slide all the way to the <strong>left</strong> and note the blue number. Then all the way to the <strong>right</strong> for the red one. Then add both numbers <strong>digit by digit</strong> — and keep only the last digit of each sum.
+
+de: Ich komme bei Rätsel 2 nicht weiter
+en: I'm stuck on puzzle 2
+
+de: Starte bei der Fahne <strong>⚑</strong> unten links. Von dort darfst du nur auf Nachbarfelder mit der <strong>anderen</strong> Farbe. Tippe eine frühere Kachel an, um zurückzugehen. Nicht jeder Weg führt zum Schloss.
+en: Start at the flag <strong>⚑</strong> at the bottom left. From there you may only move to neighbouring tiles of the <strong>other</strong> colour. Tap an earlier tile to go back. Not every path leads to the lock.
+
+de: Ich komme bei Rätsel 3 nicht weiter
+en: I'm stuck on puzzle 3
+
+de: Stell <strong>einen</strong> Regler nach dem anderen ein. Beobachte den Prozentwert: Geht er hoch, bist du auf dem richtigen Weg. Erst wenn alle drei Wellen sitzen, springt die Anzeige auf 100 %.
+en: Set <strong>one</strong> slider after the other. Watch the percentage: if it goes up, you're on the right track. Only when all three waves are in place does the display jump to 100 %.
+
+de: Ich komme bei Rätsel 4 nicht weiter
+en: I'm stuck on puzzle 4
+
+de: Fang mit den <strong>sicheren</strong> Hinweisen an: Bob steht fest, und ganz rechts wird Energie gemessen. Danach bleibt für Diana nur noch eine Möglichkeit. Die Häkchen zeigen dir, welche Hinweise schon erfüllt sind.
+en: Start with the <strong>certain</strong> clues: Bob's lab is fixed, and energy is measured on the far right. After that, only one option is left for Diana. The ticks show you which clues are already satisfied.
+
+de: Erst mal nachlesen
+en: Read up first
+
+de: Was Superposition eigentlich bedeutet
+en: What superposition actually means
+
+de: Vier weitere Schlösser — diesmal Fragen statt Regler
+en: Four more locks — this time questions instead of sliders
+
+de: Die vier Rätsel
+en: The four puzzles
+
+de: Vier Rätsel mit je <strong>vier Fragen</strong>. Jedes gibt dir am Ende einen <strong>vierstelligen Code</strong>.
+en: Four puzzles with <strong>four questions</strong> each. Each one gives you a <strong>four-digit code</strong> at the end.
+
+de: Level Matura/Studium - Alles, was die Schlösser verlangen, steht in den <a href="katze-2/theorie.html">Rechenregeln</a>.
+en: Level: school-leaving exam / university — everything the locks ask for is in the <a href="katze-2/theorie.html">rules of calculation</a>.
+
+de: Zustand &amp; Rechenkraft
+en: State &amp; computing power
+
+de: Messung &amp; Kollaps
+en: Measurement &amp; collapse
+
+de: Drehungen &amp; Paare
+en: Rotations &amp; pairs
+
+de: Photonen, Winkel und Bell-Zustände — mit Rechnung
+en: Photons, angles and Bell states — with calculations
+
+de: Vorher nachlesen
+en: Read up first
+
+de: Hier kannst du alles lernen, was du für die sechzehn Fragen brauchst, von der Born’schen Regel bis zum Bell-Zustand.
+en: Here you can learn everything you need for the sixteen questions, from the Born rule to the Bell state.
+
+de: Amplituden, 2ⁿ, Messung, Gatter, Photonen, Bell — mit Beispielen
+en: Amplitudes, 2ⁿ, measurement, gates, photons, Bell — with examples

@@ -21,6 +21,13 @@
   <div class="q-glow"></div>
   <div class="q-wrap q-langrow" translate="no"><a class="q-lang" href="../index.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a></div>
 
+  <div class="q-wrap q-homebar">
+    <details class="q-site-menu">
+      <summary aria-expanded="false"><span aria-hidden="true">☰</span> Menu</summary>
+      <nav class="q-menu-panel" aria-label="Page overview" data-q-site-menu></nav>
+    </details>
+  </div>
+
   <div class="q-wrap q-center">
     <div class="q-eyebrow">60 years of JKU · 6 Oct</div>
     <h1 class="q-h1">Let's make<br>60 years of JKU<br><span class="t-blue">measurable.</span></h1>
@@ -84,7 +91,7 @@
 
     <h2 class="q-h2 q-mt">And also</h2>
     <div class="q-list q-mt-sm">
-      <a class="q-tile" href="stations/5-ama/">
+      <a class="q-tile" href="stations/5-ama/fragen.html">
         <span class="q-tile-num c-coral">💬</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">FAQ</span>
@@ -97,25 +104,39 @@
 
 
 
+  <details class="q-wrap q-jump q-mt">
+    <summary>Go directly to</summary>
+    <nav class="q-direct-links" aria-label="Go directly to">
+      <a href="stations/1-schroedinger/index.html#box-1-overview">Box 1 · Puzzles</a>
+      <a href="stations/1-schroedinger/index.html#box-2-overview">Box 2 · Puzzles</a>
+      <a href="stations/2-bloch-sphere/index.html#bloch-simulation">Bloch simulation</a>
+      <a href="stations/2-bloch-sphere/index.html#bloch-challenges">Bloch challenges</a>
+      <a href="stations/3-quantumtable/index.html#table-circuit">Build a circuit</a>
+      <a href="quiz/">Quiz pool</a>
+      <a href="stations/5-ama/fragen.html">All questions</a>
+      <a href="stations/5-ama/mythen.html">Quantum myths</a>
+    </nav>
+  </details>
+
   <div class="q-wrap q-mt">
-    <details class="q-acc">
-      <summary>Do I need to install anything?</summary>
+    <section class="q-info">
+      <h3 class="q-info-title">Do I need to install anything?</h3>
       <div class="q-acc-body">
         No. Everything runs in your phone's browser — no login, no app, no sign-up. If you like, you can bookmark this page and finish the puzzles at home later.
       </div>
-    </details>
-    <details class="q-acc">
-      <summary>Do I need any prior knowledge?</summary>
+    </section>
+    <section class="q-info">
+      <h3 class="q-info-title">Do I need any prior knowledge?</h3>
       <div class="q-acc-body">
         No. The puzzles are made for <strong>upper secondary school</strong>, but each one explains itself. Curiosity is all you need — and we are right there and happy to help.
       </div>
-    </details>
-    <details class="q-acc">
-      <summary>Is my progress saved?</summary>
+    </section>
+    <section class="q-info">
+      <h3 class="q-info-title">Is my progress saved?</h3>
       <div class="q-acc-body">
         Yes, but only <strong>locally on your phone</strong>. We collect no data, there is no tracking and nothing leaves your device. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Reset progress</button> </div>
       </div>
-    </details>
+    </section>
   </div>
 
   <div class="q-wrap q-mt q-center">
@@ -133,11 +154,13 @@
     <a class="q-navitem" href="stations/2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
     <a class="q-navitem" href="stations/3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="stations/4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="stations/5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="stations/5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 
 <script src="../assets/quantum.js"></script>
+<script src="../assets/onepager.js"></script>
+<script src="../assets/site-menu.js"></script>
 <script>
   document.getElementById('reset-btn').addEventListener('click', function () {
     Q.resetProgress();

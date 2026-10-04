@@ -363,3 +363,20 @@ en: Ask us something
 de: Sieh dir häufige Fragen an oder stell uns deine eigene Frage
 en: Browse common questions or ask us your own
 
+de: ← Zurück zur Station
+en: ← Back to station
+
+de: Spoiler: Tipp anzeigen
+en: Spoiler: Show hint
+
+de: Spoiler: Tipp 1 anzeigen
+en: Spoiler: Show hint 1
+
+de: Spoiler: Tipp 2 anzeigen
+en: Spoiler: Show hint 2
+
+de: Spoiler: Tipp 3 anzeigen
+en: Spoiler: Show hint 3
+
+de: Spoiler: Tipp 4 anzeigen
+en: Spoiler: Show hint 4

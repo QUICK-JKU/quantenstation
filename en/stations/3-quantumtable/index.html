@@ -50,14 +50,14 @@
     <h2 class="q-h2">Where to next</h2>
     <div class="q-list q-mt-sm">
 
-      <a class="q-tile" href="schaltkreis.html">
+      <div class="q-task" id="table-circuit"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="table-circuit-body">
         <span class="q-tile-num c-red">▶</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Circuits on your phone</span>
           <span class="q-tile-sub">Is the table busy right now? Try the simulation online.</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button><div class="q-task-panel" id="table-circuit-body" hidden><iframe data-q-embed data-src="schaltkreis.html" loading="lazy" title="Circuits on your phone"></iframe></div></div>
 
       <a class="q-tile" href="info.html">
         <span class="q-tile-num">?</span>
@@ -91,12 +91,12 @@
   </div>
 
   <div class="q-wrap q-mt">
-    <details class="q-acc">
-      <summary>Is this a real quantum computer?</summary>
+    <section class="q-info">
+      <h3 class="q-info-title">Is this a real quantum computer?</h3>
       <div class="q-acc-body">
         No — it's a <strong>simulation</strong>, and it computes exactly. A normal laptop can work through quantum circuits of up to about 30 qubits, the largest supercomputers up to just under 50. Beyond that it becomes practically impossible for classical computers — and that is exactly where things get interesting.
       </div>
-    </details>
+    </section>
   </div>
 
 
@@ -109,10 +109,11 @@
     <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
     <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="../5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 
 <script src="../../../assets/quantum.js"></script>
+<script src="../../../assets/onepager.js"></script>
 </body>
 </html>

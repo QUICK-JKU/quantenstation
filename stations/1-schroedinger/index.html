@@ -44,11 +44,10 @@
   </div>
 
   <div class="q-wrap q-mt">
-    <div class="q-note q-center">
-      <div class="q-note-title">Vor Ort</div>
-      <div class="q-body">
+    <h2 class="q-h2">Vor Ort</h2>
+    <p class="q-body q-mt-sm">
         Knacke die Rätsel, die Schrödingers Katze gefangen halten, und öffne die Box!
-      </div>
+    </p>
 
       <div class="q-kisten q-mt-sm">
         <div class="q-kiste k-1">
@@ -66,11 +65,10 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 
   <!-- 1 · Was ist Superposition? -->
-  <div class="q-wrap q-mt">
+  <div class="q-wrap q-mt" id="station1-superposition">
     <h2 class="q-h2">Was ist Superposition?</h2>
     <p class="q-body q-mt-sm">
       Ein klassisches Bit ist 0 <em>oder</em> 1. Ein Quantenteilchen kann beides
@@ -92,37 +90,37 @@
 
   <div class="q-wrap q-mt">
     <h3 class="q-h3">Kurz gefragt</h3>
-    <details class="q-acc q-mt-sm">
-      <summary>Ist die Katze wirklich tot und lebendig?</summary>
+    <section class="q-info q-mt-sm">
+      <h3 class="q-info-title">Ist die Katze wirklich tot und lebendig?</h3>
       <div class="q-acc-body">
         Nein — und genau das war Schrödingers Punkt. Er hat sich das Beispiel
         1935 <strong>als Kritik</strong> ausgedacht: Wenn man die Quantenregeln
         naiv auf große Dinge überträgt, kommt Unsinn heraus. Für <strong>einzelne
         Teilchen</strong> stimmt die Superposition aber messbar genau.
       </div>
-    </details>
-    <details class="q-acc">
-      <summary>Warum bricht die Superposition beim Hinsehen zusammen?</summary>
+    </section>
+    <section class="q-info">
+      <h3 class="q-info-title">Warum bricht die Superposition beim Hinsehen zusammen?</h3>
       <div class="q-acc-body">
         Weil „Hinsehen“ nie passiv ist. Jede Messung koppelt das Teilchen an
         seine Umgebung — dieser Vorgang heißt <strong>Dekohärenz</strong>. Je
         größer ein Objekt, desto schneller passiert das: bei einer echten Katze
         in unvorstellbar kurzer Zeit.
       </div>
-    </details>
-    <details class="q-acc">
-      <summary>Wozu ist das gut?</summary>
+    </section>
+    <section class="q-info">
+      <h3 class="q-info-title">Wozu ist das gut?</h3>
       <div class="q-acc-body">
         Superposition ist der Motor von <strong>Quantencomputern</strong>: Ein
         Qubit kann 0 und 1 zugleich sein, und zusammen mit Interferenz entsteht
         daraus die Rechenkraft. Wie ein Qubit aussieht, zeigt
         <a href="../2-bloch-sphere/">Station 2</a>.
       </div>
-    </details>
+    </section>
   </div>
 
   <!-- 2 · Die Boxen -->
-  <div class="q-wrap q-mt">
+  <div class="q-wrap q-mt" id="station1-boxes-info">
     <h2 class="q-h2">Was steckt in den Kisten?</h2>
     <p class="q-body q-mt-sm">
       Vor dir stehen zwei Holzkisten mit je vier Zahlenschlössern. Wer alle
@@ -151,29 +149,214 @@
       Schlösser. Die Reihenfolge ist egal und dein Fortschritt bleibt auf
       diesem Handy gespeichert.
     </p>
-    <div class="q-list q-mt-sm">
+    <nav class="q-direct-links" aria-label="Rätsel direkt öffnen">
+      <a href="#task-box1-1">Box 1 · Rätsel 1</a>
+      <a href="#task-box1-2">Box 1 · Rätsel 2</a>
+      <a href="#task-box1-3">Box 1 · Rätsel 3</a>
+      <a href="#task-box1-4">Box 1 · Rätsel 4</a>
+      <a href="#task-box2-1">Box 2 · Rätsel 1</a>
+      <a href="#task-box2-2">Box 2 · Rätsel 2</a>
+      <a href="#task-box2-3">Box 2 · Rätsel 3</a>
+      <a href="#task-box2-4">Box 2 · Rätsel 4</a>
+    </nav>
+  </div>
 
-      <a class="q-tile" href="raetsel/">
-        <span class="q-tile-num c-ink">🔒</span>
+
+  <details class="q-box" id="box-1-overview">
+  <summary><span class="q-tile-num c-ink">🔒</span><span class="q-tile-txt"><span class="q-tile-title">Box 1 · einfach</span><span class="q-tile-sub">Vier Schlösser · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span> gelöst</span></span></summary>
+  <div class="q-wrap q-mt">
+    <div class="q-eyebrow">Box 1 · einfach</div>
+    <h2 class="q-h2">Die 4 Rätsel</h2>
+    <p class="q-lead" style="max-width:420px;margin-left:auto;margin-right:auto;">
+      Jedes Rätsel gibt dir einen <strong>vierstelligen Code</strong>.
+      Jeder Code öffnet ein Schloss.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-plain">
+      <h3 class="q-plain-title">Gut zu wissen</h3>
+      <div class="q-body">
+        Level <strong>Oberstufe</strong> ·
+        Reihenfolge egal · Fortschritt bleibt auf diesem Handy gespeichert.
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="q-wrap q-mt">
+    <div class="q-link-list">
+
+      <div class="q-task" id="task-box1-1">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-1" aria-expanded="false" aria-controls="task-box1-1-body">
+        <span class="q-tile-num">1</span>
         <span class="q-tile-txt">
-          <span class="q-tile-title">Box 1 · einfach</span>
-          <span class="q-tile-sub">Vier Schlösser · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span> gelöst</span>
+          <span class="q-tile-title">Superposition</span>
+          <span class="q-tile-sub">Miss jeden Pol einzeln — in der Mitte ist nichts lesbar</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box1-1-body" hidden>
+          <iframe data-q-embed data-src="raetsel/1-superposition.html" loading="lazy" title="Rätsel 1: Superposition"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box1-2">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-2" aria-expanded="false" aria-controls="task-box1-2-body">
+        <span class="q-tile-num c-red">2</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Interferenz</span>
+          <span class="q-tile-sub">Durchs Labyrinth — jede Kachel die andere Farbe</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box1-2-body" hidden>
+          <iframe data-q-embed data-src="raetsel/2-interferenz.html" loading="lazy" title="Rätsel 2: Interferenz"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box1-3">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-3" aria-expanded="false" aria-controls="task-box1-3-body">
+        <span class="q-tile-num c-purple">3</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Wellen in Phase</span>
+          <span class="q-tile-sub">Drei Wellen überlagern, bis die Zielkurve passt</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box1-3-body" hidden>
+          <iframe data-q-embed data-src="raetsel/3-wellen.html" loading="lazy" title="Rätsel 3: Wellen in Phase"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box1-4">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-4" aria-expanded="false" aria-controls="task-box1-4-body">
+        <span class="q-tile-num c-green">4</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Wer findet den Ort?</span>
+          <span class="q-tile-sub">Vier Labore, vier Forschende — ein Logikrätsel</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box1-4-body" hidden>
+          <iframe data-q-embed data-src="raetsel/4-labore.html" loading="lazy" title="Rätsel 4: Wer findet den Ort?"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<div class="q-wrap q-mt">
+    <h2 class="q-h2">Was in den Rätseln steckt</h2>
+    <p class="q-small q-mt-sm">
+      Jedes der vier Rätsel spielt ein Prinzip durch, und jedes davon steckt
+      auch in einem echten Quantencomputer.
+    </p>
+    <div class="q-flow q-mt-sm">
+
+      <div class="q-plain">
+        <h3 class="q-plain-title">Rätsel 1 · Superposition</h3>
+        <p class="q-body">
+          Der Regler steht zwischen Blau und Rot, und in der Mitte kannst du
+          <strong>nichts</strong> ablesen. Messen lassen sich nur die beiden
+          Pole. Im Rechner heißt das, dass ein Qubit beide Antworten
+          gleichzeitig trägt und <strong>n</strong> Qubits alle
+          2<sup>n</sup> Kombinationen auf einmal.
+        </p>
+      </div>
+
+      <div class="q-plain">
+        <h3 class="q-plain-title">Rätsel 2 · Interferenz</h3>
+        <p class="q-body">
+          Im <strong>Labyrinth</strong> führt nicht jeder Weg zum Ziel, denn nur
+          Felder mit wechselnder Farbe passen zusammen und der Rest ist eine
+          Sackgasse. Genauso rechnet ein Quantenalgorithmus, indem er die
+          falschen Wege sich gegenseitig <strong>auslöschen</strong> lässt und
+          den richtigen verstärkt. Ohne diesen Trick wäre das gleichzeitige
+          Rechnen wertlos, weil beim Messen nur Zufall herauskäme.
+        </p>
+      </div>
+
+      <div class="q-plain">
+        <h3 class="q-plain-title">Rätsel 3 · Wellen</h3>
+        <p class="q-body">
+          Drei Wellen werden überlagert, bis die Zielkurve steht, und sie
+          addieren sich nur bei passender <strong>Phase</strong>. Genau diese
+          Phasen verstellen die Gatter in einem Quantencomputer.
+        </p>
+      </div>
+
+      <div class="q-plain">
+        <h3 class="q-plain-title">Rätsel 4 · Logik</h3>
+        <p class="q-body">
+          Vier Labore und vier Forschende, und aus den Hinweisen wird eine
+          Lösung eingekreist. Das ist kein Quanteneffekt, sondern sauberes
+          Ausschließen, also die Denkarbeit vor jedem Algorithmus.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Hängst du fest?</h2>
+    <details class="q-acc q-spoiler q-mt-sm">
+      <summary>Spoiler: Tipp 1 anzeigen</summary>
+      <div class="q-acc-body">
+        Schieb den Regler ganz nach <strong>links</strong> und notiere die blaue
+        Zahl. Dann ganz nach <strong>rechts</strong> für die rote. Danach beide
+        Zahlen <strong>Stelle für Stelle</strong> addieren — und pro Stelle nur
+        die letzte Ziffer behalten.
+      </div>
+    </details>
+    <details class="q-acc q-spoiler">
+      <summary>Spoiler: Tipp 2 anzeigen</summary>
+      <div class="q-acc-body">
+        Starte bei der Fahne <strong>⚑</strong> unten links. Von dort darfst du
+        nur auf Nachbarfelder mit der <strong>anderen</strong> Farbe. Tippe eine
+        frühere Kachel an, um zurückzugehen. Nicht jeder Weg führt zum Schloss.
+      </div>
+    </details>
+    <details class="q-acc q-spoiler">
+      <summary>Spoiler: Tipp 3 anzeigen</summary>
+      <div class="q-acc-body">
+        Stell <strong>einen</strong> Regler nach dem anderen ein. Beobachte den
+        Prozentwert: Geht er hoch, bist du auf dem richtigen Weg. Erst wenn alle
+        drei Wellen sitzen, springt die Anzeige auf 100 %.
+      </div>
+    </details>
+    <details class="q-acc q-spoiler">
+      <summary>Spoiler: Tipp 4 anzeigen</summary>
+      <div class="q-acc-body">
+        Fang mit den <strong>sicheren</strong> Hinweisen an: Bob steht fest, und
+        ganz rechts wird Energie gemessen. Danach bleibt für Diana nur noch eine
+        Möglichkeit. Die Häkchen zeigen dir, welche Hinweise schon erfüllt sind.
+      </div>
+    </details>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-link-list">
+      <a class="q-flat-link" href="info.html">
+        <span class="q-tile-num c-purple">?</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Erst mal nachlesen</span>
+          <span class="q-tile-sub">Was Superposition eigentlich bedeutet</span>
         </span>
         <span class="q-tile-arrow" aria-hidden="true">→</span>
       </a>
-
-      <a class="q-tile" href="katze-2/">
-        <span class="q-tile-num c-green">🐈‍⬛</span>
+      <a class="q-flat-link" href="box.html">
+        <span class="q-tile-num c-red">🐱</span>
         <span class="q-tile-txt">
-          <span class="q-tile-title">Box 2 · schwer</span>
-          <span class="q-tile-sub">Vier Schlösser · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> gelöst</span>
+          <span class="q-tile-title">Woher kommt die Katze?</span>
+          <span class="q-tile-sub">Die ganze Geschichte von Einstein bis zur Stahlkammer</span>
         </span>
         <span class="q-tile-arrow" aria-hidden="true">→</span>
       </a>
-
       <!-- Quiz-Pool vorübergehend ausgeblendet (zum Einblenden Kommentar entfernen):
-      <a class="q-tile" href="../../quiz/">
-        <span class="q-tile-num c-purple">❓</span>
+      <a class="q-flat-link" href="../../quiz/">
+        <span class="q-tile-num c-ink">❓</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Zu schwer? Zu leicht?</span>
           <span class="q-tile-sub">18 Quizze von Kinder- bis Studi-Niveau — auch mit Code</span>
@@ -181,11 +364,117 @@
         <span class="q-tile-arrow" aria-hidden="true">→</span>
       </a>
       -->
-
     </div>
   </div>
 
 
+  </details>
+
+  <details class="q-box" id="box-2-overview">
+  <summary><span class="q-tile-num c-green">🐈‍⬛</span><span class="q-tile-txt"><span class="q-tile-title">Box 2 · schwer</span><span class="q-tile-sub">Vier Schlösser · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> gelöst</span></span></summary>
+  <div class="q-wrap q-mt">
+    <div class="q-eyebrow">Box 2 · schwer</div>
+    <h2 class="q-h2">Die vier Rätsel</h2>
+    <p class="q-lead" style="max-width:440px;margin-left:auto;margin-right:auto;">
+      Vier Rätsel mit je <strong>vier Fragen</strong>. Jedes gibt dir am Ende
+      einen <strong>vierstelligen Code</strong>.
+    </p>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-plain">
+      <h3 class="q-plain-title">Gut zu wissen</h3>
+      <div class="q-body">
+        Level Matura/Studium -
+        Alles, was die Schlösser verlangen, steht in den
+        <a href="katze-2/theorie.html">Rechenregeln</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <div class="q-link-list">
+
+      <div class="q-task" id="task-box2-1">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-1" aria-expanded="false" aria-controls="task-box2-1-body">
+        <span class="q-tile-num">1</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Zustand &amp; Rechenkraft</span>
+          <span class="q-tile-sub">Was in einem Qubit steckt — und was daraus folgt</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box2-1-body" hidden>
+          <iframe data-q-embed data-src="katze-2/1-zustand.html" loading="lazy" title="Rätsel 1: Zustand &amp; Rechenkraft"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box2-2">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-2" aria-expanded="false" aria-controls="task-box2-2-body">
+        <span class="q-tile-num c-red">2</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Messung &amp; Kollaps</span>
+          <span class="q-tile-sub">Warum Nachschauen die Sache verändert</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box2-2-body" hidden>
+          <iframe data-q-embed data-src="katze-2/2-messung.html" loading="lazy" title="Rätsel 2: Messung &amp; Kollaps"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box2-3">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-3" aria-expanded="false" aria-controls="task-box2-3-body">
+        <span class="q-tile-num c-purple">3</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Drehungen &amp; Paare</span>
+          <span class="q-tile-sub">Photonen, Winkel und Bell-Zustände — mit Rechnung</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box2-3-body" hidden>
+          <iframe data-q-embed data-src="katze-2/3-drehungen.html" loading="lazy" title="Rätsel 3: Drehungen &amp; Paare"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box2-4">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-4" aria-expanded="false" aria-controls="task-box2-4-body">
+        <span class="q-tile-num c-green">4</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Verschränkung im Alltag</span>
+          <span class="q-tile-sub">Was daraus wirklich folgt — und was nicht</span>
+        </span>
+
+      </button>
+        <div class="q-task-panel" id="task-box2-4-body" hidden>
+          <iframe data-q-embed data-src="katze-2/4-verschraenkung.html" loading="lazy" title="Rätsel 4: Verschränkung im Alltag"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="q-wrap q-mt">
+    <h2 class="q-h2">Vorher nachlesen</h2>
+    <p class="q-small q-mt-sm">
+      Hier kannst du alles lernen, was du für die sechzehn Fragen brauchst, von der
+      Born’schen Regel bis zum Bell-Zustand.
+    </p>
+    <div class="q-link-list q-mt-sm">
+      <a class="q-flat-link" href="katze-2/theorie.html">
+        <span class="q-tile-num c-purple">📐</span>
+        <span class="q-tile-txt">
+          <span class="q-tile-title">Die Rechenregeln</span>
+          <span class="q-tile-sub">Amplituden, 2ⁿ, Messung, Gatter, Photonen, Bell — mit Beispielen</span>
+        </span>
+        <span class="q-tile-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+
+
+</details>
 </main>
 
 <nav class="q-bottombar" aria-label="Stationen">
@@ -195,10 +484,11 @@
     <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="../5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 
 <script src="../../assets/quantum.js"></script>
+<script src="../../assets/onepager.js"></script>
 </body>
 </html>

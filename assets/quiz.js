@@ -142,8 +142,13 @@
 
       var ul = el('div', 'q-list q-mt-sm');
       list.forEach(function (quiz, i) {
-        var a = el('a', 'q-tile');
-        a.href = 'quiz.html?id=' + encodeURIComponent(quiz.id);
+        var task = el('div', 'q-task');
+        task.id = 'quiz-' + quiz.id;
+        var a = el('button', 'q-task-trigger');
+        a.type = 'button';
+        a.setAttribute('data-q-panel', '');
+        a.setAttribute('aria-expanded', 'false');
+        a.setAttribute('aria-controls', task.id + '-body');
         a.setAttribute('data-q-id', storeId(quiz));
 
         var num = el('span', 'q-tile-num ' + (lvl.color || ''), String(i + 1));
@@ -155,8 +160,18 @@
           quiz.sub + ' · ' + quiz.questions.length + t(' Fragen', ' questions')));
         a.appendChild(txt);
 
-        a.appendChild(el('span', 'q-tile-arrow', '→'));
-        ul.appendChild(a);
+        var panel = el('div', 'q-task-panel');
+        panel.id = task.id + '-body';
+        panel.hidden = true;
+        var frame = el('iframe');
+        frame.setAttribute('data-q-embed', '');
+        frame.setAttribute('data-src', 'quiz.html?id=' + encodeURIComponent(quiz.id));
+        frame.setAttribute('loading', 'lazy');
+        frame.title = quiz.title;
+        panel.appendChild(frame);
+        task.appendChild(a);
+        task.appendChild(panel);
+        ul.appendChild(task);
       });
       sec.appendChild(ul);
 
@@ -296,7 +311,7 @@
             b.disabled = true;
             card.appendChild(feedbackBox(false, strict
               ? t('Wähl eine andere Antwort.', 'Pick another answer.')
-              : (q.hint || t('Probier eine andere Antwort.', 'Try another answer.'))));
+              : t('Probier eine andere Antwort.', 'Try another answer.')));
           }
         });
         wrap.appendChild(b);
@@ -369,7 +384,7 @@
             ? t('Bitte eine Zahl eingeben — Komma oder Punkt, beides geht.',
                 'Please enter a number — comma or point, both work.')
             : (strict ? t('Das ist nicht der gesuchte Wert.', 'That is not the value we are looking for.')
-                      : (q.hint || t('Rechne noch einmal nach.', 'Check your calculation again.')))));
+                      : t('Rechne noch einmal nach.', 'Check your calculation again.'))));
           if (misses >= 2 && !strict) offerSolution();
           form.classList.remove('q-shake');
           void form.offsetWidth;
@@ -404,6 +419,15 @@
 
       if (q.num != null) renderNumber(q, card);
       else renderChoice(q, card);
+
+      if (!strict && q.hint) {
+        var hint = el('details', 'q-acc q-spoiler q-mt-sm');
+        hint.appendChild(el('summary', null, t('Spoiler: Tipp anzeigen', 'Spoiler: Show hint')));
+        var hintBody = el('div', 'q-acc-body');
+        hintBody.innerHTML = q.hint;
+        hint.appendChild(hintBody);
+        card.appendChild(hint);
+      }
 
       stage.appendChild(card);
       stage.focus({ preventScroll: true });

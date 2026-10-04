@@ -131,20 +131,98 @@
     }
   }
 
-  /* ---------- Zurück-Button ---------- */
-  // Nutzt die Browser-Historie, wenn der Nutzer von innerhalb der
-  // Seite kam — sonst den im href hinterlegten Fallback-Pfad.
-  function wireBack() {
-    $$('[data-q-back]').forEach(function (a) {
-      a.addEventListener('click', function (ev) {
-        if (global.history.length > 1 && document.referrer &&
-            document.referrer.indexOf(global.location.origin) === 0) {
-          ev.preventDefault();
-          global.history.back();
-        }
-        // sonst: normaler Link-Sprung zum Fallback
-      });
+  /* ---------- Orientierung auf allen Inhaltsseiten ---------- */
+  function wireNavigation() {
+    var main = $('.q-main');
+    var bar = $('.q-bottombar');
+    if (!main || !bar) return;
+    var links = $$('.q-navitem', bar);
+    if (!links.length) return;
+    var home = links[0];
+    var path = global.location.pathname.replace(/\/index\.html$/, '/');
+    var section = null, next = null;
+
+    links.forEach(function (a, i) {
+      var target = a.pathname.replace(/\/index\.html$/, '/');
+      if (target === path) {
+        a.setAttribute('aria-current', 'page');
+        if (i) section = a;
+      }
+      else if (i && (path.indexOf(target) === 0 ||
+                     (/\/5-ama\/fragen\.html$/.test(target) &&
+                      path.indexOf(target.replace(/fragen\.html$/, '')) === 0))) {
+        section = a;
+        a.setAttribute('aria-current', 'location');
+      }
     });
+    if (!section && path !== home.pathname.replace(/\/index\.html$/, '/')) {
+      // Der Quiz-Pool liegt außerhalb der Stationsordner.
+      section = $('.q-topbar-title');
+    }
+    if (!section && path === home.pathname.replace(/\/index\.html$/, '/')) return;
+
+    var nav = document.createElement('nav');
+    nav.className = 'q-context q-wrap';
+    nav.setAttribute('aria-label', t('Seitenpfad und nächste Station', 'Page path and next station'));
+    var trail = document.createElement('div');
+    trail.className = 'q-context-trail';
+    function link(href, label) {
+      var a = document.createElement('a');
+      a.href = href;
+      a.textContent = label;
+      return a;
+    }
+    function sep() {
+      var s = document.createElement('span');
+      s.className = 'q-context-sep';
+      s.setAttribute('aria-hidden', 'true');
+      s.textContent = '›';
+      trail.appendChild(s);
+    }
+    function label(a) {
+      var icon = $('.ico', a);
+      return a.textContent.replace(icon ? icon.textContent : '', '').trim();
+    }
+    trail.appendChild(link(home.href, label(home)));
+    if (section && section.href && section.pathname !== path) {
+      sep();
+      trail.appendChild(link(section.href, label(section)));
+    }
+    if (section && section.href && /1-schroedinger/.test(section.pathname)) {
+      var branch = /\/katze-2\//.test(path) ? 'katze-2/'
+                 : /\/raetsel\//.test(path) ? 'raetsel/' : null;
+      if (branch) {
+        var branchUrl = new URL(branch === 'raetsel/' ? '#box-1-overview' : '#box-2-overview', section.href);
+        if (path !== section.pathname) {
+          sep();
+          trail.appendChild(link(branchUrl.href, branch === 'raetsel/' ? 'Box 1' : 'Box 2'));
+        }
+      }
+    } else if (!section.href && /\/quiz\/quiz\.html$/.test(path)) {
+      sep();
+      trail.appendChild(link(new URL('index.html', global.location.href).href,
+        t('Quiz-Pool', 'Quiz pool')));
+    }
+    var current = $('.q-main h1');
+    if (current) {
+      sep();
+      var here = document.createElement('span');
+      here.setAttribute('aria-current', 'page');
+      here.textContent = current.textContent.trim();
+      trail.appendChild(here);
+    }
+    nav.appendChild(trail);
+
+    if (section && section.href) {
+      var index = links.indexOf(section);
+      next = links[index + 1];
+    }
+    if (next) {
+      var onward = link(next.href, t('Nächste Station: ', 'Next station: ') + label(next) + ' →');
+      onward.className = 'q-context-next';
+      nav.appendChild(onward);
+    }
+    main.insertBefore(nav, main.firstChild);
   }
 
   /* ---------- Zahlenschloss ----------
@@ -175,22 +253,23 @@
     });
   }
 
-  /* ---------- Aktiven Menüpunkt markieren ---------- */
-  function markCurrentNav() {
-    var here = global.location.pathname.replace(/\/index\.html$/, '/');
-    $$('.q-navitem').forEach(function (a) {
-      var target = a.pathname ? a.pathname.replace(/\/index\.html$/, '/') : '';
-      if (target && target === here) a.setAttribute('aria-current', 'page');
+  /* ---------- Start ---------- */
+  function wireSpoilerKeyboard() {
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      var summary = event.target.closest('summary');
+      if (!summary || !summary.parentElement.matches('details.q-spoiler')) return;
+      event.preventDefault();
+      summary.click();
     });
   }
 
-  /* ---------- Start ---------- */
   function init() {
     decorateTiles(document);
     renderCounts(document);
-    wireBack();
+    wireNavigation();
     wireLocks();
-    markCurrentNav();
+    wireSpoilerKeyboard();
   }
 
   if (document.readyState === 'loading') {

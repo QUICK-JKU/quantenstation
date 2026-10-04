@@ -62,30 +62,30 @@
         <span class="q-tile-arrow" aria-hidden="true">→</span>
       </a>
 
-      <a class="q-tile" href="simulation.html">
+      <div class="q-task" id="bloch-simulation"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="bloch-simulation-body">
         <span class="q-tile-num c-purple">2</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Simulation der Bloch-Kugel</span>
           <span class="q-tile-sub">Frei drehen, mit Gattern rechnen, direkt messen</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-tile" href="teste-selbst.html">
+      </button><div class="q-task-panel" id="bloch-simulation-body" hidden><iframe data-q-embed data-src="simulation.html" loading="lazy" title="Simulation der Bloch-Kugel"></iframe></div></div>
+
+      <div class="q-task" id="bloch-challenges"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="bloch-challenges-body">
         <span class="q-tile-num c-red">3</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Teste selbst</span>
           <span class="q-tile-sub">20 Vor-Ort-Challenges in vier Stufen</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button><div class="q-task-panel" id="bloch-challenges-body" hidden><iframe data-q-embed data-src="teste-selbst.html" loading="lazy" title="Teste selbst"></iframe></div></div>
 
     </div>
   </div>
 
   <div class="q-wrap q-mt">
     <h2 class="q-h2">Die Kugel in 30 Sekunden</h2>
-    <div class="q-card q-mt-sm">
+    <div class="q-mt-sm">
       <div class="q-kv">
         <div class="q-kv-row">
           <span class="q-kv-key">Nordpol</span>
@@ -108,28 +108,28 @@
   </div>
 
   <div class="q-wrap q-mt">
-    <details class="q-acc">
-      <summary>Warum eine Kugel und keine Linie?</summary>
+    <section class="q-info">
+      <h3 class="q-info-title">Warum eine Kugel und keine Linie?</h3>
       <div class="q-acc-body">
         Weil zwei Zahlen nötig sind, um ein Qubit zu beschreiben: <strong>wie
         stark</strong> es zu 0 oder 1 tendiert (der Breitengrad) und
         <strong>welche Phase</strong> es hat (der Längengrad). Zwei Freiheiten →
         eine Fläche → eine Kugel.
       </div>
-    </details>
-    <details class="q-acc">
-      <summary>Und bei mehreren Qubits?</summary>
+    </section>
+    <section class="q-info">
+      <h3 class="q-info-title">Und bei mehreren Qubits?</h3>
       <div class="q-acc-body">
         Da hört das schöne Bild leider auf. Zwei Qubits brauchen bereits einen
         Raum, den man nicht mehr zeichnen kann — und genau dort steckt
         <strong>Verschränkung</strong>, die eigentliche Superkraft. Die Kugel
         gilt nur für <em>ein einzelnes</em> Qubit.
       </div>
-    </details>
+    </section>
   </div>
 
   <div class="q-wrap q-mt">
-    <a class="q-btn q-btn-primary q-btn-block" href="simulation.html">▶ Kugel ausprobieren</a>
+    <a class="q-btn q-btn-primary q-btn-block" href="#bloch-simulation">▶ Kugel ausprobieren</a>
   </div>
 
 </main>
@@ -141,10 +141,11 @@
     <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="../5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 
 <script src="../../assets/quantum.js"></script>
+<script src="../../assets/onepager.js"></script>
 </body>
 </html>

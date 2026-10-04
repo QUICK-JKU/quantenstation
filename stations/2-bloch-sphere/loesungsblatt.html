@@ -32,6 +32,8 @@
     cursor: pointer; flex: none;
   }
 
+  a.print-btn { display: inline-flex; align-items: center; text-decoration: none; min-height: 48px; }
+  a.print-btn:focus-visible { outline: 3px solid var(--l2); outline-offset: 3px; }
   table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 6px; }
   caption { text-align: left; font-family: var(--font-mono); font-weight: 700; font-size: 12.5px;
     letter-spacing: .1em; text-transform: uppercase; color: #fff; padding: 7px 10px; border-radius: 8px 8px 0 0; }
@@ -89,6 +91,7 @@
 
   <div id="out">Lade Aufgaben …</div>
 
+  <p class="no-print"><a class="print-btn" href="index.html" target="_top">← Zurück zur Station</a></p>
   <footer>60 Jahre JKU · Station 2 — Bloch-Kugel · nur für Betreuer:innen</footer>
 </div>
 

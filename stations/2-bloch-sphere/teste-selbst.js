@@ -345,6 +345,13 @@
 
     body.appendChild(form);
 
+    var hint = el('details', 'q-acc q-spoiler q-mt-sm');
+    hint.appendChild(el('summary', null, tr('Spoiler: Tipp anzeigen', 'Spoiler: Show hint')));
+    hint.appendChild(el('div', 'q-acc-body', tr(
+      'Noch nicht beide Zahlen richtig. T ist eine Achtel-Drehung um z — wie viele Achtel sind eine ganze bzw. eine halbe Umdrehung?',
+      'Not both numbers right yet. T is an eighth of a turn about z — how many eighths make a full turn, and how many a half turn?')));
+    body.appendChild(hint);
+
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var a = parseInt(back.value, 10), b = parseInt(minus.value, 10);
@@ -353,7 +360,7 @@
         replaceFeedback(body, feedback(true, ''));
         if (onDone) onDone();
       } else {
-        replaceFeedback(body, feedback(false, tr('Noch nicht beide Zahlen richtig. T ist eine Achtel-Drehung um z — wie viele Achtel sind eine ganze bzw. eine halbe Umdrehung?', 'Not both numbers right yet. T is an eighth of a turn about z — how many eighths make a full turn, and how many a half turn?')));
+        replaceFeedback(body, feedback(false, tr('Noch nicht beide Zahlen richtig.', 'Not both numbers right yet.')));
       }
     });
   }

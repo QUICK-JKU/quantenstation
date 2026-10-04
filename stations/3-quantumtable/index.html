@@ -53,14 +53,14 @@
     <h2 class="q-h2">Weiter geht's</h2>
     <div class="q-list q-mt-sm">
 
-      <a class="q-tile" href="schaltkreis.html">
+      <div class="q-task" id="table-circuit"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="table-circuit-body">
         <span class="q-tile-num c-red">▶</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Schaltkreis am Handy</span>
           <span class="q-tile-sub">Ist der Tisch gerade voll? Probier die Simulation online.</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button><div class="q-task-panel" id="table-circuit-body" hidden><iframe data-q-embed data-src="schaltkreis.html" loading="lazy" title="Schaltkreis am Handy"></iframe></div></div>
 
       <a class="q-tile" href="info.html">
         <span class="q-tile-num">?</span>
@@ -99,8 +99,8 @@
   </div>
 
   <div class="q-wrap q-mt">
-    <details class="q-acc">
-      <summary>Ist das ein echter Quantencomputer?</summary>
+    <section class="q-info">
+      <h3 class="q-info-title">Ist das ein echter Quantencomputer?</h3>
       <div class="q-acc-body">
         Nein — es ist eine <strong>Simulation</strong>, und sie rechnet exakt.
         Ein normaler Laptop kann Quantenschaltkreise bis etwa 30 Qubits
@@ -108,7 +108,7 @@
         für klassische Computer praktisch unmöglich — und genau dort beginnt
         der interessante Bereich.
       </div>
-    </details>
+    </section>
   </div>
 
 
@@ -121,10 +121,11 @@
     <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="../5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 
 <script src="../../assets/quantum.js"></script>
+<script src="../../assets/onepager.js"></script>
 </body>
 </html>

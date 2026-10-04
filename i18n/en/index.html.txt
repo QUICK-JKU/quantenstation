@@ -1,5 +1,11 @@
 # Englische Texte für index.html — siehe tools/build-en.py
 
+de: <span aria-hidden="true">☰</span> Menü
+en: <span aria-hidden="true">☰</span> Menu
+
+de: Seitenübersicht
+en: Page overview
+
 de: Quantenstation · 60 Jahre JKU
 en: Quantum Station · 60 Years of JKU
 
@@ -66,3 +72,23 @@ en: Yes, but only <strong>locally on your phone</strong>. We collect no data, th
 de: Johannes Kepler Universität Linz · Jubiläum 60 Jahre<br> Quantenstation — nicht zuschauen, mitmessen.
 en: Johannes Kepler University Linz · 60th anniversary<br> Quantum Station — don't just watch, measure along.
 
+de: Direkt zu den Angeboten
+en: Direct links
+
+de: Direkt zu
+en: Go directly to
+
+de: Box 2 · Rätsel
+en: Box 2 · Puzzles
+
+de: Bloch-Simulation
+en: Bloch simulation
+
+de: Bloch-Challenges
+en: Bloch challenges
+
+de: Alle Fragen
+en: All questions
+
+de: Quanten-Mythen
+en: Quantum myths
