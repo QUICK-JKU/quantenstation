@@ -89,3 +89,9 @@ en: If you want to know more about Schrödinger's cat, we are happy to tell you 
 
 de: 🔒 Zu den Rätseln
 en: 🔒 To the puzzles
+
+de: Der spannendste Teil der Quantenmechanik ist, dass sich Möglichkeiten <strong>gegenseitig auslöschen</strong> können. Dafür braucht man Wellen, die sich gegenseitig überlagern und Interferenzen bilden.
+en: The most exciting part of quantum mechanics is that possibilities can <strong>cancel each other out</strong>. For that you need waves that overlap and interfere with each other.
+
+de: Echte Quantenexperimente brauchen Vakuum, Laser und oft Temperaturen nahe dem absoluten Nullpunkt, und das ist hier vor Ort schwierig aufzubauen.
+en: Real quantum experiments need vacuum, lasers and often temperatures close to absolute zero — and that is hard to set up here on site.

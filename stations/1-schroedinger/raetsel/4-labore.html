@@ -41,38 +41,50 @@
   select.q-select.w-charlie,
   select.q-select.is-sup { font-weight: 700; }
 
-  .labs { display: flex; flex-direction: column; gap: 9px; }
+  /* Die vier Labore stehen wie im Rätseltext nebeneinander, 1 bis 4
+     von links nach rechts — auch am Handy. */
+  .labs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
   .lab {
-    border-radius: 14px;
+    border-radius: 12px;
     background: var(--surface);
     border: 2px solid var(--line);
     box-shadow: var(--shadow-sm);
-    padding: 10px 12px;
+    padding: 8px 4px 5px;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    min-width: 0;
     transition: border-color .15s;
   }
   .lab-n {
-    flex: none;
-    width: 58px;
     font-family: var(--font-mono);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: .08em;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: .04em;
     color: var(--faint);
     line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
   }
-  .lab-fields { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; min-width: 0; }
+  .lab-fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: 5px; min-width: 0; }
+  /* In den schmalen Spalten: kein Pfeil, wenig Rand, Text mittig. */
+  .lab select.q-select {
+    min-height: 42px;
+    padding: 6px 2px;
+    font-size: 12px;
+    text-align: center;
+    text-align-last: center;
+    background-image: none;
+    text-overflow: ellipsis;
+  }
   .lab.is-filled { border-color: rgba(31,91,255,.35); }
   .lab.is-solved { border-color: var(--green); }
 
-  /* Vier Spalten nebeneinander erst, wenn die Auswahlfelder darin
-     noch lesbar sind (Laptop). Darunter: eine Zeile pro Labor. */
-  @media (min-width: 1000px) {
-    .labs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
-    .lab { flex-direction: column; align-items: stretch; }
-    .lab-n { width: auto; text-align: center; }
-    .lab-fields { grid-template-columns: 1fr; }
+  @media (min-width: 600px) {
+    .labs { gap: 9px; }
+    .lab { padding: 10px 8px 8px; }
+    .lab-n { font-size: 11px; letter-spacing: .08em; }
+    .lab select.q-select { font-size: 13.5px; padding: 8px 6px; }
   }
 </style>
 <!-- lang:start -->

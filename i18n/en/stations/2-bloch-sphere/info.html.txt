@@ -87,3 +87,11 @@ en: Rotate the state, apply gates, measure
 de: Die Vor-Ort-Challenges in vier Stufen
 en: The on-site challenges in four levels
 
+de: Gleich hoch, aber verschoben: Der Abstand <strong>φ</strong> zwischen den Bergen ist die Phase.
+en: Same height, but shifted: the distance <strong>φ</strong> between the crests is the phase.
+
+de: <strong class="t-green">Berg auf Berg</strong> — die Summe wird doppelt so hoch.
+en: <strong class="t-green">Crest on crest</strong> — the sum becomes twice as high.
+
+de: <strong class="t-red">Berg auf Tal</strong> — die Summe verschwindet.
+en: <strong class="t-red">Crest on trough</strong> — the sum vanishes.
