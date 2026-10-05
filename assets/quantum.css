@@ -165,18 +165,26 @@ a, button, [role="button"], .q-tap {
   gap: 10px;
 }
 
+/* Der einzige Weg zurück auf Unterseiten: ein beschrifteter Link. */
 .q-back {
   flex: none;
-  width: 40px; height: 40px;
+  height: 40px;
+  padding: 0 14px;
   display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
+  border-radius: 999px;
   background: var(--card);
   border: 1.5px solid var(--line);
-  font-size: 19px; line-height: 1;
+  font-size: 14px; font-weight: 600; line-height: 1;
+  white-space: nowrap;
   color: var(--ink);
   box-shadow: var(--shadow-sm);
 }
+.q-back:hover { color: var(--blue); border-color: var(--blue); }
 .q-back:active { transform: scale(.93); }
+/* Neben dem Zurück-Link braucht der Seitentitel den Platz des Abzeichens. */
+@media (max-width: 480px) {
+  .q-back ~ .q-topbar-badge { display: none; }
+}
 
 .q-topbar-title {
   flex: 1;
@@ -278,120 +286,36 @@ a, button, [role="button"], .q-tap {
 .q-navitem[aria-current="location"] { color: var(--blue); }
 .q-navitem:active { background: rgba(20, 22, 28, .05); }
 
-/* Pfad und nächster Halt bleiben auch auf Unterseiten sichtbar. */
-.q-context {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 6px 14px;
-  padding-top: 12px;
-  font-size: 12px;
-  line-height: 1.45;
-}
-.q-context-trail { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
-.q-context-trail [aria-current="page"] { font-weight: 700; color: var(--ink); }
-.q-context-sep { color: var(--faint); }
-.q-context-next { font-weight: 700; }
-.q-context a { min-height: 30px; display: inline-flex; align-items: center; }
-
-/* Direkte Ziele und offen dargestellte Informationsabschnitte. */
-.q-direct-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.q-direct-links a {
-  display: inline-flex; align-items: center; min-height: 44px;
-  padding: 9px 13px; border: 1.5px solid var(--line);
-  border-radius: 999px; background: var(--card);
-  color: var(--ink); font-size: 13px; font-weight: 600;
-}
-.q-direct-links a:hover { border-color: var(--blue); color: var(--blue); }
-.q-direct-links a::after { content: ' ↗'; color: var(--blue); font-weight: 800; }
-.q-homebar {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 12px; min-height: 48px;
-}
-.q-main > .q-langrow {
-  position: absolute; top: 20px; left: 50%; z-index: 21;
-  transform: translateX(-50%); pointer-events: none;
-  margin: 0; padding-top: var(--safe-t);
-}
-.q-main > .q-langrow .q-lang { pointer-events: auto; }
-.q-main > .q-homebar { z-index: 20; }
-.q-site-menu { position: relative; min-width: 0; }
-.q-site-menu > summary {
-  display: flex; align-items: center; gap: 8px;
-  min-height: 44px; padding: 8px 13px;
-  border: 1.5px solid var(--line); border-radius: 12px;
-  background: var(--card); box-shadow: var(--shadow-sm);
-  color: var(--ink); font: 700 14px/1.2 var(--font-mono);
-  cursor: pointer; list-style: none;
-}
-.q-site-menu > summary::-webkit-details-marker,
-.q-menu-group > summary::-webkit-details-marker { display: none; }
-.q-site-menu > summary::after, .q-menu-group > summary::after {
-  content: '⌄'; color: var(--blue); font: 800 22px/1 var(--font-mono);
-  transition: transform .18s;
-}
-.q-site-menu[open] > summary::after,
-.q-menu-group[open] > summary::after { transform: rotate(180deg); }
-.q-site-menu[open] > summary { border-color: var(--blue); }
-.q-menu-panel {
-  position: absolute; top: calc(100% + 8px); left: 0;
-  width: min(440px, calc(100vw - 2 * var(--pad)));
-  max-height: min(72dvh, 640px); overflow-y: auto;
-  padding: 12px 14px 18px;
-  border: 1.5px solid var(--line); border-radius: 16px;
-  background: var(--card); box-shadow: var(--shadow-lg);
-  overscroll-behavior: contain;
-}
-.q-site-menu:not([open]) > .q-menu-panel { display: none; }
-.q-menu-group { border-top: 1px solid var(--line-soft); }
-.q-menu-group:first-child { border-top: 0; }
-.q-menu-group > summary {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 10px; min-height: 44px; padding: 9px 4px;
-  color: var(--ink); font-weight: 700; line-height: 1.3;
-  cursor: pointer; list-style: none;
-}
-.q-menu-children {
-  display: flex; flex-direction: column;
-  margin: 0 0 8px 10px; padding-left: 12px;
-  border-left: 2px solid var(--line);
-}
-.q-menu-link {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 8px; min-height: 42px; padding: 8px 4px;
-  color: var(--blue); line-height: 1.3;
-}
-.q-menu-link::after { content: '↗'; flex: none; font-weight: 800; }
-.q-menu-link:hover { color: var(--purple); }
-.q-menu-group > summary:hover { color: var(--blue); }
-.q-menu-panel :focus-visible { outline-offset: 0; }
-.q-site-menu > summary:focus-visible { outline-offset: 2px; }
-@media (min-width: 600px) {
-  .q-main > .q-langrow { top: 32px; }
-}
-@media (min-width: 1000px) {
-  .q-main > .q-langrow { top: 40px; }
-}
-.q-jump, .q-box {
+/* Aufklappbare Bereiche und Aufgaben auf den Startseiten. */
+.q-box {
   margin-top: 20px;
   border-top: 2px solid var(--line);
 }
-.q-jump > summary, .q-box > summary {
+.q-box > summary {
   display: flex; align-items: center; gap: 12px;
   min-height: 58px; cursor: pointer; list-style: none;
   color: var(--ink); font-family: var(--font-display); font-weight: 700;
 }
-.q-jump > summary::-webkit-details-marker, .q-box > summary::-webkit-details-marker { display: none; }
-.q-jump > summary::after, .q-box > summary::after,
-.q-task-trigger::after {
-  content: '⌄'; margin-left: auto; flex: none;
-  color: var(--blue); font: 800 26px/1 var(--font-mono);
-  transition: transform .18s;
+.q-box > summary::-webkit-details-marker { display: none; }
+/* Ein Pfeil für alle Aufklapper: runde Fläche mit gezeichnetem Winkel. */
+.q-box > summary::after,
+.q-task-trigger::after,
+.q-acc > summary::after,
+.q-task-close::before {
+  content: ''; flex: none;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(31, 91, 255, .10) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%231f5bff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 6l4.5 4.5L12.5 6'/%3E%3C/svg%3E") center / 16px 16px no-repeat;
+  transition: transform .22s ease, background-color .18s;
 }
-.q-jump[open] > summary::after, .q-box[open] > summary::after,
+.q-box > summary::after,
+.q-task-trigger::after,
+.q-acc > summary::after { margin-left: auto; }
+.q-box > summary:hover::after,
+.q-task-trigger:hover::after,
+.q-acc > summary:hover::after,
+.q-task-close:hover::before { background-color: rgba(31, 91, 255, .20); }
+.q-box[open] > summary::after,
 .q-task-trigger[aria-expanded="true"]::after { transform: rotate(180deg); }
-.q-jump > .q-direct-links { margin: 0 0 15px; }
 .q-box > summary { padding: 4px var(--pad); max-width: var(--wrap); margin: auto; }
 .q-box > summary .q-tile-txt { display: grid; gap: 3px; }
 .q-box > .q-wrap { margin-top: 18px; }
@@ -407,6 +331,15 @@ a, button, [role="button"], .q-tap {
 .q-task-panel { padding: 5px 0 18px; }
 .q-task-panel[hidden] { display: none; }
 .q-task-panel iframe { display: block; width: 100%; min-height: 500px; border: 0; }
+.q-task-close {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; min-height: 48px; margin-top: 10px; padding: 8px 2px;
+  border: 0; border-top: 1px dashed var(--line); background: transparent;
+  color: var(--blue); cursor: pointer;
+  font: 600 14px/1 var(--font-body, inherit);
+}
+.q-task-close::before { transform: rotate(180deg); }
+.q-task-close:hover { color: var(--ink); }
 .q-embedded { scroll-behavior: auto; }
 .q-embedded body { padding: 0; }
 .q-embedded .q-main { padding-top: 8px; }
@@ -438,7 +371,7 @@ a, button, [role="button"], .q-tap {
 }
 .q-flat-link:hover { color: var(--blue); }
 .q-flat-link .q-tile-num { width: 36px; height: 36px; font-size: 16px; }
-[id="box-1-overview"], [id="box-2-overview"], [id="faq-intro"] {
+[id="faq-intro"] {
   scroll-margin-top: calc(72px + var(--safe-t));
 }
 
@@ -834,16 +767,6 @@ select.q-select {
   line-height: 1.25;
 }
 .q-acc > summary::-webkit-details-marker { display: none; }
-.q-acc > summary::after {
-  content: '⌄';
-  margin-left: auto;
-  flex: none;
-  font-family: var(--font-mono);
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--faint);
-  transition: transform .18s;
-}
 .q-acc[open] > summary::after { transform: rotate(180deg); }
 .q-acc-body {
   padding: 0 16px 16px;
@@ -856,8 +779,6 @@ select.q-select {
 /* Einheitliche, zunächst geschlossene Hilfen zu Aufgaben und Quizzen. */
 .q-spoiler > summary { color: var(--blue); }
 .q-spoiler[open] > summary { color: var(--ink); }
-.q-station-return { margin-top: 28px; }
-.q-station-return .q-btn { min-height: 52px; }
 
 /* Bildschirmleser-only */
 .q-sr {

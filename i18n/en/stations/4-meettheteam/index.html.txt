@@ -33,3 +33,6 @@ en: Talk to us
 de: Ernsthaft: Wir stehen den ganzen Tag hier und freuen uns über jede Frage. Auch über <em>„ich versteh gar nichts“</em> — das ist bei diesem Thema die ehrlichste und häufigste Reaktion.
 en: Seriously: we're here all day and happy about every question. Even about <em>“I don't understand anything”</em> — with this topic that's the most honest and most common reaction.
 
+
+de: We are the QuiCK Sloths.
+en: =

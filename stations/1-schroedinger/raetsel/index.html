@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="refresh" content="0;url=../index.html#box-1-overview">
 <meta name="theme-color" content="#f3efe6">
 <title>Die 4 Rätsel · Quantenstation JKU</title>
-<meta name="description" content="Vier Quanten-Rätsel, vier Schlösser. Level Oberstufe, direkt am Handy.">
+<meta name="description" content="Vier Quanten-Rätsel, vier Schlösser. Level Unterstufe, direkt am Handy.">
 <link rel="stylesheet" href="../../../assets/fonts/fonts.css">
 <link rel="stylesheet" href="../../../assets/quantum.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
@@ -20,7 +19,7 @@
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../index.html" data-q-back aria-label="Zurück">←</a>
+    <a class="q-back" href="../index.html" data-q-back aria-label="Zurück">← Zurück</a>
     <div class="q-topbar-title">Box 1 · Rätsel</div>
     <div class="q-topbar-badge">🔒 <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span></div>
     <a class="q-lang" href="../../../en/stations/1-schroedinger/raetsel/index.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
@@ -40,20 +39,10 @@
   </div>
 
   <div class="q-wrap q-mt">
-    <div class="q-kiste k-1">
-      <div class="q-kiste-kopf"><span>Box 1</span><em>einfach</em></div>
-      <div class="q-kiste-flaeche">
-        <img src="../../../assets/box-1.png"
-             alt="Gravur auf Kiste 1: Katzen, ein Karton und der Schriftzug Schrödinger's cat is alive und dead">
-      </div>
-    </div>
-  </div>
-
-  <div class="q-wrap q-mt">
     <div class="q-plain">
       <h3 class="q-plain-title">Gut zu wissen</h3>
       <div class="q-body">
-        Level <strong>Oberstufe</strong> ·
+        Level <strong>Unterstufe</strong> ·
         Reihenfolge egal · Fortschritt bleibt auf diesem Handy gespeichert.
       </div>
     </div>
@@ -64,167 +53,63 @@
   <div class="q-wrap q-mt">
     <div class="q-link-list">
 
-      <a class="q-flat-link" href="1-superposition.html" data-q-id="schroedinger-1">
+      <div class="q-task" id="task-box1-1">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-1" aria-expanded="false" aria-controls="task-box1-1-body">
         <span class="q-tile-num">1</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Superposition</span>
           <span class="q-tile-sub">Miss jeden Pol einzeln — in der Mitte ist nichts lesbar</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="2-interferenz.html" data-q-id="schroedinger-2">
+      </button>
+        <div class="q-task-panel" id="task-box1-1-body" hidden>
+          <iframe data-q-embed data-src="1-superposition.html" loading="lazy" title="Rätsel 1: Superposition"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box1-2">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-2" aria-expanded="false" aria-controls="task-box1-2-body">
         <span class="q-tile-num c-red">2</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Interferenz</span>
           <span class="q-tile-sub">Durchs Labyrinth — jede Kachel die andere Farbe</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="3-wellen.html" data-q-id="schroedinger-3">
+      </button>
+        <div class="q-task-panel" id="task-box1-2-body" hidden>
+          <iframe data-q-embed data-src="2-interferenz.html" loading="lazy" title="Rätsel 2: Interferenz"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box1-3">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-3" aria-expanded="false" aria-controls="task-box1-3-body">
         <span class="q-tile-num c-purple">3</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Wellen in Phase</span>
           <span class="q-tile-sub">Drei Wellen überlagern, bis die Zielkurve passt</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="4-labore.html" data-q-id="schroedinger-4">
+      </button>
+        <div class="q-task-panel" id="task-box1-3-body" hidden>
+          <iframe data-q-embed data-src="3-wellen.html" loading="lazy" title="Rätsel 3: Wellen in Phase"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box1-4">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="schroedinger-4" aria-expanded="false" aria-controls="task-box1-4-body">
         <span class="q-tile-num c-green">4</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Wer findet den Ort?</span>
           <span class="q-tile-sub">Vier Labore, vier Forschende — ein Logikrätsel</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-    </div>
-  </div>
-
-<div class="q-wrap q-mt">
-    <h2 class="q-h2">Was in den Rätseln steckt</h2>
-    <p class="q-small q-mt-sm">
-      Jedes der vier Rätsel spielt ein Prinzip durch, und jedes davon steckt
-      auch in einem echten Quantencomputer.
-    </p>
-    <div class="q-flow q-mt-sm">
-
-      <div class="q-plain">
-        <h3 class="q-plain-title">Rätsel 1 · Superposition</h3>
-        <p class="q-body">
-          Der Regler steht zwischen Blau und Rot, und in der Mitte kannst du
-          <strong>nichts</strong> ablesen. Messen lassen sich nur die beiden
-          Pole. Im Rechner heißt das, dass ein Qubit beide Antworten
-          gleichzeitig trägt und <strong>n</strong> Qubits alle
-          2<sup>n</sup> Kombinationen auf einmal.
-        </p>
-      </div>
-
-      <div class="q-plain">
-        <h3 class="q-plain-title">Rätsel 2 · Interferenz</h3>
-        <p class="q-body">
-          Im <strong>Labyrinth</strong> führt nicht jeder Weg zum Ziel, denn nur
-          Felder mit wechselnder Farbe passen zusammen und der Rest ist eine
-          Sackgasse. Genauso rechnet ein Quantenalgorithmus, indem er die
-          falschen Wege sich gegenseitig <strong>auslöschen</strong> lässt und
-          den richtigen verstärkt. Ohne diesen Trick wäre das gleichzeitige
-          Rechnen wertlos, weil beim Messen nur Zufall herauskäme.
-        </p>
-      </div>
-
-      <div class="q-plain">
-        <h3 class="q-plain-title">Rätsel 3 · Wellen</h3>
-        <p class="q-body">
-          Drei Wellen werden überlagert, bis die Zielkurve steht, und sie
-          addieren sich nur bei passender <strong>Phase</strong>. Genau diese
-          Phasen verstellen die Gatter in einem Quantencomputer.
-        </p>
-      </div>
-
-      <div class="q-plain">
-        <h3 class="q-plain-title">Rätsel 4 · Logik</h3>
-        <p class="q-body">
-          Vier Labore und vier Forschende, und aus den Hinweisen wird eine
-          Lösung eingekreist. Das ist kein Quanteneffekt, sondern sauberes
-          Ausschließen, also die Denkarbeit vor jedem Algorithmus.
-        </p>
+      </button>
+        <div class="q-task-panel" id="task-box1-4-body" hidden>
+          <iframe data-q-embed data-src="4-labore.html" loading="lazy" title="Rätsel 4: Wer findet den Ort?"></iframe>
+        </div>
       </div>
 
     </div>
-  </div>
-
-  <div class="q-wrap q-mt">
-    <h2 class="q-h2">Hängst du fest?</h2>
-    <details class="q-acc q-spoiler q-mt-sm">
-      <summary>Spoiler: Tipp 1 anzeigen</summary>
-      <div class="q-acc-body">
-        Schieb den Regler ganz nach <strong>links</strong> und notiere die blaue
-        Zahl. Dann ganz nach <strong>rechts</strong> für die rote. Danach beide
-        Zahlen <strong>Stelle für Stelle</strong> addieren — und pro Stelle nur
-        die letzte Ziffer behalten.
-      </div>
-    </details>
-    <details class="q-acc q-spoiler">
-      <summary>Spoiler: Tipp 2 anzeigen</summary>
-      <div class="q-acc-body">
-        Starte bei der Fahne <strong>⚑</strong> unten links. Von dort darfst du
-        nur auf Nachbarfelder mit der <strong>anderen</strong> Farbe. Tippe eine
-        frühere Kachel an, um zurückzugehen. Nicht jeder Weg führt zum Schloss.
-      </div>
-    </details>
-    <details class="q-acc q-spoiler">
-      <summary>Spoiler: Tipp 3 anzeigen</summary>
-      <div class="q-acc-body">
-        Stell <strong>einen</strong> Regler nach dem anderen ein. Beobachte den
-        Prozentwert: Geht er hoch, bist du auf dem richtigen Weg. Erst wenn alle
-        drei Wellen sitzen, springt die Anzeige auf 100 %.
-      </div>
-    </details>
-    <details class="q-acc q-spoiler">
-      <summary>Spoiler: Tipp 4 anzeigen</summary>
-      <div class="q-acc-body">
-        Fang mit den <strong>sicheren</strong> Hinweisen an: Bob steht fest, und
-        ganz rechts wird Energie gemessen. Danach bleibt für Diana nur noch eine
-        Möglichkeit. Die Häkchen zeigen dir, welche Hinweise schon erfüllt sind.
-      </div>
-    </details>
-  </div>
-
-  <div class="q-wrap q-mt">
-    <div class="q-link-list">
-      <a class="q-flat-link" href="../info.html">
-        <span class="q-tile-num c-purple">?</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Erst mal nachlesen</span>
-          <span class="q-tile-sub">Was Superposition eigentlich bedeutet</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="q-flat-link" href="../katze-2/">
-        <span class="q-tile-num c-green">🐈‍⬛</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Box 2 · Die zweite Katze</span>
-          <span class="q-tile-sub">Vier weitere Schlösser — diesmal Fragen statt Regler</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-      <!-- Quiz-Pool vorübergehend ausgeblendet (zum Einblenden Kommentar entfernen):
-      <a class="q-flat-link" href="../../../quiz/">
-        <span class="q-tile-num c-ink">❓</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Zu schwer? Zu leicht?</span>
-          <span class="q-tile-sub">18 Quizze von Kinder- bis Studi-Niveau — auch mit Code</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-      -->
-    </div>
-  </div>
-
-  <div class="q-wrap q-station-return">
-    <a class="q-btn q-btn-primary q-btn-block" href="../index.html" target="_top">← Zurück zur Station</a>
   </div>
 
 </main>
@@ -241,5 +126,6 @@
 </nav>
 
 <script src="../../../assets/quantum.js"></script>
+<script src="../../../assets/onepager.js"></script>
 </body>
 </html>

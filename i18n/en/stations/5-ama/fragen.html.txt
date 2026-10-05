@@ -45,8 +45,8 @@ en: Is Schrödinger's cat really dead and alive?
 de: Nein. Schrödinger hat sich das Beispiel 1935 als <strong>Kritik</strong> ausgedacht. Er wollte zeigen, wie absurd es wird, wenn man die Regeln der winzigen Teilchen auf große Dinge überträgt. Bei einzelnen Atomen lässt sich die Superposition genau nachmessen. Bei einer Katze gibt es sie nicht, denn sie besteht aus unvorstellbar vielen Teilchen und ist immer eindeutig lebendig oder eindeutig tot.
 en: No. Schrödinger came up with the example in 1935 as a <strong>criticism</strong>. He wanted to show how absurd it gets if you apply the rules of tiny particles to big things. For single atoms, superposition can be measured precisely. A cat doesn't have it, because it consists of unimaginably many particles and is always clearly alive or clearly dead.
 
-de: Ein Qubit ist das kleinste Quantensystem mit genau zwei möglichen Messergebnissen, meist 0 und 1. Anders als ein gewöhnliches Bit kann es vor der Messung in einer Superposition aus beiden Werten stehen. Um seinen Zustand vollständig zu beschreiben, braucht man zwei Winkel. Deshalb lässt er sich als Punkt auf einer Kugel darstellen, der <a href="../2-bloch-sphere/">Bloch-Kugel</a>.
-en: A qubit is the smallest quantum system with exactly two possible measurement results, usually 0 and 1. Unlike an ordinary bit, it can be in a superposition of both values before the measurement. To describe its state completely, you need two angles. That's why it can be shown as a point on a sphere, the <a href="../2-bloch-sphere/">Bloch sphere</a>.
+de: Ein Qubit ist das kleinste Quantensystem mit genau zwei möglichen Messergebnissen, meist 0 und 1. Anders als ein gewöhnliches Bit kann es vor der Messung in einer Superposition aus beiden Werten stehen. Um seinen Zustand vollständig zu beschreiben, braucht man zwei Winkel. Deshalb lässt er sich als Punkt auf einer Kugel darstellen, der Bloch-Kugel.
+en: A qubit is the smallest quantum system with exactly two possible measurement results, usually 0 and 1. Unlike an ordinary bit, it can be in a superposition of both values before the measurement. To describe its state completely, you need two angles. That's why it can be shown as a point on a sphere, the Bloch sphere.
 
 de: Was ist Interferenz?
 en: What is interference?
@@ -57,14 +57,14 @@ en: Waves overlap and add up their amplitudes. Where crest meets crest, the wave
 de: Was bedeutet „Messung zerstört den Zustand“?
 en: What does “measurement destroys the state” mean?
 
-de: Messen ist kein passives Hinschauen, sondern eine Wechselwirkung mit dem System. Danach befindet es sich in genau einem der möglichen Ergebnisse und die ursprüngliche Superposition ist unwiederbringlich verloren. Das kannst du an der <a href="../2-bloch-sphere/simulation.html">Bloch-Kugel</a> selbst ausprobieren. Nach jeder Messung springt der Pfeil auf einen der beiden Pole.
-en: Measuring is not passive looking, but an interaction with the system. Afterwards it is in exactly one of the possible results and the original superposition is irretrievably lost. You can try this yourself on the <a href="../2-bloch-sphere/simulation.html">Bloch sphere</a>. After every measurement the arrow jumps to one of the two poles.
+de: Messen ist kein passives Hinschauen, sondern eine Wechselwirkung mit dem System. Danach befindet es sich in genau einem der möglichen Ergebnisse und die ursprüngliche Superposition ist unwiederbringlich verloren. Das kannst du an der <a href="../2-bloch-sphere/index.html#bloch-simulation">Bloch-Kugel</a> selbst ausprobieren. Nach jeder Messung springt der Pfeil auf einen der beiden Pole.
+en: Measuring is not passive looking, but an interaction with the system. Afterwards it is in exactly one of the possible results and the original superposition is irretrievably lost. You can try this yourself on the <a href="../2-bloch-sphere/index.html#bloch-simulation">Bloch sphere</a>. After every measurement the arrow jumps to one of the two poles.
 
 de: Was ist Verschränkung?
 en: What is entanglement?
 
-de: Zwei Teilchen können so eng verbunden sein, dass keines von beiden für sich einen eigenen Zustand hat. Beschrieben werden kann nur das Paar gemeinsam. Misst man beide, passen die Ergebnisse immer zusammen, obwohl jedes einzelne für sich rein zufällig ausfällt. Du kannst so ein Paar selbst herstellen, mit dem <a href="../3-quantumtable/schaltkreis.html">Bell-Zustand</a> am QuantumTable.
-en: Two particles can be so closely connected that neither of them has a state of its own. Only the pair can be described together. If you measure both, the results always match, even though each one on its own comes out completely at random. You can make such a pair yourself with the <a href="../3-quantumtable/schaltkreis.html">Bell state</a> at the QuantumTable.
+de: Zwei Teilchen können so eng verbunden sein, dass keines von beiden für sich einen eigenen Zustand hat. Beschrieben werden kann nur das Paar gemeinsam. Misst man beide, passen die Ergebnisse immer zusammen, obwohl jedes einzelne für sich rein zufällig ausfällt. Du kannst so ein Paar selbst herstellen, mit dem <a href="../3-quantumtable/index.html#table-circuit">Bell-Zustand</a> am QuantumTable.
+en: Two particles can be so closely connected that neither of them has a state of its own. Only the pair can be described together. If you measure both, the results always match, even though each one on its own comes out completely at random. You can make such a pair yourself with the <a href="../3-quantumtable/index.html#table-circuit">Bell state</a> at the QuantumTable.
 
 de: Was ist die Unschärferelation?
 en: What is the uncertainty principle?

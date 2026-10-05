@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="refresh" content="0;url=../index.html#box-2-overview">
 <meta name="theme-color" content="#f3efe6">
 <title>The second cat · Quantum Station JKU</title>
 <meta name="description" content="The second Schrödinger cat: four locks with four questions each. No hints, no solutions shown — but everything there to read up on.">
@@ -21,7 +20,7 @@
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../index.html" data-q-back aria-label="Back to the station">←</a>
+    <a class="q-back" href="../index.html" data-q-back aria-label="Back to the station">← Back</a>
     <div class="q-topbar-title">Box 2 · Puzzles</div>
     <div class="q-topbar-badge">🔒 <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span></div>
     <a class="q-lang" href="../../../../stations/1-schroedinger/katze-2/index.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
@@ -40,20 +39,10 @@
   </div>
 
   <div class="q-wrap q-mt">
-    <div class="q-kiste k-2">
-      <div class="q-kiste-kopf"><span>Box 2</span><em>hard</em></div>
-      <div class="q-kiste-flaeche">
-        <img src="../../../../assets/box-2.png"
-             alt="Engraving on box 2: Quantum Enclosure System with a living and a decaying cat">
-      </div>
-    </div>
-  </div>
-
-  <div class="q-wrap q-mt">
     <div class="q-plain">
       <h3 class="q-plain-title">Good to know</h3>
       <div class="q-body">
-        Level: school-leaving exam / university — everything the locks ask for is in the <a href="theorie.html">rules of calculation</a>.
+        Level: school-leaving exam / university — everything the locks ask for is in the rules of calculation further down.
       </div>
     </div>
   </div>
@@ -61,41 +50,61 @@
   <div class="q-wrap q-mt">
     <div class="q-link-list">
 
-      <a class="q-flat-link" href="1-zustand.html" data-q-id="quiz-katze2-1">
+      <div class="q-task" id="task-box2-1">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-1" aria-expanded="false" aria-controls="task-box2-1-body">
         <span class="q-tile-num">1</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">State &amp; computing power</span>
           <span class="q-tile-sub">What's inside a qubit — and what follows from it</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="2-messung.html" data-q-id="quiz-katze2-2">
+      </button>
+        <div class="q-task-panel" id="task-box2-1-body" hidden>
+          <iframe data-q-embed data-src="1-zustand.html" loading="lazy" title="Puzzle 1: State &amp; computing power"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box2-2">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-2" aria-expanded="false" aria-controls="task-box2-2-body">
         <span class="q-tile-num c-red">2</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Measurement &amp; collapse</span>
           <span class="q-tile-sub">Why looking changes things</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="3-drehungen.html" data-q-id="quiz-katze2-3">
+      </button>
+        <div class="q-task-panel" id="task-box2-2-body" hidden>
+          <iframe data-q-embed data-src="2-messung.html" loading="lazy" title="Puzzle 2: Measurement &amp; collapse"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box2-3">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-3" aria-expanded="false" aria-controls="task-box2-3-body">
         <span class="q-tile-num c-purple">3</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Rotations &amp; pairs</span>
           <span class="q-tile-sub">Photons, angles and Bell states — with calculations</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="4-verschraenkung.html" data-q-id="quiz-katze2-4">
+      </button>
+        <div class="q-task-panel" id="task-box2-3-body" hidden>
+          <iframe data-q-embed data-src="3-drehungen.html" loading="lazy" title="Puzzle 3: Rotations &amp; pairs"></iframe>
+        </div>
+      </div>
+
+      <div class="q-task" id="task-box2-4">
+        <button class="q-task-trigger" type="button" data-q-panel data-q-id="quiz-katze2-4" aria-expanded="false" aria-controls="task-box2-4-body">
         <span class="q-tile-num c-green">4</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Entanglement in everyday life</span>
           <span class="q-tile-sub">What really follows from it — and what doesn't</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button>
+        <div class="q-task-panel" id="task-box2-4-body" hidden>
+          <iframe data-q-embed data-src="4-verschraenkung.html" loading="lazy" title="Puzzle 4: Entanglement in everyday life"></iframe>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -117,11 +126,6 @@
     </div>
   </div>
 
-
-  <div class="q-wrap q-station-return">
-    <a class="q-btn q-btn-primary q-btn-block" href="../index.html" target="_top">← Back to station</a>
-  </div>
-
 </main>
 
 <nav class="q-bottombar" aria-label="Stations">
@@ -136,5 +140,6 @@
 </nav>
 
 <script src="../../../../assets/quantum.js"></script>
+<script src="../../../../assets/onepager.js"></script>
 </body>
 </html>

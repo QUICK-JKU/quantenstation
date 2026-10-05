@@ -19,7 +19,6 @@
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../../index.html" data-q-back aria-label="Zurück zur Übersicht">←</a>
     <div class="q-topbar-title">Station 2</div>
     <div class="q-topbar-badge">🔮 Kugel</div>
     <a class="q-lang" href="../../en/stations/2-bloch-sphere/index.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
@@ -53,14 +52,14 @@
     <h2 class="q-h2">Weiter geht's</h2>
     <div class="q-list q-mt-sm">
 
-      <a class="q-tile" href="info.html">
+      <div class="q-task" id="bloch-info"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="bloch-info-body">
         <span class="q-tile-num">1</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Was ist ein Qubit?</span>
           <span class="q-tile-sub">Von der Glühbirne zur Kugel — Schritt für Schritt</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button><div class="q-task-panel" id="bloch-info-body" hidden><iframe data-q-embed data-src="info.html" loading="lazy" title="Was ist ein Qubit?"></iframe></div></div>
 
       <div class="q-task" id="bloch-simulation"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="bloch-simulation-body">
         <span class="q-tile-num c-purple">2</span>
@@ -128,9 +127,6 @@
     </section>
   </div>
 
-  <div class="q-wrap q-mt">
-    <a class="q-btn q-btn-primary q-btn-block" href="#bloch-simulation">▶ Kugel ausprobieren</a>
-  </div>
 
 </main>
 

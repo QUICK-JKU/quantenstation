@@ -60,8 +60,8 @@ en: No. Everything runs in your phone's browser — no login, no app, no sign-up
 de: Brauche ich Vorwissen?
 en: Do I need any prior knowledge?
 
-de: Nein. Die Rätsel sind für die <strong>Oberstufe</strong> gemacht, aber jedes erklärt sich selbst. Neugier reicht völlig — und wir stehen daneben und helfen gerne weiter.
-en: No. The puzzles are made for <strong>upper secondary school</strong>, but each one explains itself. Curiosity is all you need — and we are right there and happy to help.
+de: Nein. Die Rätsel reichen <strong>von Unterstufe bis Studium</strong>, aber jedes erklärt sich selbst. Neugier reicht völlig — und wir stehen daneben und helfen gerne weiter.
+en: No. The puzzles range <strong>from lower secondary school to university level</strong>, but each one explains itself. Curiosity is all you need — and we are right there and happy to help.
 
 de: Wird mein Fortschritt gespeichert?
 en: Is my progress saved?

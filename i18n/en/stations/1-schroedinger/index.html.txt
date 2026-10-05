@@ -75,8 +75,8 @@ en: Because “looking” is never passive. Every measurement couples the partic
 de: Wozu ist das gut?
 en: What is it good for?
 
-de: Superposition ist der Motor von <strong>Quantencomputern</strong>: Ein Qubit kann 0 und 1 zugleich sein, und zusammen mit Interferenz entsteht daraus die Rechenkraft. Wie ein Qubit aussieht, zeigt <a href="../2-bloch-sphere/">Station 2</a>.
-en: Superposition is the engine of <strong>quantum computers</strong>: a qubit can be 0 and 1 at the same time, and together with interference this is where the computing power comes from. What a qubit looks like is shown at <a href="../2-bloch-sphere/">Station 2</a>.
+de: Superposition ist der Motor von <strong>Quantencomputern</strong>: Ein Qubit kann 0 und 1 zugleich sein, und zusammen mit Interferenz entsteht daraus die Rechenkraft. Wie ein Qubit aussieht, zeigt Station 2.
+en: Superposition is the engine of <strong>quantum computers</strong>: a qubit can be 0 and 1 at the same time, and together with interference this is where the computing power comes from. What a qubit looks like is shown at Station 2.
 
 de: Was steckt in den Kisten?
 en: What's in the boxes?
@@ -236,3 +236,6 @@ en: Here you can learn everything you need for the sixteen questions, from the B
 
 de: Amplituden, 2ⁿ, Messung, Gatter, Photonen, Bell — mit Beispielen
 en: Amplitudes, 2ⁿ, measurement, gates, photons, Bell — with examples
+
+de: Level Matura/Studium - Alles, was die Schlösser verlangen, steht in den Rechenregeln weiter unten.
+en: Level: school-leaving exam / university — everything the locks ask for is in the rules of calculation further down.

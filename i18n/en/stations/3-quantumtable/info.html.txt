@@ -30,8 +30,8 @@ en: TIME →
 de: 2. Die Gatter
 en: 2. The gates
 
-de: Ein Kästchen auf einer Linie ist ein <strong>Gatter</strong> — eine Drehung des Zustands. Auf der Bloch-Kugel vor Ort kannst du dir das ansehen: <a href="../2-bloch-sphere/simulation.html">Gatter sind Drehungen</a>.
-en: A box on a line is a <strong>gate</strong> — a rotation of the state. You can see this on the Bloch sphere on site: <a href="../2-bloch-sphere/simulation.html">gates are rotations</a>.
+de: Ein Kästchen auf einer Linie ist ein <strong>Gatter</strong> — eine Drehung des Zustands. Auf der Bloch-Kugel vor Ort kannst du dir das ansehen: <a href="../2-bloch-sphere/index.html#bloch-simulation">Gatter sind Drehungen</a>.
+en: A box on a line is a <strong>gate</strong> — a rotation of the state. You can see this on the Bloch sphere on site: <a href="../2-bloch-sphere/index.html#bloch-simulation">gates are rotations</a>.
 
 de: Ein H-Gatter auf dem oberen Draht
 en: An H gate on the upper wire

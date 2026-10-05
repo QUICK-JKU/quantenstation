@@ -50,7 +50,6 @@
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../../index.html" data-q-back aria-label="Back">←</a>
     <div class="q-topbar-title">FAQ · All questions</div>
     <div class="q-topbar-badge">🔍 Search</div>
     <a class="q-lang" href="../../../stations/5-ama/fragen.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
@@ -100,7 +99,7 @@
     <section class="q-info" data-cat="grundlagen">
       <h3 class="q-info-title">What is a qubit?</h3>
       <div class="q-acc-body">
-        A qubit is the smallest quantum system with exactly two possible measurement results, usually 0 and 1. Unlike an ordinary bit, it can be in a superposition of both values before the measurement. To describe its state completely, you need two angles. That's why it can be shown as a point on a sphere, the <a href="../2-bloch-sphere/">Bloch sphere</a>.
+        A qubit is the smallest quantum system with exactly two possible measurement results, usually 0 and 1. Unlike an ordinary bit, it can be in a superposition of both values before the measurement. To describe its state completely, you need two angles. That's why it can be shown as a point on a sphere, the Bloch sphere.
       </div>
     </section>
 
@@ -114,14 +113,14 @@
     <section class="q-info" data-cat="grundlagen">
       <h3 class="q-info-title">What does “measurement destroys the state” mean?</h3>
       <div class="q-acc-body">
-        Measuring is not passive looking, but an interaction with the system. Afterwards it is in exactly one of the possible results and the original superposition is irretrievably lost. You can try this yourself on the <a href="../2-bloch-sphere/simulation.html">Bloch sphere</a>. After every measurement the arrow jumps to one of the two poles.
+        Measuring is not passive looking, but an interaction with the system. Afterwards it is in exactly one of the possible results and the original superposition is irretrievably lost. You can try this yourself on the <a href="../2-bloch-sphere/index.html#bloch-simulation">Bloch sphere</a>. After every measurement the arrow jumps to one of the two poles.
       </div>
     </section>
 
     <section class="q-info" data-cat="grundlagen">
       <h3 class="q-info-title">What is entanglement?</h3>
       <div class="q-acc-body">
-        Two particles can be so closely connected that neither of them has a state of its own. Only the pair can be described together. If you measure both, the results always match, even though each one on its own comes out completely at random. You can make such a pair yourself with the <a href="../3-quantumtable/schaltkreis.html">Bell state</a> at the QuantumTable.
+        Two particles can be so closely connected that neither of them has a state of its own. Only the pair can be described together. If you measure both, the results always match, even though each one on its own comes out completely at random. You can make such a pair yourself with the <a href="../3-quantumtable/index.html#table-circuit">Bell state</a> at the QuantumTable.
       </div>
     </section>
 
@@ -250,9 +249,6 @@
     </div>
   </div>
 
-  <div class="q-wrap q-mt">
-    <a class="q-btn q-btn-block" href="mythen.html">✗ On to the quantum myths</a>
-  </div>
 
   <div class="q-wrap q-mt" id="faq-intro">
     <div class="q-eyebrow">For your questions</div>
@@ -275,32 +271,16 @@
     <h2 class="q-h2">Read up first</h2>
     <div class="q-link-list q-mt-sm">
 
-      <a class="q-flat-link" href="#faq">
-        <span class="q-tile-num c-coral">?</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">The most common questions</span>
-          <span class="q-tile-sub">Searchable — from “What is a qubit?” to “Are there parallel universes?”</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="mythen.html">
+      <div class="q-task" id="mythen"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="mythen-body">
         <span class="q-tile-num c-red">✗</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Six quantum myths</span>
           <span class="q-tile-sub">What people keep claiming — and what's actually true</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
 
-      <a class="q-flat-link" href="../4-meettheteam/studieren.html">
-        <span class="q-tile-num c-green">🎓</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Paths into quantum physics</span>
-          <span class="q-tile-sub">What to study for it — and what not</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+      </button><div class="q-task-panel" id="mythen-body" hidden><iframe data-q-embed data-src="mythen.html" loading="lazy" title="Six quantum myths"></iframe></div></div>
+
 
     </div>
   </div>
@@ -356,9 +336,6 @@
     </div>
   </div>
 
-  <div class="q-wrap q-mt">
-    <a class="q-btn q-btn-primary q-btn-block" href="#faq">❓ To the most common questions</a>
-  </div>
 
 
 </main>
@@ -375,6 +352,7 @@
 </nav>
 
 <script src="../../../assets/quantum.js"></script>
+<script src="../../../assets/onepager.js"></script>
 <script>
 (function () {
   'use strict';

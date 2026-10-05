@@ -13,57 +13,66 @@
   .graph-card {
     width: 100%;
     max-width: 360px;
-    margin: 16px auto 0;
-    padding: 12px;
+    margin: 12px auto 0;
+    padding: 10px 12px;
     border-radius: 16px;
     background: var(--surface);
     box-shadow: var(--shadow-lg);
   }
-  .graph-card svg { display: block; width: 100%; height: auto; }
+  /* Flach gehalten, damit Kurve und alle drei Regler auf ein Handy passen. */
+  .graph-card svg { display: block; width: 100%; height: 104px; }
+  .graph-card svg path, .wave svg path { vector-effect: non-scaling-stroke; }
 
   .wave-list {
     width: 100%;
     max-width: 360px;
-    margin: 16px auto 0;
+    margin: 8px auto 0;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 8px;
   }
   .wave {
-    padding: 12px 14px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "head curve" "slider slider";
+    align-items: center;
+    gap: 2px 12px;
+    padding: 6px 12px;
     border-radius: 14px;
     background: #fff;
     border: 1.5px solid var(--line);
     box-shadow: var(--shadow-sm);
   }
   .wave-head {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 9px;
+    grid-area: head;
+    display: flex; align-items: center; gap: 8px;
   }
   .wave-name {
     display: flex; align-items: center; gap: 8px;
-    font-weight: 700; font-size: 14px;
+    font-weight: 700; font-size: 13px;
   }
-  .dot { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
   .wave-deg {
     font-family: var(--font-mono);
-    font-size: 13px; font-weight: 600;
+    font-size: 12px; font-weight: 600;
     color: var(--faint);
+    min-width: 4ch;
   }
-  .wave svg { display: block; width: 100%; height: auto; margin-bottom: 8px; }
+  .wave svg { grid-area: curve; display: block; width: 100%; height: 26px; }
   .wave input[type=range] {
     -webkit-appearance: none; appearance: none;
-    width: 100%; height: 14px; border-radius: 10px; outline: none; margin: 0;
+    grid-area: slider;
+    width: 100%; height: 10px; border-radius: 10px; outline: none; margin: 11px 0;
   }
   .wave input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none; appearance: none;
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--ink); border: 4px solid #fff;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--ink); border: 3px solid #fff;
     box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer;
   }
   .wave input[type=range]::-moz-range-thumb {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--ink); border: 4px solid #fff;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--ink); border: 3px solid #fff;
     box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer;
   }
   .legend {
@@ -85,7 +94,7 @@
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../index.html#box-1-overview" data-q-back aria-label="Back to the puzzle overview">←</a>
+    <a class="q-back" href="index.html" data-q-back aria-label="Back to the puzzle overview">← Back</a>
     <div class="q-topbar-title">Box 1 · Puzzle 3 of 4</div>
     <div class="q-topbar-badge">🔒 Lock 3</div>
     <a class="q-lang" href="../../../../stations/1-schroedinger/raetsel/3-wellen.html" hreflang="de" lang="de" translate="no" data-q-lang="de" aria-label="Deutsche Version">DE</a>
@@ -105,7 +114,7 @@
 
   <div class="q-wrap">
     <div class="graph-card">
-      <svg viewBox="0 0 336 150" aria-label="Sum of the three waves compared with the target curve">
+      <svg viewBox="0 0 336 150" preserveAspectRatio="none" aria-label="Sum of the three waves compared with the target curve">
         <line x1="0" y1="75" x2="336" y2="75" stroke="rgba(20,22,28,.12)" stroke-width="1"></line>
         <path id="target-path" fill="none" stroke="#9a948a" stroke-width="2.5" stroke-dasharray="6 5"></path>
         <path id="sum-path" fill="none" stroke="#14161c" stroke-width="3.5"
@@ -144,25 +153,24 @@
     <details class="q-acc">
       <summary>What's behind it?</summary>
       <div class="q-acc-body">
-        Waves don't add up like numbers, but <strong>with their phase</strong>. When crest meets crest, it gets louder or brighter — <em>constructive</em> interference. When crest meets trough, nothing is left — <em>destructive</em> interference. A quantum computer computes in exactly this way: it aligns the phases so that the wrong answers cancel out and the right one remains.
+        <p>
+          Three waves are superposed until the target curve is reached, and they only add up with the right <strong>phase</strong>. It is exactly these phases that the gates in a quantum computer adjust.
+        </p>
+        <p class="q-mt-sm">
+          Waves don't add up like numbers, but <strong>with their phase</strong>. When crest meets crest, it gets louder or brighter — <em>constructive</em> interference. When crest meets trough, nothing is left — <em>destructive</em> interference. A quantum computer computes in exactly this way: it aligns the phases so that the wrong answers cancel out and the right one remains.
+        </p>
       </div>
     </details>
   </div>
 
-  <div class="q-wrap q-mt">
-    <a class="q-btn q-btn-block" href="../index.html#box-1-overview">← All puzzles of Box 1</a>
-  </div>
 
-  <div class="q-wrap q-station-return">
-    <a class="q-btn q-btn-primary q-btn-block" href="../index.html" target="_top">← Back to station</a>
-  </div>
 
 </main>
 
 <nav class="q-bottombar" aria-label="Stations">
   <div class="q-bottombar-inner">
     <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Home</a>
-    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Cat</a>
+    <a class="q-navitem" href="../"><span class="ico" aria-hidden="true">🐱</span>Cat</a>
     <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Sphere</a>
     <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
@@ -218,7 +226,7 @@
         '<span class="wave-name"><span class="dot" style="background:' + COLORS[i] + '"></span>Wave ' + (i + 1) + '</span>' +
         '<span class="wave-deg">0°</span>' +
       '</div>' +
-      '<svg viewBox="0 0 300 46" aria-hidden="true">' +
+      '<svg viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true">' +
         '<line x1="0" y1="23" x2="300" y2="23" stroke="rgba(20,22,28,.1)" stroke-width="1"></line>' +
         '<path fill="none" stroke="' + COLORS[i] + '" stroke-width="2.5"></path>' +
       '</svg>' +

@@ -84,8 +84,8 @@ en: So the physics is not in the boxes, but in the puzzles in front of them. The
 de: Frag uns
 en: Ask us
 
-de: Wenn du mehr über Schrödingers Katze wissen willst, erzählen wir dir gerne direkt vor Ort davon. Antworten auf viele Fragen findest du auch im <a href="../5-ama/fragen.html">FAQ</a>.
-en: If you want to know more about Schrödinger's cat, we are happy to tell you about it right here on site. You'll also find answers to many questions in the <a href="../5-ama/fragen.html">FAQ</a>.
+de: Wenn du mehr über Schrödingers Katze wissen willst, erzählen wir dir gerne direkt vor Ort davon. Antworten auf viele Fragen findest du auch im FAQ.
+en: If you want to know more about Schrödinger's cat, we are happy to tell you about it right here on site. You'll also find answers to many questions in the FAQ.
 
 de: 🔒 Zu den Rätseln
 en: 🔒 To the puzzles

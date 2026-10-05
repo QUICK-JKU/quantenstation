@@ -380,3 +380,6 @@ en: Spoiler: Show hint 3
 
 de: Spoiler: Tipp 4 anzeigen
 en: Spoiler: Show hint 4
+
+de: ← Zurück
+en: ← Back

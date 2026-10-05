@@ -20,7 +20,6 @@
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../../index.html" data-q-back aria-label="Zurück zur Übersicht">←</a>
     <div class="q-topbar-title">Station 4</div>
     <div class="q-topbar-badge">👥 Team</div>
     <a class="q-lang" href="../../en/stations/4-meettheteam/index.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
@@ -41,14 +40,14 @@
 
   <div class="q-wrap q-mt">
     <div class="q-list">
-      <a class="q-tile" href="quick-sloths.html">
+      <div class="q-task" id="team-sloths"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="team-sloths-body">
         <span class="q-tile-num c-purple">🦥</span>
         <span class="q-tile-txt">
           <span class="q-tile-title" lang="en" translate="no">We are the QuiCK Sloths.</span>
           <span class="q-tile-sub">Wer wir sind, was wir erreicht haben und wie wir arbeiten</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button><div class="q-task-panel" id="team-sloths-body" hidden><iframe data-q-embed data-src="quick-sloths.html" loading="lazy" title="We are the QuiCK Sloths."></iframe></div></div>
     </div>
   </div>
 
@@ -227,22 +226,14 @@
   <div class="q-wrap q-mt">
     <h2 class="q-h2">Was wir hier tun</h2>
     <div class="q-list q-mt-sm">
-      <a class="q-tile" href="studieren.html">
+      <div class="q-task" id="team-studieren"><button class="q-task-trigger" type="button" data-q-panel aria-expanded="false" aria-controls="team-studieren-body">
         <span class="q-tile-num c-green">🎓</span>
         <span class="q-tile-txt">
           <span class="q-tile-title">Wege in die Quantenphysik</span>
           <span class="q-tile-sub">Was man studiert, wenn man das hier machen will</span>
         </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="q-tile" href="../5-ama/fragen.html">
-        <span class="q-tile-num c-coral">💬</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Frag uns etwas</span>
-          <span class="q-tile-sub">Sieh dir häufige Fragen an oder stell uns deine eigene Frage</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
+
+      </button><div class="q-task-panel" id="team-studieren-body" hidden><iframe data-q-embed data-src="studieren.html" loading="lazy" title="Wege in die Quantenphysik"></iframe></div></div>
     </div>
   </div>
 
@@ -271,5 +262,6 @@
 </nav>
 
 <script src="../../assets/quantum.js"></script>
+<script src="../../assets/onepager.js"></script>
 </body>
 </html>

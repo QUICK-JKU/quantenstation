@@ -39,3 +39,5 @@ en: Tile
 de: cell
 en: =
 
+de: Im <strong>Labyrinth</strong> führt nicht jeder Weg zum Ziel, denn nur Felder mit wechselnder Farbe passen zusammen und der Rest ist eine Sackgasse. Genauso rechnet ein Quantenalgorithmus, indem er die falschen Wege sich gegenseitig <strong>auslöschen</strong> lässt und den richtigen verstärkt. Ohne diesen Trick wäre das gleichzeitige Rechnen wertlos, weil beim Messen nur Zufall herauskäme.
+en: In the <strong>maze</strong> not every path leads to the goal, because only tiles of alternating colour fit together and the rest is a dead end. A quantum algorithm computes in just this way, by letting the wrong paths <strong>cancel each other out</strong> and reinforcing the right one. Without this trick, computing everything at once would be worthless, because measuring would only give you chance.

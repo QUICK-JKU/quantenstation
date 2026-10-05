@@ -63,3 +63,5 @@ en: =
 de: Übereinstimmung
 en: Match
 
+de: Drei Wellen werden überlagert, bis die Zielkurve steht, und sie addieren sich nur bei passender <strong>Phase</strong>. Genau diese Phasen verstellen die Gatter in einem Quantencomputer.
+en: Three waves are superposed until the target curve is reached, and they only add up with the right <strong>phase</strong>. It is exactly these phases that the gates in a quantum computer adjust.

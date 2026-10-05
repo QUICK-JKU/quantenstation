@@ -123,8 +123,8 @@ en: Tap <strong>H</strong>, then <strong>H</strong> once more. You end up exactl
 de: Warum ändert φ die Wahrscheinlichkeiten nicht?
 en: Why doesn't φ change the probabilities?
 
-de: Weil φ die <strong>Phase</strong> ist. Sie ist bei einer einzelnen Messung in der 0/1-Richtung völlig unsichtbar. Wichtig wird sie erst, wenn zwei Wege wieder zusammentreffen — dann entscheidet sie, ob sich etwas verstärkt oder auslöscht. Genau das ist <a href="../1-schroedinger/raetsel/3-wellen.html">Rätsel 3</a>.
-en: Because φ is the <strong>phase</strong>. In a single measurement in the 0/1 direction it is completely invisible. It only matters when two paths meet again — then it decides whether something is reinforced or cancelled. That is exactly <a href="../1-schroedinger/raetsel/3-wellen.html">puzzle 3</a>.
+de: Weil φ die <strong>Phase</strong> ist. Sie ist bei einer einzelnen Messung in der 0/1-Richtung völlig unsichtbar. Wichtig wird sie erst, wenn zwei Wege wieder zusammentreffen — dann entscheidet sie, ob sich etwas verstärkt oder auslöscht. Genau das ist <a href="../1-schroedinger/raetsel/index.html#task-box1-3">Rätsel 3</a>.
+en: Because φ is the <strong>phase</strong>. In a single measurement in the 0/1 direction it is completely invisible. It only matters when two paths meet again — then it decides whether something is reinforced or cancelled. That is exactly <a href="../1-schroedinger/raetsel/index.html#task-box1-3">puzzle 3</a>.
 
 de: Warum muss jedes Gatter umkehrbar sein?
 en: Why does every gate have to be reversible?
@@ -135,8 +135,8 @@ en: Because a rotation never destroys information — you can turn it back. A cl
 de: Und wo bleibt die Verschränkung?
 en: And where is entanglement?
 
-de: Dafür braucht es Gatter, die <strong>zwei</strong> Qubits gleichzeitig betreffen — etwa CNOT. Auf einer einzelnen Kugel lässt sich das nicht darstellen. Beim <a href="../3-quantumtable/">QuantumTable</a> kannst du genau solche Schaltkreise selbst zusammenstecken.
-en: For that you need gates that act on <strong>two</strong> qubits at once — such as CNOT. That can't be shown on a single sphere. At the <a href="../3-quantumtable/">QuantumTable</a> you can plug together exactly such circuits yourself.
+de: Dafür braucht es Gatter, die <strong>zwei</strong> Qubits gleichzeitig betreffen — etwa CNOT. Auf einer einzelnen Kugel lässt sich das nicht darstellen. Beim QuantumTable kannst du genau solche Schaltkreise selbst zusammenstecken.
+en: For that you need gates that act on <strong>two</strong> qubits at once — such as CNOT. That can't be shown on a single sphere. At the QuantumTable you can plug together exactly such circuits yourself.
 
 de: Ist der Zufall bei der Messung echt?
 en: Is the randomness of the measurement real?

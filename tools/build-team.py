@@ -53,7 +53,7 @@ HEAD = """<!DOCTYPE html>
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="../index.html" data-q-back aria-label="Zurück zum Team">←</a>
+    <a class="q-back" href="../index.html" data-q-back aria-label="Zurück zum Team">← Zurück</a>
     <div class="q-topbar-title">Station 4 · Team</div>
     <div class="q-topbar-badge">👥 Person</div>
   </div>
@@ -64,18 +64,6 @@ HEAD = """<!DOCTYPE html>
 """
 
 FOOT = """
-  <div class="q-wrap q-mt">
-    <div class="q-list">
-      <a class="q-tile" href="../index.html">
-        <span class="q-tile-num c-green">👥</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Back to the team</span>
-          <span class="q-tile-sub">Everyone at a glance</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
 
 </main>
 
@@ -85,8 +73,8 @@ FOOT = """
     <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
     <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
-    <a class="q-navitem" href="../../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="../../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="../"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../../5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 
@@ -363,7 +351,7 @@ SLOTHS_HEAD = """<!DOCTYPE html>
 
 <header class="q-topbar">
   <div class="q-topbar-inner">
-    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zum Team">←</a>
+    <a class="q-back" href="index.html" data-q-back aria-label="Zurück zum Team">← Zurück</a>
     <div class="q-topbar-title">Station 4 · Team</div>
     <div class="q-topbar-badge">🦥 Wir</div>
     <a class="q-lang" href="../../en/stations/4-meettheteam/quick-sloths.html" hreflang="en" lang="en" translate="no" data-q-lang="en" aria-label="English version">EN</a>
@@ -375,26 +363,6 @@ SLOTHS_HEAD = """<!DOCTYPE html>
 """
 
 SLOTHS_FOOT = """
-  <div class="q-wrap q-mt">
-    <div class="q-list">
-      <a class="q-tile" href="index.html">
-        <span class="q-tile-num c-green">👥</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Zu den Personen</span>
-          <span class="q-tile-sub">Lerne die Forscher*innen einzeln kennen</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="q-tile" href="../5-ama/">
-        <span class="q-tile-num c-coral">💬</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Frag uns etwas</span>
-          <span class="q-tile-sub">Sieh dir häufige Fragen an oder stell uns deine eigene Frage</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
 
 </main>
 
@@ -404,8 +372,8 @@ SLOTHS_FOOT = """
     <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
     <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
-    <a class="q-navitem" href="../4-meettheteam/"><span class="ico" aria-hidden="true">👥</span>Team</a>
-    <a class="q-navitem" href="../5-ama/"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
+    <a class="q-navitem" href="./"><span class="ico" aria-hidden="true">👥</span>Team</a>
+    <a class="q-navitem" href="../5-ama/fragen.html"><span class="ico" aria-hidden="true">💬</span>FAQ</a>
   </div>
 </nav>
 

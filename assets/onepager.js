@@ -7,7 +7,7 @@
 
   // Details/Summary und Buttons bleiben nativ bedienbar. Das explizite
   // Tastaturverhalten hilft auch Browsern, die Summary nicht aktivieren.
-  document.querySelectorAll('.q-jump > summary, .q-box > summary, [data-q-panel]').forEach(function (control) {
+  document.querySelectorAll('.q-box > summary, [data-q-panel]').forEach(function (control) {
     control.addEventListener('keydown', function (event) {
       if (event.key !== 'Enter' && event.key !== ' ') return;
       event.preventDefault();
@@ -53,6 +53,24 @@
     });
   });
 
+  // Am Ende jedes aufgeklappten Bereichs: ein Pfeil, der ihn wieder schließt
+  // und zurück zu seiner Überschrift springt.
+  var english = /^en/i.test(document.documentElement.lang || '');
+  document.querySelectorAll('[data-q-panel]').forEach(function (button) {
+    var panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+    var close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'q-task-close';
+    close.textContent = english ? 'Close' : 'Schließen';
+    close.addEventListener('click', function () {
+      if (button.getAttribute('aria-expanded') === 'true') button.click();
+      button.parentElement.scrollIntoView({ block: 'start' });
+      button.focus({ preventScroll: true });
+    });
+    panel.appendChild(close);
+  });
+
   document.addEventListener('click', function (event) {
     var lang = event.target.closest('[data-q-lang]');
     if (!lang || location.hash) return;
@@ -81,7 +99,7 @@
       var doc;
       try { doc = frame.contentDocument; } catch (e) { return; }
       if (!doc) return;
-      var chrome = doc.querySelectorAll('.q-topbar, .q-bottombar, .q-context, .q-glow');
+      var chrome = doc.querySelectorAll('.q-topbar, .q-bottombar, .q-glow');
       chrome.forEach(function (node) { node.style.display = 'none'; });
       doc.documentElement.classList.add('q-embedded');
       var main = doc.querySelector('main');
@@ -109,9 +127,15 @@
             return target.pathname === url.pathname && target.search === url.search;
           });
         event.preventDefault();
+        var samePage = url.pathname.replace(/\/index\.html$/, '/') ===
+                       location.pathname.replace(/\/index\.html$/, '/');
         if (match) {
           location.hash = match.closest('[id]').id;
           openTarget(match.closest('[id]').id, true);
+        } else if (samePage && url.hash) {
+          // Ziel liegt auf dieser Seite: aufklappen statt neu laden.
+          location.hash = url.hash;
+          openTarget(decodeURIComponent(url.hash.slice(1)), true);
         } else {
           location.href = url.href;
         }
