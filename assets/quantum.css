@@ -1162,3 +1162,24 @@ body::after {
 .q-embedded body::after, body.q-no-bottombar::after { display: none; }
 @media (prefers-reduced-motion: reduce) { body::after { display: none; } }
 @media print { body::after, .q-main::after { display: none !important; } .q-h2::before { content: none; } }
+
+/* Die Kisten als Einstieg in die Rätsel: ganze Kiste antippbar. */
+a.q-kiste {
+  display: block;
+  color: var(--ink);
+  transition: transform .12s, box-shadow .12s;
+}
+a.q-kiste:hover { color: var(--ink); box-shadow: var(--shadow-md); }
+a.q-kiste:active { transform: scale(.985); }
+.q-kiste-fuss {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 11px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.q-kiste-fuss strong { font-family: var(--font-mono); font-size: 14px; color: var(--ink); }
+a.q-kiste:hover .q-kiste-fuss strong { color: var(--coral); }

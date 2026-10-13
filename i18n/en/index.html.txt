@@ -39,8 +39,8 @@ en: Dead and alive at once? Solve the puzzles and open the box
 de: Die Kristallkugel der Quantenphysik: Wie sieht ein Quantenbit aus?
 en: The crystal ball of quantum physics: what does a quantum bit look like?
 
-de: Schaltkreise brauen wie in der Hexenküche — vom SCCH
-en: Brew circuits like in a witch's kitchen — by the SCCH
+de: Schaltkreise bauen &amp; sofort sehen — vom SCCH
+en: Build circuits &amp; see the result instantly — by the SCCH
 
 de: Wer spukt hier eigentlich durchs Labor?
 en: Who's actually haunting the lab?

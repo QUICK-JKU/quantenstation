@@ -12,8 +12,8 @@ en: =
 de: Station 3 · vom SCCH
 en: Station 3 · by the SCCH
 
-de: Schaltkreise <strong class="t-red">brauen</strong> wie in der Hexenküche — und das Ergebnis <strong>sofort sehen</strong>.
-en: <strong class="t-red">Brew</strong> circuits like in a witch's kitchen — and <strong>see</strong> the result <strong>instantly</strong>.
+de: Schaltkreise <strong class="t-red">bauen</strong> — und das Ergebnis <strong>sofort sehen</strong>.
+en: <strong class="t-red">Build</strong> circuits — and <strong>see</strong> the result <strong>instantly</strong>.
 
 de: Leg die Bausteine auf den Tisch, verbinde sie zu einem Schaltkreis und beobachte, wie sich das Messergebnis live verändert. <strong>Alex</strong> hilft dir gern beim Einstieg.
 en: Place the building blocks on the table, connect them into a circuit and watch how the measurement result changes live. <strong>Alex</strong> is happy to help you get started.

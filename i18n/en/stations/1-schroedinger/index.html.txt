@@ -239,3 +239,6 @@ en: Amplitudes, 2ⁿ, measurement, gates, photons, Bell — with examples
 
 de: Für Fortgeschrittene, mit Rechnung — Alles, was die Schlösser verlangen, steht in den Rechenregeln weiter unten.
 en: For the advanced, with calculations — everything the locks ask for is in the rules of calculation further down.
+
+de: Zu den Rätseln →
+en: To the puzzles →

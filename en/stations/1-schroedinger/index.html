@@ -41,27 +41,39 @@
          style="filter:drop-shadow(0 12px 28px rgba(20,22,28,.18));">
   </div>
 
-  <div class="q-wrap q-mt">
-    <h2 class="q-h2">On site</h2>
+  <!-- Die beiden Boxen: Bild antippen führt direkt zu den Rätseln -->
+  <div class="q-wrap q-mt" id="boxen" style="scroll-margin-top:64px;">
+    <h2 class="q-h2">The two boxes</h2>
     <p class="q-body q-mt-sm">
         Four locks keep Schrödinger's cat in its crypt. Crack the puzzles and open the box — if you dare.
     </p>
+    <p class="q-body q-mt-sm">
+      Each box comes with four puzzles. Each one gives you a <strong>four-digit code</strong>, and each code opens one of the locks. The order doesn't matter and your progress stays saved on this phone.
+    </p>
 
       <div class="q-kisten q-mt-sm">
-        <div class="q-kiste k-1">
+        <a class="q-kiste k-1" href="raetsel/">
           <div class="q-kiste-kopf"><span>Box 1</span><em>easy</em></div>
           <div class="q-kiste-flaeche">
             <img src="../../../assets/box-1.png"
                  alt="Engraving on box 1: cats, a cardboard box and the words Schrödinger's cat is alive and dead">
+            <div class="q-kiste-fuss">
+              <span>Four locks · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span> solved</span>
+              <strong>To the puzzles →</strong>
+            </div>
           </div>
-        </div>
-        <div class="q-kiste k-2">
+        </a>
+        <a class="q-kiste k-2" href="katze-2/">
           <div class="q-kiste-kopf"><span>Box 2</span><em>hard</em></div>
           <div class="q-kiste-flaeche">
             <img src="../../../assets/box-2.png"
                  alt="Engraving on box 2: Quantum Enclosure System with a living and a decaying cat">
+            <div class="q-kiste-fuss">
+              <span>Four locks · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> solved</span>
+              <strong>To the puzzles →</strong>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
   </div>
 
@@ -120,33 +132,6 @@
         </span>
 
       </button><div class="q-task-panel" id="station1-box-body" hidden><iframe data-q-embed data-src="box.html" loading="lazy" title="What is really standing here"></iframe></div></div>
-    </div>
-  </div>
-
-  <!-- 3 · Die beiden Boxen mit den Rätseln -->
-  <div class="q-wrap q-mt" id="boxen" style="scroll-margin-top:64px;">
-    <div class="q-eyebrow">And now</div>
-    <h2 class="q-h2">The two boxes</h2>
-    <p class="q-body q-mt-sm">
-      Each box comes with four puzzles. Each one gives you a <strong>four-digit code</strong>, and each code opens one of the locks. The order doesn't matter and your progress stays saved on this phone.
-    </p>
-    <div class="q-list q-mt-sm">
-      <a class="q-tile" href="raetsel/">
-        <span class="q-tile-num c-ink">🔒</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Box 1 · easy</span>
-          <span class="q-tile-sub">Four locks · <span data-q-count="schroedinger-1,schroedinger-2,schroedinger-3,schroedinger-4">0/4</span> solved</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="q-tile" href="katze-2/">
-        <span class="q-tile-num c-green">🐈‍⬛</span>
-        <span class="q-tile-txt">
-          <span class="q-tile-title">Box 2 · hard</span>
-          <span class="q-tile-sub">Four locks · <span data-q-count="quiz-katze2-1,quiz-katze2-2,quiz-katze2-3,quiz-katze2-4">0/4</span> solved</span>
-        </span>
-        <span class="q-tile-arrow" aria-hidden="true">→</span>
-      </a>
     </div>
   </div>
 
