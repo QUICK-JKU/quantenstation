@@ -1183,3 +1183,47 @@ a.q-kiste:active { transform: scale(.985); }
 }
 .q-kiste-fuss strong { font-family: var(--font-mono); font-size: 14px; color: var(--ink); }
 a.q-kiste:hover .q-kiste-fuss strong { color: var(--coral); }
+
+/* ---------- 17. Schwarze Katzen ----------
+   Eine Silhouette mit Bernsteinaugen, über die ganze Seite verteilt:
+   Sie sitzt auf der Fußleiste, auf Hinweiskästen und Karten, auf der
+   Event-Karte und zwischen den Kürbissen der Startseite. */
+:root {
+  --cat: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='%2314161c'%3E%3Cellipse cx='22' cy='35' rx='11' ry='13'/%3E%3Ccircle cx='22' cy='15' r='8.5'/%3E%3Cpath d='M14.5 13L13 2l8 6zM29.5 13L31 2l-8 6z'/%3E%3C/g%3E%3Cpath d='M31 43c9 2 14-3 12-10-1-4-5-5-6-9' fill='none' stroke='%2314161c' stroke-width='3.4' stroke-linecap='round'/%3E%3Cellipse cx='18.8' cy='15' rx='1.7' ry='2' fill='%23ffb000'/%3E%3Cellipse cx='25.2' cy='15' rx='1.7' ry='2' fill='%23ffb000'/%3E%3C/svg%3E");
+}
+
+.q-bottombar::before,
+.q-note::after,
+.q-card-soft::after,
+.q-acc:first-of-type::after,
+.h-event::before,
+.h-pumpkins::after {
+  content: '';
+  position: absolute;
+  width: 26px; height: 26px;
+  background: var(--cat) center bottom / contain no-repeat;
+  pointer-events: none;
+}
+
+/* auf der Fußleiste, rechts außen */
+.q-bottombar::before {
+  bottom: calc(100% - 1px);
+  right: max(14px, calc(50% - var(--wrap) / 2 + 14px));
+  width: 30px; height: 30px;
+}
+
+/* auf Hinweiskästen (rechts) und weichen Karten (links, gespiegelt) */
+.q-note, .q-card-soft, .q-acc:first-of-type, .h-event { position: relative; }
+.q-note::after { bottom: calc(100% - 1px); right: 16px; }
+.q-card-soft::after { bottom: calc(100% - 1px); left: 18px; transform: scaleX(-1); }
+/* Aufklapper schneiden ihren Inhalt ab — die Katze sitzt innen in der Kopfzeile. */
+.q-acc:first-of-type::after { top: 12px; right: 56px; width: 22px; height: 22px; opacity: .85; }
+
+/* Startseite: auf der Event-Karte und neben den Kürbissen */
+.h-event::before { bottom: calc(100% - 2px); right: 18px; width: 32px; height: 32px; }
+.h-pumpkins::after { position: static; width: 34px; height: 34px; transform: scaleX(-1); filter: drop-shadow(0 0 5px rgba(255, 233, 168, .55)); }
+
+.q-embedded .q-note::after, .q-embedded .q-card-soft::after { display: none; }
+@media print {
+  .q-note::after, .q-card-soft::after, .q-acc:first-of-type::after, .h-event::before { display: none; }
+}

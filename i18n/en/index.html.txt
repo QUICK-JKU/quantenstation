@@ -6,14 +6,11 @@ en: <span aria-hidden="true">☰</span> Menu
 de: Seitenübersicht
 en: Page overview
 
-de: Quantenstation · Halloween-Edition 0xA
-en: Quantum Station · Halloween Edition 0xA
+de: Quantenstation · 0xA Quantum Computing
+en: Quantum Station · 0xA Quantum Computing
 
-de: Süßes, Saures, Superposition. Vier Stationen rund um Quantenphysik — die Herbst- und Halloween-Edition zum 0xA-Event.
-en: Trick, treat, superposition. Four stations on quantum physics — the autumn and Halloween edition for the 0xA event.
-
-de: 0xA · HALLOWEEN-EDITION
-en: 0xA · HALLOWEEN EDITION
+de: Süßes, Saures, Superposition. Vier Stationen rund um Quantenphysik zum 0xA-Event „Quantum Computing“.
+en: Trick, treat, superposition. Four stations on quantum physics for the 0xA event “Quantum Computing”.
 
 de: Süßes, Saures,<br><span class="t-pumpkin">Superposition.</span>
 en: Trick, treat,<br><span class="t-pumpkin">superposition.</span>
@@ -69,8 +66,8 @@ en: Is my progress saved?
 de: Ja, aber nur <strong>lokal auf deinem Handy</strong>. Wir sammeln keine Daten, es gibt kein Tracking und nichts verlässt dein Gerät. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Fortschritt zurücksetzen</button> </div>
 en: Yes, but only <strong>locally on your phone</strong>. We collect no data, there is no tracking and nothing leaves your device. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Reset progress</button> </div>
 
-de: Johannes Kepler Universität Linz · 0xA Science Association<br> Quantenstation, Halloween-Edition — nicht gruseln, mitmessen.
-en: Johannes Kepler University Linz · 0xA Science Association<br> Quantum Station, Halloween Edition — don't get spooked, measure along.
+de: Johannes Kepler Universität Linz · 0xA Science Association<br> Quantenstation — nicht gruseln, mitmessen.
+en: Johannes Kepler University Linz · 0xA Science Association<br> Quantum Station — don't get spooked, measure along.
 
 de: Direkt zu den Angeboten
 en: Direct links
