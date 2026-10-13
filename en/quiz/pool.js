@@ -440,7 +440,7 @@ window.QUIZPOOL = {
           q: 'JKU has existed since 1966. How old will it be in 2026?',
           a: ['60 years', '30 years', '100 years', '16 years'],
           keep: true,
-          why: '60 years of Johannes Kepler University Linz — and that\'s why we\'re here today with this station.'
+          why: 'Founded in 1966 — so in 2026 Johannes Kepler University Linz celebrates its 60th birthday.'
         }
       ]
     },

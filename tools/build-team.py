@@ -41,7 +41,7 @@ HEAD = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f3efe6">
+<meta name="theme-color" content="#1d1426">
 <title translate="no">{name} · Meet the Team</title>
 <meta name="description" content="{meta}" translate="no">
 <link rel="stylesheet" href="../../../assets/fonts/fonts.css">
@@ -69,8 +69,8 @@ FOOT = """
 
 <nav class="q-bottombar" aria-label="Stationen">
   <div class="q-bottombar-inner">
-    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
-    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../../index.html"><span class="ico" aria-hidden="true">🎃</span>Start</a>
+    <a class="q-navitem" href="../../1-schroedinger/"><span class="ico" aria-hidden="true">🐈‍⬛</span>Katze</a>
     <a class="q-navitem" href="../../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="../"><span class="ico" aria-hidden="true">👥</span>Team</a>
@@ -334,7 +334,7 @@ SLOTHS_HEAD = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f3efe6">
+<meta name="theme-color" content="#1d1426">
 <title>{title} · Meet the Team</title>
 <meta name="description" content="{meta}">
 <link rel="stylesheet" href="../../assets/fonts/fonts.css">
@@ -368,8 +368,8 @@ SLOTHS_FOOT = """
 
 <nav class="q-bottombar" aria-label="Stationen">
   <div class="q-bottombar-inner">
-    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🏠</span>Start</a>
-    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐱</span>Katze</a>
+    <a class="q-navitem" href="../../index.html"><span class="ico" aria-hidden="true">🎃</span>Start</a>
+    <a class="q-navitem" href="../1-schroedinger/"><span class="ico" aria-hidden="true">🐈‍⬛</span>Katze</a>
     <a class="q-navitem" href="../2-bloch-sphere/"><span class="ico" aria-hidden="true">🔮</span>Kugel</a>
     <a class="q-navitem" href="../3-quantumtable/"><span class="ico" aria-hidden="true">⚛️</span>Table</a>
     <a class="q-navitem" href="./"><span class="ico" aria-hidden="true">👥</span>Team</a>

@@ -9,11 +9,11 @@ en: Stations
 de: <span class="ico" aria-hidden="true">⚛️</span>Table
 en: <span class="ico" aria-hidden="true">⚛️</span>Table
 
-de: <span class="ico" aria-hidden="true">🏠</span>Start
-en: <span class="ico" aria-hidden="true">🏠</span>Home
+de: <span class="ico" aria-hidden="true">🎃</span>Start
+en: <span class="ico" aria-hidden="true">🎃</span>Home
 
-de: <span class="ico" aria-hidden="true">🐱</span>Katze
-en: <span class="ico" aria-hidden="true">🐱</span>Cat
+de: <span class="ico" aria-hidden="true">🐈‍⬛</span>Katze
+en: <span class="ico" aria-hidden="true">🐈‍⬛</span>Cat
 
 de: <span class="ico" aria-hidden="true">🔮</span>Kugel
 en: <span class="ico" aria-hidden="true">🔮</span>Sphere

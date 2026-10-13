@@ -681,8 +681,8 @@ en: 100 years
 de: 16 Jahre
 en: 16 years
 
-de: 60 Jahre Johannes Kepler Universität Linz — und dafür stehen wir heute mit dieser Station hier.
-en: 60 years of Johannes Kepler University Linz — and that's why we're here today with this station.
+de: 1966 gegründet — 2026 feiert die Johannes Kepler Universität Linz also ihren 60. Geburtstag.
+en: Founded in 1966 — so in 2026 Johannes Kepler University Linz celebrates its 60th birthday.
 
 de: Der Kern der Sache
 en: The heart of the matter

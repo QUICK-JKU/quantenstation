@@ -10,8 +10,8 @@ en: We are the Quantum Computing department at the Institute for Integrated Circ
 de: 🦥 Wir
 en: 🦥 Us
 
-de: 60 Jahre JKU · Meet the Team
-en: 60 Years of JKU · Meet the Team
+de: Halloween-Edition · Meet the Team
+en: Halloween Edition · Meet the Team
 
 de: Das waren wir im Sommer 2025, seither ist unsere Gruppe gewachsen.
 en: That was us in summer 2025 — our group has grown since then.
