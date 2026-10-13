@@ -18,8 +18,8 @@ en: 0xA · HALLOWEEN EDITION
 de: Süßes, Saures,<br><span class="t-pumpkin">Superposition.</span>
 en: Trick, treat,<br><span class="t-pumpkin">superposition.</span>
 
-de: Nicht gruseln — sondern <strong>mitmessen</strong>. Euch erwarten vier Stationen voller spukhafter Quantenphysik — mit Rätseln direkt auf dem Handy.
-en: Don't get spooked — <strong>measure along</strong>. Four stations full of spooky quantum physics are waiting for you — with puzzles right on your phone.
+de: Nicht gruseln — sondern <strong>mitmessen</strong>. Zwischen Vorträgen und Buffet warten vier Stationen voller spukhafter Quantenphysik — mit Rätseln direkt auf dem Handy.
+en: Don't get spooked — <strong>measure along</strong>. Between the talks and the buffet, four stations full of spooky quantum physics are waiting — with puzzles right on your phone.
 
 de: So funktioniert's
 en: How it works
@@ -39,8 +39,8 @@ en: Dead and alive at once? Solve the puzzles and open the box
 de: Die Kristallkugel der Quantenphysik: Wie sieht ein Quantenbit aus?
 en: The crystal ball of quantum physics: what does a quantum bit look like?
 
-de: Schaltkreise bauen &amp; sofort sehen — vom SCCH
-en: Build circuits &amp; see the result instantly — by the SCCH
+de: Schaltkreise brauen wie in der Hexenküche — vom SCCH
+en: Brew circuits like in a witch's kitchen — by the SCCH
 
 de: Wer spukt hier eigentlich durchs Labor?
 en: Who's actually haunting the lab?
@@ -48,8 +48,8 @@ en: Who's actually haunting the lab?
 de: Und außerdem
 en: And also
 
-de: Häufige Fragen, Quanten-Mythen — und deine eigenen
-en: Common questions, quantum myths — and your own
+de: Häufige Fragen, Schauermärchen der Quantenphysik — und deine eigenen
+en: Common questions, quantum horror stories — and your own
 
 de: Muss ich etwas installieren?
 en: Do I need to install anything?
@@ -57,11 +57,11 @@ en: Do I need to install anything?
 de: Nein. Alles läuft im Browser deines Handys — kein Login, keine App, keine Anmeldung. Wenn du magst, kannst du diese Seite als Lesezeichen speichern und die Rätsel später zu Hause fertig lösen.
 en: No. Everything runs in your phone's browser — no login, no app, no sign-up. If you like, you can bookmark this page and finish the puzzles at home later.
 
-de: Brauche ich Vorwissen?
-en: Do I need any prior knowledge?
+de: Wie viel Vorwissen brauche ich?
+en: How much prior knowledge do I need?
 
-de: Nein. Die Rätsel reichen <strong>von Unterstufe bis Studium</strong>, aber jedes erklärt sich selbst. Neugier reicht völlig — und wir stehen daneben und helfen gerne weiter.
-en: No. The puzzles range <strong>from lower secondary school to university level</strong>, but each one explains itself. Curiosity is all you need — and we are right there and happy to help.
+de: Wenig. Begriffe wie Bit und Wahrscheinlichkeit genügen, alles Weitere erklären die Seiten selbst. Box 1 ist zum Aufwärmen, <strong>Box 2 rechnet in Bra-Ket-Notation</strong> — und wir stehen daneben und helfen gerne weiter.
+en: Not much. Notions like bit and probability are enough; the pages explain everything else. Box 1 is a warm-up, <strong>box 2 calculates in bra-ket notation</strong> — and we are right there and happy to help.
 
 de: Wird mein Fortschritt gespeichert?
 en: Is my progress saved?
@@ -69,8 +69,8 @@ en: Is my progress saved?
 de: Ja, aber nur <strong>lokal auf deinem Handy</strong>. Wir sammeln keine Daten, es gibt kein Tracking und nichts verlässt dein Gerät. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Fortschritt zurücksetzen</button> </div>
 en: Yes, but only <strong>locally on your phone</strong>. We collect no data, there is no tracking and nothing leaves your device. <div class="q-mt-sm"> <button class="q-btn" type="button" id="reset-btn">Reset progress</button> </div>
 
-de: Johannes Kepler Universität Linz · 0xA · Herbst-/Halloween-Edition<br> Quantenstation — nicht gruseln, mitmessen.
-en: Johannes Kepler University Linz · 0xA · Autumn/Halloween Edition<br> Quantum Station — don't get spooked, measure along.
+de: Johannes Kepler Universität Linz · 0xA Science Association<br> Quantenstation, Halloween-Edition — nicht gruseln, mitmessen.
+en: Johannes Kepler University Linz · 0xA Science Association<br> Quantum Station, Halloween Edition — don't get spooked, measure along.
 
 de: Direkt zu den Angeboten
 en: Direct links
@@ -92,3 +92,15 @@ en: All questions
 
 de: Quanten-Mythen
 en: Quantum myths
+
+de: 0xA · QUANTUM COMPUTING · 20.10.
+en: 0xA · QUANTUM COMPUTING · 20 OCT
+
+de: Quantum Computing · 0xA × Quantum Enthusiasts Club
+en: =
+
+de: 20.10.2026 · 17:00–20:00 · Stufenforum, Open Innovation Center (OIC), JKU Linz
+en: 20 Oct 2026 · 17:00–20:00 · Stufenforum, Open Innovation Center (OIC), JKU Linz
+
+de: Dieses Event existiert nur, solange es jemand beobachtet. Zum Programm →
+en: This event only exists when observed. See the programme →

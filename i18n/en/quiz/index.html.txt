@@ -15,8 +15,8 @@ en: Three levels · 108 questions
 de: Der Quiz-Pool
 en: The quiz pool
 
-de: Wie bei den vier Rätseln der Schrödinger-Box: Jedes Quiz endet mit einem <strong>vierstelligen Code</strong>. Nur ist hier für jedes Alter etwas dabei.
-en: Just like the four puzzles of the Schrödinger box: every quiz ends with a <strong>four-digit code</strong>. Only here there is something for every age.
+de: Wie bei den vier Rätseln der Schrödinger-Box: Jedes Quiz endet mit einem <strong>vierstelligen Code</strong>. Nur ist hier für jedes Vorwissen etwas dabei.
+en: Just like the four puzzles of the Schrödinger box: every quiz ends with a <strong>four-digit code</strong>. Only here there is something for every level of prior knowledge.
 
 de: So läuft ein Quiz
 en: How a quiz works

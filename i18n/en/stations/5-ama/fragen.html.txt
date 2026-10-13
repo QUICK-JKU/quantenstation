@@ -175,14 +175,14 @@ en: ✗ On to the quantum myths
 de: Für deine Fragen
 en: For your questions
 
-de: Es gibt keine dummen Fragen — nur solche, die sich niemand <strong class="t-purple">zu stellen traut</strong>.
-en: There are no stupid questions — only ones nobody <strong class="t-purple">dares to ask</strong>.
+de: Es gibt keine dummen Fragen — nur unheimliche, die sich niemand <strong class="t-purple">zu stellen traut</strong>.
+en: There are no stupid questions — only eerie ones nobody <strong class="t-purple">dares to ask</strong>.
 
 de: So geht's
 en: How it works
 
-de: Sprich uns einfach an. Wir stehen den ganzen Tag hier — und <em>„ich hab überhaupt nichts verstanden“</em> ist ein <strong>perfekter</strong> Einstieg.
-en: Just talk to us. We're here all day — and <em>“I didn't understand a thing”</em> is a <strong>perfect</strong> place to start.
+de: Sprich uns einfach an. Wir sind den ganzen Abend hier — und <em>„ich hab überhaupt nichts verstanden“</em> ist ein <strong>perfekter</strong> Einstieg.
+en: Just talk to us. We're here all evening — and <em>“I didn't understand a thing”</em> is a <strong>perfect</strong> place to start.
 
 de: Schon mal nachlesen
 en: Read up first
@@ -193,8 +193,8 @@ en: The most common questions
 de: Durchsuchbar — von „Was ist ein Qubit?“ bis „Gibt es Paralleluniversen?“
 en: Searchable — from “What is a qubit?” to “Are there parallel universes?”
 
-de: Was ständig behauptet wird — und was davon stimmt
-en: What people keep claiming — and what's actually true
+de: Schauermärchen der Quantenphysik — und was davon stimmt
+en: Quantum horror stories — and what's actually true
 
 de: Was man dafür studiert — und was nicht
 en: What to study for it — and what not

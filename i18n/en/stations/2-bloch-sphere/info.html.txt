@@ -33,11 +33,11 @@ en: When you measure a qubit, you <strong>never</strong> get “a little bit of 
 de: Der Knackpunkt
 en: The crux
 
-de: Ein Qubit speichert nicht „0,7“. Es speichert eine Tendenz, bei der Messung 0 oder 1 zu liefern — und diese Tendenz kann sich mit anderen Tendenzen <strong>überlagern und auslöschen</strong>. Das kann kein Dimmer.
-en: A qubit doesn't store “0.7”. It stores a tendency to give 0 or 1 when measured — and this tendency can <strong>overlap with other tendencies and cancel out</strong>. No dimmer can do that.
+de: Ein Qubit speichert nicht „0,7“. Es speichert eine Tendenz, bei der Messung 0 oder 1 zu liefern — und diese Tendenz kann sich mit anderen Tendenzen <strong>überlagern und auslöschen</strong>. Das kann keine klassische Wahrscheinlichkeit.
+en: A qubit doesn't store “0.7”. It stores a tendency to give 0 or 1 when measured — and this tendency can <strong>overlap with other tendencies and cancel out</strong>. No classical probability can do that.
 
-de: Schritt 3: die zweite Zahl
-en: Step 3: the second number
+de: Schritt 2: die zweite Zahl
+en: Step 2: the second number
 
 de: Hier wird es interessant. Zur Beschreibung eines Qubits reicht eine Zahl <em>nicht</em>. Es braucht zwei:
 en: This is where it gets interesting. One number is <em>not</em> enough to describe a qubit. It takes two:
@@ -95,3 +95,9 @@ en: <strong class="t-green">Crest on crest</strong> — the sum becomes twice as
 
 de: <strong class="t-red">Berg auf Tal</strong> — die Summe verschwindet.
 en: <strong class="t-red">Crest on trough</strong> — the sum vanishes.
+
+de: Schritt 1: mehr als ein Bit
+en: Step 1: more than a bit
+
+de: Ein klassisches Bit ist 0 oder 1. Ein Qubit darf in einer Überlagerung aus beiden stehen — gemessen wird trotzdem <strong>nie</strong> „ein bisschen 0“, sondern immer 0 oder 1. Der Zustand legt nur die <strong>Wahrscheinlichkeiten</strong> fest.
+en: A classical bit is 0 or 1. A qubit may be in a superposition of both — yet a measurement <strong>never</strong> yields “a little bit of 0”, always 0 or 1. The state only fixes the <strong>probabilities</strong>.

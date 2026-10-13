@@ -6,14 +6,14 @@ en: Bloch Sphere · Quantum Station JKU
 de: Die Bloch-Kugel: die Landkarte aller Zustände, die ein einzelnes Qubit annehmen kann.
 en: The Bloch sphere: the map of all the states a single qubit can take.
 
-de: Ein Bit kennt zwei Werte. Ein <strong class="t-purple">Qubit</strong> kennt eine ganze Kugeloberfläche.
-en: A bit knows two values. A <strong class="t-purple">qubit</strong> knows the entire surface of a sphere.
+de: Ein Bit kennt zwei Werte. Ein <strong class="t-purple">Qubit</strong> kennt eine ganze Kugeloberfläche. Willkommen bei der Kristallkugel der Quantenphysik.
+en: A bit knows two values. A <strong class="t-purple">qubit</strong> knows the entire surface of a sphere. Welcome to the crystal ball of quantum physics.
 
-de: Nimm das Modell in die Hand und dreh es. <strong>Oben</strong> ist |0⟩, <strong>unten</strong> |1⟩ — und alles dazwischen ist ein echter, erlaubter Zustand.
-en: Pick up the model and turn it. <strong>At the top</strong> is |0⟩, <strong>at the bottom</strong> |1⟩ — and everything in between is a real, allowed state.
+de: Nimm die Kristallkugel in die Hand und dreh sie. Die Zukunft zeigt sie nicht, nur Wahrscheinlichkeiten. <strong>Oben</strong> ist |0⟩, <strong>unten</strong> |1⟩ — und alles dazwischen ist ein echter, erlaubter Zustand.
+en: Pick up the crystal ball and turn it. It won't show the future, only probabilities. <strong>At the top</strong> is |0⟩, <strong>at the bottom</strong> |1⟩ — and everything in between is a real, allowed state.
 
-de: Von der Glühbirne zur Kugel — Schritt für Schritt
-en: From the light bulb to the sphere — step by step
+de: Vom Bit zur Kugel: zwei Winkel, ein Zustand
+en: From bit to sphere: two angles, one state
 
 de: Frei drehen, mit Gattern rechnen, direkt messen
 en: Rotate freely, compute with gates, measure directly

@@ -72,3 +72,11 @@ en: Because it turns into technology. A classical bit is 0 <em>or</em> 1. A <str
 de: Der Haken: Beim Messen bekommt man am Ende doch nur ein Ergebnis. Die ganze Kunst des Quantenrechnens besteht darin, die Möglichkeiten vorher so <strong>überlagern zu lassen</strong>, dass die falschen sich gegenseitig auslöschen — und die richtige übrig bleibt. Genau das ist <strong>Interferenz</strong>, und darum geht es in Rätsel 2 und 3.
 en: The catch: when you measure, you still get only one result in the end. The whole art of quantum computing is to let the possibilities <strong>overlap</strong> beforehand in such a way that the wrong ones cancel each other out — and the right one remains. That is exactly <strong>interference</strong>, and it is what puzzles 2 and 3 are about.
 
+de: Mehr als Nichtwissen
+en: More than not knowing
+
+de: Eine geworfene Münze wirkt unentschieden, ist es aber nicht: Klassisch steht das Ergebnis die ganze Zeit fest, uns fehlt nur die Information. Bei einem Quantensystem gibt es vor der Messung keinen solchen versteckten Wert. Es befindet sich in einer <strong>Superposition</strong> — nicht „entweder A oder B“, sondern eine Kombination aus A <strong>und</strong> B.
+en: A tossed coin looks undecided, but it isn't: classically the outcome is fixed all along, we merely lack the information. A quantum system has no such hidden value before the measurement. It is in a <strong>superposition</strong> — not “either A or B”, but a combination of A <strong>and</strong> B.
+
+de: <em>Erst die Messung erzwingt ein eindeutiges Ergebnis.</em> Unheimlich daran ist nicht der Zufall, sondern dass die Unbestimmtheit selbst Teil der physikalischen Realität ist.
+en: <em>Only the measurement forces a definite outcome.</em> The eerie part is not the randomness, but that the indeterminacy itself is part of physical reality.

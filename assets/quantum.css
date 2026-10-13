@@ -1058,3 +1058,107 @@ select.q-select {
   .h-moon, .h-bats, .h-leaves, .h-pumpkins, .h-ground { display: none !important; }
   .h-hero { background: none; color: var(--ink); padding-bottom: 0; }
 }
+
+/* ---------- 16. Halloween-Edition, Teil 2: der 0xA-Look ----------
+   Angelehnt an 0xa.at: Monospace-Überschriften, fast schwarze Leisten,
+   kantige Kästen, ein Terminal-Prompt vor den Zwischenüberschriften.
+   Dazu Spinnweben in der Ecke und ein Gespenst, das gelegentlich
+   durchs Bild zieht. */
+:root {
+  --night:     #1b1b1b;
+  --night-2:   #2a2030;
+  --night-dim: #b9b3bf;
+  --font-mono:    'Q Eszett', 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: var(--font-mono);
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  --r-xl: 10px;
+}
+
+/* Das ß der IBM Plex Mono hat eine historische Form, die in Überschriften
+   und Beschriftungen wie ein Fehler wirkt — nur dieses eine Zeichen kommt aus der Bricolage. */
+@font-face {
+  font-family: 'Q Eszett';
+  src: url('fonts/bricolage-grotesque-700-latin.woff2') format('woff2');
+  font-weight: 500 800;
+  font-display: swap;
+  unicode-range: U+00DF;
+}
+
+.q-h1 { font-weight: 700; font-size: clamp(25px, 8.2vw, 40px); line-height: 1.05; letter-spacing: -.04em; }
+.q-h2 { font-weight: 700; font-size: clamp(20px, 5.6vw, 24px); line-height: 1.15; letter-spacing: -.03em; }
+.q-h2::before { content: '> '; color: var(--coral); }
+.q-h3, .q-tile-title, .q-acc > summary, .q-box > summary { letter-spacing: -.02em; }
+.q-tile-title { font-size: 16px; }
+
+.q-back, .q-lang, .q-topbar-badge, .q-chip { border-radius: var(--r-md); }
+.q-tile-num, .q-code-digit { border-radius: var(--r-md); }
+.q-tile:hover { border-color: var(--coral); }
+.q-kiste { border-radius: var(--r-lg); }
+.q-btn-primary { background: var(--night); border-color: var(--night); }
+.q-success-label::before { content: '🎃 '; }
+
+.h-hero {
+  background:
+    radial-gradient(120% 70% at 50% 108%, rgba(255, 138, 31, .26), transparent 62%),
+    linear-gradient(180deg, var(--night) 0%, var(--night-2) 100%);
+}
+.h-hero .q-eyebrow { font-size: 13.5px; letter-spacing: .12em; }
+
+/* Event-Karte auf der Startseite: ein Terminalfenster */
+.h-event {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: var(--r-md);
+  background: var(--night);
+  border: 1.5px solid #3a3a3a;
+  box-shadow: var(--shadow-md);
+  color: var(--night-ink);
+  font-family: var(--font-mono);
+}
+.h-event:hover { color: var(--night-ink); border-color: var(--pumpkin); }
+.h-event-cmd { font-size: 12.5px; color: #7fd18b; }
+.h-event-title { font-size: 16px; font-weight: 700; line-height: 1.25; }
+.h-event-meta { font-size: 13.5px; line-height: 1.45; color: var(--night-dim); }
+.h-event-note { font-size: 13.5px; line-height: 1.45; color: var(--pumpkin); }
+
+/* Spinnwebe in der rechten oberen Ecke jeder Unterseite */
+.q-main::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 84px; height: 84px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .26;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%2314161c' stroke-width='1.1' stroke-linecap='round'%3E%3Cpath d='M100 0L0 6M100 0L14 44M100 0L44 80M100 0L78 98M100 0L97 100'/%3E%3Cpath d='M72 2q0 8-4 14q4 6 9 9q5 5 12 6q2 4 10 4'/%3E%3Cpath d='M46 3q2 14-5 26q9 10 20 16q9 11 23 14q4 6 14 8'/%3E%3Cpath d='M20 5q5 20-6 39q14 14 30 22q13 16 34 20q5 8 19 11'/%3E%3C/svg%3E") top right / contain no-repeat;
+}
+.h-home .q-main::after, .q-embedded .q-main::after { display: none; }
+
+/* Das Gespenst zieht alle 50 Sekunden einmal über die Fußleiste. */
+body::after {
+  content: '👻';
+  position: fixed;
+  left: -48px;
+  bottom: calc(78px + var(--safe-b));
+  z-index: 55;
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  animation: h-ghost 50s linear 6s infinite;
+}
+@keyframes h-ghost {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  2%   { opacity: .75; }
+  6%   { transform: translate(34vw, -16px); }
+  10%  { transform: translate(68vw, 6px); opacity: .75; }
+  14%  { transform: translate(calc(100vw + 60px), -10px); opacity: 0; }
+  100% { transform: translate(calc(100vw + 60px), -10px); opacity: 0; }
+}
+.q-embedded body::after, body.q-no-bottombar::after { display: none; }
+@media (prefers-reduced-motion: reduce) { body::after { display: none; } }
+@media print { body::after, .q-main::after { display: none !important; } .q-h2::before { content: none; } }

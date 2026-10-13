@@ -9,8 +9,8 @@ en: Who is behind the Quantum Station — and what we actually do all day.
 de: 👥 Team
 en: =
 
-de: Hinter der Forschung stecken Menschen, die genauso angefangen haben wie du: <strong class="t-purple">neugierig</strong> und ohne Plan.
-en: Behind the research are people who started out just like you: <strong class="t-purple">curious</strong> and without a plan.
+de: Hinter der Forschung stecken keine Geister, sondern Menschen — und die meisten haben <strong class="t-purple">neugierig</strong> und ohne Plan angefangen.
+en: Behind the research there are no ghosts, just people — and most of them started out <strong class="t-purple">curious</strong> and without a plan.
 
 de: Unser Team
 en: Our team
@@ -24,14 +24,14 @@ en: What we do here
 de: Wer wir sind, was wir erreicht haben und wie wir arbeiten
 en: Who we are, what we have achieved and how we work
 
-de: Was man studiert, wenn man das hier machen will
-en: What to study if you want to do this
+de: Physik, Informatik oder Mathematik: drei Türen, ein Raum
+en: Physics, computer science or maths: three doors, one room
 
 de: Sprich uns an
 en: Talk to us
 
-de: Ernsthaft: Wir stehen den ganzen Tag hier und freuen uns über jede Frage. Auch über <em>„ich versteh gar nichts“</em> — das ist bei diesem Thema die ehrlichste und häufigste Reaktion.
-en: Seriously: we're here all day and happy about every question. Even about <em>“I don't understand anything”</em> — with this topic that's the most honest and most common reaction.
+de: Ernsthaft: Wir sind den ganzen Abend hier, beißen nicht und freuen uns über jede Frage. Auch über <em>„ich versteh gar nichts“</em> — das ist bei diesem Thema die ehrlichste und häufigste Reaktion.
+en: Seriously: we're here all evening, we don't bite, and we're happy about every question. Even about <em>“I don't understand anything”</em> — with this topic that's the most honest and most common reaction.
 
 
 de: We are the QuiCK Sloths.

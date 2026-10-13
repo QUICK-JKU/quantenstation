@@ -57,8 +57,8 @@ en: Enjoying maths and programming. But you'll learn both during your studies to
 de: Nicht nötig
 en: Not necessary
 
-de: Du brauchst keine Eins in Mathe. Du musst kein „Naturtalent“ sein. Du musst nicht mit 17 schon wissen, was du willst.
-en: You don't need top marks in maths. You don't have to be a “natural talent”. You don't have to know at 17 what you want.
+de: Kein „Naturtalent“, keine lückenlose Vorbildung — und es ist nie zu spät, damit anzufangen.
+en: No “natural talent”, no flawless background — and it's never too late to start.
 
 de: Das erste Studienjahr ist in allen drei Richtungen ziemlich zäh: Analysis, lineare Algebra, Mechanik, Programmieren. Quantenkurse kommen erst viel später vor.
 en: The first year of study is pretty tough in all three directions: analysis, linear algebra, mechanics, programming. Quantum courses only come much later.
